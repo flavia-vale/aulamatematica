@@ -1,0 +1,276 @@
+---
+import Base from '../layouts/Base.astro';
+import FAQ from '../components/FAQ.astro';
+import { site, waLink } from '../config/site';
+import {
+  graph,
+  personSchema,
+  localBusinessSchema,
+  websiteSchema,
+  serviceSchema,
+  faqSchema,
+} from '../lib/schema';
+
+const title = 'Aulas particulares de matemática online — Reforço escolar com professora da UFMG';
+const description = `Aulas particulares de matemática online para alunos do ensino fundamental e médio. Reforço escolar, recuperação e acompanhamento com ${site.teacher.name}, licencianda em Matemática pela UFMG. Aula diagnóstica gratuita.`;
+
+const faqs = [
+  {
+    q: 'Como funcionam as aulas particulares de matemática online?',
+    a: 'As aulas são individuais, ao vivo por videochamada (Google Meet ou Zoom), com duração de 50 minutos. A primeira aula é uma diagnóstica gratuita de 30 minutos para identificar dificuldades específicas e montar um plano de estudos personalizado para o aluno.',
+  },
+  {
+    q: 'Para quais séries são oferecidas as aulas?',
+    a: 'O foco é em alunos do ensino fundamental II (6º ao 9º ano) e ensino médio (1º, 2º e 3º ano). Atendo desde reforço escolar contínuo até preparação para provas, recuperação de notas e revisão para vestibulares.',
+  },
+  {
+    q: 'A aula online funciona tão bem quanto a presencial?',
+    a: 'Sim. Com uma lousa digital compartilhada, exercícios resolvidos em tempo real e materiais enviados por WhatsApp, a aula online costuma render igual ou mais que a presencial — sem deslocamento, com gravação opcional para revisão e horários mais flexíveis para a família.',
+  },
+  {
+    q: 'Quanto custa a aula particular de matemática?',
+    a: 'O valor é definido após a aula diagnóstica gratuita, conforme a frequência (1 ou 2 vezes por semana) e a duração desejada. Trabalho com pacotes mensais, com desconto para contratação por trimestre.',
+  },
+  {
+    q: 'Atende alunos fora de Belo Horizonte?',
+    a: 'Sim. Como as aulas são 100% online, atendo alunos de qualquer cidade do Brasil. Belo Horizonte é a base geográfica, mas a maioria dos alunos vem de cidades diferentes.',
+  },
+  {
+    q: 'Como agendar a primeira aula?',
+    a: 'Basta enviar uma mensagem pelo WhatsApp (32) 99999-3956 informando a série do aluno e o principal motivo da busca (notas baixas, dificuldade em algum conteúdo, prova chegando). Em até 24 horas envio um horário disponível para a aula diagnóstica gratuita.',
+  },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  websiteSchema,
+  serviceSchema({
+    name: 'Aulas particulares de matemática online',
+    description: 'Reforço escolar de matemática para alunos do ensino fundamental e médio. Aulas individuais, 100% online.',
+    url: site.url,
+  }),
+  faqSchema(faqs),
+);
+---
+
+<Base title={title} description={description} schema={schema}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="grain absolute inset-0 opacity-60" aria-hidden="true"></div>
+    <div class="relative mx-auto grid max-w-6xl gap-12 px-4 pb-16 pt-14 sm:px-6 md:grid-cols-12 md:pb-24 md:pt-20">
+      <div class="md:col-span-7">
+        <p class="flex items-center gap-2 text-sm font-medium text-stone-600">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-600"></span>
+          Aceito novos alunos · Aula diagnóstica gratuita
+        </p>
+        <h1 class="mt-5 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+          Matemática que <em class="italic text-stone-700">finalmente</em> faz sentido — pro 6º ano até o 3º do médio.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+          Aulas particulares online com {site.teacher.name}, licencianda em Matemática pela <strong class="font-medium text-stone-800">UFMG</strong>. Reforço escolar individual, focado em fechar as lacunas do aluno e levantar a nota antes da próxima prova.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href={waLink('Olá! Quero agendar a aula diagnóstica gratuita.')}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3.5 font-semibold text-stone-50 transition hover:bg-stone-800"
+          >
+            Agendar aula diagnóstica grátis
+            <span aria-hidden="true">→</span>
+          </a>
+          <a
+            href="#como-funciona"
+            class="inline-flex items-center gap-2 rounded-full border border-stone-300 px-6 py-3.5 font-medium text-stone-800 transition hover:border-stone-900 hover:bg-stone-100"
+          >
+            Como funciona
+          </a>
+        </div>
+
+        <dl class="mt-12 grid grid-cols-3 gap-6 border-t border-stone-200 pt-8 text-sm">
+          <div>
+            <dt class="text-stone-500">Modalidade</dt>
+            <dd class="mt-1 font-semibold text-stone-900">100% online</dd>
+          </div>
+          <div>
+            <dt class="text-stone-500">Foco</dt>
+            <dd class="mt-1 font-semibold text-stone-900">Fund. II e Médio</dd>
+          </div>
+          <div>
+            <dt class="text-stone-500">Formação</dt>
+            <dd class="mt-1 font-semibold text-stone-900">UFMG</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Editorial card -->
+      <aside class="md:col-span-5" aria-label="Aula diagnóstica">
+        <div class="relative rounded-2xl border border-stone-200 bg-white p-7 shadow-[0_1px_0_rgba(0,0,0,0.03),0_20px_60px_-20px_rgba(0,0,0,0.15)]">
+          <span class="absolute -top-3 left-7 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase">Grátis</span>
+          <p class="font-serif text-2xl font-medium tracking-tight text-stone-900">Aula diagnóstica de 30 minutos</p>
+          <p class="mt-3 text-stone-600">Antes de qualquer contrato. A gente conversa com o aluno, identifica o que está travando e monta um plano de estudo individual.</p>
+
+          <ol class="mt-6 space-y-3 text-sm text-stone-700">
+            <li class="flex gap-3">
+              <span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-900 font-serif text-xs font-semibold text-stone-50">1</span>
+              <span>Conversa rápida sobre a série, a escola e a dor principal</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-900 font-serif text-xs font-semibold text-stone-50">2</span>
+              <span>Diagnóstico ao vivo com 3 exercícios do nível atual</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-stone-900 font-serif text-xs font-semibold text-stone-50">3</span>
+              <span>Plano de aulas e cronograma sugerido — sem compromisso</span>
+            </li>
+          </ol>
+
+          <a
+            href={waLink('Olá! Quero agendar a aula diagnóstica gratuita de 30 minutos.')}
+            target="_blank"
+            rel="noopener"
+            class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-5 py-3 font-semibold text-white transition hover:bg-emerald-700"
+          >
+            Pedir pelo WhatsApp
+          </a>
+          <p class="mt-3 text-center text-xs text-stone-500">Resposta em até 24h · Sem cadastro</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Pra quem é -->
+  <section class="border-t border-stone-200 bg-stone-100/40">
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Para quem é</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+          O aluno tem dificuldade em matemática. Você está aqui pra resolver isso.
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {[
+          {
+            tag: 'Fund. II',
+            t: 'Está perdido com frações, equações ou geometria',
+            d: 'Trabalho a base com paciência. Antes de avançar, garanto que o aluno entendeu — não decorou.',
+          },
+          {
+            tag: 'Médio',
+            t: 'Notas baixas e prova chegando',
+            d: 'Foco cirúrgico no que cai na próxima prova, sem deixar de cobrir o que ficou pra trás.',
+          },
+          {
+            tag: 'Ano todo',
+            t: 'Acompanhamento contínuo, sem sufoco',
+            d: 'Aulas semanais que acompanham a escola, evitam reprovação e tiram dúvidas em tempo real.',
+          },
+        ].map((card) => (
+          <article class="rounded-xl border border-stone-200 bg-white p-7 transition hover:border-stone-300 hover:shadow-sm">
+            <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">{card.tag}</p>
+            <h3 class="mt-3 font-serif text-xl font-medium text-stone-900">{card.t}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-stone-600">{card.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section id="como-funciona" class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+    <div class="grid gap-12 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Como funciona</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+          Aulas particulares de matemática <em class="italic text-stone-700">de verdade</em> individuais.
+        </h2>
+        <p class="mt-5 text-stone-600 leading-relaxed">
+          Nada de turma de 10 alunos chamada de "aula em grupo". É um aluno, uma professora, e o conteúdo que <em>esse</em> aluno precisa. Sempre.
+        </p>
+      </div>
+
+      <ol class="md:col-span-7 space-y-px overflow-hidden rounded-2xl border border-stone-200 bg-white">
+        {[
+          { n: '01', t: 'Aula diagnóstica gratuita', d: 'Identifico as lacunas reais antes de propor qualquer plano.' },
+          { n: '02', t: 'Plano de estudo individual', d: 'Cronograma com prioridades, baseado nas dificuldades específicas e nas próximas avaliações da escola.' },
+          { n: '03', t: 'Aulas semanais ao vivo', d: 'Encontros de 50 minutos via Google Meet, com lousa digital, exercícios e materiais enviados depois.' },
+          { n: '04', t: 'Acompanhamento entre aulas', d: 'Dúvidas em fotos no WhatsApp respondidas — sem custo extra. Continuidade que rende.' },
+        ].map((step) => (
+          <li class="flex gap-6 border-b border-stone-200 p-7 last:border-b-0">
+            <span class="font-serif text-2xl font-medium text-stone-300">{step.n}</span>
+            <div>
+              <h3 class="font-medium text-stone-900">{step.t}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-stone-600">{step.d}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- Credenciais (E-E-A-T) -->
+  <section class="border-y border-stone-200 bg-stone-900 text-stone-100">
+    <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-12">
+      <div class="md:col-span-7">
+        <p class="text-sm font-semibold tracking-widest text-stone-400 uppercase">A professora</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight sm:text-4xl">
+          {site.teacher.name}
+        </h2>
+        <p class="mt-2 font-serif text-lg italic text-stone-400">{site.teacher.credentials}</p>
+        <p class="mt-6 max-w-xl leading-relaxed text-stone-300">
+          Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG) — a maior universidade pública de Minas Gerais e referência nacional em formação de professores. Atendo alunos do ensino fundamental e médio com método focado em entendimento, não em decoreba.
+        </p>
+        <a href="/sobre" class="mt-8 inline-flex items-center gap-2 text-stone-100 underline-offset-4 hover:underline">
+          Conhecer a professora <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="md:col-span-5">
+        <ul class="space-y-5 text-stone-200">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 inline-block h-1 w-6 bg-emerald-500" aria-hidden="true"></span>
+            <span>Formação em curso pela UFMG — base teórica sólida</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 inline-block h-1 w-6 bg-emerald-500" aria-hidden="true"></span>
+            <span>Especializada em reforço escolar (Fund. II e Médio)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 inline-block h-1 w-6 bg-emerald-500" aria-hidden="true"></span>
+            <span>Material próprio de exercícios e listas progressivas</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 inline-block h-1 w-6 bg-emerald-500" aria-hidden="true"></span>
+            <span>Comunicação direta com responsáveis sobre evolução</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <FAQ items={faqs} />
+
+  <!-- CTA final -->
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        A próxima prova é em quantos dias?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        Comece pela aula diagnóstica gratuita. Sem cadastro, sem compromisso — só uma conversa pra entender o que está travando.
+      </p>
+      <a
+        href={waLink('Olá! Quero agendar a aula diagnóstica gratuita.')}
+        target="_blank"
+        rel="noopener"
+        class="mt-8 inline-flex items-center gap-2 rounded-full bg-stone-900 px-7 py-4 font-semibold text-stone-50 transition hover:bg-stone-800"
+      >
+        Falar com a professora no WhatsApp
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</Base>

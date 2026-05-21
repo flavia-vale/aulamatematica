@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/aulas-particulares-matematica-bh';
+const url = `${site.url}${path}`;
+const title = 'Aulas particulares de matemática em BH — Reforço escolar online com professora da UFMG';
+const description = 'Aulas particulares de matemática em Belo Horizonte (BH), 100% online. Reforço escolar para ensino fundamental e médio com Taciane Andrade, licencianda em Matemática pela UFMG. Aula diagnóstica gratuita.';
+
+const faqs = [
+  { q: 'As aulas particulares de matemática são em BH presencial?', a: 'As aulas são 100% online, com base em Belo Horizonte. Isso permite atender alunos de toda a Grande BH — Contagem, Betim, Nova Lima, Sabará — sem o tempo perdido em deslocamento no trânsito da capital.' },
+  { q: 'Por que escolher uma professora de Belo Horizonte?', a: 'Conheço o calendário e o formato das principais escolas de BH (Bernoulli, Coleguium, Magnum, Santo Agostinho, Cotemig, Pitágoras, redes públicas estaduais) e o estilo das provas de vestibulares mineiros como UFMG, CEFET-MG e PUC Minas.' },
+  { q: 'Qual o valor da aula particular de matemática em BH?', a: 'O valor é definido após a aula diagnóstica gratuita, conforme frequência e duração. Pacotes mensais e trimestrais com desconto. Por ser online, o custo costuma ser inferior ao de aulas presenciais com deslocamento.' },
+  { q: 'Atende alunos da Grande BH e região metropolitana?', a: 'Sim. Como tudo é online, atendo Belo Horizonte e cidades vizinhas: Contagem, Betim, Nova Lima, Sabará, Ribeirão das Neves, Santa Luzia, Vespasiano, além do interior de Minas Gerais.' },
+  { q: 'Como começar?', a: 'Envie uma mensagem no WhatsApp (32) 99999-3956 informando a série do aluno e o principal motivo (notas, prova próxima, recuperação). Agendamos a aula diagnóstica gratuita em até 24 horas.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchema({
+    name: 'Aulas particulares de matemática em Belo Horizonte (BH)',
+    description: 'Aulas particulares de matemática online para alunos de Belo Horizonte e Grande BH. Reforço escolar para ensino fundamental e médio.',
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Aulas particulares em BH', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="Belo Horizonte · MG"
+    title=""
+    description="Aulas particulares de matemática online para alunos de Belo Horizonte e região metropolitana. Reforço escolar individual com método focado em fechar lacunas — não em decorar fórmulas."
+  >
+    <Fragment slot="title">
+      Aulas particulares de matemática em <em class="italic text-stone-700">Belo Horizonte</em>.
+    </Fragment>
+    <CTAButtons slot="cta" message="Olá! Sou de Belo Horizonte e quero agendar a aula diagnóstica gratuita." secondaryHref="#bairros" secondaryLabel="Bairros atendidos" />
+  </PageHero>
+
+  <!-- Diferencial BH -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <div class="grid gap-12 md:grid-cols-2">
+      <div>
+        <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Por que uma professora de BH</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+          Conheço a escola do seu filho.
+        </h2>
+        <p class="mt-5 text-stone-600 leading-relaxed">
+          O calendário escolar de BH não é igual ao do resto do país. As provas do <strong class="text-stone-800">Bernoulli</strong>, <strong class="text-stone-800">Coleguium</strong>, <strong class="text-stone-800">Magnum</strong>, <strong class="text-stone-800">Santo Agostinho</strong>, <strong class="text-stone-800">Cotemig</strong> e da rede pública estadual têm um padrão próprio. Aulas com uma professora que vive em Minas significa que o plano de estudo segue o ritmo real da sua escola.
+        </p>
+      </div>
+      <div class="rounded-2xl border border-stone-200 bg-white p-7">
+        <p class="font-serif text-xl font-medium text-stone-900">O que muda na prática</p>
+        <ul class="mt-5 space-y-4 text-sm text-stone-700">
+          <li class="flex gap-3">
+            <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"></span>
+            Cronograma sincronizado com as provas bimestrais e simulados
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"></span>
+            Foco no estilo de questão de cada rede de ensino
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"></span>
+            Preparação específica para UFMG, CEFET-MG e PUC Minas
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600"></span>
+            Sem tempo perdido no trânsito da Cristiano Machado
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bairros atendidos -->
+  <section id="bairros" class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Cobertura</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+          Atendimento em toda Belo Horizonte e Grande BH.
+        </h2>
+        <p class="mt-4 text-stone-600">
+          Por ser online, atendo todas as regiões da capital e cidades vizinhas — sem custo de deslocamento, sem tempo perdido no trânsito.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { r: 'Centro-Sul', b: 'Savassi · Lourdes · Funcionários · Serra · Anchieta · Sion · Mangabeiras · Cidade Jardim · Buritis' },
+          { r: 'Centro', b: 'Centro · Santo Agostinho · Barro Preto · Floresta · Santa Efigênia · Funcionários' },
+          { r: 'Pampulha & Norte', b: 'Pampulha · Castelo · Ouro Preto · São Luiz · Liberdade · Cidade Nova' },
+          { r: 'Oeste & Barreiro', b: 'Buritis · Estoril · Palmares · Gutierrez · Calafate · Barreiro' },
+          { r: 'Leste', b: 'Santa Tereza · Floresta · Sagrada Família · Horto · Santa Inês' },
+          { r: 'Venda Nova', b: 'Venda Nova · Céu Azul · Santa Mônica · Letícia' },
+          { r: 'Grande BH', b: 'Contagem · Betim · Nova Lima · Sabará · Santa Luzia · Ribeirão das Neves · Vespasiano' },
+          { r: 'Interior MG', b: 'Sete Lagoas · Divinópolis · Itaúna · Lagoa Santa · Pedro Leopoldo · Juiz de Fora' },
+        ].map((zone) => (
+          <article class="rounded-xl border border-stone-200 bg-white p-5">
+            <p class="font-serif text-sm font-semibold tracking-wide text-emerald-700 uppercase">{zone.r}</p>
+            <p class="mt-2 text-sm leading-relaxed text-stone-700">{zone.b}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Escolas -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Experiência com</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Alunos das principais escolas de BH.
+    </h2>
+    <p class="mt-4 max-w-2xl text-stone-600">
+      Já acompanhei alunos das redes mais exigentes da capital — conheço o nível e o ritmo de cada uma.
+    </p>
+
+    <ul class="mt-10 flex flex-wrap gap-2">
+      {[
+        'Bernoulli', 'Coleguium', 'Magnum', 'Santo Agostinho', 'Cotemig', 'Pitágoras', 'Anchieta',
+        'Logos', 'Sagrado Coração de Maria', 'Marista Dom Silvério', 'Promove', 'Padre Eustáquio',
+        'Rede Estadual MG', 'Rede Municipal BH', 'CEFET-MG', 'Colégio Tiradentes',
+      ].map((school) => (
+        <li class="rounded-full border border-stone-300 bg-white px-4 py-1.5 text-sm text-stone-700">{school}</li>
+      ))}
+    </ul>
+  </section>
+
+  <FAQ items={faqs} title="Dúvidas frequentes de famílias de BH" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Mora em BH? Vamos conversar.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        Aula diagnóstica gratuita de 30 minutos. Sem compromisso — só pra entender se faz sentido pro seu filho.
+      </p>
+      <CTAButtons message="Olá! Sou de BH e quero agendar a aula diagnóstica gratuita." />
+    </div>
+  </section>
+</Base>

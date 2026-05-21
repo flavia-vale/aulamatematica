@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, waLink } from '../config/site';
+import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/contato';
+const url = `${site.url}${path}`;
+const title = 'Contato — Agendar aula particular de matemática';
+const description = `Entre em contato para agendar a aula diagnóstica gratuita de matemática. WhatsApp ${site.contact.whatsappDisplay} — resposta em até 24 horas.`;
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Contato', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema} hideFloat>
+  <section class="relative overflow-hidden border-b border-stone-200">
+    <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl px-4 pt-14 pb-12 sm:px-6 md:pt-20 md:pb-16">
+      <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Fale com a professora</p>
+      <h1 class="mt-4 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+        Contato.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+        O canal principal é o WhatsApp — é por lá que combino horários, tiro dúvidas e mando o link da aula. Resposta em até 24 horas, de segunda a sábado.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+    <div class="grid gap-8 md:grid-cols-5">
+      <!-- WhatsApp principal -->
+      <div class="md:col-span-3">
+        <article class="rounded-3xl border border-stone-900 bg-stone-900 p-10 text-stone-100">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.05 4.91A10 10 0 0 0 4.46 17.96L3 22l4.18-1.09a10 10 0 0 0 14.87-8.72 10 10 0 0 0-3-7.28zM12.04 20.13a8.12 8.12 0 0 1-4.14-1.13l-.3-.18-2.48.65.66-2.42-.19-.31a8.13 8.13 0 1 1 6.45 3.39zm4.69-6.07c-.26-.13-1.52-.75-1.76-.83-.24-.09-.41-.13-.58.13-.17.26-.66.83-.81 1-.15.17-.3.19-.55.06-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.27-1.51-1.42-1.77-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17 0 1.28.93 2.52 1.06 2.69.13.17 1.83 2.8 4.43 3.93.62.27 1.1.43 1.48.55.62.2 1.18.17 1.63.1.5-.07 1.52-.62 1.74-1.22.21-.6.21-1.11.15-1.22-.06-.11-.24-.17-.5-.3z" />
+              </svg>
+            </span>
+            <p class="font-serif text-2xl font-medium">WhatsApp</p>
+          </div>
+          <p class="mt-6 font-serif text-3xl font-medium tracking-tight">{site.contact.whatsappDisplay}</p>
+          <p class="mt-4 text-stone-300 leading-relaxed">
+            Mande uma mensagem com a série do aluno e o motivo da busca (notas baixas, prova chegando, recuperação). Envio um horário disponível para a diagnóstica gratuita.
+          </p>
+          <a
+            href={waLink('Olá! Vim pelo site. Gostaria de agendar a aula diagnóstica gratuita de matemática.')}
+            target="_blank"
+            rel="noopener"
+            class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 font-semibold text-white transition hover:bg-emerald-700"
+          >
+            Abrir WhatsApp
+            <span aria-hidden="true">→</span>
+          </a>
+          <p class="mt-3 text-center text-xs text-stone-400">Mensagem pré-preenchida · Você ajusta antes de enviar</p>
+        </article>
+      </div>
+
+      <!-- Informações práticas -->
+      <aside class="md:col-span-2 space-y-6">
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Horário</p>
+          <h2 class="mt-2 font-serif text-lg font-medium text-stone-900">Atendimento</h2>
+          <ul class="mt-3 space-y-1.5 text-sm text-stone-700">
+            <li>Segunda a sexta · 8h às 21h</li>
+            <li>Sábado · 9h às 14h</li>
+            <li>Domingo · sem atendimento</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Localização</p>
+          <h2 class="mt-2 font-serif text-lg font-medium text-stone-900">Base em Belo Horizonte</h2>
+          <p class="mt-3 text-sm leading-relaxed text-stone-700">
+            Aulas 100% online — atendo todo o Brasil, com foco em Belo Horizonte, Grande BH e interior de Minas Gerais.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Tempo de resposta</p>
+          <h2 class="mt-2 font-serif text-lg font-medium text-stone-900">Em até 24 horas</h2>
+          <p class="mt-3 text-sm leading-relaxed text-stone-700">
+            Mensagens enviadas em horário comercial costumam ser respondidas no mesmo dia.
+          </p>
+        </article>
+      </aside>
+    </div>
+  </section>
+
+  <!-- O que mandar -->
+  <section class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Dica</p>
+      <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900 sm:text-3xl">
+        Pra agilizar, mande na primeira mensagem:
+      </h2>
+      <ul class="mt-6 grid gap-3 text-stone-700 sm:grid-cols-2">
+        {[
+          'Série do aluno (ex: 8º ano, 2º ano do médio)',
+          'Escola e cidade',
+          'Principal motivo da busca',
+          'Disponibilidade aproximada de horário',
+        ].map((item) => (
+          <li class="flex items-start gap-3 rounded-xl border border-stone-200 bg-white p-4">
+            <span class="mt-1.5 inline-block h-2 w-2 rounded-full bg-emerald-600"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-6 text-sm text-stone-500">
+        Não é obrigatório — se preferir, mande só "oi" e a gente conversa por lá.
+      </p>
+    </div>
+  </section>
+</Base>

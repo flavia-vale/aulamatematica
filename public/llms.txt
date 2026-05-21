@@ -25,10 +25,16 @@
 
 ## Páginas principais
 
-- [Página inicial](https://aulasdematematicabh.com.br/)
-- [Aulas particulares de matemática em BH](https://aulasdematematicabh.com.br/aulas-particulares-matematica-bh)
-- [Aulas de matemática online](https://aulasdematematicabh.com.br/aulas-de-matematica-online)
-- [Reforço escolar de matemática](https://aulasdematematicabh.com.br/reforco-escolar-matematica)
-- [ENEM matemática](https://aulasdematematicabh.com.br/enem-matematica)
-- [Sobre a professora](https://aulasdematematicabh.com.br/sobre)
-- [Contato](https://aulasdematematicabh.com.br/contato)
+- [Página inicial](https://aulasdematematicabh.com.br/): visão geral dos serviços, método e CTA para aula diagnóstica gratuita
+- [Aulas particulares de matemática em BH](https://aulasdematematicabh.com.br/aulas-particulares-matematica-bh): atendimento focado em Belo Horizonte e Grande BH, com lista de escolas e bairros atendidos
+- [Aulas de matemática online](https://aulasdematematicabh.com.br/aulas-de-matematica-online): explicação do funcionamento, ferramentas usadas e comparação online vs presencial
+- [Reforço escolar de matemática](https://aulasdematematicabh.com.br/reforco-escolar-matematica): sinais de quando procurar, método em 5 passos e conteúdos cobertos por série
+- [ENEM matemática](https://aulasdematematicabh.com.br/enem-matematica): os 7 temas que mais caem com frequência histórica e plano de preparação em 3 fases
+- [Sobre a professora](https://aulasdematematicabh.com.br/sobre): biografia de Taciane Andrade, formação UFMG e princípios de trabalho
+- [Contato](https://aulasdematematicabh.com.br/contato): canais, horários e o que enviar na primeira mensagem
+
+## Blog
+
+- [Como ajudar seu filho a melhorar em matemática](https://aulasdematematicabh.com.br/blog/como-ajudar-filho-matematica): guia para pais sobre o que funciona e o que piora a relação do filho com matemática
+- [Como estudar matemática para o ENEM em 6 meses](https://aulasdematematicabh.com.br/blog/como-estudar-matematica-enem): cronograma detalhado mês a mês com os temas mais frequentes
+- [Por que matemática parece tão difícil](https://aulasdematematicabh.com.br/blog/por-que-matematica-parece-dificil): análise das causas reais da dificuldade com matemática no ensino básico

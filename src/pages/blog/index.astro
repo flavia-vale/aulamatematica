@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { site } from '../../config/site';
+import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../../lib/schema';
+
+const path = '/blog';
+const url = `${site.url}${path}`;
+const title = 'Blog — Aulas de Matemática BH';
+const description = 'Artigos sobre matemática, didática, reforço escolar e preparação para vestibulares. Escritos pela professora Taciane Andrade.';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Blog', url },
+  ]),
+  {
+    '@type': 'Blog',
+    name: 'Blog Aulas de Matemática BH',
+    url,
+    author: { '@id': `${site.url}/#taciane` },
+    publisher: { '@id': `${site.url}/#business` },
+  },
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <section class="relative overflow-hidden border-b border-stone-200">
+    <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl px-4 pt-14 pb-12 sm:px-6 md:pt-20 md:pb-16">
+      <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Blog</p>
+      <h1 class="mt-4 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+        Notas sobre matemática.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
+        Textos para pais, alunos e quem quer entender por que matemática parece ser o que é — e como ela pode deixar de ser.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+    <div class="divide-y divide-stone-200">
+      {posts.map((post) => (
+        <article class="group py-10 first:pt-0">
+          <a href={`/blog/${post.id}`} class="block">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-widest text-stone-500">
+              <time datetime={post.data.publishedAt.toISOString()}>{fmtDate(post.data.publishedAt)}</time>
+              {post.data.readingTime && (
+                <>
+                  <span class="text-stone-300" aria-hidden="true">·</span>
+                  <span>{post.data.readingTime} de leitura</span>
+                </>
+              )}
+            </div>
+            <h2 class="mt-3 font-serif text-2xl font-medium leading-snug text-stone-900 transition group-hover:text-emerald-800 sm:text-3xl">
+              {post.data.title}
+            </h2>
+            <p class="mt-3 max-w-2xl text-stone-600 leading-relaxed">
+              {post.data.description}
+            </p>
+            <p class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-emerald-700">
+              Ler texto completo
+              <span aria-hidden="true" class="transition group-hover:translate-x-0.5">→</span>
+            </p>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,29 @@
+---
+import { waLink } from '../config/site';
+interface Props { message?: string; secondaryHref?: string; secondaryLabel?: string }
+const {
+  message = 'Olá! Quero agendar a aula diagnóstica gratuita.',
+  secondaryHref,
+  secondaryLabel = 'Saber mais',
+} = Astro.props;
+---
+
+<div class="mt-8 flex flex-wrap items-center gap-3">
+  <a
+    href={waLink(message)}
+    target="_blank"
+    rel="noopener"
+    class="inline-flex items-center gap-2 rounded-full bg-stone-900 px-6 py-3.5 font-semibold text-stone-50 transition hover:bg-stone-800"
+  >
+    Agendar aula diagnóstica grátis
+    <span aria-hidden="true">→</span>
+  </a>
+  {secondaryHref && (
+    <a
+      href={secondaryHref}
+      class="inline-flex items-center gap-2 rounded-full border border-stone-300 px-6 py-3.5 font-medium text-stone-800 transition hover:border-stone-900 hover:bg-stone-100"
+    >
+      {secondaryLabel}
+    </a>
+  )}
+</div>

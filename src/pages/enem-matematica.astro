@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/enem-matematica';
+const url = `${site.url}${path}`;
+const title = 'Aulas de matemática para o ENEM — Preparação individual com professora da UFMG';
+const description = 'Aulas particulares de matemática para o ENEM, online e individuais. Foco nos temas que mais caem, treino de questões reais e estratégia de prova. Preparação com professora da UFMG.';
+
+const faqs = [
+  { q: 'Quais temas de matemática mais caem no ENEM?', a: 'Por ordem de frequência histórica: razão e proporção, porcentagem, funções (1º grau, 2º grau, exponencial), estatística, probabilidade, geometria plana e espacial, e análise combinatória. Esses 7 grupos respondem por mais de 70% das questões de matemática do ENEM.' },
+  { q: 'Quanto tempo de antecedência preciso pra me preparar?', a: 'O ideal são 8 a 12 meses de preparação consistente (1 a 2 aulas por semana). Mas é possível obter ganho real em 3 a 4 meses se a base não estiver completamente fragilizada — começamos com diagnóstico para definir o plano.' },
+  { q: 'Como funciona a aula focada em ENEM?', a: 'Diferente do reforço escolar, a aula de ENEM gira em torno de resolução de questões oficiais (provas de 2009 em diante). Trabalhamos interpretação do enunciado, atalhos de resolução e estratégia de tempo — habilidades específicas pra prova.' },
+  { q: 'Vale a pena fazer só matemática ou todas as áreas?', a: 'Matemática é a prova em que dá pra ganhar mais pontos com preparação focada — mesmo aluno que tira 500 pode chegar a 700 com método. Faz sentido focar aqui, especialmente se for curso que pondera matemática (engenharia, computação, exatas).' },
+  { q: 'A preparação serve também pra outros vestibulares?', a: 'Sim. O método cobre o conteúdo do ensino médio com profundidade suficiente para Fuvest, UFMG, UFRJ, Unicamp, UnB. A diferença é o estilo de prova — ajusto o treino de questões conforme a banca-alvo do aluno.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchema({
+    name: 'Aulas particulares de matemática para o ENEM',
+    description: 'Preparação individual em matemática para o ENEM. Foco em temas frequentes, treino de questões oficiais e estratégia de prova.',
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'ENEM matemática', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="ENEM · Vestibulares"
+    title=""
+    description="Preparação individual em matemática para o ENEM. Foco no que cai, treino de questões reais e estratégia de tempo. Para alunos do 3º ano e vestibulandos."
+  >
+    <Fragment slot="title">
+      Matemática do <em class="italic text-stone-700">ENEM</em> sem decoreba.
+    </Fragment>
+    <CTAButtons slot="cta" message="Olá! Quero preparação em matemática para o ENEM. Pode agendar a diagnóstica?" secondaryHref="#temas" secondaryLabel="Temas que mais caem" />
+  </PageHero>
+
+  <!-- Temas frequentes -->
+  <section id="temas" class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Onde focar</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Os 7 temas que decidem a nota.
+    </h2>
+    <p class="mt-4 max-w-2xl text-stone-600">
+      Análise das provas de 2009 a 2024 mostra que esses 7 blocos respondem por mais de 70% das questões. É aqui que a preparação rende mais.
+    </p>
+
+    <ol class="mt-12 space-y-px overflow-hidden rounded-2xl border border-stone-200 bg-white">
+      {[
+        { n: '01', t: 'Razão, proporção e porcentagem', f: '~15% das questões', d: 'Cálculo de descontos, juros simples, comparação de grandezas. Base contextualizada em situações do cotidiano.' },
+        { n: '02', t: 'Funções', f: '~13% das questões', d: '1º grau, 2º grau, exponencial e logarítmica. Modelagem de problemas reais é o foco.' },
+        { n: '03', t: 'Geometria plana', f: '~12% das questões', d: 'Áreas, perímetros, semelhança, Pitágoras. Questões com figuras compostas e situações práticas.' },
+        { n: '04', t: 'Estatística', f: '~10% das questões', d: 'Média, mediana, moda. Leitura de gráficos e tabelas — interpretação tão importante quanto cálculo.' },
+        { n: '05', t: 'Probabilidade', f: '~8% das questões', d: 'Eventos simples, união, intersecção, independência. Quase sempre em contexto aplicado.' },
+        { n: '06', t: 'Geometria espacial', f: '~7% das questões', d: 'Volumes e áreas de prismas, cilindros, esferas. Costuma vir em problemas de empacotamento.' },
+        { n: '07', t: 'Análise combinatória', f: '~6% das questões', d: 'PFC, arranjos, combinações. Tema mais "técnico" — exige treino sistemático.' },
+      ].map((tema) => (
+        <li class="flex flex-col gap-2 border-b border-stone-200 p-6 last:border-b-0 sm:flex-row sm:items-start sm:gap-6">
+          <span class="shrink-0 font-serif text-2xl font-medium text-stone-300 sm:w-12">{tema.n}</span>
+          <div class="flex-1">
+            <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h3 class="font-medium text-stone-900">{tema.t}</h3>
+              <span class="font-serif text-sm italic text-emerald-700">{tema.f}</span>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-stone-600">{tema.d}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- Plano de preparação -->
+  <section class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Plano</p>
+        <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+          Como organizo a preparação.
+        </h2>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {[
+          { fase: 'Fase 1 · Diagnóstico', sem: '1 a 2 semanas', d: 'Simulado curto + análise dos temas em que o aluno trava. Construção do plano individual.' },
+          { fase: 'Fase 2 · Conteúdo', sem: '2 a 6 meses', d: 'Aulas temáticas cobrindo prioridades, sempre combinando teoria curta e bateria de questões reais do ENEM.' },
+          { fase: 'Fase 3 · Reta final', sem: '4 a 8 semanas', d: 'Simulados completos, estratégia de tempo, revisão direcionada e preparação psicológica pra prova.' },
+        ].map((phase) => (
+          <article class="rounded-2xl border border-stone-200 bg-white p-7">
+            <p class="font-serif text-sm font-semibold tracking-wide text-emerald-700 uppercase">{phase.fase}</p>
+            <p class="mt-2 font-serif text-lg italic text-stone-500">{phase.sem}</p>
+            <p class="mt-4 text-sm leading-relaxed text-stone-700">{phase.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faqs} title="Dúvidas sobre preparação para o ENEM" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Quanto tempo falta pro seu ENEM?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        Comece pelo diagnóstico gratuito. Saio com um plano específico pro tempo que você tem.
+      </p>
+      <CTAButtons message="Olá! Quero me preparar pro ENEM e gostaria de fazer a aula diagnóstica gratuita." />
+    </div>
+  </section>
+</Base>

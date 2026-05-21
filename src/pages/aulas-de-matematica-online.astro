@@ -1,0 +1,142 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/aulas-de-matematica-online';
+const url = `${site.url}${path}`;
+const title = 'Aulas de matemática online — Aulas particulares ao vivo com professora da UFMG';
+const description = 'Aulas de matemática online individuais ao vivo. Lousa digital, exercícios em tempo real e suporte por WhatsApp entre as aulas. Reforço escolar para ensino fundamental e médio com professora da UFMG.';
+
+const faqs = [
+  { q: 'Como é uma aula de matemática online ao vivo?', a: 'Encontros de 50 minutos via Google Meet ou Zoom, com lousa digital compartilhada onde aluno e professora escrevem juntos. Resolução de exercícios em tempo real, materiais enviados após cada aula e gravação opcional para revisão.' },
+  { q: 'A aula online é tão eficiente quanto presencial?', a: 'Sim, e em muitos casos melhor. Sem deslocamento, com gravação para revisar, lousa digital infinita e materiais compartilhados na hora. O aluno mantém o foco maior porque o ambiente é familiar.' },
+  { q: 'Qual ferramenta é usada para a aula?', a: 'Google Meet ou Zoom para a videochamada e uma lousa digital (Miro ou similar) para escrever. Tudo gratuito, sem instalação complicada — basta o navegador do computador, tablet ou celular.' },
+  { q: 'Precisa de algum equipamento especial?', a: 'Não. Computador, tablet ou celular com câmera, microfone e internet estável. Idealmente um caderno e lápis ao lado para o aluno também resolver no papel.' },
+  { q: 'E se a conexão cair durante a aula?', a: 'A aula é remarcada sem custo. Acontece raramente — mas se algo der errado do lado da professora ou do aluno, o tempo perdido é compensado.' },
+  { q: 'Posso pagar por aula avulsa?', a: 'O ideal é trabalhar com pacotes mensais para manter a continuidade pedagógica. Aulas avulsas são possíveis para reforço pontual antes de uma prova, mas têm valor um pouco maior.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchema({
+    name: 'Aulas particulares de matemática online ao vivo',
+    description: 'Aulas online individuais de matemática para ensino fundamental e médio. Lousa digital, gravação opcional, suporte por WhatsApp.',
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Aulas online', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="100% online · Ao vivo"
+    title=""
+    description="Aulas individuais por videochamada com lousa digital, materiais enviados depois e suporte por WhatsApp entre os encontros. Sem deslocamento. Sem turma. Só o aluno e a professora."
+  >
+    <Fragment slot="title">
+      Aulas de matemática <em class="italic text-stone-700">online</em> que rendem como presencial.
+    </Fragment>
+    <CTAButtons slot="cta" message="Olá! Quero uma aula de matemática online. Pode me agendar a diagnóstica gratuita?" secondaryHref="#ferramentas" secondaryLabel="Como funciona" />
+  </PageHero>
+
+  <!-- Comparação online vs presencial -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Online vs Presencial</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Sim, online funciona. E aqui é por quê.
+    </h2>
+
+    <div class="mt-10 overflow-hidden rounded-2xl border border-stone-200">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-5 py-4 font-semibold text-stone-700">Critério</th>
+            <th class="px-5 py-4 font-semibold text-stone-700">Aula online ao vivo</th>
+            <th class="px-5 py-4 font-semibold text-stone-500">Aula presencial</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-stone-200 bg-white">
+          {[
+            ['Deslocamento', 'Zero', '30 a 60 min entre ida e volta'],
+            ['Gravação para revisar', 'Sim, opcional', 'Não'],
+            ['Lousa digital infinita', 'Sim', 'Limitada ao quadro'],
+            ['Material enviado depois', 'PDF organizado', 'Foto do caderno'],
+            ['Dúvida fora do horário', 'Foto no WhatsApp', 'Espera a próxima aula'],
+            ['Custo médio', 'Menor', 'Maior (deslocamento embutido)'],
+            ['Flexibilidade de horário', 'Alta', 'Limitada'],
+          ].map((row) => (
+            <tr>
+              <td class="px-5 py-4 font-medium text-stone-900">{row[0]}</td>
+              <td class="px-5 py-4 text-emerald-700">{row[1]}</td>
+              <td class="px-5 py-4 text-stone-500">{row[2]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Ferramentas -->
+  <section id="ferramentas" class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Como acontece</p>
+          <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+            Ferramentas simples. Aula rica.
+          </h2>
+          <p class="mt-5 text-stone-600 leading-relaxed">
+            Nada de plataforma cara que precisa instalar e nunca funciona. Uso ferramentas que o aluno provavelmente já conhece da escola — Google Meet e uma lousa digital aberta no navegador.
+          </p>
+        </div>
+        <ul class="space-y-5">
+          {[
+            { t: 'Videochamada', d: 'Google Meet ou Zoom — link enviado no WhatsApp 5 minutos antes da aula' },
+            { t: 'Lousa digital compartilhada', d: 'Aluno e professora escrevem juntos. Salva tudo automaticamente.' },
+            { t: 'Material em PDF', d: 'Resumo da aula, exercícios resolvidos e lista de fixação enviados depois' },
+            { t: 'WhatsApp entre as aulas', d: 'Foto da dúvida resolvida em minutos — incluso no pacote, sem custo extra' },
+          ].map((item) => (
+            <li class="rounded-xl border border-stone-200 bg-white p-5">
+              <p class="font-medium text-stone-900">{item.t}</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-stone-600">{item.d}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atendimento nacional -->
+  <section class="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Sem fronteira</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Mora em qualquer cidade do Brasil? Tudo bem.
+    </h2>
+    <p class="mx-auto mt-5 max-w-2xl text-stone-600 leading-relaxed">
+      Como tudo é online, atendo de São Paulo a Manaus. A base é Belo Horizonte, mas a maioria dos alunos vem de outras cidades. Idioma português, fuso de Brasília — e horários flexíveis pra encaixar na rotina escolar.
+    </p>
+  </section>
+
+  <FAQ items={faqs} title="Dúvidas sobre aula online" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Quer testar uma aula online?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        A aula diagnóstica gratuita já é online — você testa antes de decidir qualquer coisa.
+      </p>
+      <CTAButtons message="Olá! Quero testar uma aula online. Pode agendar a diagnóstica gratuita?" />
+    </div>
+  </section>
+</Base>

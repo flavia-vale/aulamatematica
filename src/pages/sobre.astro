@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/sobre';
+const url = `${site.url}${path}`;
+const title = `Sobre ${site.teacher.name} — Professora de matemática, UFMG`;
+const description = `Conheça ${site.teacher.name}, professora particular de matemática e licencianda em Matemática pela UFMG. Especializada em reforço escolar para ensino fundamental e médio.`;
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Sobre', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <!-- Hero editorial -->
+  <section class="relative overflow-hidden border-b border-stone-200">
+    <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-5xl px-4 pt-14 pb-12 sm:px-6 md:pt-24 md:pb-20">
+      <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">A professora</p>
+      <h1 class="mt-4 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+        {site.teacher.name}
+      </h1>
+      <p class="mt-4 font-serif text-xl italic text-stone-600">
+        {site.teacher.credentials}
+      </p>
+    </div>
+  </section>
+
+  <!-- Bio em prosa -->
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 md:py-24">
+    <div class="prose prose-stone max-w-none text-lg leading-relaxed text-stone-700">
+      <p class="font-serif text-2xl font-medium leading-snug text-stone-900">
+        Sou licencianda em Matemática pela Universidade Federal de Minas Gerais — a UFMG — e dou aulas particulares para alunos do ensino fundamental e médio.
+      </p>
+
+      <p class="mt-8">
+        Comecei a ensinar matemática quase por acaso, ajudando colegas no fim do ensino médio. Foi lá que entendi uma coisa simples: a maioria das pessoas não tem dificuldade com <em>matemática</em>. Tem dificuldade com a <em>forma como a matemática foi ensinada pra elas</em>. Quando a explicação é boa, quase todo mundo consegue.
+      </p>
+
+      <p class="mt-6">
+        Essa é a base do meu trabalho. Antes de qualquer fórmula ou exercício, eu quero entender por que esse aluno específico não está aprendendo. Quase sempre é uma lacuna lá atrás — uma operação que ficou pela metade no 7º ano, um conceito de função que veio meio confuso. Resolvido isso, o resto destrava.
+      </p>
+
+      <p class="mt-6">
+        Na UFMG estudo não só conteúdo matemático, mas também <strong class="font-medium text-stone-900">como o aluno aprende</strong>. Didática da matemática, psicologia da educação, história da matemática — tudo isso muda completamente a forma de explicar. Tenho a sorte de aplicar diariamente, nas aulas particulares, o que aprendo nas disciplinas da graduação.
+      </p>
+
+      <p class="mt-6">
+        Atendo alunos do <strong class="font-medium text-stone-900">6º ano até o 3º ano do ensino médio</strong>. As aulas são individuais e 100% online — o que me permite atender alunos de Belo Horizonte, da Grande BH, do interior de Minas e de outros estados do Brasil.
+      </p>
+
+      <p class="mt-6">
+        Se você chegou até aqui, provavelmente tem um filho ou filha que está sofrendo com matemática. Antes de qualquer coisa, gosto de marcar uma conversa gratuita de 30 minutos com o aluno — sem pressão, sem compromisso. A partir dela, decidimos juntos se vale a pena continuar.
+      </p>
+
+      <p class="mt-8 font-serif text-xl italic text-stone-600">
+        — {site.teacher.name}
+      </p>
+    </div>
+  </section>
+
+  <!-- Credenciais -->
+  <section class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Formação e experiência</p>
+      <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Por que confiar.
+      </h2>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Formação</p>
+          <h3 class="mt-3 font-serif text-lg font-medium text-stone-900">UFMG · Licenciatura em Matemática</h3>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">
+            Cursando licenciatura em Matemática na Universidade Federal de Minas Gerais — referência nacional em formação de professores.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Especialidade</p>
+          <h3 class="mt-3 font-serif text-lg font-medium text-stone-900">Reforço escolar individual</h3>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">
+            Foco em alunos do ensino fundamental II e ensino médio. Recuperação de notas, acompanhamento contínuo e preparação para vestibulares.
+          </p>
+        </article>
+        <article class="rounded-2xl border border-stone-200 bg-white p-7">
+          <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Método</p>
+          <h3 class="mt-3 font-serif text-lg font-medium text-stone-900">Entender antes de praticar</h3>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">
+            Sem decoreba. O aluno entende a lógica por trás de cada fórmula — só depois treina. Conhecimento que dura além da prova.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Princípios -->
+  <section class="mx-auto max-w-4xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Como trabalho</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Princípios das minhas aulas.
+    </h2>
+    <div class="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+      {[
+        { t: 'Honestidade com a família', d: 'Se o aluno melhorou, eu falo. Se não, também — com as razões e o que mudar. Não tem por que pintar um quadro irreal.' },
+        { t: 'Pontualidade absoluta', d: 'A aula começa no horário e termina no horário. O tempo do aluno e da família vale.' },
+        { t: 'Material que faz sentido', d: 'Listas curtas e bem escolhidas valem mais do que listas longas que ninguém faz. Foco em quantidade certa.' },
+        { t: 'Sem julgamento', d: 'Dúvida básica é dúvida válida. A aula é um espaço seguro pra perguntar qualquer coisa sem vergonha.' },
+      ].map((p) => (
+        <div>
+          <p class="font-serif text-lg font-medium text-stone-900">{p.t}</p>
+          <p class="mt-2 text-stone-600 leading-relaxed">{p.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Vamos conversar?
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        Aula diagnóstica de 30 minutos. Gratuita. Sem compromisso.
+      </p>
+      <CTAButtons message={`Olá ${site.teacher.name}! Vim do site e quero agendar a aula diagnóstica gratuita.`} />
+    </div>
+  </section>
+</Base>

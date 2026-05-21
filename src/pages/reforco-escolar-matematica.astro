@@ -1,0 +1,151 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/reforco-escolar-matematica';
+const url = `${site.url}${path}`;
+const title = 'Reforço escolar de matemática — Ensino fundamental e médio com professora da UFMG';
+const description = 'Reforço escolar de matemática individual e online para alunos do ensino fundamental e médio. Recuperação de notas, acompanhamento contínuo e preparação para provas com método focado em entender — não em decorar.';
+
+const faqs = [
+  { q: 'O que é reforço escolar de matemática?', a: 'É um acompanhamento individual paralelo à escola, focado em preencher lacunas de aprendizado, acompanhar o conteúdo atual da turma e preparar para provas. Difere da aula coletiva: o ritmo e os exemplos são ajustados ao que ESSE aluno específico precisa.' },
+  { q: 'Quando começar o reforço escolar?', a: 'Idealmente no começo do ano letivo, antes que as lacunas se acumulem. Mas funciona em qualquer momento — inclusive na reta final, para recuperar notas e evitar reprovação. Quanto mais cedo, mais leve.' },
+  { q: 'Quantas aulas por semana são ideais?', a: 'Para acompanhamento contínuo, 1 aula semanal de 50 minutos resolve a maioria dos casos. Para recuperação intensiva ou véspera de prova importante, 2 aulas por semana rendem muito mais.' },
+  { q: 'Como saber se meu filho precisa de reforço?', a: 'Sinais claros: notas em queda, demora pra entregar tarefa de casa, frustração com a matéria, evitar estudar matemática, dificuldade com conteúdos que dependem da base (frações para equações, equações para funções).' },
+  { q: 'O reforço serve pra recuperação final?', a: 'Sim. Aulas intensivas focadas no que cai na prova de recuperação, com plano de estudo dia a dia. Em 4 a 6 aulas concentradas é possível virar o resultado — desde que o aluno se comprometa.' },
+  { q: 'Os pais recebem feedback?', a: 'Sim. Mando um resumo curto após cada aula com o que foi trabalhado e como o aluno foi. Para alunos do fundamental II, o contato com responsáveis é fundamental pra alinhar expectativa e cobrança em casa.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchema({
+    name: 'Reforço escolar de matemática',
+    description: 'Reforço escolar individual de matemática para ensino fundamental e médio. Online, ao vivo, com plano personalizado.',
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Reforço escolar', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="Reforço escolar individual"
+    title=""
+    description="Acompanhamento paralelo à escola, com plano de estudo construído sobre o que esse aluno específico precisa. Fundamental II e ensino médio."
+  >
+    <Fragment slot="title">
+      Reforço escolar de matemática que <em class="italic text-stone-700">funciona</em>.
+    </Fragment>
+    <CTAButtons slot="cta" message="Olá! Quero saber sobre reforço escolar de matemática." secondaryHref="#metodo" secondaryLabel="Conhecer o método" />
+  </PageHero>
+
+  <!-- Sinais de alerta -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Quando procurar reforço</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Os sinais aparecem antes da nota cair.
+    </h2>
+    <p class="mt-4 max-w-2xl text-stone-600">
+      Se um ou mais desses sinais aparecem em casa, o reforço escolar evita que a situação piore — e muitas vezes evita uma reprovação.
+    </p>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {[
+        { t: 'Evita fazer tarefa de matemática', d: 'Procrastinação, irritação, "depois eu faço" — sinal claro de falta de domínio do conteúdo.' },
+        { t: 'Diz que "não entende nada"', d: 'Geralmente significa que ficou pra trás em algum tópico anterior e tudo virou bola de neve.' },
+        { t: 'Notas caindo gradualmente', d: 'Não é falta de inteligência. É falta de base sólida nos anos anteriores.' },
+        { t: 'Vai bem no exercício, mal na prova', d: 'Confunde-se sob pressão. Falta automatismo nas operações fundamentais.' },
+        { t: 'Recuperação no fim do ano', d: 'Provavelmente ficou perdido no meio do ano e não pediu ajuda — comum.' },
+        { t: 'Prova chegando e despreparado', d: 'Plano intensivo de 4 a 8 aulas pode virar o jogo.' },
+      ].map((sign) => (
+        <article class="rounded-xl border border-stone-200 bg-white p-6">
+          <p class="font-serif text-lg font-medium text-stone-900">{sign.t}</p>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">{sign.d}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Método -->
+  <section id="metodo" class="border-y border-stone-200 bg-stone-900 text-stone-100">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="text-sm font-semibold tracking-widest text-stone-400 uppercase">O método</p>
+          <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight sm:text-4xl">
+            Entender antes de praticar. Praticar até automatizar.
+          </h2>
+          <p class="mt-5 text-stone-300 leading-relaxed">
+            Decorar fórmula sem entender o sentido é receita pra esquecer na prova. Aqui o aluno entende <em>por que</em> a fórmula funciona antes de aplicar. Só depois vêm os exercícios — primeiro do fácil, subindo a dificuldade até o nível da escola.
+          </p>
+        </div>
+        <div class="md:col-span-7 space-y-px overflow-hidden rounded-2xl bg-stone-800/50">
+          {[
+            { n: '01', t: 'Diagnóstico das lacunas reais', d: 'Mapeio o que travou — frações? sinais? equações? — em uma aula gratuita.' },
+            { n: '02', t: 'Plano em ordem certa', d: 'Conteúdos retomados na sequência que constrói base sólida, não pulando etapas.' },
+            { n: '03', t: 'Aula com lousa, exemplo, exercício', d: 'Explicação curta, exemplo guiado, exercício resolvido junto, exercício resolvido sozinho.' },
+            { n: '04', t: 'Lista de fixação curta', d: '5 a 8 exercícios entre uma aula e outra. Quantidade pensada para o aluno fazer mesmo.' },
+            { n: '05', t: 'Revisão antes da prova', d: 'Simulado focado no que vai cair, em sessão dedicada na semana da avaliação.' },
+          ].map((step) => (
+            <div class="flex gap-6 border-b border-stone-700/50 p-6 last:border-b-0">
+              <span class="font-serif text-xl font-medium text-stone-500">{step.n}</span>
+              <div>
+                <p class="font-medium text-stone-50">{step.t}</p>
+                <p class="mt-1.5 text-sm leading-relaxed text-stone-300">{step.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdos cobertos -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Conteúdos</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Do 6º ano ao 3º do ensino médio.
+    </h2>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-stone-200 bg-white p-7">
+        <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Fundamental II</p>
+        <h3 class="mt-2 font-serif text-xl font-medium text-stone-900">6º ao 9º ano</h3>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-stone-700">
+          {['Operações com inteiros', 'Frações', 'Decimais', 'Porcentagem', 'Razão e proporção', 'Equações 1º grau', 'Sistemas lineares', 'Equações 2º grau', 'Geometria plana', 'Áreas e perímetros', 'Potências e raízes', 'Teorema de Pitágoras'].map((t) => <li class="flex items-center gap-2"><span class="h-1 w-1 rounded-full bg-stone-400"></span>{t}</li>)}
+        </ul>
+      </article>
+
+      <article class="rounded-2xl border border-stone-200 bg-white p-7">
+        <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Ensino Médio</p>
+        <h3 class="mt-2 font-serif text-xl font-medium text-stone-900">1º, 2º e 3º ano</h3>
+        <ul class="mt-5 grid grid-cols-2 gap-2 text-sm text-stone-700">
+          {['Conjuntos numéricos', 'Funções (todas)', 'Logaritmos', 'Trigonometria', 'Progressões (PA/PG)', 'Matrizes e determinantes', 'Análise combinatória', 'Probabilidade', 'Geometria analítica', 'Geometria espacial', 'Números complexos', 'Estatística'].map((t) => <li class="flex items-center gap-2"><span class="h-1 w-1 rounded-full bg-stone-400"></span>{t}</li>)}
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <FAQ items={faqs} title="Dúvidas sobre reforço escolar" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Comece pelo diagnóstico.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl text-stone-600">
+        Em 30 minutos a gente descobre o que está travando — e se faz sentido continuar.
+      </p>
+      <CTAButtons message="Olá! Quero reforço escolar e gostaria de agendar a aula diagnóstica gratuita." />
+    </div>
+  </section>
+</Base>

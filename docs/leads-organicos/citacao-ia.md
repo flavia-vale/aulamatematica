@@ -68,6 +68,37 @@ base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela �
 
 ## Histórico
 
-| Ciclo | Data | Citações (de 28) | Superfícies que citam (de 4) | Observação |
+| Ciclo | Data | Citações | Superfícies que citam | Observação |
 |---|---|---|---|---|
-| 0 | — | | | ainda não medido |
+| 0 | 2026-09-03 | 0 de 4 | 0 de 4 | só a consulta 1; site ainda não publicado |
+
+### Ciclo 0 · consulta 1 — `Aulas de Matemática BH`
+
+Quatro superfícies, zero citações. **O site ainda não está no ar, então isso era
+o esperado** — o valor desta linha é ser a linha de base do "antes". O que ela
+revela além do zero:
+
+**A marca é ambígua, como previsto.** Nenhuma das quatro superfícies leu "Aulas
+de Matemática BH" como nome de alguém. As quatro leram como descrição genérica e
+devolveram lista de professores de Belo Horizonte. O risco levantado ao montar
+esta consulta se confirmou na primeira medição.
+
+**Quem vence essa consulta não são sites — são fichas do Google.** As respostas
+mais ricas (resumo de IA do Google, Gemini) são feitas de perfis do Google
+Business Profile: endereço, bairro, telefone, nota e número de avaliações. O
+ChatGPT lista por bairro. Perplexity vai direto para marketplace. **Nenhuma
+superfície recomendou um site institucional.** Um site bem otimizado, sozinho,
+provavelmente não ganha esta consulta.
+
+**"BH" no nome ancora num mercado presencial.** As quatro superfícies
+interpretaram a consulta como aula presencial, por bairro. Nenhuma ofereceu aula
+online de alcance nacional. O serviço é 100% online para todo o Brasil — há uma
+tensão real entre o nome e o produto, e ela aparece já na primeira medição.
+
+**O diferencial "UFMG" não é exclusivo.** O resumo de IA do Google cita Vanessa
+Marçal, "formada pela UFMG", e um anúncio no Superprof de "estudante de
+matemática na UFMG, 4º período, R$35/h" — posicionamento idêntico, preço
+declarado. A consulta 6 (`aula particular de matemática com professora da UFMG`)
+ficou muito mais interessante do que parecia.
+
+Concorrentes e preços coletados: **[concorrentes.md](concorrentes.md)**.

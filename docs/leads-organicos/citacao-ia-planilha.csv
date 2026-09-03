@@ -1,8 +1,8 @@
 Ciclo,Data,#,Tipo,Consulta,Superficie,Citou o site? (sim/nao),Acertou os fatos? (sim/nao/parcial),Quem citou no lugar,Observacao
-0,,1,marca sozinha,Aulas de Matemática BH,ChatGPT,,,,
-0,,1,marca sozinha,Aulas de Matemática BH,Gemini,,,,
-0,,1,marca sozinha,Aulas de Matemática BH,Perplexity,,,,
-0,,1,marca sozinha,Aulas de Matemática BH,Resumo de IA do Google,,,,
+0,2026-09-03,1,marca sozinha,Aulas de Matemática BH,ChatGPT,nao,n/a — nao citou,Eduardo Borges Matematica; Alex Fabiani Matematica; Alfredo Matematica; Wagner Chebile; Ana Clara Barcelos; Bruna M./EDUCAMENT; Curso de Exatas; Cursinho BH Dois Pontos; Superprof,"Leu 'BH' como geografia presencial e devolveu fichas locais por bairro (Savassi, Centro, Buritis, Floresta). Citou preco de plataforma R$40-50/h. Perguntou se era ensino medio/ENEM ou faculdade."
+0,2026-09-03,1,marca sozinha,Aulas de Matemática BH,Gemini,nao,n/a — nao citou,Wagner Chebile; Reforco Escolar Cida Lage; Bruna M./EDUCAMENT; Lucas Groenner; Aprender em Casa; Semear para Crescer; KOGNO Cidade Jardim,"So centros e professores presenciais de BH, todos identificados por bairro. Nenhuma mencao a aula online. Nenhum preco."
+0,2026-09-03,1,marca sozinha,Aulas de Matemática BH,Perplexity,nao,n/a — nao citou,Superprof; Mestres da Matematica; Professor Bruno,"Resposta mais curta e mais dependente de marketplace. Preco medio Superprof R$46-49/h, com primeira aula gratuita. Sugeriu filtrar por bairro."
+0,2026-09-03,1,marca sozinha,Aulas de Matemática BH,Resumo de IA do Google,nao,n/a — nao citou,Eduardo Borges Matematica; Educament/Bruna M.; Aprender em Casa; Token Metodo; Vanessa Marcal (formada pela UFMG); Superprof; Preply,"A resposta mais rica: fichas do Google Business Profile com endereco, nota e numero de avaliacoes, mais tabela de precos. Vanessa Marcal aparece com o MESMO diferencial (UFMG). No Superprof, anuncio de 'estudante de matematica na UFMG, 4o periodo, R$35/h'."
 0,,2,marca + preço,quanto custa aula com a professora Taciane Andrade de matemática,ChatGPT,,,,
 0,,2,marca + preço,quanto custa aula com a professora Taciane Andrade de matemática,Gemini,,,,
 0,,2,marca + preço,quanto custa aula com a professora Taciane Andrade de matemática,Perplexity,,,,

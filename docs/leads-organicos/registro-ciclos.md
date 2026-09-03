@@ -101,3 +101,33 @@ Entra como pergunta 4 do Ciclo 1.
 **Próxima ação, na ordem:** trocar os nameservers na Cloudflare → publicar →
 verificar a propriedade → pedir as 11 indexações. A Fase 3 (citação por IA) pode
 ser feita hoje, em paralelo, sem depender de nada disso.
+
+### Continuação — primeira medição de IA (2026-09-03)
+
+**O que foi feito**
+
+- Fase 3 iniciada: consulta 1 (`Aulas de Matemática BH`) medida nas 4
+  superfícies. Resultado na planilha e a leitura em [citacao-ia.md](citacao-ia.md).
+- Lista B de concorrentes montada: 19 nomes distintos, com preços de mercado
+  anotados com fonte e data. [concorrentes.md](concorrentes.md).
+
+**O que a medição derrubou**
+
+- *"Um site bem feito ganha a busca pelo nome da operação."* Não nesta consulta.
+  As quatro superfícies responderam com fichas do Google Business Profile e
+  marketplaces; **nenhuma recomendou um site institucional**. Otimizar o site não
+  é o caminho para esta consulta específica — ter perfil no Google é.
+- *"UFMG é o diferencial."* É um diferencial comum. Na mesma resposta aparecem
+  uma professora formada pela UFMG e um anúncio de estudante da UFMG por
+  R$35/h. O diferencial defensável precisa ser mais específico do que a
+  instituição.
+
+**Hipótese levantada, não medida — o nome ancora no mercado errado**
+
+As quatro superfícies leram "BH" como presencial e listaram por bairro. Nenhuma
+ofereceu aula online nacional. O serviço é 100% online para todo o Brasil. Isso
+não é motivo para trocar nada agora — é uma pergunta a responder com as
+consultas 3 e 4 (categoria e lista), que não têm âncora geográfica. Se elas
+também não citarem, o problema é de presença; se citarem, o problema é do nome.
+
+**Ainda faltam 24 linhas:** consultas 2 a 7, mesmas 4 superfícies.

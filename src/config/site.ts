@@ -17,6 +17,11 @@ export const site = {
   contact: {
     whatsappRaw: '5532999993956',
     whatsappDisplay: '(32) 99999-3956',
+    // NÃO RENDERIZE este endereço sem antes configurar e-mail no domínio.
+    // O DNS tem null MX (`MX . 0`) e `v=spf1 -all`: o domínio declara que não
+    // envia nem recebe e-mail. Publicar este endereço hoje entrega ao visitante
+    // um canal que descarta a mensagem em silêncio. Hoje ele não aparece em
+    // nenhuma página — conferido no HTML compilado.
     email: 'contato@aulasdematematicabh.com.br',
   },
   social: {

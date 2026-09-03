@@ -202,3 +202,59 @@ Gemini herdando contexto da conversa anterior (respondeu como se quem
 perguntasse quisesse anunciar aulas, não contratar). Adicionada uma conferência
 de cinco itens no topo de [citacao-ia.md](citacao-ia.md), para rodar **a cada
 consulta**, não uma vez por sessão.
+
+### Continuação — consulta 5 (2026-09-03)
+
+**Correção de uma leitura minha, não do dado**
+
+No registro da consulta 3 eu montei um binário: ou a consulta 5 citaria algum
+site de professor (e o caminho seria conteúdo de dor específica), ou viria
+zerada (e o site seria o canal errado). **O binário estava errado.** Veio uma
+terceira coisa, que eu não tinha previsto: nesta consulta **ninguém é
+recomendado**. Três das quatro superfícies — as três linhas limpas — não
+nomearam um único professor, centro, marketplace ou site de serviço. Só conselho.
+
+**O que isso na verdade revela**
+
+As marcas citadas existem, mas são de outra natureza: **Khan Academy, GeoGebra e
+quatro canais de YouTube** (Matemática Rio, Ferretto, Gis com Giz, Equaciona).
+
+Isso reorganiza as quatro consultas medidas:
+
+| Tipo de consulta | Quem é citado | O site compete? |
+|---|---|---|
+| 1, 3, 6 · "me liste professores" | marketplaces e fichas do Google | não, por formato |
+| 5 · "o que eu faço" | conteúdo gratuito | **sim, por formato** |
+
+É a primeira das quatro em que o formato do vencedor coincide com o formato do
+ativo. Plausível, não provado: nada garante que um blog novo entre numa lista
+onde estão Khan Academy e canais com milhões de inscritos.
+
+**O que a medição entregou de volta — um diferencial no lugar do que caiu**
+
+A consulta 6 derrubou "professora da UFMG" como diferencial. A consulta 5
+devolveu um substituto, e veio da boca das próprias IAs. O ChatGPT redigiu a
+mensagem que um pai deveria mandar antes de contratar — *"gostaria que você
+fizesse uma avaliação para identificar possíveis lacunas dos anos anteriores;
+você trabalha dessa forma?"* — e disse que não contrataria quem respondesse
+apenas "sim, posso ajudar com as matérias da escola".
+
+Isso é a **aula diagnóstica gratuita**, que o site já oferece e já usa em todos
+os CTAs. O diferencial defensável não é a credencial: é diagnosticar antes de
+acompanhar. É exatamente o que as IAs instruem um pai a procurar.
+
+**Um dado que contradiz a consulta 6**
+
+HENRIQUE, licenciado em Matemática pela UFMG, cobra **R$100/h** com 98
+avaliações nota 5 — muito acima da faixa que a consulta 6 atribuiu à credencial
+formada (R$40–70/h). A credencial não sustenta preço; **reputação acumulada
+sustenta**. Reforça, por outro caminho, que avaliação pública é ativo e que o
+site não tem nenhuma.
+
+**Quarta contaminação, terceira seguida do ChatGPT**
+
+Memória atravessando consultas, e nomes que só apareceram após pergunta de
+acompanhamento — que o protocolo proíbe. A conferência de higiene já está
+escrita; o problema é ela não estar sendo executada antes de cada consulta.
+
+**Faltam 12 linhas:** consultas 2, 4 e 7.

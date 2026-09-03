@@ -87,7 +87,7 @@ base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela �
 
 | Ciclo | Data | Citações | Superfícies que citam | Observação |
 |---|---|---|---|---|
-| 0 | 2026-09-03 | 0 de 12 | 0 de 4 | consultas 1, 3 e 6; site ainda não publicado; 3 linhas contaminadas |
+| 0 | 2026-09-03 | 0 de 16 | 0 de 4 | consultas 1, 3, 5 e 6; site ainda não publicado; 4 linhas contaminadas |
 
 ### Ciclo 0 · consulta 1 — `Aulas de Matemática BH`
 
@@ -119,6 +119,65 @@ declarado. A consulta 6 (`aula particular de matemática com professora da UFMG`
 ficou muito mais interessante do que parecia.
 
 Concorrentes e preços coletados: **[concorrentes.md](concorrentes.md)**.
+
+### Ciclo 0 · consulta 5 — `meu filho está indo mal em matemática no 9º ano, o que fazer`
+
+A consulta que eu tinha chamado de decisiva. Zero citações de novo — mas o
+resultado **não é o que eu tinha previsto, em nenhuma das duas direções**.
+
+**Eu tinha montado um binário errado.** Disse que ou algum site de professor
+seria citado (e o caminho seria conteúdo), ou tudo viria zerado (e o site seria
+o canal errado). Veio uma terceira coisa: **nesta consulta ninguém é
+recomendado.** Gemini, Perplexity e o resumo do Google não nomearam um único
+professor, centro, marketplace ou site de serviço. Deram conselho, e só.
+
+**Mas conteúdo *é* citado — só não o nosso.** As três linhas limpas nomearam:
+
+| Citado | Por |
+|---|---|
+| Khan Academy | Gemini, Perplexity |
+| GeoGebra | Gemini |
+| YouTube: Matemática Rio, Ferretto, Gis com Giz, Equaciona | Perplexity |
+| nenhuma fonte | resumo de IA do Google |
+
+Isto muda a leitura das três consultas anteriores. Nas de diretório (1, 3, 6) o
+concorrente é marketplace e ficha do Google. **Aqui o concorrente é conteúdo
+gratuito** — e conteúdo gratuito é justamente o formato que o site tem como
+competir. É a primeira das quatro consultas em que existe um caminho plausível
+para ser citado.
+
+Plausível, não provado: nada garante que um blog de professora particular entre
+numa lista onde hoje estão Khan Academy e canais com milhões de inscritos. Mas
+é a primeira vez que o formato do vencedor coincide com o formato do ativo.
+
+**O conselho das quatro superfícies é o conteúdo que o site já tem.** Diagnosticar
+a lacuna antes de avançar; a base do 7º e 8º ano que estourou no 9º; sessões
+curtas e frequentes em vez de maratona; não dizer "eu também era ruim em
+matemática". Esta última é literalmente a frase de abertura do artigo
+`/blog/por-que-matematica-parece-dificil`. O alinhamento existe; a indexação é
+que não.
+
+**E apareceu um substituto para o diferencial que a consulta 6 derrubou.** O
+ChatGPT chegou a redigir a mensagem que um pai deveria mandar antes de contratar:
+
+> *"Antes de simplesmente acompanhar a matéria atual, gostaria que você fizesse
+> uma avaliação para identificar possíveis lacunas dos anos anteriores. Você
+> trabalha dessa forma?"*
+
+E completou: *"eu não contrataria alguém que respondesse apenas 'sim, posso
+ajudá-lo com as matérias da escola'."*
+
+Isso é a **aula diagnóstica gratuita** que o site já oferece, e que aparece em
+todos os CTAs. O diferencial defensável não é a credencial — é o método de
+diagnosticar antes de acompanhar. É o que as IAs dizem a um pai para procurar.
+
+> **Terceira contaminação seguida do ChatGPT.** A memória atravessou as
+> consultas: *"Como você estava procurando recentemente professor particular de
+> Matemática…"*. E os nomes só apareceram depois de uma pergunta de
+> acompanhamento — que o protocolo proíbe. Linha fora da série. Achado que
+> sobrevive: HENRIQUE, licenciado em Matemática pela UFMG, cobra **R$100/h** com
+> 98 avaliações nota 5, bem acima da faixa que a consulta 6 atribuiu à
+> credencial. A credencial não sustenta preço; **reputação acumulada sustenta**.
 
 ### Ciclo 0 · consulta 6 — `aula particular de matemática com professora da UFMG`
 

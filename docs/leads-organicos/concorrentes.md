@@ -88,6 +88,25 @@ O Gemini citou como caminho o **mural físico do ICEx (Campus Pampulha)** e
 grupos de estudantes da UFMG no Facebook e Telegram, além de **Corujito**,
 plataforma focada em tutores de universidades públicas.
 
+### Conteúdo gratuito — consulta 5, 2026-09-03
+
+Na consulta de dor específica, **nenhum professor, centro ou marketplace foi
+recomendado por nenhuma das três linhas limpas**. As únicas marcas citadas são
+fontes de conteúdo:
+
+| Fonte | Natureza | Citada por |
+|---|---|---|
+| Khan Academy | plataforma gratuita | Gemini, Perplexity |
+| GeoGebra | ferramenta gratuita | Gemini |
+| Matemática Rio | canal de YouTube | Perplexity |
+| Ferretto Matemática | canal de YouTube | Perplexity |
+| Gis com Giz | canal de YouTube | Perplexity |
+| Equaciona | canal de YouTube | Perplexity |
+
+**Nesta consulta o concorrente não é outro professor — é conteúdo gratuito.**
+É a única das quatro consultas medidas em que o formato do vencedor coincide com
+o formato do que o site tem a oferecer.
+
 ## Preço de mercado
 
 Registrado com fonte e data, como manda a regra — preço de concorrente sem os
@@ -109,6 +128,7 @@ dois campos não entra em lugar nenhum.
 | **R$ 35–50 / h** | **estudante de graduação da UFMG, fundamental e médio** | resumo de IA do Google | 2026-09-03 |
 | R$ 40–70 / h | professora formada pela UFMG, fundamental, médio e ENEM | resumo de IA do Google | 2026-09-03 |
 | R$ 70–120 / h | pós-graduada ou mestranda pela UFMG, ensino superior | resumo de IA do Google | 2026-09-03 |
+| R$ 100 / h | HENRIQUE, licenciado em Matemática pela UFMG, 10+ anos, 98 avaliações nota 5, fundamental II | ChatGPT (linha contaminada), via Superprof | 2026-09-03 |
 
 São valores relatados por IAs, não coletados na fonte primária. Trate como
 ordem de grandeza, não como tabela.

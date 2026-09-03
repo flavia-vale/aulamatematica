@@ -28,7 +28,12 @@ As sete consultas, adaptadas para esta operação:
 
 ## Planilha
 
-Uma linha por consulta × superfície (28 linhas/mês). Quatro colunas:
+**Já está pronta em [`citacao-ia-planilha.csv`](citacao-ia-planilha.csv)** — 28 linhas,
+com as consultas e as superfícies preenchidas. Abra no Google Sheets ou no Excel
+e preencha as colunas vazias. Duplique o bloco a cada ciclo, mudando a coluna
+`Ciclo`.
+
+Uma linha por consulta × superfície. As colunas que você preenche:
 
 | Consulta | Superfície | Citou o site? | Acertou os fatos? | **Quem citou no lugar** |
 |---|---|---|---|---|
@@ -54,6 +59,12 @@ metodologia da empresa, o resumo de IA do Google *inventou* uma metodologia com
 pilares nomeados e citou fontes falsas. Se a consulta 5 ou 6 devolver uma
 descrição errada do método de trabalho, o conserto é **publicar a página real**,
 não reclamar. O `llms.txt` e as páginas de FAQ existem para isso.
+
+## Esta medição não depende do site estar no ar
+
+Pelo contrário: rodar a Fase 3 **antes** do domínio propagar produz a linha de
+base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela é a
+única prova de que alguma coisa mudou. São 20 minutos, e podem ser hoje.
 
 ## Histórico
 

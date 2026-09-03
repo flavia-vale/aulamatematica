@@ -54,6 +54,40 @@ Também apareceram, como fonte, um perfil de Instagram
 (`@profraimundoalmeida`) e um anúncio de vaga no Jooble — mas **nenhum site
 institucional de professor particular, em nenhuma das quatro superfícies**.
 
+### Professores da UFMG — consulta 6, 2026-09-03
+
+A consulta do diferencial. Doze professores com vínculo UFMG nomeados nas
+quatro superfícies, vários com preço declarado.
+
+| Nome | Vínculo UFMG | Preço | Citado por |
+|---|---|---|---|
+| Vanessa Marçal | formada, 8+ anos | — | Google (também na consulta 1) |
+| Rafaella | Licenciatura em Matemática | R$ 60/h | Google |
+| Aline | formada | R$ 40/h | Google |
+| Mariana | Eng. Química, ex-monitora de Cálculo/GAAL | R$ 40/h | Google |
+| Patrícia | — | R$ 45/h | Google |
+| João | formado em Matemática | — | Google |
+| Vivian | formada em Matemática | R$ 60/h | ChatGPT ¹ |
+| Mariana | licenciada, +2.000h de aula | R$ 75/h | ChatGPT ¹ |
+| **Thais** | **estudante de Matemática** | R$ 50/h | ChatGPT ¹ |
+| Adriana Xavier | bacharel + pós | — | Perplexity |
+| Naara Eugênio | graduada em Matemática | — | Perplexity |
+| **Julia Mendonça Pires** | **graduanda em Licenciatura em Matemática, desde 2018** | — | Perplexity |
+| Luiz Henrique O. Alves | mestrando em Matemática | — | Perplexity |
+
+¹ linha contaminada, ver [citacao-ia.md](citacao-ia.md) — os nomes seguem
+válidos como concorrentes, o zero da linha não entra na série.
+
+**Julia Mendonça Pires** e **Thais** têm o posicionamento idêntico ao do site:
+graduanda / estudante de Licenciatura em Matemática na UFMG. Julia anuncia
+"desde 2018".
+
+### Canais fora do site — consulta 6
+
+O Gemini citou como caminho o **mural físico do ICEx (Campus Pampulha)** e
+grupos de estudantes da UFMG no Facebook e Telegram, além de **Corujito**,
+plataforma focada em tutores de universidades públicas.
+
 ## Preço de mercado
 
 Registrado com fonte e data, como manda a regra — preço de concorrente sem os
@@ -72,6 +106,9 @@ dois campos não entra em lugar nenhum.
 | R$ 80–150+ / h | superior (cálculo, álgebra linear) | Gemini | 2026-09-03 |
 | R$ 49–60 / aula | plataformas, online | Perplexity | 2026-09-03 |
 | R$ 33–50 / h | vaga anunciada para professor particular em BH | Jooble, via resumo de IA do Google | 2026-09-03 |
+| **R$ 35–50 / h** | **estudante de graduação da UFMG, fundamental e médio** | resumo de IA do Google | 2026-09-03 |
+| R$ 40–70 / h | professora formada pela UFMG, fundamental, médio e ENEM | resumo de IA do Google | 2026-09-03 |
+| R$ 70–120 / h | pós-graduada ou mestranda pela UFMG, ensino superior | resumo de IA do Google | 2026-09-03 |
 
 São valores relatados por IAs, não coletados na fonte primária. Trate como
 ordem de grandeza, não como tabela.

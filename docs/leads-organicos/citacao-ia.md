@@ -6,6 +6,23 @@ No projeto de origem esse foi **o canal que mais trouxe cliente** — 43% dos
 cadastros vieram do ChatGPT com apenas 18% das visitas, enquanto o Google trazia
 70% das visitas.
 
+## Antes de começar — higiene da medição
+
+Três rodadas, três linhas contaminadas. **Faça esta conferência a cada consulta,
+não uma vez por sessão:**
+
+- [ ] Janela **anônima**, sem login, em todas as quatro superfícies.
+- [ ] No ChatGPT: memória desligada, ou conta deslogada. Contaminou duas vezes
+      seguidas mesmo parecendo neutra.
+- [ ] No Gemini: **conversa nova a cada consulta**. O contexto da anterior vaza
+      e muda o papel que o modelo assume.
+- [ ] Cole a consulta **sozinha**, sem pergunta de acompanhamento antes.
+- [ ] Se a resposta mencionar você, seu curso, sua cidade ou seu projeto: a
+      linha está contaminada. Marque e refaça.
+
+Linha contaminada não é lixo — os concorrentes que ela nomeia continuam
+valendo. O que não vale é o "citou / não citou" entrar na série histórica.
+
 ## Protocolo
 
 **7 consultas fixas × 4 superfícies.** Sempre as mesmas perguntas, sempre na
@@ -70,7 +87,7 @@ base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela �
 
 | Ciclo | Data | Citações | Superfícies que citam | Observação |
 |---|---|---|---|---|
-| 0 | 2026-09-03 | 0 de 8 | 0 de 4 | consultas 1 e 3; site ainda não publicado; linha ChatGPT/consulta 3 contaminada |
+| 0 | 2026-09-03 | 0 de 12 | 0 de 4 | consultas 1, 3 e 6; site ainda não publicado; 3 linhas contaminadas |
 
 ### Ciclo 0 · consulta 1 — `Aulas de Matemática BH`
 
@@ -102,6 +119,42 @@ declarado. A consulta 6 (`aula particular de matemática com professora da UFMG`
 ficou muito mais interessante do que parecia.
 
 Concorrentes e preços coletados: **[concorrentes.md](concorrentes.md)**.
+
+### Ciclo 0 · consulta 6 — `aula particular de matemática com professora da UFMG`
+
+A consulta do diferencial. Zero citações nas quatro — e as duas linhas limpas
+(Google e Perplexity) são as que doem.
+
+**O diferencial não é diferencial.** As quatro superfícies nomearam **doze
+professores com vínculo UFMG**, vários com preço. Duas com o posicionamento
+idêntico ao do site: **Julia Mendonça Pires**, "graduanda em Licenciatura em
+Matemática na UFMG, professora particular desde 2018", e **Thais**, "estudante
+de Matemática da UFMG", R$50/h. "Professora da UFMG" não distingue ninguém num
+mercado onde a UFMG forma turmas inteiras de licenciandos todo ano.
+
+**O resumo de IA do Google precificou a credencial.** Não a pessoa — a
+credencial:
+
+| Perfil | Faixa |
+|---|---|
+| Estudante de graduação da UFMG | **R$ 35–50 / h** |
+| Professora formada pela UFMG | R$ 40–70 / h |
+| Pós-graduada ou mestranda | R$ 70–120 / h |
+
+O posicionamento atual do site — "licencianda pela UFMG" — cai na **primeira
+linha, a mais barata**. Anunciar a credencial coloca a operação na faixa de
+entrada por construção. Isso é observação de mercado, não recomendação: quem
+decide preço e posicionamento é a dona do projeto.
+
+**E o mercado busca esse filtro dentro do marketplace.** O Google instruiu
+literalmente: "Superprof é o caminho mais rápido para filtrar por professoras da
+UFMG — digite UFMG na barra de pesquisa interna". A demanda pelo diferencial
+existe e é atendida lá dentro.
+
+**Duas linhas contaminadas.** ChatGPT, segunda vez seguida, ainda logado. Gemini
+respondeu como se quem perguntasse quisesse **anunciar** aulas, não contratar —
+contexto da conversa anterior vazando. Ambas fora da série; os nomes que
+trouxeram seguem válidos. Ver a conferência no topo deste documento.
 
 ### Ciclo 0 · consulta 3 — `professor particular de matemática online`
 

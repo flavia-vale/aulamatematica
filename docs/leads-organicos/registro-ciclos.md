@@ -164,3 +164,41 @@ resposta pelo perfil de quem perguntou, transformando a consulta de categoria
 numa consulta de nível superior. Linha marcada como contaminada e fora da série.
 O protocolo já exigia aba anônima; a conferência passou a ser o primeiro passo
 de cada rodada.
+
+### Continuação — consulta 6 (2026-09-03)
+
+**O que a medição derrubou**
+
+- *"O diferencial é ser professora da UFMG."* Derrubado com nome e preço. As
+  quatro superfícies nomearam **doze** professores com vínculo UFMG, e **duas
+  têm o posicionamento idêntico** ao do site: Julia Mendonça Pires, "graduanda
+  em Licenciatura em Matemática na UFMG desde 2018", e Thais, "estudante de
+  Matemática da UFMG", R$50/h. A credencial não distingue.
+- *"Anunciar a UFMG sustenta o preço."* O resumo de IA do Google precificou a
+  credencial em três faixas, e "estudante de graduação da UFMG" é a mais barata:
+  R$35–50/h. Anunciar a credencial ancora a operação na faixa de entrada.
+  Observação de mercado; preço e posicionamento são decisão da dona do projeto.
+
+**Onde isso deixa a pergunta do canal**
+
+Três consultas medidas (1, 3, 6), doze respostas, **zero citações de qualquer
+site institucional de professor particular**. Mas as três eram consultas de
+diretório — "me liste professores". Um site nunca ganha esse formato.
+
+Falta a **consulta 5** (`meu filho está indo mal em matemática no 9º ano, o que
+fazer`). É a única do conjunto que pede conselho em vez de lista, e é onde o
+conteúdo do site compete de verdade. Ela decide entre duas leituras:
+
+- Se citar algum site de professor → o caminho é conteúdo que responde dor
+  específica, e as páginas de serviço tipo diretório são o que não funciona.
+- Se também vier zerada → em nenhuma das superfícies medidas a demanda é
+  atendida por sites individuais, e o Ciclo 1 precisa pôr marketplace, perfil no
+  Google e presença social na mesa **ao lado** do site, não depois dele.
+
+**Erro de método, de novo**
+
+Duas das quatro linhas contaminadas: ChatGPT logado pela segunda vez seguida, e
+Gemini herdando contexto da conversa anterior (respondeu como se quem
+perguntasse quisesse anunciar aulas, não contratar). Adicionada uma conferência
+de cinco itens no topo de [citacao-ia.md](citacao-ia.md), para rodar **a cada
+consulta**, não uma vez por sessão.

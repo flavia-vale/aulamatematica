@@ -36,6 +36,24 @@ superfícies. 19 nomes distintos, nenhum deles este site.
 | Professor Bruno | reforço, CEFET e Colégio Militar | Perplexity |
 | Preply | marketplace | Google |
 
+### Plataformas — consulta 3, 2026-09-03
+
+Na consulta de categoria (`professor particular de matemática online`), **as
+quatro superfícies responderam quase só com marketplaces**, não com pessoas.
+
+| Plataforma | Citada por |
+|---|---|
+| Superprof | ChatGPT, Gemini, Perplexity, Google |
+| Preply | Gemini, Perplexity, Google |
+| Suas Aulas Particulares | Perplexity, Google |
+| GetNinjas | Gemini, Perplexity |
+| Professores de Plantão / Profes | Gemini |
+| OLX | Google |
+
+Também apareceram, como fonte, um perfil de Instagram
+(`@profraimundoalmeida`) e um anúncio de vaga no Jooble — mas **nenhum site
+institucional de professor particular, em nenhuma das quatro superfícies**.
+
 ## Preço de mercado
 
 Registrado com fonte e data, como manda a regra — preço de concorrente sem os
@@ -48,6 +66,12 @@ dois campos não entra em lugar nenhum.
 | R$ 50–150 / h | reforço individual, domicílio ou centro | resumo de IA do Google | 2026-09-03 |
 | R$ 150–400+ / mês | salinhas e preparatórios em turma | resumo de IA do Google | 2026-09-03 |
 | R$ 35 / h | anúncio de estudante de Matemática da UFMG, 4º período, no Superprof | resumo de IA do Google | 2026-09-03 |
+| a partir de R$ 25 / h | Superprof online, entrada da plataforma (125.730 professores) | resumo de IA do Google | 2026-09-03 |
+| R$ 40–70 / h | fundamental, online | Gemini | 2026-09-03 |
+| R$ 50–90 / h | médio e ENEM, online | Gemini | 2026-09-03 |
+| R$ 80–150+ / h | superior (cálculo, álgebra linear) | Gemini | 2026-09-03 |
+| R$ 49–60 / aula | plataformas, online | Perplexity | 2026-09-03 |
+| R$ 33–50 / h | vaga anunciada para professor particular em BH | Jooble, via resumo de IA do Google | 2026-09-03 |
 
 São valores relatados por IAs, não coletados na fonte primária. Trate como
 ordem de grandeza, não como tabela.

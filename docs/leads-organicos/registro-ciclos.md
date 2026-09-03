@@ -131,3 +131,36 @@ consultas 3 e 4 (categoria e lista), que não têm âncora geográfica. Se elas
 também não citarem, o problema é de presença; se citarem, o problema é do nome.
 
 **Ainda faltam 24 linhas:** consultas 2 a 7, mesmas 4 superfícies.
+
+### Continuação — consulta 3 (2026-09-03)
+
+**O que a medição derrubou**
+
+- *"O site não é citado porque o nome ancora em BH."* Levantada na consulta 1,
+  derrubada na consulta 3: sem nenhuma âncora geográfica, o site continua não
+  sendo citado. O nome pode ser um problema, mas não é **este** problema.
+
+**O achado que se repetiu — e por isso pesa**
+
+Duas consultas, quatro superfícies cada, oito respostas: **nenhum site
+institucional de professor particular foi citado por ninguém.** O que vence é
+ficha do Google Business Profile (consulta 1) ou marketplace (consulta 3).
+
+Isto toca a premissa do plano inteiro, então merece o cuidado de não virar
+decisão precipitada. São 2 consultas de 7, e faltam justamente as que um site
+tem chance de ganhar: a 5 (dor específica, em linguagem de cliente) e a 6
+(diferencial). Um site responde uma pergunta longa e específica melhor que um
+diretório — é aí que ele compete, não em "me liste professores".
+
+Se as consultas 5 e 6 também vierem zeradas, a leitura muda de "o site ainda não
+está no ar" para "o canal escolhido não é onde essa demanda é atendida", e o
+Ciclo 1 precisa colocar presença em marketplace e perfil no Google na mesa, ao
+lado do site. **Não antes disso.**
+
+**Erro de método, registrado**
+
+A linha ChatGPT/consulta 3 saiu de sessão logada e o modelo personalizou a
+resposta pelo perfil de quem perguntou, transformando a consulta de categoria
+numa consulta de nível superior. Linha marcada como contaminada e fora da série.
+O protocolo já exigia aba anônima; a conferência passou a ser o primeiro passo
+de cada rodada.

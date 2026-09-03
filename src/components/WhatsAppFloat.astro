@@ -1,6 +1,6 @@
 ---
-import { waLink } from '../config/site';
-const href = waLink();
+import { waLinkFor } from '../config/site';
+const href = waLinkFor(Astro.url.pathname);
 ---
 
 <a

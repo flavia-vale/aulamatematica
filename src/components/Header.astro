@@ -1,5 +1,5 @@
 ---
-import { site, waLink } from '../config/site';
+import { site, waLinkFor } from '../config/site';
 
 const nav = [
   { href: '/aulas-particulares-matematica-bh', label: 'Aulas em BH' },
@@ -25,7 +25,7 @@ const nav = [
     </nav>
 
     <a
-      href={waLink()}
+      href={waLinkFor(Astro.url.pathname)}
       target="_blank"
       rel="noopener"
       class="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-4 py-2 text-sm font-semibold text-stone-50 transition hover:bg-stone-800"

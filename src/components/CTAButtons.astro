@@ -1,8 +1,8 @@
 ---
-import { waLink } from '../config/site';
+import { waLink, leadMessage } from '../config/site';
 interface Props { message?: string; secondaryHref?: string; secondaryLabel?: string }
 const {
-  message = 'Olá! Quero agendar a aula diagnóstica gratuita.',
+  message = leadMessage(Astro.url.pathname),
   secondaryHref,
   secondaryLabel = 'Saber mais',
 } = Astro.props;

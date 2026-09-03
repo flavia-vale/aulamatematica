@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, waLink } from '../config/site';
+import { site, waLinkFor } from '../config/site';
 import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../lib/schema';
 
 const path = '/contato';
@@ -50,7 +50,7 @@ const schema = graph(
             Mande uma mensagem com a série do aluno e o motivo da busca (notas baixas, prova chegando, recuperação). Envio um horário disponível para a diagnóstica gratuita.
           </p>
           <a
-            href={waLink('Olá! Vim pelo site. Gostaria de agendar a aula diagnóstica gratuita de matemática.')}
+            href={waLinkFor(Astro.url.pathname)}
             target="_blank"
             rel="noopener"
             class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 font-semibold text-white transition hover:bg-emerald-700"

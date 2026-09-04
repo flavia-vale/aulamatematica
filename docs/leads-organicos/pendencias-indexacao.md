@@ -21,22 +21,25 @@ resolve os três de uma vez.
 
 ## Lista
 
-Estado inicial: **nenhuma página foi pedida ainda**, porque a propriedade no
-Search Console ainda não foi verificada. Assim que for, estes 11 pedidos são a
-ação de maior retorno por minuto de todo o ciclo (cabem em um dia).
+Domínio verificado no Search Console e site no ar em Cloudflare Workers.
+9 de 11 páginas já pedidas; faltam as 2 últimas do blog (cota diária de
+~10-12, o que sobrou entra amanhã).
 
 | Rota | Pedido em | Indexada? | Observação |
 |---|---|---|---|
-| `/` | — | — | prioridade 1 |
-| `/aulas-particulares-matematica-bh` | — | — | prioridade 1 |
-| `/aulas-de-matematica-online` | — | — | prioridade 1 |
-| `/reforco-escolar-matematica` | — | — | prioridade 1 |
-| `/enem-matematica` | — | — | prioridade 1 |
-| `/sobre` | — | — | prioridade 2 |
-| `/contato` | — | — | prioridade 2 |
-| `/blog` | — | — | prioridade 2 |
-| `/blog/como-ajudar-filho-matematica` | — | — | prioridade 2 |
-| `/blog/como-estudar-matematica-enem` | — | — | prioridade 2 |
-| `/blog/por-que-matematica-parece-dificil` | — | — | prioridade 2 |
+| `/` | 2026-09-04 | — | prioridade 1 |
+| `/aulas-particulares-matematica-bh` | 2026-09-04 | — | prioridade 1 |
+| `/aulas-de-matematica-online` | 2026-09-04 | — | prioridade 1 |
+| `/reforco-escolar-matematica` | 2026-09-04 | — | prioridade 1 |
+| `/enem-matematica` | 2026-09-04 | — | prioridade 1 |
+| `/sobre` | 2026-09-04 | — | prioridade 2 |
+| `/contato` | 2026-09-04 | — | prioridade 2 |
+| `/blog` | 2026-09-04 | — | prioridade 2 |
+| `/blog/como-ajudar-filho-matematica` | 2026-09-04 | — | prioridade 2 |
+| `/blog/como-estudar-matematica-enem` | **pendente** | — | prioridade 2 — pedir amanhã |
+| `/blog/por-que-matematica-parece-dificil` | **pendente** | — | prioridade 2 — pedir amanhã |
 
 `/404` não entra: é `noindex` por definição.
+
+"Indexada?" se preenche olhando de novo em Inspeção de URL daqui a alguns
+dias — o pedido não é instantâneo, é fila.

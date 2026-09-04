@@ -258,3 +258,39 @@ acompanhamento — que o protocolo proíbe. A conferência de higiene já está
 escrita; o problema é ela não estar sendo executada antes de cada consulta.
 
 **Faltam 12 linhas:** consultas 2, 4 e 7.
+
+### Continuação — domínio no ar, indexação pedida (2026-09-04)
+
+**O que foi feito**
+
+- Deploy resolvido: era projeto Workers (não Pages clássico), `wrangler deploy`
+  tentava instalar o adaptador `@astrojs/cloudflare` sozinho e falhava.
+  Corrigido com `wrangler.jsonc` declarando assets estáticos puros.
+- Bug pego ao vivo: `/robots.txt` e `/llms.txt` serviam com acentos corrompidos
+  (`MatemÃ¡tica`, `â€”`) — Workers Assets sem `charset=utf-8` no Content-Type,
+  navegador decodificando UTF-8 como Latin-1. Corrigido em `public/_headers`.
+- Domínio `aulasdematematicabh.com.br` conectado ao Worker via "Connect Worker"
+  na tela do domínio (equivalente ao Custom Domain do lado do Worker).
+- Propriedade de **Domínio** verificada no Search Console.
+- 9 de 11 páginas pedidas à indexação manual: as 5 de prioridade 1 e 4 de
+  prioridade 2. Faltam os 2 últimos posts do blog — cota diária.
+
+**Erro de leitura meu, registrado para não repetir**
+
+Recomendei checar `/sobre` sem `.html` achando que quebraria (era a suspeita
+mais forte do roteiro `deploy-e-dns.md`). Não quebrou — Workers Assets já
+resolve isso sozinho. O que quebrou foi algo que eu não tinha previsto: charset
+do Content-Type. Fica a lição: a lista de riscos escrita antes do deploy real
+não substitui olhar o resultado ao vivo.
+
+**Próximo passo**
+
+1. Pedir as 2 URLs restantes do blog amanhã.
+2. Rodar `npm run indexnow` (build primeiro) para avisar Bing/Yandex/DuckDuckGo
+   — ainda não foi feito.
+3. Esperar. Não escrever página nova nem mexer em título/descrição por ~30 dias:
+   é o tempo mínimo para o Search Console acumular dado que sustente as seis
+   perguntas da Fase 2.
+4. Enquanto espera: terminar as 16 linhas que faltam na planilha de citação por
+   IA (consultas 2, 4, 7, e as 4 refações contaminadas do ChatGPT/Gemini) —
+   não depende de nada acima.

@@ -1,0 +1,13 @@
+{
+  // Site 100% estático: sem Worker de servidor, sem adaptador do Astro.
+  // Sem este arquivo, o deploy assume que o projeto precisa do adaptador
+  // @astrojs/cloudflare (modo servidor) e tenta instalá-lo sozinho — foi
+  // isso que quebrou o primeiro deploy. Com "assets" apontando para dist/,
+  // o Wrangler só publica os arquivos já compilados pelo `astro build`.
+  "name": "aulamatematica",
+  "compatibility_date": "2026-09-04",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

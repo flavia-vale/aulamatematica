@@ -17,7 +17,12 @@
   Cache-Control: public, max-age=604800
 
 # O robots e o llms.txt mudam junto com o conteúdo: cache curto.
+# Content-Type explícito é necessário: sem "charset=utf-8" aqui, o Workers
+# Assets serve texto/plain sem charset e o navegador adivinha Latin-1,
+# corrompendo todo acento (visto ao vivo: "MatemÃ¡tica" em vez de "Matemática").
 /robots.txt
+  Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
 /llms.txt
+  Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600

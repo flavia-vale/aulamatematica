@@ -283,12 +283,13 @@ resolve isso sozinho. O que quebrou foi algo que eu não tinha previsto: charset
 do Content-Type. Fica a lição: a lista de riscos escrita antes do deploy real
 não substitui olhar o resultado ao vivo.
 
+**IndexNow rodado em 2026-09-04**: 11 URLs enviadas, HTTP 202 aceito por
+Bing/Yandex/DuckDuckGo de uma vez.
+
 **Próximo passo**
 
-1. Pedir as 2 URLs restantes do blog amanhã.
-2. Rodar `npm run indexnow` (build primeiro) para avisar Bing/Yandex/DuckDuckGo
-   — ainda não foi feito.
-3. Esperar. Não escrever página nova nem mexer em título/descrição por ~30 dias:
+1. Pedir as 2 URLs restantes do blog amanhã (cota diária do Google).
+2. Esperar. Não escrever página nova nem mexer em título/descrição por ~30 dias:
    é o tempo mínimo para o Search Console acumular dado que sustente as seis
    perguntas da Fase 2.
 4. Enquanto espera: terminar as 16 linhas que faltam na planilha de citação por

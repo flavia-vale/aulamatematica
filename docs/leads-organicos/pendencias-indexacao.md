@@ -32,12 +32,12 @@ qualidade ou por ninguém ter pedido.
 | Rota | Pedido em | Indexada? | Último rastreamento |
 |---|---|---|---|
 | `/` | 2026-09-04 | **sim** | 04/09 |
-| `/aulas-particulares-matematica-bh` | 2026-09-04 | **sim** | 04/09 |
+| `/aulas-particulares-matematica-bh` | 2026-09-04, **repetida em 2026-09-06** | **sim** | 04/09 |
 | `/aulas-de-matematica-online` | 2026-09-04 | **não** | — |
 | `/reforco-escolar-matematica` | 2026-09-04 | **sim** | 04/09 |
 | `/enem-matematica` | 2026-09-04 | **sim** | 04/09 |
-| `/sobre` | 2026-09-04 | **sim** | 04/09 |
-| `/contato` | 2026-09-04 | **sim** | 04/09 |
+| `/sobre` | 2026-09-04, **repetida em 2026-09-06** | **sim** | 04/09 |
+| `/contato` | 2026-09-04, **repetida em 2026-09-06** | **sim** | 04/09 |
 | `/blog` | 2026-09-04 | **sim** | 05/09 |
 | `/blog/como-ajudar-filho-matematica` | 2026-09-04 | **sim** | 04/09 |
 | `/blog/como-estudar-matematica-enem` | 2026-09-06 | não | — |
@@ -89,19 +89,37 @@ Os rastreamentos são de 04 e 05/09 — **anteriores às mudanças publicadas em
 `/aulas-particulares-matematica-bh` já serve o título de presencial. A regra 1
 desta página foi cumprida.
 
-### A leva pedida
+### A leva planejada, e o que a cota permitiu
 
-| Rota | Prioridade | Motivo |
-|---|---|---|
-| `/aulas-particulares-matematica-bh` | 1 | Mudou título **e** descrição, de online para presencial. Na prática é outra página. |
-| `/aulas-de-matematica-online` | 1 | Pedida em 04/09 e nunca indexada, sozinha entre as de prioridade 1. Repetição do pedido. |
-| `/` | 2 | Ganhou preço, depoimentos e foto. Título e descrição inalterados. |
-| `/enem-matematica` | 2 | Idem — e a sazonalidade sobe agora. Pedir em novembro é tarde: o pico é nas duas semanas da prova. |
-| `/sobre` | 2 | Idem. |
-| `/contato` | 2 | Idem. |
-| `/reforco-escolar-matematica` | 2 | Idem. |
+A cota do dia já estava parcialmente gasta: `/blog/como-estudar-matematica-enem`
+e `/blog/por-que-matematica-parece-dificil` foram pedidas na manhã de 06/09.
+Sobraram três pedidos.
 
-Sete pedidos, dentro da cota de ~10 a 12 por dia.
+| Rota | Prioridade | Pedida em 06/09? | Motivo |
+|---|---|---|---|
+| `/aulas-particulares-matematica-bh` | 1 | **sim** | Mudou título **e** descrição, de online para presencial. Na prática é outra página. |
+| `/aulas-de-matematica-online` | 1 | **não — fila** | Pedida em 04/09 e nunca indexada, sozinha entre as de prioridade 1. |
+| `/sobre` | 2 | **sim** | Ganhou preço, depoimentos e foto. Título e descrição inalterados. |
+| `/contato` | 2 | **sim** | Idem. |
+| `/` | 2 | **não — fila** | Idem. |
+| `/enem-matematica` | 2 | **não — fila** | Idem — e a sazonalidade sobe agora. |
+| `/reforco-escolar-matematica` | 2 | **não — fila** | Idem. |
+
+### Fila de 07/09 — pedir nesta ordem
+
+1. `/aulas-de-matematica-online` — **é a única de prioridade 1 pendente**, e a
+   única página do site que nunca indexou. Vai na frente de tudo.
+2. `/` — a página que mais recebe link e a que o Google usa como âncora do site.
+3. `/enem-matematica` — sazonalidade subindo; pedir em novembro é tarde.
+4. `/reforco-escolar-matematica`.
+
+> **Erro de ordenação a não repetir.** A leva de 06/09 gastou dois dos três
+> pedidos disponíveis em `/sobre` e `/contato` — páginas de prioridade 2,
+> **já indexadas**, cuja mudança não altera nada do que o Google exibe na
+> busca. A única página do site que nunca indexou ficou para o dia seguinte.
+> Com cota escassa, a ordem de execução tem que ser a ordem de prioridade,
+> não a ordem da tabela. Nas próximas levas, listar as páginas **na sequência
+> exata de execução** e dizer explicitamente onde cortar se a cota acabar.
 
 ### O que ficou de fora, de propósito
 

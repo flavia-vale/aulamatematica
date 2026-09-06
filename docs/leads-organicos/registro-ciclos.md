@@ -337,3 +337,48 @@ aparecer no Search Console, não tratar como problema de título.
 candidata mais forte para a decisão de título do Ciclo 1, mas trocar título
 antes dos ~30 dias de Search Console destruiria a linha de base que ainda
 está sendo formada.
+
+### Continuação — export de 648 termos (2026-09-06)
+
+**Duas correções minhas, na mesma rodada**
+
+1. *"`professora particular de matemática` é um nicho: 500/mês com
+   concorrência Baixa."* **Falso.** Com 648 termos em vez de 79, aparecem
+   `professora de matemática particular` (5.000/mês, índice 62) e `professora
+   de matemática` (5.000/mês, índice 23). Formas femininas estão dos dois
+   lados. **O que separa os clusters é a ordem das palavras, não o gênero** —
+   não existe desconto de concorrência por usar o feminino. Eu li um recorte
+   pequeno, vi uma ordem de palavras só, e generalizei.
+2. *"Nenhum termo com BH em 79 sugestões."* Verdadeiro naquele recorte; nos
+   648, `aula particular de matematica bh` aparece uma vez, a 50/mês. A
+   proposta de congelamento geográfico continua de pé — o volume é de piso —
+   mas a evidência foi reescrita para dizer o número certo.
+
+**O achado que fecha a tese**
+
+`atividades de matemática`: **50.000 buscas/mês, índice de concorrência 2.**
+Dez vezes o volume de qualquer termo de contratação, com praticamente nenhum
+anunciante disputando. É material gratuito para imprimir.
+
+Neste mercado, **volume e intenção de compra apontam em direções opostas.**
+O segmento que interessa (contratar professor) é dez vezes menor que o de
+material gratuito. Vale para `atividades` (50.000, índice 2), para `reforço`
+(500, relacionadas de atividade) e para `matemática enem` (volume alto,
+lance R$ 2,59, relacionadas de pdf/gabarito).
+
+**Ressalva metodológica que eu mesmo furei**
+
+Escrevi que "o lance é o melhor sinal de intenção de compra". É verdade
+**junto com o índice de concorrência**, não sozinho: `atividades de matemática
+6º ano` tem teto de R$ 12,96 com índice 2 — pouquíssimos anunciantes, um
+pagando caro. Teto alto com índice baixo é ruído; teto alto com índice alto é
+disputa real.
+
+**Padrão que se repete e merece atenção**
+
+Três leituras minhas foram derrubadas nesta fase: o volume do `reforço` (pelo
+Planejador), o nicho do feminino (por uma amostra maior) e o uso do lance
+isolado (por um contraexemplo). Todas na mesma direção: **eu concluí rápido
+demais a partir do primeiro recorte disponível.** Registrado como viés a
+vigiar quando o Search Console trouxer os primeiros dados do Ciclo 1 — que
+serão, por definição, o menor recorte que teremos.

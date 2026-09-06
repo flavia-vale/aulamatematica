@@ -47,11 +47,12 @@ Evidência completa em [mercado.md](mercado.md).
 1. Trends, série de 12 meses: `aula particular de matemática bh` e `professor
    particular de matemática belo horizonte` ficaram em **zero nas 53 semanas**.
 2. Trends, mapa: **zero nos 27 estados**, sem exceção.
-3. Planejador, gerador de ideias: em 79 termos sugeridos, **nenhum com Belo
-   Horizonte ou BH**. Apareceram quatro com Porto Alegre — a **50 buscas/mês
-   cada**, o piso da tabela.
+3. Planejador, gerador de ideias: num conjunto de **648 termos**, `aula
+   particular de matematica bh` aparece **uma única vez, com 50 buscas/mês** —
+   o piso da tabela. Num outro conjunto de 79 termos, nenhuma variante com BH
+   apareceu, e as quatro variantes com Porto Alegre também ficaram em 50/mês.
 
-Ou seja: mesmo a cidade que o Google *sugere* tem volume de piso. Página por
+Ou seja: a cidade *existe* como busca, com volume de piso. Página por
 bairro estaria uma camada abaixo disso. Some-se o dado do projeto de origem
 (quinze páginas por cidade, ~25 impressões em dois meses e meio) e o fato de o
 serviço ser 100% online.

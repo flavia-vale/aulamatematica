@@ -71,20 +71,58 @@ forma "professor"** do que pela forma "aula". Corrige o que escrevi antes:
 **A família "reforço" soma ~500/mês por cluster — uma ordem de grandeza
 abaixo.** Confirma e fecha a correção da leitura do Trends.
 
-### `professora`, no feminino, é um nicho de verdade
+### Correção 2 — o feminino não é um nicho separado
 
-`professora particular de matemática`: **500/mês com concorrência Baixa
-(índice 32)** — o menor índice entre todos os clusters de intenção de
-contratação. Um décimo do volume da forma genérica, mas com uma disputa
-muito menor.
+Com o export de 79 termos eu escrevi que `professora particular de matemática`
+seria "um nicho de verdade": 500/mês com concorrência Baixa, um décimo do
+volume da forma genérica. **O export de 648 termos desmente.**
 
-E é literalmente exato para esta operação. Some-se a isso o que a Fase 3 já
-tinha mostrado: quando as IAs listam professoras da UFMG, elas listam
-*professoras* — Vanessa Marçal, Rafaella, Aline, Julia, Thais. A forma
-feminina é como esse segmento do mercado é de fato descrito.
+| Termo | Buscas/mês | Concorr. | Teto |
+|---|---|---|---|
+| `professora de matemática particular` | **5.000** | Médio (62) | R$ 7,40 |
+| `professora de matemática` | **5.000** | Baixo (23) | R$ 5,83 |
+| `professora particular` (sem matéria) | **5.000** | Médio (35) | R$ 5,49 |
+| `professora particular de matemática` | 500 | Baixo (32) | R$ 5,06 |
+| `professora matematica particular` | 500 | Médio (57) | R$ 8,81 |
 
-500 buscas/mês com concorrência baixa é um alvo mais realista para um site
-novo do que 5.000 com concorrência média.
+Formas femininas aparecem **dos dois lados** — no cluster de 5.000 e no de
+500. O que separa os clusters é a **ordem das palavras**, não o gênero:
+`professora de matemática particular` cai no mesmo grupo que o masculino
+`professor particular de matemática` (mesmo índice 62, mesmo teto R$ 7,40).
+
+Eu li um recorte de 79 termos, vi uma única ordem de palavras no feminino, e
+generalizei. O erro não foi da ferramenta — foi de amostra. **Não existe
+desconto de concorrência por usar o feminino.**
+
+O que continua válido da observação original: a Fase 3 mostrou que as IAs
+descrevem esse segmento no feminino quando listam professoras da UFMG. Isso
+é argumento de linguagem natural da página, não de arbitragem de busca.
+
+### A armadilha de volume, provada
+
+O maior termo deste mercado inteiro:
+
+| Termo | Buscas/mês | Índice de concorrência | Teto de lance |
+|---|---|---|---|
+| **`atividades de matemática`** | **50.000** | **2** | R$ 6,23 |
+| `atividades de matemática 3 ano` | 50.000 | 3 | R$ 6,56 |
+
+**Dez vezes o volume de qualquer termo de contratação, com índice de
+concorrência 2** — praticamente nenhum anunciante disputando. É professor e
+pai procurando atividade pronta para imprimir. Ninguém paga por esse clique
+porque ele não vira cliente de nada.
+
+É a confirmação final da tese que atravessa Trends e Planejador: **neste
+mercado, volume e intenção de compra andam em direções opostas.** O segmento
+de contratação (5.000/mês, índice 52–62) é dez vezes menor que o de material
+gratuito (50.000/mês, índice 2) — e é o único que interessa.
+
+> **Ressalva sobre usar o lance como sinal.** Escrevi antes que "o lance é o
+> melhor sinal de intenção de compra que temos". É verdade *em conjunto com o
+> índice de concorrência*, não sozinho. `atividades de matemática 6º ano`
+> aparece com teto de R$ 12,96 e índice 2: pouquíssimos anunciantes, um deles
+> pagando caro. Teto alto com índice baixo é ruído de amostra pequena; teto
+> alto com índice alto é disputa real. Ler os dois juntos.
 
 ### Preço: a política atual está certa, e o dado sustenta
 

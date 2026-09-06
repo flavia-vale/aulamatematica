@@ -3,7 +3,11 @@ import { site, depoimentos } from '../config/site';
 /** Perfis externos da professora. Ligar as entidades é o que permite a um
  *  buscador ou a uma IA entender que o site e o perfil são a mesma pessoa —
  *  hoje o perfil citado pelas IAs é o do Superprof, não o site. */
-const perfisExternos = [site.social.instagram, site.social.superprof].filter(
+const perfisExternos = [
+  site.social.instagram,
+  site.social.superprof,
+  site.social.googleBusiness,
+].filter(
   (u): u is string => Boolean(u),
 );
 

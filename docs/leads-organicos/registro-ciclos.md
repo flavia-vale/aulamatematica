@@ -609,3 +609,55 @@ em PNG e foi removido do repositório após a otimização. A foto renderiza em
 Levantei que o arquivo original trazia metadados C2PA da OpenAI. A dona do
 projeto esclareceu que é foto de pessoa real que passou por ajuste de IA —
 prática comum em retrato profissional. Registrado, e seguimos.
+
+### Decisões da dona do projeto (2026-09-06)
+
+1. **Preço no Superprof: não atualizar.** Decidido que a divergência é
+   irrelevante. Consequência registrada, não como objeção: o site liga o
+   perfil via `sameAs`, e o Modo IA do Google já respondeu R$ 50 lendo o
+   Superprof. Enquanto o perfil disser R$ 50 e o site disser R$ 45, as IAs
+   podem citar qualquer um dos dois. Reavaliar se aparecer lead confuso com
+   o valor.
+2. **Depoimentos autorizados** pelas cinco famílias. Registrado em
+   `config/site.ts`.
+3. **O Google Business Profile já existe** — "Taciane S. — Professora
+   Particular de Matemática". Auditoria pendente, ver abaixo.
+4. **Ciclo 1 marcado para ~04/10/2026.**
+
+### Google Business Profile — o que auditar
+
+Não consegui inspecionar o perfil: o link `share.google` bloqueia acesso
+automatizado. A checagem fica com a dona do projeto, e o que importa é isto:
+
+**O problema que já dá para ver pelo nome.** O perfil se chama **"Taciane
+S."**; o site, o schema, o `llms.txt` e o Superprof dizem **"Taciane
+Andrade"**. Consistência de nome entre fontes é o que permite a buscador e a
+IA entenderem que são a mesma entidade — e essa é justamente a ligação que
+falta hoje, já que o site não é citado por nenhuma IA e o perfil é.
+
+Vale também saber que o Google desaconselha descritor de serviço no nome do
+perfil ("— Professora Particular de Matemática"): a diretriz pede o nome real
+do negócio, e nome com palavra-chave é motivo de suspensão. Risco baixo em
+operação pequena, mas existe.
+
+**A configuração que a mudança de hoje torna obrigatória:** o perfil precisa
+estar como **negócio com área de atendimento** (sem endereço público), com a
+área definida pelas cidades dentro dos 20 km — Belo Horizonte, Contagem, Nova
+Lima, Sabará, Santa Luzia, Ribeirão das Neves e Vespasiano. É exatamente o
+que o `serviceArea` do schema declara. Antes de hoje ela nem era elegível,
+porque o site dizia ser 100% online.
+
+**Conferir que batem com o site:** telefone (32) 99999-3956, site
+`aulasdematematicabh.com.br`, horário seg-sex 8h-21h e sáb 9h-14h.
+
+**A ação de maior retorno:** as cinco famílias que autorizaram os depoimentos
+são as mesmas que podem deixar avaliação no Google. A Fase 3 estabeleceu que
+**volume de avaliação é o critério de ranqueamento em todas as listas de
+"melhores professores"** produzidas pelas quatro IAs, e que reputação — não
+credencial — é o que sustenta preço. Cinco avaliações reais valem mais que
+qualquer mudança de título que possamos fazer.
+
+**Pendência técnica:** falta a URL canônica do perfil em
+`site.social.googleBusiness`, para entrar no `sameAs`. O link `share.google`
+não serve; serve `https://maps.google.com/?cid=...` ou `https://g.page/...`,
+obtidos no painel do perfil.

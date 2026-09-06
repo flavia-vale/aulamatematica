@@ -41,6 +41,18 @@ export const site = {
      */
     superprof:
       'https://www.superprof.com.br/aulas-particulares-matematica-presencial-online-licencianda-pela-ufmg-primeira-aula-gratis.html',
+    /**
+     * Google Business Profile. JÁ EXISTE ("Taciane S. — Professora Particular
+     * de Matemática"), mas falta a URL canônica aqui.
+     *
+     * Pegar no painel do perfil, não o link `share.google` (que é temporário
+     * e não serve como `sameAs`). Serve: `https://maps.google.com/?cid=...`
+     * ou o link curto `https://g.page/...`.
+     *
+     * É o ativo mais importante para as consultas de BH: a Fase 3 mostrou que
+     * o que vence a consulta 1 são fichas do Google Business Profile.
+     */
+    googleBusiness: '',
   },
 
   /**
@@ -118,6 +130,8 @@ export const site = {
  * Nomes de alunos são anonimizados por inicial. As mensagens abaixo são
  * transcrições de conversas reais de WhatsApp, editadas apenas para remover
  * saudação, despedida e nome do aluno.
+ *
+ * Publicação AUTORIZADA pelas famílias em 2026-09-06.
  */
 export interface Depoimento {
   nome: string;

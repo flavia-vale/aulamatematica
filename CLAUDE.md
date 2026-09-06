@@ -88,6 +88,17 @@ um serviço que dizia ser 100% online.
 
 **Não reintroduzir "100% online" em lugar nenhum.** É falso desde 2026-09-06.
 
+## Ativos externos
+
+- **Superprof** — ligado via `sameAs`. Anuncia R$ 50; o site anuncia R$ 45.
+  A dona do projeto decidiu **não corrigir** a divergência. Não reabrir sem
+  motivo novo.
+- **Google Business Profile** — existe como "Taciane S. — Professora
+  Particular de Matemática". Falta a URL canônica em
+  `site.social.googleBusiness`, e o nome diverge do resto ("Taciane
+  Andrade"). Auditoria detalhada em `registro-ciclos.md`.
+- **Depoimentos** — publicação autorizada pelas cinco famílias em 2026-09-06.
+
 ## Regras de trabalho
 
 - **Não alterar título, descrição ou copy sem dado do Search Console.** A

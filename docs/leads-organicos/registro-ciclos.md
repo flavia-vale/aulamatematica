@@ -724,3 +724,44 @@ decisão de título do Ciclo 1: o nome da professora talvez deva ocupar, nos
 títulos e no `brand`, o lugar que hoje é do nome genérico. A aba Consultas do
 Search Console dirá se alguém chega buscando "Taciane" — e aí a decisão sai
 de dado, não de leitura de captura de tela.
+
+### Indexação conferida — 9 de 11 em dois dias (2026-09-06)
+
+**O que a contagem confirma**
+
+A hipótese do projeto de origem — "página não indexa porque ninguém pediu,
+não porque o conteúdo é fraco" — se sustenta aqui: 9 das 11 páginas pedidas
+manualmente entraram em dois dias, num domínio criado há três dias.
+
+**O que a contagem refina**
+
+`/blog/por-que-matematica-parece-dificil` foi rastreada em **05/09, um dia
+antes** do pedido manual de 06/09. Sitemap e IndexNow também produzem
+descoberta. O pedido manual acelera; não é o único caminho. Registro isto
+porque a leitura original ("das 10 nunca pedidas, nenhuma indexou") pode
+levar a superestimar o peso do pedido manual isolado.
+
+**A exceção que merece observação**
+
+`/aulas-de-matematica-online` foi pedida em 04/09, junto com as oito que
+entraram, e é a única de prioridade 1 ainda fora. Sem causa aparente: tem
+canonical correto, não é `noindex`, está no sitemap e no `llms.txt`. Repetir
+o pedido e acompanhar. Se persistir por mais uma semana, investigar a sério.
+
+**O "erro" que não é erro**
+
+O Search Console reporta 1 página em "Página alternativa com tag canônica
+adequada": `http://aulasdematematicabh.com.br/`, sem o S. É o Google
+excluindo corretamente a versão HTTP que aponta por canonical para a HTTPS.
+Registrado para que nenhum ciclo futuro tente "corrigir" isso.
+
+**Dívida de reindexação criada hoje**
+
+Todos os rastreamentos são de 04 e 05/09, anteriores às mudanças publicadas
+em 06/09 (preço, depoimentos, foto, e o reposicionamento presencial). O
+Google tem a versão antiga.
+
+A mais crítica é `/aulas-particulares-matematica-bh`, que **mudou de título e
+de descrição** — de aula online para aula presencial. Na prática é outra
+página. Depois de confirmar o deploy, repetir o pedido para ela, para a home,
+`/sobre` e `/contato`.

@@ -28,10 +28,13 @@ Search Console → **Desempenho → Resultados da pesquisa**, período de 12 mes
 > "Países"**, nunca do painel-resumo (que inclui linhas sem país atribuído).
 > Misturar as duas entre ciclos transforma a série em ficção.
 
-- [ ] Preencher a coluna `Indexada?` de
-      [pendencias-indexacao.md](pendencias-indexacao.md) — as 11 páginas
-      foram pedidas em 04 e 06/09. É essa contagem que responde se uma página
-      não indexou por qualidade ou por ninguém ter pedido.
+- [ ] Atualizar [pendencias-indexacao.md](pendencias-indexacao.md). Em
+      06/09 estavam **9 de 11 indexadas**. Conferir especialmente
+      `/aulas-de-matematica-online`, que foi pedida em 04/09 junto com as que
+      entraram e continuava fora sem causa aparente.
+- [ ] Conferir se as páginas alteradas em 06/09 foram **re-rastreadas** — em
+      especial `/aulas-particulares-matematica-bh`, que mudou de título e
+      descrição.
 
 ## Passo 2 · As seis perguntas (Fase 2)
 

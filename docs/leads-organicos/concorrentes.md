@@ -124,6 +124,13 @@ domina todas as consultas de diretório:
 O Gemini chega a recomendar cancelar o Passe Aluno logo após obter o contato
 do professor.
 
+**Corroborado por segunda fonte independente.** O Perplexity descreveu o mesmo
+mecanismo com outro nome — "Student Pass": assinatura mensal (~US$ 49/mês nos
+EUA, valor similar em reais no Brasil) exigida para entrar em contato com os
+tutores, com renovação automática e **sem reembolso depois que um professor
+aceita o pedido**. Duas superfícies, sem contato entre si, descrevendo o mesmo
+atrito — deixa de ser relato isolado.
+
 **Por que isto importa aqui:** a operação oferece exatamente o oposto —
 contato direto por WhatsApp, sem intermediário, sem assinatura, sem taxa para
 falar com a professora. É a primeira vantagem estrutural encontrada em toda a

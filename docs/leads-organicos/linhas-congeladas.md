@@ -28,10 +28,22 @@ a bloquear (`npm run check` falha se uma página nova casar com ele):
 
 ## Linhas congeladas
 
-**Nenhuma ainda.** As duas abaixo têm evidência suficiente e estão propostas —
-falta a decisão explícita da dona do projeto para virarem congelamento de fato.
+**Nenhuma.**
 
-## Propostas de congelamento — Fase 4, 2026-09-06
+## Decisão de 2026-09-06 — não congelar
+
+As duas linhas abaixo tinham evidência suficiente e foram propostas para
+congelamento. **A dona do projeto decidiu não congelar nenhuma das duas.**
+
+Isto é uma decisão, não uma pendência: as duas ficam **abertas**, sem trava no
+`npm run check`, e podem ser construídas a qualquer momento. A evidência fica
+registrada abaixo para quem for decidir no futuro — não para impedir, para
+informar.
+
+Reavaliar na próxima Fase 4 (trimestral), ou antes se o Search Console mostrar
+algo que contrarie os números abaixo.
+
+## Evidência levantada — Fase 4, 2026-09-06 (não congeladas)
 
 Evidência completa em [mercado.md](mercado.md).
 

@@ -17,7 +17,8 @@ npm run indexnow   # avisa Bing/Yandex/DuckDuckGo (exige build antes)
 ou descrição faltarem ou se repetirem entre páginas, faltar canonical, a
 atribuição de lead quebrar (página sem WhatsApp, com duas frases diferentes,
 ou repetindo a frase de outra página), houver promessa de resultado, houver
-preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, uma página cair
+preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, o JSON-LD contiver
+`review` ou `aggregateRating`, uma página cair
 numa linha congelada, ou uma página indexável faltar no `llms.txt` ou nas
 pendências de indexação.
 

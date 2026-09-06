@@ -89,6 +89,11 @@ export const site = {
   presencial: {
     raioKm: 20,
     origem: 'Belo Horizonte',
+    /** Centro de BH. Um GeoCircle sem coordenada real é ininterpretável:
+     *  o Google normalizava a string de endereço para um PostalAddress solto
+     *  e o raio ficava sem âncora. */
+    lat: -19.9167,
+    lng: -43.9345,
     /** Locais: casa do aluno ou local público (biblioteca, café, coworking). */
     ondeTexto: 'na casa do aluno ou em local público combinado',
     /** Dentro de ~20 km do centro de BH. Sete Lagoas, Divinópolis, Itaúna,

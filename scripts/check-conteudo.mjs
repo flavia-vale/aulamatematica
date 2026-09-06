@@ -148,7 +148,32 @@ for (const p of paginas) {
     );
 }
 
-// ---------- R5 · linhas congeladas ----------
+// ---------- R5 · avaliação inventada no JSON-LD ----------
+// Três vezes em 2026-09-06 essa marcação tentou entrar: no pedido de
+// depoimentos fabricados, num `nota ?? 5` que eu mesmo escrevi, e como
+// "erro a corrigir" no relatório de Snippets do Search Console.
+//
+// `review` e `aggregateRating` no schema deste site significam derivar nota
+// de mensagem de agradecimento — dado de avaliação inventado, que o Google
+// trata como spam estruturado. E não há ganho: ele não exibe estrela para
+// avaliação que o próprio negócio coleta e publica.
+//
+// Os depoimentos ficam VISÍVEIS na página. Só a marcação é proibida.
+// O lugar da nota é o Google Business Profile.
+for (const p of paginas) {
+  for (const bloco of p.html.matchAll(
+    /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,
+  )) {
+    if (/"(review|aggregateRating)"\s*:/.test(bloco[1]))
+      erro(
+        'avaliacao-no-schema',
+        p.rota,
+        'JSON-LD contém review/aggregateRating — nota derivada de depoimento é dado de avaliação inventado; ver docs/leads-organicos/registro-ciclos.md',
+      );
+  }
+}
+
+// ---------- R6 · linhas congeladas ----------
 // Padrões declarados em linhas-congeladas.md como `- rota: <glob>`
 if (existsSync(CONGELADAS)) {
   const globs = [...readFileSync(CONGELADAS, 'utf8').matchAll(/^-\s*rota:\s*(\S+)/gm)].map((m) => m[1]);
@@ -160,7 +185,7 @@ if (existsSync(CONGELADAS)) {
   }
 }
 
-// ---------- R6 · toda página indexável está no llms.txt e nas pendências ----------
+// ---------- R7 · toda página indexável está no llms.txt e nas pendências ----------
 const llms = existsSync(LLMS) ? readFileSync(LLMS, 'utf8') : '';
 const pend = existsSync(PENDENCIAS) ? readFileSync(PENDENCIAS, 'utf8') : '';
 for (const p of indexaveis) {

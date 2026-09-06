@@ -175,6 +175,7 @@ Regras já codificadas:
 | ERRO | Toda página tem WhatsApp, com uma só frase, distinta da de qualquer outra página |
 | ERRO | Nenhuma promessa de resultado ("aprovação garantida", "100% de aprovação") |
 | ERRO | Nenhum preço em R$ na página — a decisão registrada é falar valor só na conversa |
+| ERRO | Nenhum `review` ou `aggregateRating` no JSON-LD |
 | ERRO | Nenhuma página nova numa linha congelada |
 | ERRO | Toda página indexável está no `llms.txt` e na lista de pendências de indexação |
 | AVISO | Título acima de 60 caracteres |

@@ -661,3 +661,66 @@ qualquer mudança de título que possamos fazer.
 `site.social.googleBusiness`, para entrar no `sameAs`. O link `share.google`
 não serve; serve `https://maps.google.com/?cid=...` ou `https://g.page/...`,
 obtidos no painel do perfil.
+
+### Auditoria do Google Business Profile (2026-09-06)
+
+Feita por captura de tela — o link `share.google` bloqueia acesso
+automatizado.
+
+**O que está certo**
+
+- Telefone **(32) 99999-3956** — bate com o site.
+- Botões de **Ligar, Site, WhatsApp** ativos.
+- Categoria **"Aulas particulares"** — adequada.
+- **4 ou mais fotos** publicadas.
+- Nenhum endereço público aparece na ficha, o que sugere que já está
+  configurado como negócio com área de atendimento. **Confirmar no painel**,
+  e conferir se a área cobre as 7 cidades dentro dos 20 km.
+
+**Três divergências concretas**
+
+| Item | Perfil do Google | Site / schema / llms.txt |
+|---|---|---|
+| Nome | "Taciane S. — Professora Particular de Matemática" | "Taciane Andrade" |
+| Horário | "Fecha 20:00" | seg-sex até **21h**, sáb até 14h |
+| Avaliações | **1** | — |
+
+Sobre o nome, além da inconsistência de entidade: a diretriz do Google pede
+o **nome real do negócio**, e descritor de serviço no campo de nome
+("— Professora Particular de Matemática") é motivo formal de suspensão.
+Risco baixo numa operação pequena, mas o descritor já está no campo
+*categoria*. Recomendado: **"Taciane Andrade"**, que alinha com o `Person`
+do schema, com o Superprof e com o site.
+
+**A única avaliação existente**
+
+5 estrelas, de 3 meses atrás, assinada por **Flávia Roberta** — o mesmo nome
+da dona do projeto. Não é irregular por si só, mas avaliação de pessoa ligada
+ao negócio tem peso baixo para o Google e não é prova social de cliente.
+**Na prática, o perfil tem zero avaliação de família atendida.**
+
+As cinco famílias que autorizaram depoimento em 2026-09-06 resolvem isso.
+A Fase 3 estabeleceu que volume de avaliação é o critério de ranqueamento em
+todas as listas de "melhores professores" das quatro IAs, e que reputação —
+não credencial — sustenta preço.
+
+### Achado estratégico: a marca do site não é a entidade que existe
+
+Na busca capturada, **o perfil do Google aparece em primeiro lugar** e o
+perfil do Superprof logo abaixo ("Taciane - Professor de matemática em Belo
+Horizonte"). Ou seja: **ela é encontrável — como "Taciane".**
+
+A consulta 1 da Fase 3 (`Aulas de Matemática BH`, a marca como escrita no
+site) não devolveu nada dela em nenhuma das quatro IAs. A conclusão que as
+duas medições formam juntas:
+
+> A entidade que existe, ranqueia e é citada chama-se **Taciane**. O site se
+> apresenta como **"Aulas de Matemática BH"** — um nome com volume de busca
+> zero (Fase 4) que não corresponde à identidade pela qual ela é de fato
+> encontrada.
+
+Isto **não é recomendação de trocar o domínio**. É uma hipótese forte para a
+decisão de título do Ciclo 1: o nome da professora talvez deva ocupar, nos
+títulos e no `brand`, o lugar que hoje é do nome genérico. A aba Consultas do
+Search Console dirá se alguém chega buscando "Taciane" — e aí a decisão sai
+de dado, não de leitura de captura de tela.

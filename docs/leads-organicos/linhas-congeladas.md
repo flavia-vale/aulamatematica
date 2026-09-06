@@ -48,7 +48,12 @@ merecem o dado antes:
   próprio.
 - **Páginas por vestibular** além do ENEM (UFMG, FUVEST…). Verificar no Trends
   se o volume justifica antes de escrever.
-- **Termos que "parecem óbvios".** No projeto de origem, o Trends mostrou que um
-  sinônimo era 12× maior que o termo escolhido por intuição. Vale checar
-  "professor particular de matemática" vs. "aula particular de matemática" vs.
-  "reforço de matemática" antes de fixar qualquer título.
+- **Termos que "parecem óbvios" — já medido, ver [mercado.md](mercado.md).**
+  `reforço de matemática` domina em volume, mas a intenção por trás é
+  material/exercício, não contratar professor — volume alto aqui não é sinal
+  de bom lead. `reforço escolar de matemática`, a frase que é literalmente o
+  H1 da página de reforço, tem volume baixíssimo como termo de busca.
+- **Termos com "BH"/"Belo Horizonte" — já medido, ver [mercado.md](mercado.md).**
+  Zero interesse mensurável no Trends, em todos os 27 estados, no ano
+  inteiro. Não é motivo para remover a marca geográfica do site, mas é
+  argumento contra depender dela no título para captar busca.

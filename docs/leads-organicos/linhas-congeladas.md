@@ -28,24 +28,56 @@ a bloquear (`npm run check` falha se uma página nova casar com ele):
 
 ## Linhas congeladas
 
-**Nenhuma ainda.** Não há dado para congelar coisa alguma: o Search Console não
-foi verificado e o site tem zero rodadas de medição. Congelar agora seria trocar
-uma opinião por outra.
+**Nenhuma ainda.** As duas abaixo têm evidência suficiente e estão propostas —
+falta a decisão explícita da dona do projeto para virarem congelamento de fato.
 
-## Candidatas a avaliar no Ciclo 1 (a cada 3 meses, Fase 4)
+## Propostas de congelamento — Fase 4, 2026-09-06
+
+Evidência completa em [mercado.md](mercado.md).
+
+### Páginas por bairro ou cidade
+
+```
+- rota: /aulas-matematica-*
+- rota: /matematica-*-bh
+```
+
+**Evidência, de três instrumentos independentes:**
+
+1. Trends, série de 12 meses: `aula particular de matemática bh` e `professor
+   particular de matemática belo horizonte` ficaram em **zero nas 53 semanas**.
+2. Trends, mapa: **zero nos 27 estados**, sem exceção.
+3. Planejador, gerador de ideias: em 79 termos sugeridos, **nenhum com Belo
+   Horizonte ou BH**. Apareceram quatro com Porto Alegre — a **50 buscas/mês
+   cada**, o piso da tabela.
+
+Ou seja: mesmo a cidade que o Google *sugere* tem volume de piso. Página por
+bairro estaria uma camada abaixo disso. Some-se o dado do projeto de origem
+(quinze páginas por cidade, ~25 impressões em dois meses e meio) e o fato de o
+serviço ser 100% online.
+
+### Páginas por série
+
+```
+- rota: /matematica-*-ano
+```
+
+**Evidência:** `aula particular de matematica ensino fundamental` — a única
+variante qualificada por nível que o Planejador devolveu em 79 termos —
+registra **50 buscas/mês**, o piso da tabela. Nenhuma variante por ano
+específico (6º, 7º, 9º…) apareceu.
+
+Nove páginas de conteúdo quase idêntico disputando 50 buscas/mês, com risco de
+canibalizar as quatro páginas de serviço que já existem e já cobrem série
+dentro do próprio conteúdo.
+
+## Candidatas ainda em aberto
 
 Não são decisões — são as linhas que **provavelmente** vão querer expansão e que
 merecem o dado antes:
 
-- **Páginas por bairro de BH** (`/aulas-matematica-<bairro>`). No projeto de
-  origem, quinze páginas por cidade somaram ~25 impressões em dois meses e meio.
-  O agravante aqui: as aulas são 100% online, então o valor da segmentação
-  geográfica é ainda menor. Não criar nenhuma antes do Planejador de
-  palavras-chave dizer o volume real de "aula de matemática \<bairro\>".
-- **Páginas por série** (`/matematica-6-ano`, `/matematica-9-ano`, …). Nove
-  páginas com conteúdo quase idêntico é receita de canibalização com as quatro
-  páginas de serviço que já existem. Medir antes se a busca por série tem volume
-  próprio.
+- ~~**Páginas por bairro de BH**~~ e ~~**páginas por série**~~ — **o dado
+  chegou, ver a proposta de congelamento abaixo.**
 - **Páginas por vestibular** além do ENEM (UFMG, FUVEST…). Verificar no Trends
   se o volume justifica antes de escrever.
 - **Termos que "parecem óbvios" — já medido, ver [mercado.md](mercado.md).**

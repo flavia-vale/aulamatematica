@@ -43,6 +43,76 @@ As faixas são largas de propósito (conta sem histórico de gasto em anúncio):
 "1 mil – 10 mil" é uma variação de 10×. Servem para separar ordens de
 grandeza, não para ranquear dentro da mesma faixa.
 
+### Volumes exatos — export "ideias de palavras-chave"
+
+O export de ideias (79 termos, ago/2025 – jul/2026) traz número em vez de
+faixa. **O Planejador agrupa variantes próximas**: termos com volume,
+concorrência e lance idênticos são o mesmo grupo por baixo. Agrupados:
+
+| Cluster (variantes agrupadas) | Buscas/mês | Concorr. | Lance topo |
+|---|---|---|---|
+| `professor particular de matemática` (6 formas) | **5.000** | Médio (62) | **R$ 1,71 – 7,40** |
+| `aula particular de matemática` (4 formas) | **5.000** | Médio (52) | R$ 1,39 – 5,96 |
+| `professor particular matemática` (sem "de", 3 formas) | 500 | Médio (57) | R$ 1,97 – 8,81 |
+| `aula particular matemática` (sem "de", 3 formas) | 500 | Médio (38) | R$ 1,40 – 7,60 |
+| **`professora particular de matemática`** (2 formas) | **500** | **Baixo (32)** | R$ 1,57 – 5,06 |
+| `reforço escolar matematica` | 500 | Baixo (27) | R$ 1,34 – 6,56 |
+| `reforço matematica` | 500 | Baixo (31) | R$ 1,53 – 5,66 |
+| `aulas de reforço matemática` (2 formas) | 500 | Médio (51) | R$ 1,68 – 5,67 |
+| `aula de reforço de matematica` | 500 | Médio (35) | R$ 1,51 – 6,38 |
+| `aula particular de matemática valor` (3 formas) | 500 | Baixo (32) | R$ 1,14 – 3,10 |
+
+**Os dois maiores empatam em 5.000/mês.** A diferença não é volume, é
+intenção: o cluster `professor` tem índice de concorrência 62 contra 52, e
+teto de lance R$ 7,40 contra R$ 5,96 — **anunciantes pagam ~24% mais pela
+forma "professor"** do que pela forma "aula". Corrige o que escrevi antes:
+`professor particular` não tem mais volume, tem mais valor por clique.
+
+**A família "reforço" soma ~500/mês por cluster — uma ordem de grandeza
+abaixo.** Confirma e fecha a correção da leitura do Trends.
+
+### `professora`, no feminino, é um nicho de verdade
+
+`professora particular de matemática`: **500/mês com concorrência Baixa
+(índice 32)** — o menor índice entre todos os clusters de intenção de
+contratação. Um décimo do volume da forma genérica, mas com uma disputa
+muito menor.
+
+E é literalmente exato para esta operação. Some-se a isso o que a Fase 3 já
+tinha mostrado: quando as IAs listam professoras da UFMG, elas listam
+*professoras* — Vanessa Marçal, Rafaella, Aline, Julia, Thais. A forma
+feminina é como esse segmento do mercado é de fato descrito.
+
+500 buscas/mês com concorrência baixa é um alvo mais realista para um site
+novo do que 5.000 com concorrência média.
+
+### Preço: a política atual está certa, e o dado sustenta
+
+Cluster `aula particular de matemática valor`: 500/mês, mais ~18 variantes
+de 50/mês (`preço`, `quanto custa`, `valor médio`). A demanda por preço
+existe.
+
+**Mas os lances são os mais baixos do conjunto: R$ 1,14 – 3,10**, contra
+R$ 1,71 – 7,40 de quem procura professor. Quem pesquisa preço vale menos
+para o anunciante — é comparador, não comprador. A decisão já registrada no
+site (não publicar valor, tratar na conversa, com a FAQ explicando que o
+valor sai após a diagnóstica) **é confirmada pelo dado**, não contrariada.
+A regra `preco-sem-fonte` do `npm run check` continua fazendo sentido.
+
+### Cálculo: os maiores lances do conjunto, e não é para nós
+
+`aula particular cálculo` (R$ 1,27 – **10,02**), `professor de calculo
+particular` (R$ 2,27 – 10,00), `aula particular de cálculo` (R$ 2,97 –
+9,41). Os três maiores tetos de lance de toda a tabela — e todos com apenas
+50 buscas/mês e concorrência Alta.
+
+Bate com o que a Fase 3 mostrou (professores de cálculo cobrando R$ 80–140/h
+no Superprof). É o segmento mais valioso do mercado de aula particular de
+exatas — **e é outra linha de serviço**, de ensino superior, não o público
+de fundamental/médio que o site atende. Registrado como observação, não como
+recomendação.
+
+
 ### O achado que sobrevive, e fica mais forte
 
 **O lance de anúncio é o melhor sinal de intenção de compra que temos** —
@@ -80,7 +150,7 @@ nenhuma página. É a candidata mais forte para o Ciclo 1 — **mas não se mexe
 agora**: com ~30 dias de Search Console saberemos por quais consultas o site
 já aparece de fato, e trocar título antes disso é jogar fora a linha de base.
 
-## 2 · Termos com "BH" têm zero interesse mensurável — em qualquer estado
+## 2 · Termos com "BH" têm zero interesse mensurável — em qualquer estado, em qualquer ferramenta
 
 Comparação (`aula de matemática online`, `professor de matemática online`,
 `aula particular de matemática bh`, `professor particular de matemática
@@ -91,6 +161,16 @@ semanas do ano, e em todos os 27 estados, sem uma única exceção.** É o
 resultado mais conclusivo que o Trends consegue dar: ninguém, em lugar
 nenhum do Brasil, digitou essas frases num volume que o Google sequer
 registrasse.
+
+**Terceira confirmação, agora pelo Planejador.** O gerador de ideias do
+próprio Google devolveu quatro variantes com **Porto Alegre** (50/mês cada)
+e **nenhuma com Belo Horizonte ou BH** em 79 termos sugeridos. Três
+instrumentos independentes — série temporal do Trends, mapa do Trends e
+gerador de ideias do Planejador — concordam.
+
+E repare na escala: mesmo a cidade que *aparece* tem só **50 buscas/mês**.
+Busca de aula particular qualificada por cidade é um mercado minúsculo em
+qualquer lugar do Brasil.
 
 As variantes "online" têm volume também baixo, mas **não zero**: um pico
 isolado de 100 em agosto/2026 para `aula de matemática online`, e presença
@@ -156,8 +236,13 @@ volume de busca, é de fora do eixo Sul/Sudeste.
 - Rever se `/reforco-escolar-matematica` deveria mirar um termo com mais
   intenção de compra do que a frase que já é seu próprio H1 — os dois termos
   da família "reforço" estão na faixa baixa de volume.
-- Avaliar `professor particular de matemática` (maior volume + maior lance)
-  como forma a destacar em algum título, contra o que o Search Console
-  mostrar que já funciona.
+- Avaliar `professor particular de matemática` (mesmo volume da forma "aula",
+  porém ~24% mais caro por clique) e `professora particular de matemática`
+  (10× menos volume, mas a menor concorrência do conjunto e exato para esta
+  operação) como formas a destacar em algum título — contra o que o Search
+  Console mostrar que já funciona.
+- **Duas linhas com evidência suficiente para congelar** (ver
+  [linhas-congeladas.md](linhas-congeladas.md)): páginas por bairro/cidade e
+  páginas por série. Decisão da dona do projeto.
 - Calendarizar a atualização/indexação de `/enem-matematica` para
   setembro-outubro, não novembro.

@@ -44,6 +44,7 @@ e várias hipóteses já derrubadas por dado.
 | `citacao-ia.md` | Fase 3: 28 medições de citação por IA, com a síntese |
 | `citacao-ia-planilha.csv` | Os dados brutos das 28 medições |
 | `concorrentes.md` | Lista de concorrentes citados pelas IAs + preços de mercado |
+| **`canais.md`** | **Onde a demanda é atendida hoje: os canais fora do site, com veredito e critério de morte** |
 | `funil.md` | Como a atribuição de lead funciona sem backend |
 | `tabela-historica.md` | A série do Search Console, uma linha por ciclo |
 | `pendencias-indexacao.md` | Controle dos pedidos manuais de indexação no Google |
@@ -89,6 +90,23 @@ um serviço que dizia ser 100% online.
 
 **Não reintroduzir "100% online" em lugar nenhum.** É falso desde 2026-09-06.
 
+## Canais (levantamento de 2026-09-06)
+
+O site **não é o canal desta operação — é a prova.** Em 28 medições de citação
+por IA, zero apontaram para ele; a ficha do Google Business Profile ranqueia em
+primeiro e o Superprof é o único ativo que as IAs citam. O plano completo, com
+os cinco critérios de avaliação e um critério de morte por canal, está em
+**`docs/leads-organicos/canais.md`**. Resumo dos vereditos:
+
+- **Faixa 1, gratuita e imediata:** Google Business Profile (nome, avaliações
+  das 5 famílias, área de atendimento), **Suas Aulas Particulares** (sem
+  comissão, contato externo por WhatsApp desde o início, ~28× menos disputado
+  que o Superprof em BH), aprofundar o Superprof, e pedir indicação.
+- **Não recomendado, com evidência registrada:** GetNinjas e Cronoshare (pagam
+  por lead), Preply (~1/3 de comissão), OLX (esteira, não acumula), Reddit
+  (autopromoção viola a norma dos subs).
+- **Vídeo fica com gatilho** para janeiro/2027 — é a única aposta cara.
+
 ## Ativos externos
 
 - **Superprof** — ligado via `sameAs`. Anuncia R$ 50; o site anuncia R$ 45.
@@ -113,3 +131,8 @@ um serviço que dizia ser 100% online.
   Hipótese contrariada por número não volta como opinião.
 - **Quem decide prioridade é a dona do projeto.** Volume de busca é argumento
   de prioridade, não de correção.
+- **Canal externo novo entra por `canaisLead` em `src/config/site.ts`**, com
+  frase de WhatsApp própria — senão o lead dele chega indistinguível do lead do
+  site. `npm run check` falha se duas frases se repetirem
+  (regra `atribuicao-canal`). Critérios e vereditos em
+  `docs/leads-organicos/canais.md`.

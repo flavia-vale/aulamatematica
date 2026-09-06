@@ -170,6 +170,35 @@ for (const p of indexaveis) {
     erro('pendencias-indexacao', p.rota, `ausente de ${PENDENCIAS} — toda página entra na lista na mesma entrega que a cria`);
 }
 
+// ---------- R7 · atribuição de lead por CANAL externo ----------
+// Ampliar o leque de canais só produz aprendizado se cada canal chegar
+// identificado. A varredura lê os dois mapas de src/config/site.ts e falha se
+// duas frases se repetirem — entre canais, ou contra a de alguma página.
+// Ver docs/leads-organicos/canais.md
+const CONFIG = 'src/config/site.ts';
+if (existsSync(CONFIG)) {
+  const cfg = readFileSync(CONFIG, 'utf8');
+  const bloco = (nome) => {
+    const i = cfg.indexOf(`export const ${nome}`);
+    return i === -1 ? '' : cfg.slice(i, cfg.indexOf('\n};', i));
+  };
+  const pares = (txt) =>
+    [...txt.matchAll(/(['"])([^'"\n]+)\1\s*:\s*\n?\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => [m[2], m[3]]);
+
+  const frases = new Map();
+  for (const [chave, frase] of pares(bloco('leadMessages')))
+    frases.set(frase, `página ${chave}`);
+
+  const canais = pares(bloco('canaisLead'));
+  if (canais.length === 0)
+    erro('atribuicao-canal', CONFIG, 'canaisLead vazio ou não encontrado — nenhum canal externo é atribuível');
+  for (const [canal, frase] of canais) {
+    const antes = frases.get(frase);
+    if (antes) erro('atribuicao-canal', `canal ${canal}`, `frase idêntica à de ${antes}`);
+    else frases.set(frase, `canal ${canal}`);
+  }
+}
+
 // ---------- AVISOS · hipóteses ainda não medidas ----------
 // A iniciativa derrubou "título longo mata o clique" com dado de campo.
 // Aqui ainda não há dado, então isto NÃO falha: vira pergunta do Ciclo 1.

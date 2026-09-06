@@ -62,7 +62,7 @@ export const personSchema = {
   jobTitle: site.teacher.role,
   description: site.teacher.bio,
   url: site.url,
-  image: `${site.url}/og-image.png`,
+  image: `${site.url}${site.teacher.foto || '/og-image.png'}`,
   telephone: `+${site.contact.whatsappRaw}`,
   ...(perfisExternos.length > 0 && { sameAs: perfisExternos }),
   alumniOf: {

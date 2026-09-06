@@ -13,6 +13,14 @@ export const site = {
     role: 'Professora particular de Matemática',
     credentials: 'Licencianda em Matemática pela UFMG',
     bio: 'Estudante de Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG), com experiência em reforço escolar para alunos do ensino fundamental e médio.',
+    /**
+     * Foto da professora, em `public/`. Deixe string vazia enquanto não
+     * houver arquivo: as seções que a exibem simplesmente não renderizam, e
+     * o `image` do schema cai de volta para a og-image.
+     * Recomendado: retrato vertical, mínimo 800x1000, otimizado.
+     */
+    foto: '',
+    fotoAlt: 'Taciane Andrade, professora particular de matemática',
   },
   contact: {
     whatsappRaw: '5532999993956',
@@ -31,7 +39,8 @@ export const site = {
      * encontram e citam hoje (ver docs/leads-organicos/citacao-ia.md).
      * Preencher liga as duas entidades via `sameAs` no JSON-LD.
      */
-    superprof: '',
+    superprof:
+      'https://www.superprof.com.br/aulas-particulares-matematica-presencial-online-licencianda-pela-ufmg-primeira-aula-gratis.html',
   },
 
   /**

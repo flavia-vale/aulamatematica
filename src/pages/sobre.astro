@@ -24,13 +24,26 @@ const schema = graph(
   <section class="relative overflow-hidden border-b border-stone-200">
     <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-5xl px-4 pt-14 pb-12 sm:px-6 md:pt-24 md:pb-20">
-      <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">A professora</p>
-      <h1 class="mt-4 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
-        {site.teacher.name}
-      </h1>
-      <p class="mt-4 font-serif text-xl italic text-stone-600">
-        {site.teacher.credentials}
-      </p>
+      <div class="flex flex-col gap-8 sm:flex-row sm:items-end sm:gap-10">
+        {site.teacher.foto && (
+          <img
+            src={site.teacher.foto}
+            alt={site.teacher.fotoAlt}
+            width="220"
+            height="275"
+            class="w-40 shrink-0 rounded-xl border border-stone-200 object-cover shadow-sm sm:w-56"
+          />
+        )}
+        <div>
+          <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">A professora</p>
+          <h1 class="mt-4 font-serif text-4xl font-medium tracking-tight text-stone-900 sm:text-5xl md:text-6xl">
+            {site.teacher.name}
+          </h1>
+          <p class="mt-4 font-serif text-xl italic text-stone-600">
+            {site.teacher.credentials}
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 

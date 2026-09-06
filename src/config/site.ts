@@ -226,3 +226,43 @@ export const leadMessage = (pathname: string): string => {
 
 /** Link do WhatsApp já atribuído à página atual. */
 export const waLinkFor = (pathname: string) => waLink(leadMessage(pathname));
+
+/**
+ * Atribuição de lead por CANAL externo.
+ *
+ * O mesmo princípio de `leadMessages`, um nível acima: cada canal fora do site
+ * (perfil, marketplace, rede social, indicação) leva ao mesmo WhatsApp com uma
+ * frase própria. Sem isso, o lead do Google Business Profile e o lead do site
+ * chegam idênticos, e a pergunta "qual canal funcionou?" fica sem resposta —
+ * exatamente a armadilha da Fase 0, que já cegou a atribuição uma vez aqui.
+ *
+ * Estes links NÃO aparecem em nenhuma página: são colados no campo de
+ * WhatsApp/contato de cada perfil externo. `npm run check` (regra
+ * `atribuicao-canal`) falha se duas frases se repetirem entre si ou colidirem
+ * com a de alguma página.
+ *
+ * Levantamento e critérios: docs/leads-organicos/canais.md
+ */
+export const canaisLead: Record<string, string> = {
+  'google-business':
+    'Olá! Vim do perfil da professora no Google e quero agendar a aula diagnóstica gratuita.',
+  'suas-aulas-particulares':
+    'Olá! Vim do anúncio no Suas Aulas Particulares e quero agendar a aula diagnóstica gratuita.',
+  superprof:
+    'Olá! Vim do perfil no Superprof e quero agendar a aula diagnóstica gratuita.',
+  instagram:
+    'Olá! Vim do Instagram da professora e quero agendar a aula diagnóstica gratuita.',
+  indicacao:
+    'Olá! Fui indicado por outra família e quero agendar a aula diagnóstica gratuita.',
+  escola:
+    'Olá! Peguei o contato na escola e quero agendar a aula diagnóstica gratuita.',
+  'mural-ufmg':
+    'Olá! Vi o anúncio no mural da UFMG e quero agendar a aula diagnóstica gratuita.',
+};
+
+/**
+ * Link do WhatsApp já atribuído a um canal externo.
+ * Uso: `waLinkForCanal('google-business')` → cole no botão do perfil.
+ */
+export const waLinkForCanal = (canal: keyof typeof canaisLead | string) =>
+  waLink(canaisLead[canal] ?? leadMessages['/']);

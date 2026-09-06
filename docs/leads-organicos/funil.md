@@ -49,10 +49,17 @@ como verdade.
 
 ## Planilha de leads (preencher na mão, mensal)
 
-Uma linha por conversa iniciada. Cinco colunas, nada além disso:
+Uma linha por conversa iniciada. Seis colunas, nada além disso:
 
-| Data | Frase de origem → página | Série do aluno | Virou diagnóstica? | Virou pagante? |
-|---|---|---|---|---|
+| Data | Canal | Frase de origem → página | Série do aluno | Virou diagnóstica? | Virou pagante? |
+|---|---|---|---|---|---|
+
+A coluna **Canal** entrou em 2026-09-06, junto com o levantamento de
+[canais.md](canais.md): a frase de origem agora identifica também canais fora
+do site (perfil do Google, Suas Aulas Particulares, Superprof, Instagram,
+indicação, escola, mural da UFMG), declarados em `canaisLead` no
+`src/config/site.ts`. Sem ela, o lead de um perfil externo chega
+indistinguível do lead da home.
 
 É essa planilha que responde a pergunta 6 da Fase 2. Contar só conversa engana:
 uma página pode trazer muita conversa que não fecha.

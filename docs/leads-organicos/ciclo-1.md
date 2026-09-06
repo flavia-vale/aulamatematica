@@ -129,6 +129,21 @@ Este último item é, pelos dados do Ciclo 0, a ação de maior retorno que
 existe — volume de avaliação é o critério de ranqueamento em todas as listas
 de "melhores professores" que as quatro IAs produziram.
 
+## Passo 5b · Canais fora do site
+
+Levantamento e critérios em [canais.md](canais.md). A Faixa 1 é gratuita e
+**não toca o site** — pode (e deve) estar pronta antes de 04/10.
+
+- [ ] **Suas Aulas Particulares**: perfil criado, com mesmo nome, foto, bio e
+      preço do site, e WhatsApp com a frase do canal
+- [ ] **Superprof**: bio alinhada e as 5 famílias convidadas a avaliar também lá
+- [ ] **Instagram**: @ reservado, bio, foto e link (fecha o buraco no `sameAs`)
+- [ ] **Indicação**: as famílias atendidas foram perguntadas se conhecem outra
+- [ ] Botão de WhatsApp de **cada** perfil usando o link de `waLinkForCanal()`
+      — sem isso a conversa chega sem canal e o ciclo não aprende nada
+- [ ] Contar as conversas do mês **por canal**, na coluna nova de
+      [funil.md](funil.md)
+
 ## Passo 6 · Fechar o ciclo
 
 - [ ] `npm run check` verde

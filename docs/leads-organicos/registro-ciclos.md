@@ -724,3 +724,75 @@ decisão de título do Ciclo 1: o nome da professora talvez deva ocupar, nos
 títulos e no `brand`, o lugar que hoje é do nome genérico. A aba Consultas do
 Search Console dirá se alguém chega buscando "Taciane" — e aí a decisão sai
 de dado, não de leitura de captura de tela.
+
+### Levantamento de canais (2026-09-06)
+
+Pedido da dona do projeto: *"hoje a única iniciativa é o site; quero ampliar o
+leque"*. Levantamento completo em [canais.md](canais.md).
+
+**O que a leitura do dado próprio estabeleceu**
+
+Três medições já registradas apontam para o mesmo lugar e nenhuma delas tinha
+sido lida junto até agora: 28 medições de citação por IA com **zero citações do
+site**, a consulta 1 vencida por **ficha do Google Business Profile** nas quatro
+superfícies, e a captura de busca pelo nome mostrando **o perfil do Google em
+primeiro e o Superprof logo abaixo**. Lidas juntas, elas dizem que o gargalo
+desta operação não é conteúdo nem título — **é presença**. O site é a prova, não
+o canal.
+
+**O achado novo — Suas Aulas Particulares**
+
+É o único marketplace encontrado que **não destrói a vantagem estrutural da
+operação**. A plataforma declara *"100% da renda vai para os professores, não
+cobramos comissão"* e o contato é **externo desde o início**, por WhatsApp —
+exatamente o contrário do "Passe Aluno" do Superprof, que 3 de 4 superfícies
+descreveram como cobrança para o aluno falar com o professor.
+
+Quatro coisas se somam: é gratuito, o contato é direto, já foi citado por
+Perplexity e Modo IA do Google na consulta 3 da Fase 3, e é muito menos
+disputado — **106 professores de reforço escolar em BH contra 2.987 no
+Superprof**, na mesma categoria e cidade, medido em 2026-09-06. Em matemática
+em BH são 173 professores, com preço médio anunciado de R$ 36/h.
+
+**O que o levantamento derrubou**
+
+- *"Ampliar o leque é entrar em mais plataformas."* Não. Metade das plataformas
+  brasileiras (GetNinjas, Cronoshare) **vende o contato do cliente por
+  crédito** — o Cronoshare a partir de R$ 50, com até 4 profissionais recebendo
+  o mesmo pedido e um histórico de reclamações sobre leads não qualificados.
+  Pagar para receber o contato de quem não paga para falar é o oposto exato da
+  vantagem que a Fase 3 encontrou.
+- *"OLX e Marketplace são de graça, então valem."* Grátis não é o critério.
+  Anúncio expira e precisa ser republicado: mesmo esforço todo mês, nada
+  acumula — sem avaliação, sem histórico, sem entidade. É esteira.
+- *"O Reddit é muito citado pelas IAs, então é canal."* As duas coisas são
+  verdadeiras separadamente e a conclusão não segue: autopromoção de serviço em
+  comunidade brasileira do Reddit viola a norma dos subs, e o risco recai sobre
+  o nome real da professora.
+- *"As estatísticas de citação por IA de terceiros servem de base."* Não
+  servem. Os levantamentos encontrados se contradizem no mesmo trimestre
+  (YouTube "39,2% em fev/2026" contra Reddit "40% no agregado") e nenhum
+  publica metodologia auditável. Ordem de grandeza, nunca base de decisão — a
+  medição que vale aqui são as nossas 28 linhas.
+
+**O que foi implementado nesta entrega**
+
+- `canaisLead` e `waLinkForCanal()` em `src/config/site.ts`: cada canal externo
+  leva ao mesmo WhatsApp com **frase de origem própria**. É a instrumentação da
+  Fase 0 aplicada um nível acima da página — sem ela, o lead do Google Business
+  Profile e o lead do site chegam idênticos.
+- Regra **`atribuicao-canal`** no `npm run check`: varre os dois mapas de
+  `site.ts` e falha se duas frases se repetirem, entre canais ou contra uma
+  página. Testada com uma colisão proposital antes de entrar.
+- **Nenhuma linha de copy, título ou descrição foi tocada.** Toda a Faixa 1 do
+  plano é externa ao site, então a trava até 04/10/2026 não bloqueia nada — o
+  trabalho pode começar hoje sem destruir a linha de base do Search Console.
+
+**Perguntas que o Ciclo 1 passa a responder**
+
+1. Quantas conversas chegaram **por canal**, e não só por página? (a planilha
+   de [funil.md](funil.md) ganhou a coluna)
+2. As 5 famílias avaliaram no Google e no Superprof? É a ação de maior retorno
+   registrada desde o Ciclo 0, e continua não feita.
+3. A Fase 3 do Ciclo 1 devolve alguma citação de um canal **nosso** — perfil do
+   Google, Suas Aulas Particulares — e não só do Superprof?

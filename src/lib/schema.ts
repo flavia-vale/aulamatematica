@@ -7,37 +7,53 @@ const perfisExternos = [site.social.instagram, site.social.superprof].filter(
   (u): u is string => Boolean(u),
 );
 
-/** Só existe quando há depoimento real. Nunca inventar avaliação: no JSON-LD
- *  isso é spam estruturado e o Google pune com desindexação. */
+const PERSON_ID = `${site.url}/#taciane`;
+const BUSINESS_ID = `${site.url}/#business`;
+const WEBSITE_ID = `${site.url}/#website`;
+
+/**
+ * Avaliações.
+ *
+ * `aggregateRating` e `reviewRating` SÓ existem quando há nota numérica real.
+ * Os depoimentos atuais são mensagens de agradecimento, não avaliações com
+ * estrela — derivar "5 de 5" delas seria inventar dado de avaliação, que é o
+ * que o Google trata como spam estruturado.
+ *
+ * Sem nota, o depoimento vira um `Review` com autor e texto, sem nota. É
+ * schema válido e honesto. (O Google não exibe estrelas para avaliação que o
+ * próprio negócio coleta e publica, então não há perda de rich result aqui.)
+ */
+const comNota = depoimentos.filter((d) => typeof d.nota === 'number');
+
 const avaliacoesSchema =
   depoimentos.length > 0
     ? {
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: (
-            depoimentos.reduce((t, d) => t + (d.nota ?? 5), 0) / depoimentos.length
-          ).toFixed(1),
-          reviewCount: depoimentos.length,
-          bestRating: 5,
-          worstRating: 1,
-        },
         review: depoimentos.map((d) => ({
           '@type': 'Review',
           author: { '@type': 'Person', name: d.nome },
           reviewBody: d.texto,
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: d.nota ?? 5,
+          ...(typeof d.nota === 'number' && {
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: d.nota,
+              bestRating: 5,
+              worstRating: 1,
+            },
+          }),
+        })),
+        ...(comNota.length > 0 && {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: (
+              comNota.reduce((t, d) => t + (d.nota as number), 0) / comNota.length
+            ).toFixed(1),
+            reviewCount: comNota.length,
             bestRating: 5,
             worstRating: 1,
           },
-        })),
+        }),
       }
     : {};
-
-const PERSON_ID = `${site.url}/#taciane`;
-const BUSINESS_ID = `${site.url}/#business`;
-const WEBSITE_ID = `${site.url}/#website`;
 
 export const personSchema = {
   '@type': 'Person',

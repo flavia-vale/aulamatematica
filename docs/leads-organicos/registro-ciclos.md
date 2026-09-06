@@ -507,3 +507,46 @@ houver depoimento verdadeiro com autorização, é uma edição de um arquivo.
 3. Uma foto da professora — o site não tem nenhuma imagem em nenhuma página.
 4. Atualizar o preço no perfil do Superprof, que ainda anuncia R$ 50 e é o que
    as IAs leem.
+
+### Prova social publicada (2026-09-06)
+
+Cinco depoimentos **reais** entraram no site, a partir de prints de conversas
+de WhatsApp fornecidos pela dona do projeto. Fecha o maior buraco apontado no
+plano de melhoria — o site tinha zero prova social num mercado onde, segundo a
+Fase 3, **todas as listas de "melhores professores" ranqueiam por volume de
+avaliações**.
+
+**Tratamento aplicado**
+
+- **Nomes de alunos anonimizados por inicial** (D., J., P.), a pedido da dona
+  do projeto. Verificado no HTML compilado: nenhum dos cinco nomes aparece.
+  (A única ocorrência de "Pedro" no site é a cidade Pedro Leopoldo, na lista
+  de regiões atendidas — conteúdo pré-existente.)
+- Edição limitada a remover saudação, despedida e nome do aluno. Nenhuma
+  palavra foi acrescentada.
+- Autoria identificada pelo papel ("Mãe de aluno", "Responsável por aluno"),
+  não por nome — os prints não mostram remetente.
+
+**Correção de um erro meu, antes de publicar**
+
+Eu havia escrito o `avaliacoesSchema` derivando `nota ?? 5` de cada
+depoimento. Isso teria gerado um `aggregateRating` de 5,0 a partir de
+mensagens que **nunca deram nota**. Seria exatamente o tipo de dado de
+avaliação inventado que eu tinha recusado a produzir, entrando pela porta dos
+fundos do JSON-LD.
+
+Corrigido: `reviewRating` só existe quando o depoimento tem `nota` numérica
+real, e `aggregateRating` só é emitido se ao menos um tiver. Como nenhum tem,
+o site publica cinco `Review` com autor e texto, **sem nota e sem média**.
+Verificado no HTML: `reviewRating` ausente, `aggregateRating` ausente.
+
+Vale notar que não há perda: o Google não exibe estrelas para avaliação que o
+próprio negócio coleta e publica, então marcação de nota ali não renderia rich
+result de qualquer forma.
+
+**Pendência que sobra**
+
+Recomendado pedir autorização explícita às cinco famílias antes de manter a
+publicação, mesmo anonimizada. O conteúdo da mensagem é delas, e é o tipo de
+gesto que essa operação pode dar ao dispensar. Não bloqueia a publicação —
+é anonimizado e elogioso —, mas é o certo a fazer.

@@ -67,8 +67,13 @@ export const site = {
  * A seção inteira e o `aggregateRating` do schema só aparecem quando este
  * array tiver conteúdo. Enquanto estiver vazio, nada é renderizado.
  *
- * Formato:
- *   { nome: 'Nome', papel: 'mãe do João, 9º ano', texto: '...', nota: 5 }
+ * `nota` é OPCIONAL e só deve ser preenchida se a pessoa realmente deu uma
+ * nota numérica. Mensagem de agradecimento não é avaliação com estrela —
+ * derivar "5 de 5" dela seria inventar dado de avaliação.
+ *
+ * Nomes de alunos são anonimizados por inicial. As mensagens abaixo são
+ * transcrições de conversas reais de WhatsApp, editadas apenas para remover
+ * saudação, despedida e nome do aluno.
  */
 export interface Depoimento {
   nome: string;
@@ -77,7 +82,38 @@ export interface Depoimento {
   nota?: number;
 }
 
-export const depoimentos: Depoimento[] = [];
+export const depoimentos: Depoimento[] = [
+  {
+    nome: 'Mãe de aluno',
+    papel: 'recuperação de notas',
+    texto:
+      'Passando para te dar o melhor feedback do mundo: ele só ia mal em matemática e, na primeira prova depois que começou a ter aulas com você, tirou 8! Não tô acreditando até agora. Muito obrigada por ter salvado ele e pela paciência gigante.',
+  },
+  {
+    nome: 'Mãe de aluna',
+    papel: 'preparação para o ENEM',
+    texto:
+      'Estou passando para dar um feedback e agradecer de coração por toda a ajuda que você tem dado à D. nessa preparação para o ENEM. Ela tá super firme nos estudos e você tem sido fundamental nessa reta final. Muito obrigada mesmo pela parceria de sempre. Na semana que vem irei te procurar para começarmos as aulas do P.',
+  },
+  {
+    nome: 'Mãe de aluna',
+    papel: 'acompanhamento no ano letivo',
+    texto:
+      'Queria te agradecer de coração pelo carinho e pela paciência com a D. Você fez toda a diferença no ano letivo dela — e na nossa rotina!',
+  },
+  {
+    nome: 'Responsável por aluno',
+    papel: 'reforço escolar de matemática',
+    texto:
+      'Passando para agradecer muito pela dedicação e paciência com o J. nas aulas de matemática. Ele evoluiu bastante!',
+  },
+  {
+    nome: 'Mãe de aluno',
+    papel: 'reforço escolar de matemática',
+    texto:
+      'Não podia deixar de te agradecer pela paciência infinita com o J. nas aulas. É lindo de ver o carinho que você tem com ele e como ele adora os momentos de vocês. Muito obrigada por ser tão especial.',
+  },
+];
 
 export const waLink = (msg = 'Olá! Tenho interesse em aulas particulares de matemática.') =>
   `https://wa.me/${site.contact.whatsappRaw}?text=${encodeURIComponent(msg)}`;

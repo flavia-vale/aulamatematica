@@ -806,3 +806,36 @@ professores" das quatro IAs.
 
 O erro de snippet e o dado da Fase 3 dizem a mesma coisa por caminhos
 diferentes: **as cinco famílias precisam avaliar no Google, não no site.**
+
+### Endurecimento do schema após o erro de snippets (2026-09-06)
+
+Auditoria do JSON-LD depois de remover a marcação de `Review`. Confirmado
+primeiro que **nenhuma página compilada** contém `review` ou
+`aggregateRating` — a correção anterior valeu para todas de uma vez, porque
+`avaliacoesSchema` era um módulo compartilhado entre `serviceSchema` e
+`localBusinessSchema`, e toda página usa os dois. O que o Search Console
+mostrava era o rastreamento anterior ao commit.
+
+**Dois defeitos reais encontrados na auditoria — não geravam erro, mas
+enfraqueciam o que foi construído hoje**
+
+1. **`GeoCircle` sem coordenada.** O `geoMidpoint` levava só uma string de
+   endereço; o Google normalizava para um `PostalAddress` solto e o raio de
+   20 km ficava sem âncora. Trocado por latitude e longitude reais do centro
+   de BH (−19.9167, −43.9345). Corrigido nos três lugares onde aparecia.
+2. **`priceRange: "R$45"`** descrevia só o online. Desde que o presencial
+   passou a existir, o intervalo correto é **R$45–R$150**.
+
+**A regra que impede a terceira tentativa de voltar**
+
+Em um único dia a marcação de avaliação tentou entrar três vezes: no pedido
+de depoimentos fabricados, num `nota ?? 5` que eu mesmo escrevi e peguei antes
+de publicar, e como "erro a corrigir" sugerido pelo relatório de Snippets.
+
+Virou regra de varredura: **`avaliacao-no-schema`** falha se qualquer bloco
+JSON-LD contiver `review` ou `aggregateRating`. Testada negativamente —
+reintroduzindo um `aggregateRating` no `LocalBusiness`, a varredura acusou 11
+páginas.
+
+Os depoimentos continuam visíveis na página. Só a marcação é proibida, e o
+lugar da nota é o Google Business Profile.

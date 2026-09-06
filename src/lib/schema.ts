@@ -78,7 +78,9 @@ export const localBusinessSchema = {
   url: site.url,
   image: `${site.url}/og-image.png`,
   telephone: `+${site.contact.whatsappRaw}`,
-  priceRange: `R$${site.preco.online}`,
+  // Cobre as duas modalidades. Só o valor do online descrevia mal a
+  // operação desde que o presencial passou a existir.
+  priceRange: `R$${site.preco.online}–R$${site.preco.presencialMax}`,
   currenciesAccepted: 'BRL',
   openingHoursSpecification: [
     {
@@ -102,7 +104,11 @@ export const localBusinessSchema = {
   ],
   serviceArea: {
     '@type': 'GeoCircle',
-    geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: site.presencial.lat,
+      longitude: site.presencial.lng,
+    },
     geoRadius: site.presencial.raioKm * 1000,
   },
   address: {
@@ -167,7 +173,11 @@ export const serviceSchema = (params: {
       url: params.url,
       areaServed: {
         '@type': 'GeoCircle',
-        geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+        geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: site.presencial.lat,
+      longitude: site.presencial.lng,
+    },
         geoRadius: site.presencial.raioKm * 1000,
       },
       priceSpecification: {
@@ -187,7 +197,11 @@ export const serviceSchema = (params: {
   ],
   serviceArea: {
     '@type': 'GeoCircle',
-    geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: site.presencial.lat,
+      longitude: site.presencial.lng,
+    },
     geoRadius: site.presencial.raioKm * 1000,
   },
   audience: { '@type': 'EducationalAudience', educationalRole: site.service.audience },

@@ -90,7 +90,7 @@ export const localBusinessSchema = {
   url: site.url,
   image: `${site.url}/og-image.png`,
   telephone: `+${site.contact.whatsappRaw}`,
-  priceRange: `R$${site.preco.aula}`,
+  priceRange: `R$${site.preco.online}`,
   currenciesAccepted: 'BRL',
   openingHoursSpecification: [
     {
@@ -107,7 +107,17 @@ export const localBusinessSchema = {
     },
   ],
   ...avaliacoesSchema,
-  areaServed: site.service.areaServed.map((n) => ({ '@type': 'Place', name: n })),
+  // Online é nacional; presencial tem raio real. Declarar os dois separados
+  // é o que permite ao Google entender a operação híbrida.
+  areaServed: [
+    { '@type': 'Country', name: 'Brasil' },
+    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
+  ],
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+    geoRadius: site.presencial.raioKm * 1000,
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.city,
@@ -138,10 +148,13 @@ export const serviceSchema = (params: {
   name: params.name,
   description: params.description,
   url: params.url,
-  offers: {
-    '@type': 'Offer',
-    price: site.preco.aula,
-    priceCurrency: 'BRL',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Aula online',
+      price: site.preco.online,
+      priceCurrency: 'BRL',
+      areaServed: { '@type': 'Country', name: 'Brasil' },
     // Um ano à frente da vigência. Data no passado faz o Google tratar a
     // oferta como expirada e ignorar o preço no resultado de busca.
     priceValidUntil: `${Number(site.preco.vigencia.slice(0, 4)) + 1}-${site.preco.vigencia.slice(5)}-28`,
@@ -149,19 +162,48 @@ export const serviceSchema = (params: {
     url: params.url,
     priceSpecification: {
       '@type': 'UnitPriceSpecification',
-      price: site.preco.aula,
+      price: site.preco.online,
       priceCurrency: 'BRL',
-      unitText: `aula de ${site.preco.duracaoMin} minutos`,
-      referenceQuantity: {
-        '@type': 'QuantitativeValue',
-        value: site.preco.duracaoMin,
-        unitCode: 'MIN',
+        unitText: `aula online de ${site.preco.duracaoMin} minutos`,
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          value: site.preco.duracaoMin,
+          unitCode: 'MIN',
+        },
       },
     },
-  },
+    {
+      '@type': 'Offer',
+      name: 'Aula presencial',
+      priceCurrency: 'BRL',
+      availability: 'https://schema.org/InStock',
+      url: params.url,
+      areaServed: {
+        '@type': 'GeoCircle',
+        geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+        geoRadius: site.presencial.raioKm * 1000,
+      },
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        minPrice: site.preco.presencialMin,
+        maxPrice: site.preco.presencialMax,
+        priceCurrency: 'BRL',
+      },
+    },
+  ],
   ...avaliacoesSchema,
   provider: { '@id': BUSINESS_ID },
-  areaServed: site.service.areaServed.map((n) => ({ '@type': 'Place', name: n })),
+  // Online é nacional; presencial tem raio real. Declarar os dois separados
+  // é o que permite ao Google entender a operação híbrida.
+  areaServed: [
+    { '@type': 'Country', name: 'Brasil' },
+    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
+  ],
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: { '@type': 'GeoCoordinates', address: `${site.presencial.origem}, MG, BR` },
+    geoRadius: site.presencial.raioKm * 1000,
+  },
   audience: { '@type': 'EducationalAudience', educationalRole: site.service.audience },
 });
 

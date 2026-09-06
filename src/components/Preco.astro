@@ -3,16 +3,18 @@ import { site } from '../config/site';
 import CTAButtons from './CTAButtons.astro';
 
 interface Props {
+  /** Qual modalidade destacar. A outra continua visível, só sem realce. */
+  destaque?: 'online' | 'presencial';
   compacto?: boolean;
 }
-const { compacto = false } = Astro.props;
-const { preco } = site;
+const { destaque = 'online', compacto = false } = Astro.props;
+const { preco, presencial } = site;
 ---
 
 <!--
   O atributo data-preco-vigencia é obrigatório em qualquer bloco que exiba
   R$. O `npm run check` falha se uma página mostrar preço sem declarar desde
-  quando ele vale — preço sem data envelhece em silêncio e vira mentira.
+  quando ele vale — preço sem data envelhece em silêncio.
 -->
 <section
   class:list={['border-t border-stone-200', compacto ? '' : 'bg-stone-100/50']}
@@ -24,53 +26,107 @@ const { preco } = site;
       Sem taxa, sem cadastro, sem intermediário.
     </h2>
 
-    <div class="mt-10 grid gap-5 lg:grid-cols-3">
-      <div class="rounded-xl border border-stone-900 bg-stone-900 p-7 text-stone-50">
-        <p class="text-xs font-semibold tracking-widest text-stone-400 uppercase">Aula individual</p>
-        <p class="mt-4 font-serif text-5xl leading-none tracking-tight">
-          R$ {preco.aula}
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      <div
+        class:list={[
+          'rounded-xl border p-7',
+          destaque === 'online'
+            ? 'border-stone-900 bg-stone-900 text-stone-50'
+            : 'border-stone-200 bg-stone-50 text-stone-900',
+        ]}
+      >
+        <p
+          class:list={[
+            'text-xs font-semibold tracking-widest uppercase',
+            destaque === 'online' ? 'text-stone-400' : 'text-stone-500',
+          ]}
+        >
+          Aula online
         </p>
-        <p class="mt-3 text-sm text-stone-300">
+        <p class="mt-4 font-serif text-5xl leading-none tracking-tight">R$ {preco.online}</p>
+        <p class:list={['mt-3 text-sm', destaque === 'online' ? 'text-stone-300' : 'text-stone-600']}>
           por aula de {preco.duracaoMin} minutos, ao vivo e individual
         </p>
-        <p class="mt-6 border-t border-stone-700 pt-5 text-sm leading-relaxed text-stone-300">
-          Pacotes mensais e trimestrais têm desconto — combinamos conforme a
-          frequência que fizer sentido pro aluno.
+        <p
+          class:list={[
+            'mt-6 border-t pt-5 text-sm leading-relaxed',
+            destaque === 'online' ? 'border-stone-700 text-stone-300' : 'border-stone-200 text-stone-600',
+          ]}
+        >
+          Atendo alunos de qualquer cidade do Brasil. Pacotes mensais e
+          trimestrais têm desconto.
         </p>
       </div>
 
-      <div class="rounded-xl border border-emerald-700/30 bg-emerald-50 p-7 lg:col-span-2">
-        <p class="text-xs font-semibold tracking-widest text-emerald-800 uppercase">
-          Antes de pagar qualquer coisa
+      <div
+        class:list={[
+          'rounded-xl border p-7',
+          destaque === 'presencial'
+            ? 'border-stone-900 bg-stone-900 text-stone-50'
+            : 'border-stone-200 bg-stone-50 text-stone-900',
+        ]}
+      >
+        <p
+          class:list={[
+            'text-xs font-semibold tracking-widest uppercase',
+            destaque === 'presencial' ? 'text-stone-400' : 'text-stone-500',
+          ]}
+        >
+          Aula presencial
         </p>
-        <p class="mt-4 font-serif text-2xl font-medium tracking-tight text-stone-900">
-          O diagnóstico de {preco.diagnosticoMin} minutos é gratuito.
+        <p class="mt-4 font-serif text-5xl leading-none tracking-tight">
+          <span class="align-middle text-xl">a partir de</span> R$ {preco.presencialMin}
         </p>
-        <p class="mt-4 leading-relaxed text-stone-700">
-          Conversamos sobre a série e a dificuldade, resolvo alguns exercícios com
-          o aluno pra descobrir onde a base quebrou, e monto um plano. Sem
-          compromisso de contratar nada depois.
+        <p
+          class:list={['mt-3 text-sm', destaque === 'presencial' ? 'text-stone-300' : 'text-stone-600']}
+        >
+          por aula de {preco.duracaoMin} minutos, {presencial.ondeTexto}
         </p>
-
-        <ul class="mt-7 grid gap-3 text-sm text-stone-700 sm:grid-cols-2">
-          <li class="flex gap-2">
-            <span aria-hidden="true" class="text-emerald-700">✓</span>
-            <span>Você fala comigo direto no WhatsApp</span>
-          </li>
-          <li class="flex gap-2">
-            <span aria-hidden="true" class="text-emerald-700">✓</span>
-            <span><strong>Nenhuma taxa</strong> para conseguir meu contato</span>
-          </li>
-          <li class="flex gap-2">
-            <span aria-hidden="true" class="text-emerald-700">✓</span>
-            <span>Sem assinatura e sem cadastro em plataforma</span>
-          </li>
-          <li class="flex gap-2">
-            <span aria-hidden="true" class="text-emerald-700">✓</span>
-            <span>Material e dúvidas por foto inclusos</span>
-          </li>
-        </ul>
+        <p
+          class:list={[
+            'mt-6 border-t pt-5 text-sm leading-relaxed',
+            destaque === 'presencial'
+              ? 'border-stone-700 text-stone-300'
+              : 'border-stone-200 text-stone-600',
+          ]}
+        >
+          Me desloco até {presencial.raioKm} km de {presencial.origem}. O valor
+          varia com a distância e o nível do aluno — combinamos na conversa.
+        </p>
       </div>
+    </div>
+
+    <div class="mt-5 rounded-xl border border-emerald-700/30 bg-emerald-50 p-7">
+      <p class="text-xs font-semibold tracking-widest text-emerald-800 uppercase">
+        Antes de pagar qualquer coisa
+      </p>
+      <p class="mt-4 font-serif text-2xl font-medium tracking-tight text-stone-900">
+        O diagnóstico de {preco.diagnosticoMin} minutos é gratuito.
+      </p>
+      <p class="mt-4 max-w-3xl leading-relaxed text-stone-700">
+        Conversamos sobre a série e a dificuldade, resolvo alguns exercícios com
+        o aluno pra descobrir onde a base quebrou, e monto um plano. Sem
+        compromisso de contratar nada depois.
+      </p>
+
+      <ul class="mt-7 grid gap-3 text-sm text-stone-700 sm:grid-cols-2">
+        <li class="flex gap-2">
+          <span aria-hidden="true" class="text-emerald-700">✓</span>
+          <span>Você fala comigo direto no WhatsApp</span>
+        </li>
+        <li class="flex gap-2">
+          <span aria-hidden="true" class="text-emerald-700">✓</span>
+          <span><strong>Nenhuma taxa</strong> para conseguir meu contato</span>
+        </li>
+        <li class="flex gap-2">
+          <span aria-hidden="true" class="text-emerald-700">✓</span>
+          <span>Sem assinatura e sem cadastro em plataforma</span>
+        </li>
+        <li class="flex gap-2">
+          <span aria-hidden="true" class="text-emerald-700">✓</span>
+          <span>Material e dúvidas por foto inclusos</span>
+        </li>
+      </ul>
     </div>
 
     {!compacto && <CTAButtons />}

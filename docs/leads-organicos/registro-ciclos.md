@@ -550,3 +550,62 @@ Recomendado pedir autorização explícita às cinco famílias antes de manter a
 publicação, mesmo anonimizada. O conteúdo da mensagem é delas, e é o tipo de
 gesto que essa operação pode dar ao dispensar. Não bloqueia a publicação —
 é anonimizado e elogioso —, mas é o certo a fazer.
+
+### Reposicionamento: BH vira presencial, online deixa de citar BH (2026-09-06)
+
+Decisão da dona do projeto, e ela é sustentada pelos dados das Fases 3 e 4.
+
+**Por que faz sentido**
+
+1. **É como as IAs já leem "BH".** Na consulta 1 da Fase 3 as quatro
+   superfícies interpretaram "Aulas de Matemática BH" como aula **presencial,
+   por bairro**, e responderam com fichas do Google Business Profile
+   (Savassi, Buritis, Floresta, Coração Eucarístico). Gemini e Google
+   perguntaram de volta "presencial em BH ou online?" e "qual bairro?".
+2. **Conserta uma contradição que já existia no site.** A página de BH listava
+   ~50 bairros e cidades e ao mesmo tempo declarava "100% online". Nunca fez
+   sentido listar bairro para atendimento remoto.
+3. **O presencial paga mais.** O resumo de IA do Google deu a faixa de reforço
+   individual em domicílio: R$ 50–150/h, acima das faixas de online.
+4. **Ela já anunciava assim em outro canal.** A URL do perfil no Superprof é
+   `...matematica-presencial-online-licencianda-pela-ufmg...`. O site era o
+   canal fora de sintonia.
+5. **Tirar BH do online está certo.** A Fase 4 mediu zero interesse para
+   termos com BH em 53 semanas e 27 estados, e uma única aparição a 50
+   buscas/mês em 648 termos. Para o público online, nacional, "BH" só ocupava
+   espaço no título.
+6. **Destrava o Google Business Profile**, que a Fase 3 apontou como o que de
+   fato vence a consulta 1 — e que exige área de atendimento real.
+
+**O que mudou**
+
+- Preço passou a ter duas modalidades: online R$ 45 (nacional) e presencial a
+  partir de R$ 50 (faixa até R$ 150, variando com distância e nível).
+- Página de BH reescrita para presencial: título, descrição, H2 de cobertura,
+  três FAQs e o card lateral.
+- **Raio de 20 km aplicado à lista de cobertura.** Saíram de "Grande BH":
+  Betim (borderline) e todo o bloco "Interior MG" — Sete Lagoas (~70 km),
+  Divinópolis (~120 km), Itaúna (~80 km), Lagoa Santa (~35 km), Pedro
+  Leopoldo (~45 km) e Juiz de Fora (~270 km). Foram movidas para um card
+  "Mais longe? Online", em vez de sumirem.
+- "100% online" **eliminado do site inteiro** (home, sobre, contato, online,
+  BH, llms.txt, config). Era falso a partir desta decisão.
+- Schema: `areaServed` híbrido (Country Brasil + as cidades do raio),
+  `serviceArea` com `GeoCircle` de 20 km, e **duas ofertas** — `Offer` com
+  preço fixo para online e `PriceSpecification` com min/max para presencial.
+
+**Menções a BH que sobraram nas páginas online, e por quê**
+
+Nome da marca no título e rodapé, link "Aulas em BH" na navegação, e o card
+de preço presencial que aparece ao lado do online. Todas legítimas — a marca
+é outra decisão, e mostrar as duas modalidades lado a lado é intencional.
+
+**Foto da professora publicada**
+
+`public/taciane-andrade.jpg`, 900×1125, 98 KB. O arquivo original tinha 2 MB
+em PNG e foi removido do repositório após a otimização. A foto renderiza em
+`/sobre` e na home, e alimenta o `image` do `Person` no schema.
+
+Levantei que o arquivo original trazia metadados C2PA da OpenAI. A dona do
+projeto esclareceu que é foto de pessoa real que passou por ajuste de IA —
+prática comum em retrato profissional. Registrado, e seguimos.

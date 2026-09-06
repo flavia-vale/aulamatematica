@@ -4,7 +4,7 @@ export const site = {
   brand: 'Aulas de Matemática BH',
   tagline: 'Aulas particulares de matemática com professora da UFMG',
   description:
-    'Aulas particulares de matemática online para alunos do ensino fundamental e médio. Reforço escolar, preparação para provas e recuperação de notas com Taciane Andrade, licencianda em Matemática pela UFMG. Atendimento em todo o Brasil, com foco em Belo Horizonte.',
+    'Aulas particulares de matemática para alunos do ensino fundamental e médio. Online para todo o Brasil, ou presenciais em Belo Horizonte e num raio de 20 km — na casa do aluno ou em local público. Reforço escolar, preparação para provas e recuperação de notas com Taciane Andrade, licencianda em Matemática pela UFMG.',
   locale: 'pt-BR',
   region: 'BR-MG',
   city: 'Belo Horizonte',
@@ -12,14 +12,14 @@ export const site = {
     name: 'Taciane Andrade',
     role: 'Professora particular de Matemática',
     credentials: 'Licencianda em Matemática pela UFMG',
-    bio: 'Estudante de Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG), com experiência em reforço escolar para alunos do ensino fundamental e médio.',
+    bio: 'Estudante de Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG), com experiência em reforço escolar para alunos do ensino fundamental e médio. Atende online em todo o Brasil e presencialmente em Belo Horizonte e região.',
     /**
      * Foto da professora, em `public/`. Deixe string vazia enquanto não
      * houver arquivo: as seções que a exibem simplesmente não renderizam, e
      * o `image` do schema cai de volta para a og-image.
      * Recomendado: retrato vertical, mínimo 800x1000, otimizado.
      */
-    foto: '',
+    foto: '/taciane-andrade.jpg',
     fotoAlt: 'Taciane Andrade, professora particular de matemática',
   },
   contact: {
@@ -52,14 +52,49 @@ export const site = {
    * R$ sem declarar desde quando aquele valor vale.
    */
   preco: {
-    aula: 45,
+    /** Aula online, ao vivo. Atendimento nacional. */
+    online: 45,
+    /** Presencial na casa do aluno ou em local público, dentro do raio.
+     *  Varia com deslocamento e nível — a página anuncia "a partir de". */
+    presencialMin: 50,
+    presencialMax: 150,
     duracaoMin: 50,
     diagnosticoMin: 30,
     vigencia: '2026-09',
     vigenciaTexto: 'setembro de 2026',
   },
+
+  /**
+   * Presencial. Definido em 2026-09-06.
+   *
+   * A Fase 3 mostrou que as quatro IAs leem "BH" como consulta de aula
+   * PRESENCIAL, por bairro, e respondem com fichas do Google Business
+   * Profile. O site disputava esse termo oferecendo aula remota — e listava
+   * 50 bairros para um serviço que dizia ser 100% online.
+   *
+   * Agora: BH é presencial, o resto é online e não menciona BH.
+   */
+  presencial: {
+    raioKm: 20,
+    origem: 'Belo Horizonte',
+    /** Locais: casa do aluno ou local público (biblioteca, café, coworking). */
+    ondeTexto: 'na casa do aluno ou em local público combinado',
+    /** Dentro de ~20 km do centro de BH. Sete Lagoas, Divinópolis, Itaúna,
+     *  Juiz de Fora, Lagoa Santa e Pedro Leopoldo ficam FORA — foram
+     *  movidas para o atendimento online. */
+    cidades: [
+      'Belo Horizonte',
+      'Contagem',
+      'Nova Lima',
+      'Sabará',
+      'Santa Luzia',
+      'Ribeirão das Neves',
+      'Vespasiano',
+    ],
+  },
   service: {
-    areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil'],
+    /** Online é nacional; o presencial tem raio próprio em `presencial`. */
+    areaServed: ['Brasil'],
     serviceType: 'Aulas particulares de Matemática',
     audience: 'Alunos do ensino fundamental e médio',
   },

@@ -61,6 +61,25 @@ e várias hipóteses já derrubadas por dado.
 - **A Taciane já tem perfil no Superprof**, e é o único ativo dela que as IAs
   encontram e citam. O site não é citado por nenhuma delas.
 
+## Modelo de atendimento (definido em 2026-09-06)
+
+Duas modalidades, deliberadamente separadas:
+
+- **Online — R$ 45/aula, todo o Brasil.** As páginas de aula online **não
+  mencionam BH**: a Fase 4 mediu que termos com "BH" têm volume zero, e o
+  público online é nacional.
+- **Presencial — a partir de R$ 50, até 20 km do centro de BH**, na casa do
+  aluno ou em local público. Cobre Contagem, Nova Lima, Sabará, Santa Luzia,
+  Ribeirão das Neves e Vespasiano. Cidades além do raio (Lagoa Santa, Sete
+  Lagoas, Divinópolis, Juiz de Fora) são atendidas **só online**.
+
+A separação veio da Fase 3: as quatro IAs leem "BH" como consulta de aula
+**presencial, por bairro**, e respondem com fichas do Google Business Profile.
+O site disputava esse termo oferecendo aula remota — e listava 50 bairros para
+um serviço que dizia ser 100% online.
+
+**Não reintroduzir "100% online" em lugar nenhum.** É falso desde 2026-09-06.
+
 ## Regras de trabalho
 
 - **Não alterar título, descrição ou copy sem dado do Search Console.** A

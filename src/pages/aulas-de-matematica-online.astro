@@ -19,7 +19,7 @@ const faqs = [
   { q: 'Qual ferramenta é usada para a aula?', a: 'Google Meet ou Zoom para a videochamada e uma lousa digital (Miro ou similar) para escrever. Tudo gratuito, sem instalação complicada — basta o navegador do computador, tablet ou celular.' },
   { q: 'Precisa de algum equipamento especial?', a: 'Não. Computador, tablet ou celular com câmera, microfone e internet estável. Idealmente um caderno e lápis ao lado para o aluno também resolver no papel.' },
   { q: 'E se a conexão cair durante a aula?', a: 'A aula é remarcada sem custo. Acontece raramente — mas se algo der errado do lado da professora ou do aluno, o tempo perdido é compensado.' },
-  { q: 'Posso pagar por aula avulsa?', a: `Pode. A aula avulsa de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.aula}, vigente desde ${site.preco.vigenciaTexto}. Para acompanhamento contínuo os pacotes mensais saem mais em conta e mantêm a continuidade pedagógica — mas avulsa funciona bem para reforço pontual antes de uma prova.` },
+  { q: 'Posso pagar por aula avulsa?', a: `Pode. A aula online avulsa de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.online}, vigente desde ${site.preco.vigenciaTexto}. Para acompanhamento contínuo os pacotes mensais saem mais em conta e mantêm a continuidade pedagógica — mas avulsa funciona bem para reforço pontual antes de uma prova.` },
 ];
 
 const schema = graph(
@@ -40,7 +40,7 @@ const schema = graph(
 
 <Base title={title} description={description} path={path} schema={schema}>
   <PageHero
-    eyebrow="100% online · Ao vivo"
+    eyebrow="Online · Ao vivo · Todo o Brasil"
     title=""
     description="Aulas individuais por videochamada com lousa digital, materiais enviados depois e suporte por WhatsApp entre os encontros. Sem deslocamento. Sem turma. Só o aluno e a professora."
   >
@@ -124,7 +124,7 @@ const schema = graph(
       Mora em qualquer cidade do Brasil? Tudo bem.
     </h2>
     <p class="mx-auto mt-5 max-w-2xl text-stone-600 leading-relaxed">
-      Como tudo é online, atendo de São Paulo a Manaus. A base é Belo Horizonte, mas a maioria dos alunos vem de outras cidades. Idioma português, fuso de Brasília — e horários flexíveis pra encaixar na rotina escolar.
+      A aula online é ao vivo e individual, e atendo de São Paulo a Manaus. Fuso de Brasília, horários flexíveis pra encaixar na rotina escolar — e a mesma aula, esteja o aluno onde estiver.
     </p>
   </section>
 

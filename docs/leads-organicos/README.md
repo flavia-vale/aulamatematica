@@ -210,6 +210,12 @@ Por fim, escreva o registro do ciclo em **[registro-ciclos.md](registro-ciclos.m
 o que foi feito, **o que a medição derrubou**, e as perguntas para o mês
 seguinte. Na próxima rodada você começa por ele em vez de reler tudo.
 
+## A próxima rodada
+
+O roteiro executável do Ciclo 1 está em **[ciclo-1.md](ciclo-1.md)**, com data
+de início (04/10/2026), as seis perguntas em forma de checklist e as decisões
+que ficaram esperando o dado do Search Console.
+
 ## A ordem, se começar hoje
 
 Nem tudo tem o mesmo retorno por hora gasta.

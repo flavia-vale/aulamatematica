@@ -37,6 +37,7 @@ e várias hipóteses já derrubadas por dado.
 
 | Documento | O que contém |
 |---|---|
+| **`ciclo-1.md`** | **Roteiro pronto da próxima rodada, a partir de 04/10/2026** |
 | `README.md` | O procedimento: 7 fases, cadência, as 6 perguntas da Fase 2 |
 | `registro-ciclos.md` | **Comece por aqui.** Diário do que foi feito e do que a medição derrubou |
 | `mercado.md` | Google Trends + Planejador: volumes, sazonalidade, intenção |
@@ -104,6 +105,8 @@ um serviço que dizia ser 100% online.
 - **Não alterar título, descrição ou copy sem dado do Search Console.** A
   propriedade foi verificada em 04/09/2026; o primeiro ciclo de leitura ocorre
   ~04/10/2026. Mexer antes destrói a linha de base.
+- **A partir de 04/10/2026, abrir `docs/leads-organicos/ciclo-1.md`** — é o
+  roteiro da rodada, com as decisões que ficaram esperando dado.
 - **Toda decisão de conteúdo vira regra no `check-conteudo.mjs`**, escrita como
   varredura com exceção nominal — nunca como lista do que conferir.
 - **Registrar o que a medição derrubou**, sempre, em `registro-ciclos.md`.

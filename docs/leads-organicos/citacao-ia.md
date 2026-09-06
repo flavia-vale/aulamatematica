@@ -87,7 +87,51 @@ base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela �
 
 | Ciclo | Data | Citações | Superfícies que citam | Observação |
 |---|---|---|---|---|
-| 0 | 2026-09-03 | 0 de 16 | 0 de 4 | consultas 1, 3, 5 e 6; site ainda não publicado; 4 linhas contaminadas |
+| 0 | 2026-09-03 a 09-06 | **1 de 28** | 1 de 4 | ciclo completo; a única citação aponta para o Superprof, **não para o site** |
+
+### Fase 3 encerrada — a síntese
+
+**28 medições. Uma citação do negócio. Zero citações do site.**
+
+A única foi o Modo IA do Google respondendo a consulta 2 com os preços reais
+da professora — R$ 50/h, pacotes de 5h por R$ 250 e 10h por R$ 500 — tirados
+do **perfil dela no Superprof**, confirmado pela dona do projeto.
+
+Ou seja: as IAs *conseguem* encontrar e descrever esta operação com precisão.
+Só que pelo canal que já existia antes do site, e que cobra do interessado
+para falar com ela.
+
+#### O que a fase estabeleceu
+
+| Achado | Força da evidência |
+|---|---|
+| Consultas de diretório são dominadas por marketplace | 4 consultas, 4 superfícies, quase sem exceção |
+| O "Passe Aluno" do Superprof cobra para o aluno falar com o professor, com renovação automática | **3 de 4 superfícies**, independentes |
+| Na consulta de dor, ninguém é recomendado — só conselho | **4 de 4 superfícies** |
+| "UFMG" não diferencia | 12+ professores da UFMG nomeados, 2 com o mesmo perfil exato |
+| "Primeira aula grátis" não diferencia | 97% dos professores do Superprof oferecem |
+| Profissional independente *pode* ser citado em lista | Raimundo Almeida e Márcio Vieira Silva, no Modo IA |
+
+#### A vantagem que sobrou
+
+Depois de derrubar credencial, gratuidade da primeira aula e diagnóstico como
+diferenciais, sobrou uma coisa que o concorrente dominante **não pode copiar
+sem mudar o próprio modelo de negócio**: pelo site, falar com a professora é
+**direto, por WhatsApp, sem taxa e sem assinatura**. Pelo Superprof, é preciso
+pagar o Passe Aluno.
+
+É a única vantagem estrutural que a Fase 3 encontrou.
+
+#### A inconsistência que a fase expôs
+
+O site declara, na FAQ, que *"o valor é definido após a aula diagnóstica
+gratuita"*. O perfil no Superprof publica **R$ 50/h com pacotes**. As IAs leem
+o Superprof e respondem com o número.
+
+Na prática, **o preço já é público** — a política de não publicá-lo no site não
+protege nada, só cria divergência entre os dois canais. A regra
+`preco-sem-fonte` do `npm run check` foi escrita quando essa informação não era
+conhecida. Decisão para o Ciclo 1, da dona do projeto.
 
 ### Ciclo 0 · consulta 1 — `Aulas de Matemática BH`
 

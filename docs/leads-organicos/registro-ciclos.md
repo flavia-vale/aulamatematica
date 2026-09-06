@@ -382,3 +382,54 @@ isolado (por um contraexemplo). Todas na mesma direção: **eu concluí rápido
 demais a partir do primeiro recorte disponível.** Registrado como viés a
 vigiar quando o Search Console trouxer os primeiros dados do Ciclo 1 — que
 serão, por definição, o menor recorte que teremos.
+
+### Fase 3 encerrada — 28 de 28 (2026-09-06)
+
+**O resultado que resume a fase**
+
+Uma citação do negócio em 28 medições. **Zero do site.** A única foi o Modo IA
+do Google respondendo a consulta de preço com R$ 50/h e pacotes de 5h/R$ 250 e
+10h/R$ 500 — lidos do **perfil da professora no Superprof**, confirmado pela
+dona do projeto.
+
+As IAs conseguem encontrar e descrever esta operação com precisão. Pelo canal
+que já existia antes do site, e que cobra do interessado para falar com ela.
+
+**O que a medição derrubou nesta fase, por completo**
+
+- *"O diferencial é ser da UFMG."* — 12+ professores da UFMG nomeados, dois com
+  o perfil exato (estudante de graduação, R$ 50/h).
+- *"O diferencial é a primeira aula gratuita."* — 97% dos professores do
+  Superprof oferecem.
+- *"O diferencial é o diagnóstico."* — Raimundo Almeida oferece diagnóstico
+  gratuito de 60 min; a operação oferece 30.
+- *"Consulta de lista = só marketplace vence."* — quase sempre, mas não é lei:
+  o Modo IA do Google nomeou dois professores independentes em seção própria.
+- *"Não publicar preço protege a negociação."* — o preço já está público no
+  Superprof e as IAs já o citam.
+
+**A vantagem que sobreviveu**
+
+Pelo site, falar com a professora é direto por WhatsApp, sem taxa e sem
+assinatura. Pelo Superprof, é preciso assinar o **Passe Aluno** — confirmado
+por 3 das 4 superfícies, com renovação automática e sem reembolso depois que o
+professor aceita o pedido. O concorrente dominante não pode remover esse
+atrito sem mudar o próprio modelo de negócio.
+
+É a única vantagem estrutural encontrada em toda a fase, e não depende de
+credencial nem de volume de avaliações.
+
+**Duas decisões que a fase colocou na mesa, para o Ciclo 1**
+
+1. **Preço.** O site diz que o valor sai após a diagnóstica; o Superprof
+   publica R$ 50/h. A regra `preco-sem-fonte` do `npm run check` foi escrita
+   antes de sabermos disso. Manter, ou alinhar os dois canais?
+2. **O perfil do Superprof é um ativo que o site ignora.** Ele já é encontrado
+   pelas IAs; o site não. Hoje os dois não se conhecem. Conectá-los é barato.
+
+**Nada foi alterado no site.** Todas as candidatas de mudança seguem
+registradas à espera dos ~30 dias de Search Console.
+
+**Uma linha ficou inconclusiva:** consulta 6 no Gemini, que devolveu pergunta
+de esclarecimento em vez de resposta, nas duas tentativas. Não invalida a
+consulta — as outras três superfícies responderam e concordaram.

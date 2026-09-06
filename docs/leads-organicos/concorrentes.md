@@ -124,6 +124,11 @@ domina todas as consultas de diretório:
 O Gemini chega a recomendar cancelar o Passe Aluno logo após obter o contato
 do professor.
 
+**Corroborado por três das quatro superfícies.** O Modo IA do Google nomeia o
+"Passe Aluno" com as mesmas palavras do Gemini, e acrescenta um dado novo: *"a
+posição de destaque de alguns perfis pode vir de **anúncios pagos**"* — o
+ranking dentro do Superprof é parcialmente comprado.
+
 **Corroborado por segunda fonte independente.** O Perplexity descreveu o mesmo
 mecanismo com outro nome — "Student Pass": assinatura mensal (~US$ 49/mês nos
 EUA, valor similar em reais no Brasil) exigida para entrar em contato com os
@@ -141,6 +146,27 @@ Alternativas que o Gemini nomeou: **Profes**, "plataformas especializadas em
 exatas", e **"busca por professores locais através de indicações e redes
 sociais"** — esta última é a categoria em que um site próprio mais presença
 social poderia competir.
+
+### Profissionais independentes citados — consulta 4, Modo IA do Google
+
+O Modo IA do Google foi a **única superfície, em todas as consultas de
+diretório (1, 3, 4, 6), a nomear professores independentes numa seção
+separada das plataformas**:
+
+| Nome | O que oferece |
+|---|---|
+| Prof. Raimundo Almeida | aulas ao vivo, **aula diagnóstica gratuita de 60 min** |
+| Prof. Márcio Vieira Silva | física, cálculo, estatística |
+
+Raimundo Almeida já havia aparecido na consulta 3, citado via Instagram.
+
+**Isto quebra a leitura absoluta.** O padrão "consulta de lista = só marketplace
+vence" não é lei: um profissional independente *pode* aparecer. O que os dois
+têm é presença própria e consistente — não um site institucional isolado.
+
+E uma nota que desinfla mais um suposto diferencial: **Raimundo Almeida oferece
+diagnóstico gratuito de 60 minutos**, contra os 30 minutos desta operação. Nem
+a aula diagnóstica é exclusiva.
 
 ## Preço de mercado
 

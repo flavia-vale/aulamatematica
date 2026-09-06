@@ -14,11 +14,19 @@ npm run indexnow   # avisa Bing/Yandex/DuckDuckGo (exige build antes)
 ```
 
 `npm run check` é a trava do projeto. Ele varre `dist/` e **falha** se: título
-ou descrição se repetirem, faltar canonical, a atribuição de lead quebrar,
-houver promessa de resultado, houver preço em R$ numa página, uma página cair
+ou descrição faltarem ou se repetirem entre páginas, faltar canonical, a
+atribuição de lead quebrar (página sem WhatsApp, com duas frases diferentes,
+ou repetindo a frase de outra página), houver promessa de resultado, houver
+preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, uma página cair
 numa linha congelada, ou uma página indexável faltar no `llms.txt` ou nas
-pendências de indexação. Regras em `scripts/check-conteudo.mjs`, com exceções
-nominais no topo do arquivo.
+pendências de indexação.
+
+Além dos erros, ele emite **avisos** que não falham: título acima de 60
+caracteres, descrição acima de 160, e título sem número concreto. São
+hipóteses ainda não medidas — viram pergunta do Ciclo 1, não conserto.
+
+Regras em `scripts/check-conteudo.mjs`, com exceções nominais no topo do
+arquivo.
 
 ## O Ciclo de Leads Orgânicos
 

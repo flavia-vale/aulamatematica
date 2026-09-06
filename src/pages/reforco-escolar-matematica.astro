@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
+import Preco from '../components/Preco.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 import { site } from '../config/site';
 import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -134,6 +136,22 @@ const schema = graph(
       </article>
     </div>
   </section>
+
+  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Leitura relacionada</p>
+    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Antes de contratar reforço, leia isto.</h2>
+    <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">Escrevi um guia honesto para pais sobre o que funciona e o que piora a relação do filho com matemática — inclusive as coisas que não custam nada e quase ninguém faz.</p>
+    <p class="mt-5">
+      <a href="/blog/como-ajudar-filho-matematica" class="inline-flex items-center gap-2 font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+        Como ajudar seu filho a melhorar em matemática
+        <span aria-hidden="true">→</span>
+      </a>
+    </p>
+  </section>
+
+  <Depoimentos />
+
+  <Preco />
 
   <FAQ items={faqs} title="Dúvidas sobre reforço escolar" />
 

@@ -26,6 +26,28 @@ export const site = {
   },
   social: {
     instagram: '',
+    /**
+     * Perfil no Superprof. É o único ativo da professora que as IAs
+     * encontram e citam hoje (ver docs/leads-organicos/citacao-ia.md).
+     * Preencher liga as duas entidades via `sameAs` no JSON-LD.
+     */
+    superprof: '',
+  },
+
+  /**
+   * Preço. Publicado de propósito: já era público no perfil do Superprof e
+   * as IAs já o citavam, então não publicar aqui só criava divergência entre
+   * canais. Ver docs/leads-organicos/citacao-ia.md.
+   *
+   * `vigencia` é obrigatória — o `npm run check` falha se uma página exibir
+   * R$ sem declarar desde quando aquele valor vale.
+   */
+  preco: {
+    aula: 45,
+    duracaoMin: 50,
+    diagnosticoMin: 30,
+    vigencia: '2026-09',
+    vigenciaTexto: 'setembro de 2026',
   },
   service: {
     areaServed: ['Belo Horizonte', 'Minas Gerais', 'Brasil'],
@@ -33,6 +55,29 @@ export const site = {
     audience: 'Alunos do ensino fundamental e médio',
   },
 } as const;
+
+/**
+ * Depoimentos de famílias atendidas.
+ *
+ * VAZIO DE PROPÓSITO. Só entram aqui depoimentos REAIS, com autorização de
+ * quem escreveu. Depoimento inventado em site comercial é publicidade
+ * enganosa (CDC art. 37) e, no JSON-LD, vira `aggregateRating` falso — que o
+ * Google trata como spam estruturado e pune com desindexação.
+ *
+ * A seção inteira e o `aggregateRating` do schema só aparecem quando este
+ * array tiver conteúdo. Enquanto estiver vazio, nada é renderizado.
+ *
+ * Formato:
+ *   { nome: 'Nome', papel: 'mãe do João, 9º ano', texto: '...', nota: 5 }
+ */
+export interface Depoimento {
+  nome: string;
+  papel: string;
+  texto: string;
+  nota?: number;
+}
+
+export const depoimentos: Depoimento[] = [];
 
 export const waLink = (msg = 'Olá! Tenho interesse em aulas particulares de matemática.') =>
   `https://wa.me/${site.contact.whatsappRaw}?text=${encodeURIComponent(msg)}`;

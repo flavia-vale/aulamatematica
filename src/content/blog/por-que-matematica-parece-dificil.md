@@ -51,7 +51,7 @@ A maioria das aulas de matemática no Brasil cobre só uma parte: a fórmula e o
 
 ## O que fazer com isso
 
-Algumas implicações práticas, se você é pai ou mãe lendo isso:
+Algumas implicações práticas, se você é pai ou mãe lendo isso — e é sobre elas que construí meu método de [reforço escolar](/reforco-escolar-matematica):
 
 **Pare de cobrar pela nota. Cobre pela compreensão.** Pergunte "você entendeu por que essa fórmula funciona?" em vez de "tirou quanto?". O foco em nota leva a decoreba, decoreba leva a esquecimento, esquecimento leva a próxima nota baixa.
 

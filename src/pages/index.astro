@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import FAQ from '../components/FAQ.astro';
+import Preco from '../components/Preco.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 import { site, waLinkFor } from '../config/site';
 import {
   graph,
@@ -29,7 +31,7 @@ const faqs = [
   },
   {
     q: 'Quanto custa a aula particular de matemática?',
-    a: 'O valor é definido após a aula diagnóstica gratuita, conforme a frequência (1 ou 2 vezes por semana) e a duração desejada. Trabalho com pacotes mensais, com desconto para contratação por trimestre.',
+    a: `A aula individual de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.aula}, valor vigente desde ${site.preco.vigenciaTexto}. Pacotes mensais e trimestrais têm desconto, conforme a frequência. A aula diagnóstica inicial de ${site.preco.diagnosticoMin} minutos é gratuita e sem compromisso. Você fala comigo direto pelo WhatsApp — não há taxa, assinatura nem cadastro em plataforma para conseguir meu contato.`,
   },
   {
     q: 'Atende alunos fora de Belo Horizonte?',
@@ -251,6 +253,10 @@ const schema = graph(
   </section>
 
   <!-- FAQ -->
+  <Depoimentos />
+
+  <Preco />
+
   <FAQ items={faqs} />
 
   <!-- CTA final -->

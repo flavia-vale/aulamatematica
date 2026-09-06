@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
+import Preco from '../components/Preco.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 import { site } from '../config/site';
 import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -106,6 +108,22 @@ const schema = graph(
       </div>
     </div>
   </section>
+
+  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Leitura relacionada</p>
+    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">O plano de 6 meses, mês a mês.</h2>
+    <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">Detalhei em texto o cronograma que monto com alunos que chegam faltando meio ano para a prova: a ordem dos temas, quantas horas por semana e os quatro erros mais comuns.</p>
+    <p class="mt-5">
+      <a href="/blog/como-estudar-matematica-enem" class="inline-flex items-center gap-2 font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+        Como estudar matemática para o ENEM em 6 meses
+        <span aria-hidden="true">→</span>
+      </a>
+    </p>
+  </section>
+
+  <Depoimentos />
+
+  <Preco />
 
   <FAQ items={faqs} title="Dúvidas sobre preparação para o ENEM" />
 

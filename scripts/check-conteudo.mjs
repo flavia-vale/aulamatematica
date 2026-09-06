@@ -128,14 +128,24 @@ const PROIBIDOS = [
   /melhor\s+profess\w+\s+d[eo]\s/i,
   /resultado\s+garantid/i,
 ];
-// Preço: a decisão registrada é que valor só se fala na conversa (ver FAQ).
+// Preço. A regra mudou em 2026-09-06: antes proibia qualquer R$ na página.
+// A Fase 3 mostrou que o preço já era público no perfil do Superprof e que as
+// IAs já o citavam — não publicar não criava discrição, criava divergência
+// entre canais. Agora a regra é outra: preço PODE aparecer, mas a página
+// precisa declarar desde quando aquele valor vale. Preço sem data envelhece em
+// silêncio e vira informação falsa.
 const PRECO = /R\$\s*\d/;
+const VIGENCIA = /data-preco-vigencia="\d{4}-\d{2}"/;
 for (const p of paginas) {
   const texto = p.html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ');
   for (const re of PROIBIDOS)
     if (re.test(texto)) erro('promessa-sem-prova', p.rota, `promessa de resultado: ${re}`);
-  if (PRECO.test(texto))
-    erro('preco-sem-fonte', p.rota, 'preço em R$ na página — a decisão registrada é falar valor só na conversa');
+  if (PRECO.test(texto) && !VIGENCIA.test(p.html))
+    erro(
+      'preco-sem-vigencia',
+      p.rota,
+      'a página exibe R$ sem declarar data-preco-vigencia="AAAA-MM" — preço sem data vira mentira silenciosa',
+    );
 }
 
 // ---------- R5 · linhas congeladas ----------

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { site } from '../../config/site';
+import CTAButtons from '../../components/CTAButtons.astro';
 import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../../lib/schema';
 
 const path = '/blog';
@@ -73,6 +74,27 @@ const schema = graph(
           </a>
         </article>
       ))}
+    </div>
+  </section>
+
+  <section class="border-t border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6">
+      <h2 class="font-serif text-2xl font-medium tracking-tight text-stone-900 sm:text-3xl">
+        Do texto para a prática.
+      </h2>
+      <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">
+        Se algum desses textos descreveu o que acontece na sua casa, o próximo passo é
+        um diagnóstico. São 30 minutos, gratuitos, e servem pra saber exatamente onde
+        está a lacuna — antes de contratar qualquer coisa.
+      </p>
+      <CTAButtons />
+
+      <p class="mt-10 text-sm text-stone-600">
+        Ou conheça o trabalho:
+        <a href="/reforco-escolar-matematica" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">reforço escolar</a>,
+        <a href="/enem-matematica" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">preparação para o ENEM</a>
+        e <a href="/aulas-de-matematica-online" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">como funciona a aula online</a>.
+      </p>
     </div>
   </section>
 </Base>

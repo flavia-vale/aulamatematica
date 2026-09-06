@@ -126,7 +126,7 @@ Se você tem 2 meses, foco em razão/proporção/porcentagem + funções básica
 
 ## Última coisa
 
-Estudar matemática pro ENEM em casa, sozinho, é possível — mas exige uma disciplina rara. A maioria dos alunos que conheço se beneficia muito de ter uma professora pra **diagnosticar onde estão**, **definir prioridades** e **cobrar a regularidade**.
+Estudar matemática pro ENEM em casa, sozinho, é possível — mas exige uma disciplina rara. A maioria dos alunos que conheço se beneficia muito de ter uma professora pra **diagnosticar onde estão**, **definir prioridades** e **cobrar a regularidade**. É assim que organizo a [preparação de matemática para o ENEM](/enem-matematica), nas três fases que descrevo lá.
 
 Se quiser conversar sobre o seu caso, [a aula diagnóstica é gratuita](/contato) — em 30 minutos a gente faz o diagnóstico e monta o plano específico pro tempo que você tem.
 

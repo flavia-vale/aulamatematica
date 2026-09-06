@@ -59,7 +59,7 @@ Sinais claros de que vale buscar um professor particular:
 
 ## O que esperar de um bom reforço escolar
 
-Um bom reforço escolar **não é** mais uma aula em cima de tudo que ele já tem. Mais aula, sozinha, raramente resolve. O que resolve é:
+Um bom reforço escolar **não é** mais uma aula em cima de tudo que ele já tem. Mais aula, sozinha, raramente resolve. O que resolve é o que descrevo em detalhe na página de [reforço escolar de matemática](/reforco-escolar-matematica) — e, em resumo:
 
 1. **Diagnóstico real das lacunas** — saber exatamente onde a base quebrou
 2. **Plano de retomada na ordem certa** — voltar nos pré-requisitos antes de avançar

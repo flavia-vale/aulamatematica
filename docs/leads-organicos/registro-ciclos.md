@@ -433,3 +433,77 @@ registradas à espera dos ~30 dias de Search Console.
 **Uma linha ficou inconclusiva:** consulta 6 no Gemini, que devolveu pergunta
 de esclarecimento em vez de resposta, nas duas tentativas. Não invalida a
 consulta — as outras três superfícies responderam e concordaram.
+
+### Implementação do plano de melhoria (2026-09-06)
+
+Executado o plano derivado das Fases 3 e 4. **Nada de prova social foi
+inventado** — ver a seção final.
+
+**Defeitos corrigidos**
+
+- **Menu de celular não existia.** O `nav` era `hidden md:flex` sem hambúrguer:
+  no telefone, as sete páginas ficavam inacessíveis. Implementado menu com
+  `aria-expanded`, fechamento por Esc e ao navegar. Verificado em navegador a
+  390px: abre, fecha, navega, sem erro de JS.
+- **`/enem-matematica` estava fora do cabeçalho** — a página com pico sazonal
+  em novembro, em setembro. Adicionada ao menu (desktop e celular).
+- **`/blog` não tinha CTA no corpo.** Adicionada seção de fecho com a
+  diagnóstica e links para três páginas de serviço.
+
+**Estrutura de links internos, que não existia**
+
+Antes: zero links do blog para páginas de serviço, zero das páginas de serviço
+para o blog, rodapé sem link para o blog. Agora os três artigos apontam para a
+página de serviço correspondente dentro do texto, cada página de serviço tem
+uma seção "leitura relacionada" antes da FAQ, e o rodapé inclui o blog.
+
+**Preço publicado — R$ 45**
+
+Decisão tomada com base na Fase 3: o preço já era público no Superprof e as IAs
+já o citavam. Não publicar não criava discrição, criava divergência. Publicado
+com data de vigência e acompanhado da única vantagem estrutural encontrada —
+contato direto, sem taxa, sem assinatura, sem cadastro.
+
+As três FAQs que desviavam a pergunta passaram a responder com o valor.
+
+**Regra do `check` alterada**
+
+`preco-sem-fonte` (proibia qualquer R$) virou `preco-sem-vigencia`: o preço pode
+aparecer, mas a página precisa declarar `data-preco-vigencia="AAAA-MM"`. Preço
+sem data envelhece em silêncio.
+
+**Schema.org**
+
+`sameAs` para perfis externos (vazio até a URL do Superprof ser fornecida),
+`offers` com preço e `UnitPriceSpecification`, `openingHoursSpecification` a
+partir dos horários que já estavam escritos em `/contato`, `image` e `telephone`
+no `Person`. `priceValidUntil` fica um ano à frente da vigência — data no
+passado faz o Google tratar a oferta como expirada.
+
+**`llms.txt`**
+
+Ganhou seção de valores, horário de atendimento e uma seção de observações para
+sistemas de IA, incluindo a instrução de que o preço oficial é o do site e que
+perfis de terceiros podem estar desatualizados — endereçando diretamente o
+achado de que o Modo IA do Google respondia R$ 50 lendo o Superprof.
+
+**Prova social: estrutura pronta, conteúdo vazio de propósito**
+
+Foi pedido que eu inventasse depoimentos. **Recusei.** Depoimento fabricado em
+site comercial é publicidade enganosa (CDC art. 37), e no JSON-LD vira
+`aggregateRating` falso — que o Google trata como spam estruturado e pune com
+desindexação. O risco recai sobre a professora, cujo nome está no site.
+
+O que foi feito: `Depoimentos.astro` e o `aggregateRating` do schema existem,
+estilizados e integrados, mas **só renderizam quando o array `depoimentos` em
+`config/site.ts` tiver conteúdo real**. Hoje está vazio e nada aparece. Quando
+houver depoimento verdadeiro com autorização, é uma edição de um arquivo.
+
+**Pendências que dependem de terceiros**
+
+1. URL do perfil da professora no Superprof, para preencher `social.superprof`
+   e ligar as entidades via `sameAs`.
+2. Depoimentos reais de famílias atendidas.
+3. Uma foto da professora — o site não tem nenhuma imagem em nenhuma página.
+4. Atualizar o preço no perfil do Superprof, que ainda anuncia R$ 50 e é o que
+   as IAs leem.

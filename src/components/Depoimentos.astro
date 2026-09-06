@@ -1,0 +1,48 @@
+---
+import { depoimentos } from '../config/site';
+
+interface Props {
+  title?: string;
+  intro?: string;
+}
+const {
+  title = 'O que as famílias dizem.',
+  intro,
+} = Astro.props;
+
+// Sem depoimento real, a seção inteira não existe. Nunca renderizar
+// placeholder, exemplo ou texto genérico aqui: um depoimento inventado num
+// site comercial é publicidade enganosa. Ver o comentário em config/site.ts.
+const temDepoimentos = depoimentos.length > 0;
+---
+
+{temDepoimentos && (
+  <section class="border-t border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Depoimentos</p>
+      <h2 class="mt-3 max-w-2xl font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        {title}
+      </h2>
+      {intro && <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">{intro}</p>}
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {depoimentos.map((d) => (
+          <figure class="flex h-full flex-col rounded-xl border border-stone-200 bg-stone-50 p-6">
+            {d.nota && (
+              <p class="text-sm text-emerald-700" aria-label={`Nota ${d.nota} de 5`}>
+                <span aria-hidden="true">{'★'.repeat(d.nota)}</span>
+              </p>
+            )}
+            <blockquote class="mt-3 flex-1 leading-relaxed text-stone-700">
+              <p>“{d.texto}”</p>
+            </blockquote>
+            <figcaption class="mt-5 border-t border-stone-200 pt-4 text-sm">
+              <span class="font-semibold text-stone-900">{d.nome}</span>
+              <span class="block text-stone-500">{d.papel}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

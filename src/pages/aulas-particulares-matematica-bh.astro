@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
+import Preco from '../components/Preco.astro';
+import Depoimentos from '../components/Depoimentos.astro';
 import { site } from '../config/site';
 import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -14,7 +16,7 @@ const description = 'Aulas particulares de matemática em Belo Horizonte (BH), 1
 const faqs = [
   { q: 'As aulas particulares de matemática são em BH presencial?', a: 'As aulas são 100% online, com base em Belo Horizonte. Isso permite atender alunos de toda a Grande BH — Contagem, Betim, Nova Lima, Sabará — sem o tempo perdido em deslocamento no trânsito da capital.' },
   { q: 'Por que escolher uma professora de Belo Horizonte?', a: 'Conheço o calendário e o formato das principais escolas de BH (Bernoulli, Coleguium, Magnum, Santo Agostinho, Cotemig, Pitágoras, redes públicas estaduais) e o estilo das provas de vestibulares mineiros como UFMG, CEFET-MG e PUC Minas.' },
-  { q: 'Qual o valor da aula particular de matemática em BH?', a: 'O valor é definido após a aula diagnóstica gratuita, conforme frequência e duração. Pacotes mensais e trimestrais com desconto. Por ser online, o custo costuma ser inferior ao de aulas presenciais com deslocamento.' },
+  { q: 'Qual o valor da aula particular de matemática em BH?', a: `R$ ${site.preco.aula} por aula individual de ${site.preco.duracaoMin} minutos, vigente desde ${site.preco.vigenciaTexto}, com desconto em pacotes mensais e trimestrais. A diagnóstica de ${site.preco.diagnosticoMin} minutos é gratuita. Por ser online, não há custo de deslocamento — nem para você, nem para mim.` },
   { q: 'Atende alunos da Grande BH e região metropolitana?', a: 'Sim. Como tudo é online, atendo Belo Horizonte e cidades vizinhas: Contagem, Betim, Nova Lima, Sabará, Ribeirão das Neves, Santa Luzia, Vespasiano, além do interior de Minas Gerais.' },
   { q: 'Como começar?', a: 'Envie uma mensagem no WhatsApp (32) 99999-3956 informando a série do aluno e o principal motivo (notas, prova próxima, recuperação). Agendamos a aula diagnóstica gratuita em até 24 horas.' },
 ];
@@ -136,6 +138,22 @@ const schema = graph(
       ))}
     </ul>
   </section>
+
+  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Leitura relacionada</p>
+    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Para os pais que estão decidindo agora.</h2>
+    <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">O que a família pode fazer em casa, o que é melhor não fazer, e como saber se chegou a hora de buscar um professor particular.</p>
+    <p class="mt-5">
+      <a href="/blog/como-ajudar-filho-matematica" class="inline-flex items-center gap-2 font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+        Como ajudar seu filho a melhorar em matemática
+        <span aria-hidden="true">→</span>
+      </a>
+    </p>
+  </section>
+
+  <Depoimentos />
+
+  <Preco />
 
   <FAQ items={faqs} title="Dúvidas frequentes de famílias de BH" />
 

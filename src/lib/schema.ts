@@ -1,4 +1,39 @@
-import { site } from '../config/site';
+import { site, depoimentos } from '../config/site';
+
+/** Perfis externos da professora. Ligar as entidades é o que permite a um
+ *  buscador ou a uma IA entender que o site e o perfil são a mesma pessoa —
+ *  hoje o perfil citado pelas IAs é o do Superprof, não o site. */
+const perfisExternos = [site.social.instagram, site.social.superprof].filter(
+  (u): u is string => Boolean(u),
+);
+
+/** Só existe quando há depoimento real. Nunca inventar avaliação: no JSON-LD
+ *  isso é spam estruturado e o Google pune com desindexação. */
+const avaliacoesSchema =
+  depoimentos.length > 0
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: (
+            depoimentos.reduce((t, d) => t + (d.nota ?? 5), 0) / depoimentos.length
+          ).toFixed(1),
+          reviewCount: depoimentos.length,
+          bestRating: 5,
+          worstRating: 1,
+        },
+        review: depoimentos.map((d) => ({
+          '@type': 'Review',
+          author: { '@type': 'Person', name: d.nome },
+          reviewBody: d.texto,
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: d.nota ?? 5,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        })),
+      }
+    : {};
 
 const PERSON_ID = `${site.url}/#taciane`;
 const BUSINESS_ID = `${site.url}/#business`;
@@ -11,6 +46,9 @@ export const personSchema = {
   jobTitle: site.teacher.role,
   description: site.teacher.bio,
   url: site.url,
+  image: `${site.url}/og-image.png`,
+  telephone: `+${site.contact.whatsappRaw}`,
+  ...(perfisExternos.length > 0 && { sameAs: perfisExternos }),
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Universidade Federal de Minas Gerais',
@@ -36,7 +74,23 @@ export const localBusinessSchema = {
   url: site.url,
   image: `${site.url}/og-image.png`,
   telephone: `+${site.contact.whatsappRaw}`,
-  priceRange: '$$',
+  priceRange: `R$${site.preco.aula}`,
+  currenciesAccepted: 'BRL',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '21:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '09:00',
+      closes: '14:00',
+    },
+  ],
+  ...avaliacoesSchema,
   areaServed: site.service.areaServed.map((n) => ({ '@type': 'Place', name: n })),
   address: {
     '@type': 'PostalAddress',
@@ -46,7 +100,7 @@ export const localBusinessSchema = {
   },
   founder: { '@id': PERSON_ID },
   employee: { '@id': PERSON_ID },
-  sameAs: site.social.instagram ? [site.social.instagram] : undefined,
+  ...(perfisExternos.length > 0 && { sameAs: perfisExternos }),
 };
 
 export const websiteSchema = {
@@ -68,6 +122,28 @@ export const serviceSchema = (params: {
   name: params.name,
   description: params.description,
   url: params.url,
+  offers: {
+    '@type': 'Offer',
+    price: site.preco.aula,
+    priceCurrency: 'BRL',
+    // Um ano à frente da vigência. Data no passado faz o Google tratar a
+    // oferta como expirada e ignorar o preço no resultado de busca.
+    priceValidUntil: `${Number(site.preco.vigencia.slice(0, 4)) + 1}-${site.preco.vigencia.slice(5)}-28`,
+    availability: 'https://schema.org/InStock',
+    url: params.url,
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: site.preco.aula,
+      priceCurrency: 'BRL',
+      unitText: `aula de ${site.preco.duracaoMin} minutos`,
+      referenceQuantity: {
+        '@type': 'QuantitativeValue',
+        value: site.preco.duracaoMin,
+        unitCode: 'MIN',
+      },
+    },
+  },
+  ...avaliacoesSchema,
   provider: { '@id': BUSINESS_ID },
   areaServed: site.service.areaServed.map((n) => ({ '@type': 'Place', name: n })),
   audience: { '@type': 'EducationalAudience', educationalRole: site.service.audience },

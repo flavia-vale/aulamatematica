@@ -57,6 +57,18 @@ Uma linha por conversa iniciada. Cinco colunas, nada além disso:
 É essa planilha que responde a pergunta 6 da Fase 2. Contar só conversa engana:
 uma página pode trazer muita conversa que não fecha.
 
+## Preço publicado em 2026-09-06
+
+O site passou a publicar R$ 45 por aula de 50 minutos, com a diagnóstica de 30
+minutos gratuita. A decisão veio da Fase 3: o preço já era público no perfil da
+professora no Superprof e as IAs já o citavam, então não publicar aqui não
+criava discrição — criava divergência entre canais.
+
+Junto com o valor, o site passou a declarar o que o concorrente dominante não
+consegue oferecer sem mudar o próprio modelo: **contato direto, sem taxa, sem
+assinatura e sem cadastro em plataforma**. É a única vantagem estrutural que a
+Fase 3 encontrou.
+
 ## A lacuna conhecida
 
 A etapa 3 do funil — **viu a página e não clicou** — é invisível. Sem ela não dá

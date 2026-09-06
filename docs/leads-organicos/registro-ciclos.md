@@ -295,3 +295,45 @@ Bing/Yandex/DuckDuckGo de uma vez.
 4. Enquanto espera: terminar as 16 linhas que faltam na planilha de citação por
    IA (consultas 2, 4, 7, e as 4 refações contaminadas do ChatGPT/Gemini) —
    não depende de nada acima.
+
+### Continuação — Fase 4, Planejador de Palavras-chave (2026-09-06)
+
+**O que a medição derrubou — uma leitura minha, não do dado**
+
+Eu havia escrito, lendo só o Trends, que `reforço de matemática` "domina o
+ano inteiro". O Planejador mostra o oposto: está na faixa mais baixa
+(100 – 1 mil/mês), enquanto `aula particular de matemática`, `professor
+particular de matemática` e `matemática enem` estão uma faixa acima
+(1 mil – 10 mil/mês).
+
+Erro de instrumento: **o Trends nunca mediu tamanho.** Mede popularidade
+relativa normalizada ao longo do tempo. Volume absoluto se pergunta ao
+Planejador. Eu usei a ferramenta certa para a pergunta errada e apresentei
+o resultado com confiança que ele não sustentava.
+
+**O achado que sobreviveu, e ficou mais forte**
+
+O lance de anúncio é o melhor sinal de intenção de compra disponível de
+graça — é quanto um concorrente aceita pagar pelo clique. E ele mostra que
+**os termos de maior volume deste mercado são de intenção errada**:
+
+- `matemática enem`: volume alto, lance mais barato da tabela (R$ 2,59),
+  concorrência Baixa. Relacionadas: `pdf`, `questões`, `gabarito`. É aluno
+  atrás de material grátis.
+- `reforço de matemática`: volume baixo E intenção errada (`atividade de
+  matemática`).
+- `professor particular de matemática`: única do conjunto que combina faixa
+  de volume mais alta com o maior lance (R$ 7,40). É o termo mais valioso —
+  e é justamente aquele cujas relacionadas do Trends vieram contaminadas e
+  que eu tinha descartado como ruído.
+
+**Consequência para a Fase 2 do Ciclo 1**
+
+A página de ENEM deve produzir muita impressão e pouca conversa. Isso não é
+defeito da página — é a natureza da consulta. Quando esse par de números
+aparecer no Search Console, não tratar como problema de título.
+
+**Nada foi alterado no site.** `professor particular de matemática` é a
+candidata mais forte para a decisão de título do Ciclo 1, mas trocar título
+antes dos ~30 dias de Search Console destruiria a linha de base que ainda
+está sendo formada.

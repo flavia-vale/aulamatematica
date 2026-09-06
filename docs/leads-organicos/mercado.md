@@ -2,37 +2,83 @@
 
 Primeira rodada da Fase 4, adiantada — o site acabou de nascer, mas as
 dúvidas já tinham saído da Fase 3 (citação por IA) e não custava nada medir
-em paralelo à espera do Search Console. Todos os dados: Brasil, 12 meses
-(06/09/2025–06/09/2026), Trends.
+em paralelo à espera do Search Console. Brasil, 12 meses
+(06/09/2025–06/09/2026), Google Trends + Planejador de Palavras-chave.
 
-## 1 · O termo mais buscado não é para quem contrata professor
+> **Ler nesta ordem, e saber o que cada ferramenta mede.** O Trends mede
+> popularidade **relativa ao longo do tempo** — serve para sazonalidade e
+> movimento, não para tamanho. O Planejador mede **volume absoluto estimado**
+> — serve para tamanho, não para tendência semanal. Onde as duas discordam
+> sobre tamanho, **o Planejador vence**. A seção 1 abaixo registra uma
+> leitura minha que morreu exatamente assim.
 
-Comparação direta (`professor particular de matemática`, `aula particular de
-matemática`, `reforço de matemática`, `reforço escolar de matemática`):
+## 1 · Volume alto e intenção de compra são coisas diferentes
 
-**`reforço de matemática` domina o ano inteiro** — é o único dos quatro com
-volume grande e constante (picos de 60–90 em semanas normais, quase nunca
-zerado). Os outros três ficam a maior parte do ano em **zero** — não é falta
-de interesse, é volume abaixo do limiar que o Trends consegue medir.
+### Correção — uma leitura minha, derrubada pelo instrumento certo
 
-O problema: as consultas relacionadas de `reforço de matemática` são quase
-todas `atividade de matemática` — **gente procurando exercício/material para
-imprimir ou resolver, não gente procurando contratar um professor.** Volume
-alto não é sinal de lead bom aqui; é sinal de tráfego de conteúdo educativo
-gratuito, que dificilmente vira aula paga.
+Na primeira passada eu li o Trends e escrevi que **"`reforço de matemática`
+domina o ano inteiro"**. O Planejador mostra o contrário: `reforço de
+matemática` está na **faixa mais baixa** (100 – 1 mil/mês), enquanto
+`aula particular de matemática`, `professor particular de matemática` e
+`matemática enem` estão uma faixa acima (1 mil – 10 mil/mês).
 
-**`reforço escolar de matemática` — a frase que já é o H1 da página
-`/reforco-escolar-matematica` — está entre os mais baixos dos quatro,**
-visível só nas duas últimas semanas medidas (9 e 11 em escala de 100). Isso
-não significa remover a frase da página (ela ainda é a categoria certa para
-humanos entenderem do que se trata), mas significa **não esperar tráfego
-relevante vindo exatamente dessa frase digitada no Google.** Ela funciona
-como rótulo, não como termo de busca.
+O erro foi de instrumento, não de leitura: **o Trends nunca disse tamanho.**
+Ele mostra popularidade relativa normalizada, e um termo de volume modesto
+mas constante desenha uma linha mais alta que termos de volume maior porém
+mais difusos. Volume absoluto se pergunta ao Planejador. Fica registrado.
 
-`professor particular de matemática` e `aula particular de matemática`
-aparecem picos isolados e recentes (fim de fev/2026, final de ago/2026),
-sugerindo alguma sazonalidade de início de semestre/ano letivo, mas o volume
-de base é baixo demais para afirmar isso com confiança nesta amostra.
+### O que o Planejador mostrou
+
+| Termo | Buscas/mês | Concorrência | Lance topo (máx.) |
+|---|---|---|---|
+| `professor particular de matemática` | 1 mil – 10 mil | Média | **R$ 7,40** |
+| `aula particular de matemática` | 1 mil – 10 mil | Média | R$ 5,96 |
+| `matemática enem` | 1 mil – 10 mil | **Baixa** | R$ 2,59 |
+| `professor de matemática online` | 100 – 1 mil | Média | **R$ 7,40** |
+| `reforço de matemática` | 100 – 1 mil | Média | R$ 5,34 |
+| `reforço escolar de matemática` | 100 – 1 mil | Baixa | R$ 5,13 |
+| `aula de matemática online` | 100 – 1 mil | Média | R$ 4,38 |
+
+As faixas são largas de propósito (conta sem histórico de gasto em anúncio):
+"1 mil – 10 mil" é uma variação de 10×. Servem para separar ordens de
+grandeza, não para ranquear dentro da mesma faixa.
+
+### O achado que sobrevive, e fica mais forte
+
+**O lance de anúncio é o melhor sinal de intenção de compra que temos** —
+é quanto um concorrente aceita pagar por um clique daquele termo. E ele
+reorganiza tudo:
+
+- **`matemática enem`: volume alto, lance mais baixo da tabela (R$ 2,59),
+  concorrência Baixa.** Ninguém paga caro por esse clique. As consultas
+  relacionadas do Trends explicam: `matemática enem pdf`, `questões enem
+  matemática`, `gabarito enem 2025`, `prova enem`. É aluno atrás de
+  **material gratuito**, não família atrás de professor.
+- **`reforço de matemática`: mesma armadilha**, já vista no Trends —
+  as relacionadas são `atividade de matemática`. Volume baixo *e* intenção
+  errada.
+- **`professor particular de matemática`: faixa de volume mais alta E o
+  maior lance da tabela.** É o único termo do conjunto que combina as duas
+  coisas. Ironicamente é o termo cujas consultas relacionadas no Trends
+  vieram contaminadas (problemas de matemática com a palavra "professor"
+  no enunciado) e que eu tinha descartado como ruído.
+
+**A conclusão que atravessa as duas ferramentas:** os termos de maior volume
+deste mercado são de gente procurando material de estudo grátis. Quem
+contrata professor usa termos de volume menor e clique mais caro.
+
+### Candidato à decisão de título do Ciclo 1
+
+O título da home hoje é *"Aulas particulares de matemática online — Reforço
+escolar com professora da UFMG"*. Ele usa "aulas particulares" (R$ 5,96) e
+"reforço escolar" (R$ 5,13), e qualifica com "online" — e a qualificação
+"online" custa uma ordem de grandeza de volume (`aula particular de
+matemática` está em 1 mil–10 mil; `aula de matemática online`, em 100–1 mil).
+
+A forma **`professor particular de matemática`** não aparece com destaque em
+nenhuma página. É a candidata mais forte para o Ciclo 1 — **mas não se mexe
+agora**: com ~30 dias de Search Console saberemos por quais consultas o site
+já aparece de fato, e trocar título antes disso é jogar fora a linha de base.
 
 ## 2 · Termos com "BH" têm zero interesse mensurável — em qualquer estado
 
@@ -80,6 +126,13 @@ publicado**: a página já cobre razão/proporção como tema #1 (~15% das
 questões) e já menciona interpretação de enunciado na FAQ. Não há lacuna
 aqui — o conteúdo já está alinhado com o que sobe perto da prova.
 
+**Ressalva de intenção (ver seção 1):** o pico de novembro é grande, mas o
+lance de R$ 2,59 e a concorrência Baixa dizem que boa parte dessa busca é
+aluno atrás de prova e gabarito, não família contratando aula. A página de
+ENEM provavelmente traz **muita impressão e pouca conversa** — e é
+exatamente esse o par de números que a pergunta 5 da Fase 2 vai avaliar no
+Ciclo 1. Não confundir tráfego de novembro com demanda por aula.
+
 ## 4 · Geografia do ENEM: interesse é maior fora do eixo Sul/Sudeste
 
 `matemática enem` por estado é **quase o inverso** do que se esperaria de
@@ -101,6 +154,10 @@ volume de busca, é de fora do eixo Sul/Sudeste.
 - Confirmar com dado próprio (não só Trends) se a home realmente perde por
   ancorar demais em "BH" no título.
 - Rever se `/reforco-escolar-matematica` deveria mirar um termo com mais
-  volume de intenção de compra do que a frase que já é seu próprio H1.
+  intenção de compra do que a frase que já é seu próprio H1 — os dois termos
+  da família "reforço" estão na faixa baixa de volume.
+- Avaliar `professor particular de matemática` (maior volume + maior lance)
+  como forma a destacar em algum título, contra o que o Search Console
+  mostrar que já funciona.
 - Calendarizar a atualização/indexação de `/enem-matematica` para
   setembro-outubro, não novembro.

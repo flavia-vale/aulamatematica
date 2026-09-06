@@ -22,8 +22,12 @@ resolve os três de uma vez.
 ## Lista
 
 Domínio verificado no Search Console e site no ar em Cloudflare Workers.
-9 de 11 páginas já pedidas; faltam as 2 últimas do blog (cota diária de
-~10-12, o que sobrou entra amanhã).
+**As 11 páginas foram pedidas**: 9 em 04/09 e as 2 últimas do blog em 06/09,
+quando a cota diária renovou.
+
+Falta preencher a coluna `Indexada?` — conferir em Inspeção de URL alguns dias
+após cada pedido. É essa contagem que responde se uma página não indexou por
+qualidade ou por ninguém ter pedido.
 
 | Rota | Pedido em | Indexada? | Observação |
 |---|---|---|---|
@@ -36,8 +40,8 @@ Domínio verificado no Search Console e site no ar em Cloudflare Workers.
 | `/contato` | 2026-09-04 | — | prioridade 2 |
 | `/blog` | 2026-09-04 | — | prioridade 2 |
 | `/blog/como-ajudar-filho-matematica` | 2026-09-04 | — | prioridade 2 |
-| `/blog/como-estudar-matematica-enem` | **pendente** | — | prioridade 2 — pedir amanhã |
-| `/blog/por-que-matematica-parece-dificil` | **pendente** | — | prioridade 2 — pedir amanhã |
+| `/blog/como-estudar-matematica-enem` | 2026-09-06 | — | prioridade 2 |
+| `/blog/por-que-matematica-parece-dificil` | 2026-09-06 | — | prioridade 2 |
 
 `/404` não entra: é `noindex` por definição.
 

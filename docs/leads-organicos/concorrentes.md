@@ -35,6 +35,8 @@ superfícies. 19 nomes distintos, nenhum deles este site.
 | Mestres da Matemática | Lourdes · turma presencial | Perplexity |
 | Professor Bruno | reforço, CEFET e Colégio Militar | Perplexity |
 | Preply | marketplace | Google |
+| Núcleo das Exatas | centro de exatas, professores USP/Unicamp | Gemini |
+| APC — Aula Particular em Casa | plataforma de aulas online | Gemini |
 
 ### Plataformas — consulta 3, 2026-09-03
 
@@ -106,6 +108,32 @@ fontes de conteúdo:
 **Nesta consulta o concorrente não é outro professor — é conteúdo gratuito.**
 É a única das quatro consultas medidas em que o formato do vencedor coincide com
 o formato do que o site tem a oferecer.
+
+### Atrito do concorrente dominante — consulta 7, 2026-09-06
+
+O Gemini foi a **única superfície a criticar o Superprof**, citando Reclame
+Aqui e Reddit. O que ele descreve é atrito real na jornada do concorrente que
+domina todas as consultas de diretório:
+
+| Atrito | O que é |
+|---|---|
+| **"Passe Aluno"** | Para falar com um professor, o aluno precisa assinar um serviço pago. Segundo centenas de reclamações no Reclame Aqui, a cobrança vira **assinatura mensal recorrente automática** se não for desativada. |
+| **Sem intermediação de pagamento** | A plataforma só conecta. O pagamento das aulas é direto com o professor, sem garantia nem reembolso se algo der errado. |
+| **Qualidade variável** | Marketplace aberto, nível oscila muito entre anúncios. |
+
+O Gemini chega a recomendar cancelar o Passe Aluno logo após obter o contato
+do professor.
+
+**Por que isto importa aqui:** a operação oferece exatamente o oposto —
+contato direto por WhatsApp, sem intermediário, sem assinatura, sem taxa para
+falar com a professora. É a primeira vantagem estrutural encontrada em toda a
+Fase 3 que não depende de credencial nem de volume de avaliações, e que o
+concorrente dominante não pode copiar sem mudar o próprio modelo de negócio.
+
+Alternativas que o Gemini nomeou: **Profes**, "plataformas especializadas em
+exatas", e **"busca por professores locais através de indicações e redes
+sociais"** — esta última é a categoria em que um site próprio mais presença
+social poderia competir.
 
 ## Preço de mercado
 

@@ -765,3 +765,44 @@ A mais crítica é `/aulas-particulares-matematica-bh`, que **mudou de título e
 de descrição** — de aula online para aula presencial. Na prática é outra
 página. Depois de confirmar o deploy, repetir o pedido para ela, para a home,
 `/sobre` e `/contato`.
+
+### Erro de snippets corrigido — a marcação de Review saiu (2026-09-06)
+
+O relatório de **Snippets de avaliação** do Search Console acusou **10 itens
+inválidos** em `/aulas-de-matematica-online`, com dois erros distintos:
+
+1. *"Há várias avaliações sem o objeto `aggregateRating`"* — o Google exige
+   média quando há vários `Review` no mesmo objeto.
+2. *"O tipo de objeto do campo `<parent_node>` não é válido"* — `Service` não
+   aceita `review` na especificação de rich results.
+
+**Por que isso não vira "adicionar um aggregateRating"**
+
+Seria fabricar dado de avaliação. Os cinco depoimentos são **mensagens de
+agradecimento**, não avaliações com estrela; ninguém deu nota. Derivar uma
+média delas é precisamente o que o Google trata como spam estruturado — e é a
+mesma armadilha que eu já havia armado sem querer em 2026-09-06, ao escrever
+`nota ?? 5` no schema, e corrigido antes de publicar. O relatório de snippets
+é a terceira vez que essa tentação aparece pela porta dos fundos.
+
+**A solução: tirar a marcação, manter os depoimentos**
+
+Os cinco depoimentos continuam **visíveis na página** — que é o que importa
+para pessoas e para as IAs, que leem o conteúdo renderizado. O que saiu foi só
+o `review` do JSON-LD.
+
+Não há perda de resultado enriquecido, e este é o ponto que fecha o raciocínio:
+**o Google não exibe estrelas para avaliação que o próprio negócio coleta e
+publica.** Mesmo perfeita, a marcação nunca produziria estrela nenhuma. Ela só
+gerava 10 itens inválidos — ruído que mascararia problema de verdade num ciclo
+futuro.
+
+**O que o erro confirma**
+
+O lugar certo da avaliação com nota é o **Google Business Profile** — não o
+schema do site. É exatamente onde a Fase 3 já apontava: volume de avaliação no
+perfil é o critério de ranqueamento em todas as listas de "melhores
+professores" das quatro IAs.
+
+O erro de snippet e o dado da Fase 3 dizem a mesma coisa por caminhos
+diferentes: **as cinco famílias precisam avaliar no Google, não no site.**

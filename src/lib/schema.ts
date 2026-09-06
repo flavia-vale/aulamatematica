@@ -1,4 +1,4 @@
-import { site, depoimentos } from '../config/site';
+import { site } from '../config/site';
 
 /** Perfis externos da professora. Ligar as entidades é o que permite a um
  *  buscador ou a uma IA entender que o site e o perfil são a mesma pessoa —
@@ -16,48 +16,32 @@ const BUSINESS_ID = `${site.url}/#business`;
 const WEBSITE_ID = `${site.url}/#website`;
 
 /**
- * Avaliações.
+ * Avaliações — deliberadamente FORA do JSON-LD.
  *
- * `aggregateRating` e `reviewRating` SÓ existem quando há nota numérica real.
- * Os depoimentos atuais são mensagens de agradecimento, não avaliações com
- * estrela — derivar "5 de 5" delas seria inventar dado de avaliação, que é o
- * que o Google trata como spam estruturado.
+ * Os cinco depoimentos aparecem na página, visíveis para pessoas e para as
+ * IAs que leem o conteúdo renderizado. O que não existe aqui é marcação
+ * `Review` no schema, e há dois motivos independentes:
  *
- * Sem nota, o depoimento vira um `Review` com autor e texto, sem nota. É
- * schema válido e honesto. (O Google não exibe estrelas para avaliação que o
- * próprio negócio coleta e publica, então não há perda de rich result aqui.)
+ * 1. O Google exige `aggregateRating` quando há vários `Review` no mesmo
+ *    objeto. Os depoimentos são mensagens de agradecimento, não avaliações
+ *    com estrela — derivar uma nota média delas seria inventar dado de
+ *    avaliação, exatamente o que o Google trata como spam estruturado.
+ *
+ * 2. `Service` nem sequer aceita `review` na especificação de rich results,
+ *    e para `LocalBusiness` o Google **não exibe estrelas de avaliação que o
+ *    próprio negócio coleta e publica**. Ou seja: mesmo perfeita, a marcação
+ *    não produziria nenhum resultado enriquecido.
+ *
+ * Marcar aqui só gerava 10 itens inválidos no relatório de snippets — ruído
+ * que mascararia problema de verdade num ciclo futuro.
+ *
+ * **O lugar certo da avaliação com nota é o Google Business Profile**, e é
+ * exatamente para lá que os dados da Fase 3 apontam: volume de avaliação no
+ * perfil é o critério de ranqueamento em todas as listas de "melhores
+ * professores" que as quatro IAs produziram.
+ *
+ * Detectado pelo relatório de Snippets de avaliação em 2026-09-06.
  */
-const comNota = depoimentos.filter((d) => typeof d.nota === 'number');
-
-const avaliacoesSchema =
-  depoimentos.length > 0
-    ? {
-        review: depoimentos.map((d) => ({
-          '@type': 'Review',
-          author: { '@type': 'Person', name: d.nome },
-          reviewBody: d.texto,
-          ...(typeof d.nota === 'number' && {
-            reviewRating: {
-              '@type': 'Rating',
-              ratingValue: d.nota,
-              bestRating: 5,
-              worstRating: 1,
-            },
-          }),
-        })),
-        ...(comNota.length > 0 && {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: (
-              comNota.reduce((t, d) => t + (d.nota as number), 0) / comNota.length
-            ).toFixed(1),
-            reviewCount: comNota.length,
-            bestRating: 5,
-            worstRating: 1,
-          },
-        }),
-      }
-    : {};
 
 export const personSchema = {
   '@type': 'Person',
@@ -110,7 +94,6 @@ export const localBusinessSchema = {
       closes: '14:00',
     },
   ],
-  ...avaliacoesSchema,
   // Online é nacional; presencial tem raio real. Declarar os dois separados
   // é o que permite ao Google entender a operação híbrida.
   areaServed: [
@@ -195,7 +178,6 @@ export const serviceSchema = (params: {
       },
     },
   ],
-  ...avaliacoesSchema,
   provider: { '@id': BUSINESS_ID },
   // Online é nacional; presencial tem raio real. Declarar os dois separados
   // é o que permite ao Google entender a operação híbrida.

@@ -99,6 +99,11 @@ um serviço que dizia ser 100% online.
   `site.social.googleBusiness`, e o nome diverge do resto ("Taciane
   Andrade"). Auditoria detalhada em `registro-ciclos.md`.
 - **Depoimentos** — publicação autorizada pelas cinco famílias em 2026-09-06.
+  Ficam **visíveis na página, sem marcação `Review` no JSON-LD**. Não
+  reintroduzir: `Service` não aceita `review`, o Google exige
+  `aggregateRating` quando há vários, e não exibe estrela para avaliação que o
+  próprio negócio publica. Derivar nota de mensagem de agradecimento é
+  fabricar dado de avaliação. O lugar da nota é o Google Business Profile.
 
 ## Regras de trabalho
 

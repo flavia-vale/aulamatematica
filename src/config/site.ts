@@ -42,17 +42,22 @@ export const site = {
     superprof:
       'https://www.superprof.com.br/aulas-particulares-matematica-presencial-online-licencianda-pela-ufmg-primeira-aula-gratis.html',
     /**
-     * Google Business Profile. JÁ EXISTE ("Taciane S. — Professora Particular
-     * de Matemática"), mas falta a URL canônica aqui.
-     *
-     * Pegar no painel do perfil, não o link `share.google` (que é temporário
-     * e não serve como `sameAs`). Serve: `https://maps.google.com/?cid=...`
-     * ou o link curto `https://g.page/...`.
+     * Google Business Profile — "Taciane Andrade — Professora Particular de
+     * Matemática".
      *
      * É o ativo mais importante para as consultas de BH: a Fase 3 mostrou que
-     * o que vence a consulta 1 são fichas do Google Business Profile.
+     * o que vence a consulta 1 são fichas do Google Business Profile, não
+     * sites. Este `sameAs` é o que declara que a ficha e o site são a mesma
+     * entidade.
+     *
+     * A URL é a forma `?cid=`, derivada do identificador estável do lugar
+     * (0xaae3d386d91e09db = 12313918382282770907). Os links `share.google` e
+     * `maps.app.goo.gl` NÃO servem: são encurtadores de sessão, o primeiro
+     * nem resolve fora do navegador. Qualquer URL `/maps/place/...` também
+     * não serve — carrega coordenadas de visualização e parâmetros de sessão
+     * que mudam a cada vez.
      */
-    googleBusiness: '',
+    googleBusiness: 'https://maps.google.com/?cid=12313918382282770907',
   },
 
   /**

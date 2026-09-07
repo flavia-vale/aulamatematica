@@ -125,9 +125,16 @@ consultas de BH**, não o site.
       [registro-ciclos.md](registro-ciclos.md). Conferir neste ciclo se o
       Google reescreveu o nome sozinho.
 - [ ] Configurado como **negócio com área de atendimento**, sem endereço
-      público, cobrindo as 7 cidades dentro dos 20 km
+      público, cobrindo as 7 cidades dentro dos 20 km — em 07/09 havia
+      **10 áreas, todas dentro de BH**, e as 6 cidades vizinhas estavam
+      ausentes. Conferir se a correção foi aplicada e persistiu.
+- [ ] Descrição sem "WhatsApp 24h", sem o erro "Ensino Básico, Fundamental e
+      Médio", e mencionando ENEM (reescrita proposta em 07/09)
+- [ ] Horário do perfil e do site batendo — divergem em três pontos desde
+      07/09, incluindo domingo
 - [ ] Telefone, site e horários batendo com o site
-- [ ] URL canônica preenchida em `site.social.googleBusiness`
+- [x] URL canônica preenchida em `site.social.googleBusiness` — feito em
+      07/09 (`?cid=12313918382282770907`), já no `sameAs` de todas as páginas
 - [ ] **Avaliações**: as 5 famílias que autorizaram depoimento foram
       convidadas a avaliar no Google?
 

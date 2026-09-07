@@ -730,6 +730,89 @@ A Fase 3 estabeleceu que volume de avaliação é o critério de ranqueamento em
 todas as listas de "melhores professores" das quatro IAs, e que reputação —
 não credencial — sustenta preço.
 
+### Auditoria completa do perfil, pelo painel (2026-09-07)
+
+A auditoria de 06/09 foi feita pela ficha pública. Com o painel à vista,
+quatro achados novos — o primeiro invalida uma conclusão anterior.
+
+**1. A área de cobertura não corresponde ao que o site promete**
+
+Dez áreas cadastradas, **todas dentro de Belo Horizonte**: a cidade inteira
+mais nove bairros dela (Sion, Centro, Buritis, Estoril, Lourdes, Savassi,
+Pampulha, Barro Preto, Santo Antônio).
+
+Os nove bairros são redundantes — "Belo Horizonte, MG" já os contém — e
+gastam nove dos vinte slots disponíveis sem acrescentar cobertura.
+
+E as **seis cidades que o site promete estão ausentes**: Contagem, Nova Lima,
+Sabará, Santa Luzia, Ribeirão das Neves e Vespasiano. O site declara
+atendimento até 20 km do centro e lista as sete cidades; o schema declara um
+`GeoCircle` de 20 km. O perfil diz BH e mais nada.
+
+Correção: apagar os nove bairros, manter "Belo Horizonte, MG" e acrescentar
+as seis cidades — sete áreas, iguais a `site.presencial.cidades`.
+
+**2. O endereço existe no cadastro**
+
+"Av Barão Homem de Melo - Estoril, Belo Horizonte - MG, 30494-060", **sem
+número**. A auditoria de 06/09 concluiu, da ficha pública, que não havia
+endereço; a leitura correta é que ele existe e está **oculto**. Confirmar a
+opção no painel: endereço público exigiria local com atendimento presencial e
+equipe, o que não é o caso de quem dá aula na casa do aluno — e exporia
+endereço residencial.
+
+**3. Três defeitos na descrição**
+
+- **"WhatsApp disponível 24h"** contradiz o horário do próprio perfil
+  (07:00–21:00) e o site ("resposta em até 24 horas, de segunda a sábado").
+  Três versões em ativos que ela controla.
+- **"Ensino Básico, Fundamental e Médio"** é erro de nomenclatura: educação
+  básica *contém* fundamental e médio.
+- **ENEM não é mencionado**, apesar da página dedicada e do pico sazonal de
+  novembro medido na Fase 4.
+
+Reescrita proposta em 07/09, com duas escolhas deliberadas:
+
+- **Sem preço.** O projeto exige `data-preco-vigencia` em toda página com R$,
+  justamente porque preço sem data envelhece em silêncio. A descrição do
+  Google não tem esse controle, e já há divergência site (R$ 45) × Superprof
+  (R$ 50). Terceira superfície com preço é terceira fonte de desencontro.
+- **UFMG por último.** A Fase 3 derrubou a credencial como diferencial. Segue
+  verdadeira e vale dizer, mas o que separa é o contato direto — e vem antes.
+
+**4. O horário diverge do site em três pontos**
+
+| | Perfil | Site, `llms.txt` e schema |
+|---|---|---|
+| Seg a sex | 07:00–21:00 | 8h–21h |
+| Sábado | 07:00–14:00 | 9h–14h |
+| Domingo | 07:00–21:00 | não atende |
+
+Qual das duas versões é a verdadeira **é decisão da dona do projeto**;
+o alinhamento no site espera essa resposta. Se domingo for real, o site está
+perdendo lead: quem procura professor no domingo à noite tem prova na segunda.
+
+**5. A URL canônica, resolvida em 07/09**
+
+O `share.google` não resolve fora do navegador — testado, o Google devolve
+uma página de busca. O `maps.app.goo.gl` resolve, e dele saiu o identificador
+estável do lugar: `0xaae3d386d91e09db`, ou 12313918382282770907 em decimal.
+
+Gravada em `site.social.googleBusiness` como
+`https://maps.google.com/?cid=12313918382282770907`, e já sai no `sameAs` de
+todas as páginas. **O site e a ficha do Google passam a ser declaradamente a
+mesma entidade** — que era o objetivo do item.
+
+Por que não guardar a URL que o encurtador devolveu: `/maps/place/...` carrega
+coordenadas de visualização, `entry`, `g_ep` e `skid` — parâmetros de sessão
+que mudam a cada acesso. `?cid=` é o identificador do lugar e não muda.
+
+**Um achado de brinde:** o alfinete da ficha está em −19.9027163, −43.9640502.
+O `geoMidpoint` do schema usa −19.9167, −43.9345, o centro de BH. **Mantido de
+propósito:** o site promete "até 20 km do centro de BH", então o círculo tem
+que estar centrado no que foi prometido, não no alfinete — que além disso é
+uma aproximação do endereço oculto e não convém espelhar.
+
 ### Achado estratégico: a marca do site não é a entidade que existe
 
 Na busca capturada, **o perfil do Google aparece em primeiro lugar** e o

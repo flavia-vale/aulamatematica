@@ -692,6 +692,32 @@ Risco baixo numa operação pequena, mas o descritor já está no campo
 *categoria*. Recomendado: **"Taciane Andrade"**, que alinha com o `Person`
 do schema, com o Superprof e com o site.
 
+**Corrigido em 2026-09-07, pela metade.** O nome passou a
+**"Taciane Andrade — Professora Particular de Matemática"**. A parte que
+importava foi feita: "Taciane S." era um nome que não existia em nenhum outro
+lugar, e a ficha agora liga com o `Person` do schema, o `llms.txt`, o
+Superprof e o site. É isso que faz Google e IAs tratarem os três perfis como
+a mesma entidade.
+
+O descritor continua no campo. A recomendação de tirá-lo segue de pé, com o
+peso honesto de cada lado:
+
+- **A favor de manter** — "Nome — Profissão" é formato comum para autônomo e
+  costuma ser tolerado; lê-se como titulação, não como palavra-chave.
+- **Contra** — o descritor já está na *categoria*, então não acrescenta
+  informação; "professora particular de matemática" é o termo de maior lance
+  do mercado (R$ 7,40 / 5.000 buscas por mês, ver `mercado.md`), o que faz a
+  titulação parecer palavra-chave; e **este perfil é o único ativo que
+  ranqueia** (Fase 3), o que torna a aposta assimétrica.
+
+Correção de exagero meu no parágrafo acima: o desfecho típico **não é
+suspensão**, é o Google reescrever o nome sozinho — em geral depois de um
+concorrente acionar "Sugerir uma edição". Suspensão é a cauda, para caso
+repetido. Risco moderado, não catastrófico.
+
+**Fica como decisão em aberto da dona do projeto, não como pendência
+técnica.**
+
 **A única avaliação existente**
 
 5 estrelas, de 3 meses atrás, assinada por **Flávia Roberta** — o mesmo nome

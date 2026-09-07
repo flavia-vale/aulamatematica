@@ -119,8 +119,11 @@ lance (R$ 7,40) — e não aparece com destaque em nenhuma página. Ver
 O perfil existe ("Taciane S."). A Fase 3 estabeleceu que **é ele que vence as
 consultas de BH**, não o site.
 
-- [ ] Nome alinhado com "Taciane Andrade" (site, schema, `llms.txt` e
-      Superprof usam essa forma)
+- [x] Nome alinhado com "Taciane Andrade" — feito em 07/09. Ficou
+      **"Taciane Andrade — Professora Particular de Matemática"**; o
+      descritor foi mantido por decisão da dona do projeto. Ver
+      [registro-ciclos.md](registro-ciclos.md). Conferir neste ciclo se o
+      Google reescreveu o nome sozinho.
 - [ ] Configurado como **negócio com área de atendimento**, sem endereço
       público, cobrindo as 7 cidades dentro dos 20 km
 - [ ] Telefone, site e horários batendo com o site

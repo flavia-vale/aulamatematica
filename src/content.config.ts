@@ -11,6 +11,9 @@ const blog = defineCollection({
     author: z.string().default('Taciane Andrade'),
     tags: z.array(z.string()).default([]),
     readingTime: z.string().optional(),
+    /** Declara a vigência quando o texto exibe R$ — exigido pela regra
+     *  `preco-sem-vigencia` do npm run check. Preço sem data envelhece em silêncio. */
+    precoVigencia: z.string().regex(/^\d{4}-\d{2}$/).optional(),
     draft: z.boolean().default(false),
   }),
 });

@@ -45,7 +45,7 @@ const schema = graph(
 ---
 
 <Base title={post.data.title} description={post.data.description} path={path} schema={schema}>
-  <article>
+  <article data-preco-vigencia={post.data.precoVigencia}>
     <header class="relative overflow-hidden border-b border-stone-200">
       <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
       <div class="relative mx-auto max-w-3xl px-4 pt-14 pb-12 sm:px-6 md:pt-20 md:pb-16">
@@ -93,7 +93,7 @@ const schema = graph(
         Gostou do texto?
       </h2>
       <p class="mx-auto mt-4 max-w-xl text-stone-600">
-        Trabalho com aulas particulares de matemática online — reforço escolar para ensino fundamental e médio. Aula diagnóstica gratuita.
+        Dou aulas particulares de matemática para ensino fundamental e médio: online para todo o Brasil, ou presenciais em Belo Horizonte e região. A primeira conversa é uma aula diagnóstica gratuita.
       </p>
       <CTAButtons />
     </div>

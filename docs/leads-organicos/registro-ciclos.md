@@ -922,3 +922,86 @@ Nenhum título, descrição ou copy. O registro de 06/09 anotou o viés de
 momento, e 49 impressões são o menor recorte que este projeto terá. A linha
 do Ciclo 1 na tabela histórica também **não** foi preenchida: a convenção fixa
 período de 12 meses, e misturar recortes transforma a série em ficção.
+
+### Dez artigos publicados e três consertos executados (2026-09-11)
+
+Decisão da dona do projeto, tomada com o export de 7 dias na mão: **publicar
+conteúdo novo agora, com volume, em vez de esperar 04/10**. Registrado como
+decisão, com a consequência declarada: o Ciclo 1 vai ler uma propriedade que
+mudou de tamanho no meio da janela, então a comparação de impressão entre
+Ciclo 0 e Ciclo 1 mede o site novo, não o antigo.
+
+**O que a Inspeção de URL derrubou**
+
+A hipótese de canibalização em `/aulas-de-matematica-online` estava errada, e
+a de defeito técnico também. A resposta do Search Console foi *"O Google não
+reconhece o URL"*, com **nenhum sitemap de referência** e **nenhuma página de
+referência** detectados. Não é página duplicada nem julgada de baixo valor.
+**O Google nunca a viu.**
+
+A explicação que sobrevive juntando as datas: a estrutura de links internos só
+foi criada em **06/09**, e os rastreamentos do site são de **04 e 05/09**. Na
+única vez em que o Google passou por aqui, essa página ainda não recebia link
+interno de lugar nenhum. Não há mistério de qualidade — há dívida de
+rastreamento. Isso reforça a prioridade de repetir os pedidos manuais.
+
+**O que foi feito**
+
+- **Dez artigos novos**, escolhidos pelos clusters que a Fase 4 mediu, não por
+  gosto. Quatro atacam a forma `professor/professora particular de matemática`
+  e a decisão de contratação (5.000 buscas/mês, índice 62, lance R$ 7,40, o
+  único cluster que combina volume alto com intenção de compra). Dois usam a
+  janela sazonal que está aberta agora: recuperação de fim de ano e os
+  conteúdos de matemática do ENEM, cujo pico é em novembro. Três atacam o
+  formato de "dor de mãe" que a **consulta 5 da Fase 3** apontou como o único
+  em que o site compete por formato, já que ali as IAs respondem com conteúdo
+  e não com lista de professores. E um é experimento controlado, abaixo.
+- **`/aulas-de-matematica-online` diferenciada da home.** Título e H1 passaram
+  a usar a forma `professora particular de matemática online`. Livre da regra
+  de congelamento pela exceção do `ciclo-1.md`: página que o Google nem
+  conhece não tem linha de base a proteger.
+- **IndexNow automatizado** em `.github/workflows/indexnow.yml`. Roda a cada
+  publicação no `main` e **só avisa depois de confirmar que o site ao vivo
+  alcançou o build** — a regra 1 das pendências de indexação vale para o
+  IndexNow também.
+- **Preço em artigo agora exige vigência.** O frontmatter ganhou
+  `precoVigencia`, que vira `data-preco-vigencia` no HTML. Sem isso a regra
+  `preco-sem-vigencia` barraria o artigo de preço, e com uma exceção nominal
+  ela ficaria barrada para sempre. A trava continua valendo para conteúdo.
+- **CTA do blog corrigida.** Dizia que o trabalho é de aula online, ignorando
+  o presencial que existe desde 06/09. Era informação desatualizada, não
+  experimento de copy.
+
+**O experimento controlado, declarado antes de medir**
+
+`atividades-de-matematica-para-praticar-em-casa` ataca o cluster de
+**50.000 buscas/mês com índice de concorrência 2** — o maior volume do mercado
+e, pela leitura da Fase 4, o de pior intenção: material gratuito para
+imprimir, não família contratando aula.
+
+A hipótese registrada **antes** de olhar o dado, para que o Ciclo 1 possa
+derrubá-la: *esta página vai produzir mais impressão que qualquer outra e
+nenhuma conversa atribuída*. Se for isso, é a confirmação de campo da tese de
+que volume e intenção andam em direções opostas, e a linha de "conteúdo de
+material gratuito" pode ser congelada com evidência própria em vez de
+evidência emprestada do Planejador. Se produzir conversa, a tese estava
+errada e a decisão muda.
+
+**Decisão da dona do projeto: não instalar analytics**
+
+Recusado o Plausible. Consequência registrada, não como objeção: a etapa 3 do
+funil — *viu a página e não clicou* — **continua invisível**, e o Ciclo 1 vai
+continuar sem conseguir separar "ninguém acha a página" de "acham e não
+clicam". A leitura do funil segue sendo feita pelas pontas, impressão de um
+lado e conversa do outro. Com 13 páginas em vez de 11, a chance de a pergunta
+5 da Fase 2 ficar sem resposta aumentou.
+
+**Google Business Profile — duas decisões dela**
+
+1. **O nome fica como está** ("Taciane S. — Professora Particular de
+   Matemática"). Vários professores anunciam assim. Encerrado, não reabrir.
+2. **Horário corrigido para 21h** no perfil. A divergência com o site sumiu.
+
+Continua pendente só a URL canônica para o `sameAs`: o link `share.google`
+fornecido não resolve por acesso automatizado, confirmando o que já estava
+registrado em 06/09.

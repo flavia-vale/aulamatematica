@@ -1,0 +1,54 @@
+# Avisa Bing, Yandex e DuckDuckGo sempre que algo é publicado no main.
+#
+# Por que existe: até 2026-09-11 o `npm run indexnow` dependia de alguém
+# lembrar de rodar. Página publicada e não avisada fica esperando o rastreador
+# passar sozinho.
+#
+# Por que espera antes de avisar: a regra 1 de docs/leads-organicos/
+# pendencias-indexacao.md vale para o IndexNow também — avisar antes de a
+# mudança estar no ar faz o buscador ler a versão velha. O passo de espera
+# abaixo só libera o aviso depois que o site ao vivo serve o que foi compilado.
+#
+# O Google NÃO participa do IndexNow. Lá o pedido continua manual, um a um,
+# em Search Console → Inspeção de URL → Solicitar indexação.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Esperar o deploy servir o que foi compilado
+        run: |
+          # Compara o conjunto de URLs do dist com o que o sitemap ao vivo já
+          # serve. Só segue quando o site ao vivo alcançou o build.
+          esperado=$(find dist -name '*.xml' -path '*sitemap-0*' -exec cat {} \; | grep -o 'https://[^<]*' | sort -u | wc -l)
+          echo "URLs no build: $esperado"
+          for i in $(seq 1 30); do
+            vivo=$(curl -s https://aulasdematematicabh.com.br/sitemap-0.xml | grep -o 'https://[^<]*' | sort -u | wc -l)
+            echo "tentativa $i — URLs no ar: $vivo"
+            if [ "$vivo" -ge "$esperado" ]; then
+              echo "Deploy alcançou o build."
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "O site ao vivo não alcançou o build em 15 minutos."
+          echo "Nada foi avisado — avisar agora faria o buscador ler a versão velha."
+          exit 1
+
+      - run: npm run indexnow

@@ -42,8 +42,13 @@ export const site = {
     superprof:
       'https://www.superprof.com.br/aulas-particulares-matematica-presencial-online-licencianda-pela-ufmg-primeira-aula-gratis.html',
     /**
-     * Google Business Profile. JÁ EXISTE ("Taciane S. — Professora Particular
-     * de Matemática"), mas falta a URL canônica aqui.
+     * Google Business Profile. URL canônica obtida em 2026-09-11, resolvendo o
+     * link curto `maps.app.goo.gl` fornecido pela dona do projeto: o CID em
+     * hexadecimal (0xaae3d386d91e09db) convertido para decimal.
+     *
+     * O perfil passou a se chamar "Taciane Andrade — Professora Particular de
+     * Matemática". O nome agora bate com o `Person` do schema, com o Superprof
+     * e com o site — a divergência registrada em 06/09 não existe mais.
      *
      * Pegar no painel do perfil, não o link `share.google` (que é temporário
      * e não serve como `sameAs`). Serve: `https://maps.google.com/?cid=...`
@@ -52,7 +57,7 @@ export const site = {
      * É o ativo mais importante para as consultas de BH: a Fase 3 mostrou que
      * o que vence a consulta 1 são fichas do Google Business Profile.
      */
-    googleBusiness: '',
+    googleBusiness: 'https://maps.google.com/?cid=12313918382282770907',
   },
 
   /**

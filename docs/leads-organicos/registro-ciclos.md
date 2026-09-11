@@ -1005,3 +1005,29 @@ lado e conversa do outro. Com 13 páginas em vez de 11, a chance de a pergunta
 Continua pendente só a URL canônica para o `sameAs`: o link `share.google`
 fornecido não resolve por acesso automatizado, confirmando o que já estava
 registrado em 06/09.
+
+### Google Business Profile ligado ao site (2026-09-11)
+
+O link curto `maps.app.goo.gl` fornecido pela dona do projeto resolveu por
+redirecionamento, ao contrário do `share.google` tentado em 06/09 e de novo
+hoje. Dele saíram duas coisas.
+
+**O CID, e com ele a URL canônica.** `0xaae3d386d91e09db` em decimal é
+`12313918382282770907`, e `https://maps.google.com/?cid=12313918382282770907`
+responde. Preenchido em `site.social.googleBusiness`, o perfil entrou no
+`sameAs` do `Person` e do `LocalBusiness` em todas as páginas, ao lado do
+Superprof. **A ligação entre o site e o único ativo que as IAs citam passou a
+existir no código.**
+
+**O nome do perfil mudou, e a divergência de 06/09 acabou.** A ficha agora se
+chama **"Taciane Andrade — Professora Particular de Matemática"**, não mais
+"Taciane S.". O nome bate com o `Person` do schema, com o site e com o
+Superprof. A recomendação de renomear está resolvida por outro caminho, e a
+decisão da dona do projeto de manter o descritor de serviço no nome segue
+registrada e não reaberta.
+
+**O que ainda falta do lado do Google:** nenhum sitemap foi enviado no Search
+Console. O `robots.txt` referencia `sitemap-index.xml` e isso funciona, mas é
+descoberta passiva. O envio direto é o que explica, junto com a ausência de
+link interno em 04 e 05/09, a Inspeção de URL ter respondido "nenhum sitemap
+de referência detectado" para a página de aula online.

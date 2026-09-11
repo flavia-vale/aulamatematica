@@ -839,3 +839,86 @@ páginas.
 
 Os depoimentos continuam visíveis na página. Só a marcação é proibida, e o
 lugar da nota é o Google Business Profile.
+
+### Primeira leitura do Search Console — parcial, 7 dias (2026-09-11)
+
+Leitura antecipada, motivada pela pergunta da dona do projeto: *nenhum lead
+chegou, como entender o que está acontecendo?* O Ciclo 1 continua em 04/10.
+Plano derivado em [plano-aceleracao.md](plano-aceleracao.md).
+
+**O que a medição derrubou**
+
+- *"Zero lead pode significar que o site não aparece na busca."* **Falso.**
+  49 impressões e 1 clique em 5 dias com dado, 10 das 11 páginas com
+  impressão. O funil **não** zera na primeira etapa. Zera por volume.
+- *"Pode haver algo quebrado no caminho do WhatsApp."* Descartado: o número
+  foi confirmado funcionando pela dona do projeto em 11/09, e os links de
+  todas as páginas apontam para ele no HTML ao vivo.
+- *"O texto do site não está convertendo."* Não é afirmável. **Houve 1
+  clique**, em 06/09, na home. Amostra de 1 não mede página, texto nem botão.
+
+**O achado que reorganiza a prioridade**
+
+No ritmo medido, o site projeta ~210 impressões/mês e ~4 visitas/mês. **Zero
+lead é o resultado aritmeticamente esperado desse volume** — não precisa de
+nenhuma hipótese sobre qualidade de texto para ser explicado. Multiplicar o
+tráfego por 5 a 10 vezes é o que faltaria, e nenhuma reescrita de título faz
+isso em 30 dias.
+
+Isso confirma, por um caminho novo, o que a Fase 3 já dizia: **o site é o
+canal lento**. Os canais onde esta operação já é encontrada são o Google
+Business Profile (primeiro lugar na busca capturada) e o Superprof (única
+citação em 28 medições de IA). A aceleração de lead está neles, e a ação de
+maior retorno continua sendo as cinco famílias avaliando no Google.
+
+**`/sobre` é a página com mais impressão e a melhor posição**
+
+24 impressões na posição média 4,21, contra 21 da home na 6,62. A página que
+fala **da professora** ranqueia melhor que todas as de serviço. Conversa
+diretamente com o achado de 06/09: a entidade que ranqueia chama-se
+**Taciane**, não "Aulas de Matemática BH". Hipótese, não conclusão — o teste
+é filtrar as consultas por `taciane`, já que 36 das 49 impressões estão
+anonimizadas.
+
+**Sinal de canibalização, por aritmética**
+
+A aba Páginas soma 84 impressões e a aba Países soma 49. Não é erro: o total
+da propriedade conta uma impressão por busca, a aba Páginas conta uma por URL
+exibida. A razão de **1,71 URLs por busca** indica que o site costuma aparecer
+com mais de uma página na mesma busca. É o sintoma da hipótese levantada em
+03/09. **Não consertado** — com 49 impressões a amostra não separa
+canibalização de coincidência.
+
+**`/aulas-de-matematica-online` continua com zero impressão, 8 dias depois**
+
+Auditada em 11/09 e **sem defeito técnico**: 200, canonical próprio, sem
+`noindex`, no sitemap, com 3 links internos vindos de todas as outras páginas.
+Não é órfã. A causa se decide pelo rótulo exato da Inspeção de URL, que separa
+fila do Google, baixo valor percebido e canônico duplicado — ver o passo B1 do
+plano. É a única página de prioridade 1 fora, e é a da modalidade nacional.
+
+**O cluster de `reforço` está entre as posições 45 e 58**
+
+Quatro variantes, todas em página 5 ou 6 da busca. É o mesmo cluster que a
+Fase 4 mediu como volume baixo com intenção de material. Impressão nessa faixa
+é ruído, não oportunidade. As duas únicas consultas de contratação com posição
+alcançável, `aula particular de matematica` (11) e `professora matematica
+particular` (12), têm 1 impressão cada.
+
+**Terceira confirmação do congelamento geográfico:** `aula particular
+matematica bh`, 1 impressão, posição 39. Trends, Planejador e agora Search
+Console dizem a mesma coisa.
+
+**O gatilho de analytics foi atingido**
+
+O critério combinado era uma página passar de ~100 impressões/mês com quase
+nenhuma conversa. `/sobre` projeta ~100 sozinha. Decisão pendente da dona do
+projeto, opções em [funil.md](funil.md#a-lacuna-conhecida).
+
+**O que NÃO foi alterado, e por quê**
+
+Nenhum título, descrição ou copy. O registro de 06/09 anotou o viés de
+"concluir rápido demais a partir do primeiro recorte" justamente para este
+momento, e 49 impressões são o menor recorte que este projeto terá. A linha
+do Ciclo 1 na tabela histórica também **não** foi preenchida: a convenção fixa
+período de 12 meses, e misturar recortes transforma a série em ficção.

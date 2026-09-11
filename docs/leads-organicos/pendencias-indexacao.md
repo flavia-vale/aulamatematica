@@ -40,7 +40,7 @@ qualidade ou por ninguém ter pedido.
 | `/contato` | 2026-09-04 | **sim** | 04/09 |
 | `/blog` | 2026-09-04 | **sim** | 05/09 |
 | `/blog/como-ajudar-filho-matematica` | 2026-09-04 | **sim** | 04/09 |
-| `/blog/como-estudar-matematica-enem` | 2026-09-06 | não | — |
+| `/blog/como-estudar-matematica-enem` | 2026-09-06 | **sim** | — |
 | `/blog/por-que-matematica-parece-dificil` | 2026-09-06 | **sim** | 05/09 |
 
 **9 de 11 indexadas em dois dias.** Rápido para um domínio novo.
@@ -91,3 +91,25 @@ Depois de confirmar que o deploy está no ar, repetir o pedido de indexação
 para as páginas com mudança material — a de BH em primeiro lugar, seguida da
 home, `/sobre` e `/contato`. **Nunca pedir antes de a mudança estar
 publicada**: o Google leria a versão velha e o pedido seria gasto à toa.
+
+## Leitura de 2026-09-11 (Search Console, 7 dias)
+
+`/blog/como-estudar-matematica-enem` **entrou**: 1 impressão na posição 9.
+São **10 de 11 indexadas**.
+
+`/aulas-de-matematica-online` continua com **zero impressão**, oito dias após
+o pedido de 04/09. Auditada em 11/09 e **sem defeito técnico**: HTTP 200,
+canonical próprio, sem `noindex`, presente no sitemap e com 3 links internos
+vindos de todas as outras páginas do site. Não é página órfã.
+
+A causa se decide pelo **rótulo exato** da Inspeção de URL:
+
+| Rótulo | Causa | Conserto |
+|---|---|---|
+| "Descoberta — não indexada no momento" | fila do Google | repetir o pedido e esperar |
+| "Rastreada — não indexada no momento" | julgada de baixo valor | diferenciar da home |
+| "Página duplicada, o Google escolheu um canônico diferente" | canibalização confirmada | diferenciar título e H1 |
+
+O terceiro rótulo confirmaria a hipótese de canibalização levantada em 03/09,
+porque o título da home contém literalmente "Aulas particulares de matemática
+online". Ver o passo B1 de [plano-aceleracao.md](plano-aceleracao.md).

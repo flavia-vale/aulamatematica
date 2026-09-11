@@ -46,6 +46,8 @@ e várias hipóteses já derrubadas por dado.
 | `citacao-ia-planilha.csv` | Os dados brutos das 28 medições |
 | `concorrentes.md` | Lista de concorrentes citados pelas IAs + preços de mercado |
 | `funil.md` | Como a atribuição de lead funciona sem backend |
+| **`plano-aceleracao.md`** | **Leitura do Search Console de 11/09 e o plano de 4 trilhas** |
+| `search-console-2026-09-11/` | Export bruto dos 7 primeiros dias |
 | `tabela-historica.md` | A série do Search Console, uma linha por ciclo |
 | `pendencias-indexacao.md` | Controle dos pedidos manuais de indexação no Google |
 | `linhas-congeladas.md` | Onde se decidiu parar de investir, e por qual evidência |

@@ -42,6 +42,16 @@ qualidade ou por ninguém ter pedido.
 | `/blog/como-ajudar-filho-matematica` | 2026-09-04 | **sim** | 04/09 |
 | `/blog/como-estudar-matematica-enem` | 2026-09-06 | **sim** | — |
 | `/blog/por-que-matematica-parece-dificil` | 2026-09-06 | **sim** | 05/09 |
+| `/blog/como-escolher-professor-particular-matematica` | — | não | — |
+| `/blog/quanto-custa-aula-particular-matematica` | — | não | — |
+| `/blog/meu-filho-nao-aprende-matematica` | — | não | — |
+| `/blog/sinais-aluno-precisa-reforco-matematica` | — | não | — |
+| `/blog/lacunas-de-matematica-do-fundamental` | — | não | — |
+| `/blog/aula-de-matematica-online-funciona` | — | não | — |
+| `/blog/recuperacao-de-matematica-fim-do-ano` | — | não | — |
+| `/blog/matematica-enem-conteudos-que-mais-caem` | — | não | — |
+| `/blog/como-estudar-matematica-sozinho` | — | não | — |
+| `/blog/atividades-de-matematica-para-praticar-em-casa` | — | não | — |
 
 **9 de 11 indexadas em dois dias.** Rápido para um domínio novo.
 
@@ -113,3 +123,27 @@ A causa se decide pelo **rótulo exato** da Inspeção de URL:
 O terceiro rótulo confirmaria a hipótese de canibalização levantada em 03/09,
 porque o título da home contém literalmente "Aulas particulares de matemática
 online". Ver o passo B1 de [plano-aceleracao.md](plano-aceleracao.md).
+
+## Dez artigos publicados em 2026-09-11
+
+Entraram na lista na mesma entrega que os criou, como manda a regra 2. A coluna
+`Pedido em` está vazia de propósito: **o pedido manual só vale depois de a
+página estar no ar**, e pedir antes queima a cota do dia lendo a versão velha.
+
+A cota do Google é de ~10 a 12 por dia, então os dez cabem em um dia. Ordem
+sugerida, por janela de tempo e não por gosto:
+
+1. `recuperacao-de-matematica-fim-do-ano` — a janela de recuperação é set-dez
+2. `matematica-enem-conteudos-que-mais-caem` — o pico do ENEM é em novembro
+3. `como-escolher-professor-particular-matematica` — o termo de maior valor medido
+4. `quanto-custa-aula-particular-matematica`
+5. `meu-filho-nao-aprende-matematica`
+6. `lacunas-de-matematica-do-fundamental`
+7. `sinais-aluno-precisa-reforco-matematica`
+8. `aula-de-matematica-online-funciona`
+9. `como-estudar-matematica-sozinho`
+10. `atividades-de-matematica-para-praticar-em-casa`
+
+**Repetir também `/aulas-de-matematica-online`.** A Inspeção de URL de
+2026-09-11 devolveu "O Google não reconhece o URL", sem sitemap de referência
+e sem página de referência. Ver a leitura abaixo.

@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
 import Preco from '../components/Preco.astro';
 import Depoimentos from '../components/Depoimentos.astro';
 import { site } from '../config/site';
@@ -128,17 +129,14 @@ const schema = graph(
     </p>
   </section>
 
-  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
-    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Leitura relacionada</p>
-    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Por que matemática parece tão difícil?</h2>
-    <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">A dificuldade quase nunca é falta de aptidão — é uma lacuna antiga que ninguém voltou para consertar. Escrevi sobre as causas reais e o que fazer com elas.</p>
-    <p class="mt-5">
-      <a href="/blog/por-que-matematica-parece-dificil" class="inline-flex items-center gap-2 font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
-        Ler a análise completa
-        <span aria-hidden="true">→</span>
-      </a>
-    </p>
-  </section>
+  <LeituraRelacionada
+    titulo="Para decidir com informação, não com achismo."
+    itens={[
+        { href: "/blog/aula-de-matematica-online-funciona", titulo: "Aula online funciona?", resumo: "O que a videochamada resolve, o que ela atrapalha, e para que perfil de aluno cada formato serve." },
+        { href: "/blog/como-escolher-professor-particular-matematica", titulo: "Como escolher um professor particular", resumo: "Sete perguntas para fazer antes de fechar, e o que cada resposta revela sobre o método." },
+        { href: "/blog/quanto-custa-aula-particular-matematica", titulo: "Quanto custa uma aula particular", resumo: "Faixas reais do mercado, o que move o valor, e os valores praticados aqui." },
+    ]}
+  />
 
   <Depoimentos />
 

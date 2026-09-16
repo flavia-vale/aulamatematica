@@ -147,3 +147,33 @@ sugerida, por janela de tempo e não por gosto:
 **Repetir também `/aulas-de-matematica-online`.** A Inspeção de URL de
 2026-09-11 devolveu "O Google não reconhece o URL", sem sitemap de referência
 e sem página de referência. Ver a leitura abaixo.
+
+## Cobertura de 2026-09-16 — 17 indexadas de 21
+
+Export em `search-console-2026-09-16/`. A série de indexadas foi de 9 em
+03/09 para **17**, estável desde 04/09 na contagem do Google e agora
+incorporando os dez artigos de 11/09.
+
+**As quatro fora, todas em "Detectada, mas não indexada no momento":**
+
+| Rota | Último rastreamento | Situação |
+|---|---|---|
+| `/aulas-de-matematica-online` | — | saiu de "não reconhece o URL" para "detectada" |
+| `/blog/meu-filho-nao-aprende-matematica` | — | fila |
+| `/blog/sinais-aluno-precisa-reforco-matematica` | — | fila |
+| `/blog/aula-de-matematica-online-funciona` | — | fila |
+
+"Detectada, mas não indexada" é fila, não recusa: o Google conhece o
+endereço e ainda não decidiu gastar rastreamento nele. O que move essa fila é
+link interno vindo de página que ele já visita — medido em 16/09, as três
+recebiam **um único link, vindo só de `/blog`**. Corrigido no mesmo dia: agora
+recebem de 4 a 6, incluindo home e `/sobre`.
+
+**O item "Página alternativa com tag canônica adequada" continua em 1** e
+continua não sendo problema. É o `http://` apontando por canonical para o
+`https://`. Não clicar em "Validar correção".
+
+**As 17 indexadas, com o último rastreamento registrado:** as reescritas de
+06/09 foram todas re-rastreadas entre 12 e 13/09, incluindo
+`/aulas-particulares-matematica-bh`. A dívida de reindexação daquela data
+está paga.

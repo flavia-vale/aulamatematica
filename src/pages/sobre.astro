@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CTAButtons from '../components/CTAButtons.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
 import { site } from '../config/site';
 import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -135,6 +136,18 @@ const schema = graph(
     </div>
   </section>
 
+  <LeituraRelacionada
+    eyebrow="Do blog"
+    titulo="O que eu escrevo sobre ensinar matemática."
+    itens={[
+        { href: "/blog/meu-filho-nao-aprende-matematica", titulo: "Meu filho não aprende matemática", resumo: "Roteiro de cinco passos para a família investigar em casa antes de contratar qualquer aula." },
+        { href: "/blog/sinais-aluno-precisa-reforco-matematica", titulo: "8 sinais de que o aluno precisa de reforço", resumo: "Como distinguir dificuldade passageira de lacuna acumulada, e três coisas que não são sinal." },
+        { href: "/blog/lacunas-de-matematica-do-fundamental", titulo: "As 6 lacunas do fundamental", resumo: "Fração, sinais, proporção, potência, equação e leitura de enunciado, com um teste de um minuto." },
+        { href: "/blog/aula-de-matematica-online-funciona", titulo: "Aula online funciona?", resumo: "O que a videochamada resolve, o que ela atrapalha, e para que perfil de aluno cada formato serve." },
+        { href: "/blog/como-escolher-professor-particular-matematica", titulo: "Como escolher um professor particular", resumo: "Sete perguntas para fazer antes de fechar, e o que cada resposta revela sobre o método." },
+        { href: "/blog/como-estudar-matematica-sozinho", titulo: "Como estudar matemática sozinho", resumo: "Um método de cinco passos e os cinco hábitos que parecem estudo e não são." },
+    ]}
+  />
   <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
     <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
       <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">

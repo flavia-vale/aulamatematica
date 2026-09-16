@@ -1,0 +1,40 @@
+---
+/**
+ * Bloco de leitura relacionada das páginas de serviço.
+ *
+ * Existe como componente desde 2026-09-16. Antes, cada página de serviço
+ * apontava para UM artigo, escolhido à mão. O Coverage de 16/09 mostrou o
+ * custo disso: três artigos publicados em 11/09 ficaram em "Detectada, mas
+ * não indexada", e os três recebiam **um único link interno**, vindo só de
+ * /blog. Os que indexaram rápido recebiam link de página com impressão.
+ *
+ * Por isso a lista é plural: página de serviço com impressão é o ativo que
+ * este site tem para apresentar artigo novo ao Google.
+ */
+interface Item {
+  href: string;
+  titulo: string;
+  resumo: string;
+}
+interface Props {
+  eyebrow?: string;
+  titulo: string;
+  itens: Item[];
+}
+const { eyebrow = 'Leitura relacionada', titulo, itens } = Astro.props;
+---
+
+<section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
+  <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">{eyebrow}</p>
+  <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">{titulo}</h2>
+  <ul class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {itens.map((i) => (
+      <li class="border-t border-stone-200 pt-5">
+        <a href={i.href} class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+          {i.titulo}
+        </a>
+        <p class="mt-2 text-sm leading-relaxed text-stone-600">{i.resumo}</p>
+      </li>
+    ))}
+  </ul>
+</section>

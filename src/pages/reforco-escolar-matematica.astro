@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
 import Preco from '../components/Preco.astro';
 import Depoimentos from '../components/Depoimentos.astro';
 import { site } from '../config/site';
@@ -137,17 +138,17 @@ const schema = graph(
     </div>
   </section>
 
-  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
-    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Leitura relacionada</p>
-    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Antes de contratar reforço, leia isto.</h2>
-    <p class="mt-4 max-w-2xl leading-relaxed text-stone-600">Escrevi um guia honesto para pais sobre o que funciona e o que piora a relação do filho com matemática — inclusive as coisas que não custam nada e quase ninguém faz.</p>
-    <p class="mt-5">
-      <a href="/blog/como-ajudar-filho-matematica" class="inline-flex items-center gap-2 font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
-        Como ajudar seu filho a melhorar em matemática
-        <span aria-hidden="true">→</span>
-      </a>
-    </p>
-  </section>
+  <LeituraRelacionada
+    titulo="Antes de contratar reforço, leia isto."
+    itens={[
+        { href: "/blog/sinais-aluno-precisa-reforco-matematica", titulo: "8 sinais de que o aluno precisa de reforço", resumo: "Como distinguir dificuldade passageira de lacuna acumulada, e três coisas que não são sinal." },
+        { href: "/blog/meu-filho-nao-aprende-matematica", titulo: "Meu filho não aprende matemática", resumo: "Roteiro de cinco passos para a família investigar em casa antes de contratar qualquer aula." },
+        { href: "/blog/lacunas-de-matematica-do-fundamental", titulo: "As 6 lacunas do fundamental", resumo: "Fração, sinais, proporção, potência, equação e leitura de enunciado, com um teste de um minuto para cada." },
+        { href: "/blog/como-ajudar-filho-matematica", titulo: "Como ajudar seu filho em matemática", resumo: "O que funciona, o que piora, e as coisas que não custam nada e quase ninguém faz." },
+        { href: "/blog/como-estudar-matematica-sozinho", titulo: "Como estudar matemática sozinho", resumo: "Um método de cinco passos e os cinco hábitos que parecem estudo e não são." },
+        { href: "/blog/por-que-matematica-parece-dificil", titulo: "Por que matemática parece difícil", resumo: "As causas reais da dificuldade no ensino básico, e o que fazer com cada uma." },
+    ]}
+  />
 
   <Depoimentos />
 

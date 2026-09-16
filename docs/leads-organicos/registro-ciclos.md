@@ -1031,3 +1031,112 @@ Console. O `robots.txt` referencia `sitemap-index.xml` e isso funciona, mas é
 descoberta passiva. O envio direto é o que explica, junto com a ausência de
 link interno em 04 e 05/09, a Inspeção de URL ter respondido "nenhum sitemap
 de referência detectado" para a página de aula online.
+
+### Segunda leitura do Search Console — 12 dias (2026-09-16)
+
+Export de Desempenho, Cobertura e Cobertura/Válidas. Dados brutos em
+`search-console-2026-09-16/`. Comparação com a leitura de 11/09.
+
+| Métrica | 11/09 (5 dias) | 16/09 (12 dias) |
+|---|---|---|
+| Impressões (soma de Países) | 49 | **132** |
+| Cliques | 1 | **1** |
+| Taxa de clique | 2,04% | **0,76%** |
+| Consultas distintas nomeadas | 8 | **18** |
+| Páginas indexadas | 10 | **17** |
+| URLs por busca (Páginas ÷ Países) | 1,71 | 1,41 |
+| Conversas no WhatsApp | 0 | 0 |
+
+**A correção que este export impõe à minha leitura anterior**
+
+Em 11/09 eu escrevi que *"o funil zera por volume"* e que zero lead era o
+resultado aritmeticamente esperado desse volume. **O volume quase triplicou e
+os cliques não saíram de 1.** A leitura estava incompleta: o gargalo não é a
+quantidade de impressão, é **a posição em que ela acontece**. Impressão na
+posição 11 não vira clique em nenhum volume razoável.
+
+**O achado que organiza tudo: o muro da posição 11**
+
+Sete consultas distintas, todas de intenção de contratação, param entre 11,0 e
+12,0 — a primeira linha da segunda página:
+
+| Consulta | Impressões | Posição |
+|---|---|---|
+| aula particular de matematica | 9 | 11,22 |
+| aulas particulares de matematica | 2 | 11,50 |
+| professora matematica particular | 2 | 11,50 |
+| aula de matemática particular | 1 | 11,00 |
+| aula particular de matemática | 1 | 11,00 |
+| professor particular de matemática bh | 1 | 11,00 |
+| professora de matemática particular | 1 | 12,00 |
+
+É exatamente o cluster que a Fase 4 apontou como o único que combina volume
+alto (5.000/mês) com intenção de compra (índice 62, lance R$ 7,40). O site
+chega perto e não entra. **Esta é a pergunta 3 da Fase 2 respondida com
+dado**, e é a prioridade do Ciclo 1.
+
+O cluster `reforço` continua entre 45 e 59, como em 11/09. Ruído, confirmado
+pela segunda vez.
+
+**Os artigos de 11/09 funcionaram, e rápido**
+
+Três dos dez já produzem impressão cinco dias depois da publicação:
+
+| Página | Impressões | Posição |
+|---|---|---|
+| `/blog/recuperacao-de-matematica-fim-do-ano` | 15 | 8,47 |
+| `/blog/quanto-custa-aula-particular-matematica` | 5 | 7,60 |
+| `/blog/como-escolher-professor-particular-matematica` | 3 | 6,67 |
+
+E uma consulta nova apareceu na lista: `recuperação de matemática`, posição 9.
+É a página sazonal entrando na janela para a qual foi escrita. **A decisão de
+publicar antes de 04/10 se pagou em impressão**, ainda que não em clique.
+
+O experimento declarado, `atividades-de-matematica-para-praticar-em-casa`,
+está indexado e com **zero impressão**. Cedo demais para julgar; a hipótese
+registrada continua de pé e se decide no Ciclo 1.
+
+**A indexação está resolvida: 17 páginas**
+
+Quatro continuam fora, todas em "Detectada, mas não indexada no momento":
+`/aulas-de-matematica-online`, `/blog/meu-filho-nao-aprende-matematica`,
+`/blog/sinais-aluno-precisa-reforco-matematica` e
+`/blog/aula-de-matematica-online-funciona`.
+
+**A hipótese de 11/09 sobre a página de aula online foi confirmada.** Ela saiu
+de *"O Google não reconhece o URL"* para *"Detectada, mas não indexada"*: o
+sitemap enviado e os links internos novos resolveram a descoberta, que era o
+problema real. Agora é fila, não invisibilidade.
+
+**O que as quatro têm em comum, e o conserto aplicado hoje**
+
+Medido no site ao vivo: os três artigos não indexados recebiam **1 ou 2 links
+internos**, todos vindos de `/blog`. Nenhum vinha de página com impressão.
+
+Criado `LeituraRelacionada.astro` e trocada a indicação de artigo único das
+quatro páginas de serviço por lista, mais um bloco na **home** (63 impressões,
+posição 8,3) e em **`/sobre`** (33 impressões, posição 4,0 — a que melhor
+ranqueia do site). Os três passaram de 1 ou 2 links para 4 a 6, agora vindos
+das páginas que o Google visita com mais frequência.
+
+**`/sobre` continua com a melhor posição e nenhum clique**
+
+33 impressões na posição média 4,0, zero clique. Em 11/09 eram 24 na posição
+4,21. O padrão persistiu por dez dias. Na posição 4 a taxa de clique típica é
+de 7 a 10%, o que faria esperar 2 ou 3 cliques. Zero em 33 tem cerca de 6% de
+chance de acontecer por acaso: **improvável, mas ainda não conclusivo.**
+
+A hipótese segue a mesma, e o teste também: filtrar as consultas por
+`taciane`. Se forem buscas pelo nome dela, o clique está indo para a ficha do
+Google, que aparece acima do site. Nesse caso não há nada a consertar no site,
+e o ativo certo é o perfil.
+
+**Celular: 61 impressões, posição 10,2, zero clique**
+
+Contra 71 impressões na posição 18,79 e 1 clique no computador. O padrão de
+11/09 se manteve com amostra três vezes maior. Continua sem separação
+estatística por causa do clique único, mas deixou de ser desprezível.
+
+**Nada foi preenchido na tabela histórica.** O export veio com período de
+3 meses e a convenção da série exige 12 meses. Misturar recortes transforma a
+série em ficção, e a linha do Ciclo 1 continua marcada para 04/10.

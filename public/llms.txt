@@ -37,6 +37,7 @@
 ## Páginas principais
 
 - [Página inicial](https://aulasdematematicabh.com.br/): visão geral dos serviços, método e CTA para aula diagnóstica gratuita
+- [Professor particular de matemática](https://aulasdematematicabh.com.br/professor-particular-de-matematica): a página do serviço sem qualificador — como contratar, o que está incluído, as duas modalidades e por que o contato é direto, sem plataforma nem taxa
 - [Aulas particulares de matemática em BH](https://aulasdematematicabh.com.br/aulas-particulares-matematica-bh): atendimento focado em Belo Horizonte e Grande BH, com lista de escolas e bairros atendidos
 - [Aulas de matemática online](https://aulasdematematicabh.com.br/aulas-de-matematica-online): explicação do funcionamento, ferramentas usadas e comparação online vs presencial
 - [Reforço escolar de matemática](https://aulasdematematicabh.com.br/reforco-escolar-matematica): sinais de quando procurar, método em 5 passos e conteúdos cobertos por série

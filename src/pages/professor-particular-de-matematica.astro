@@ -1,0 +1,236 @@
+---
+/**
+ * Página do termo `professor particular de matemática`.
+ *
+ * Por que ela existe, com o dado: a Fase 4 mediu este cluster como o único
+ * que combina a faixa de volume mais alta (5.000 buscas/mês) com intenção de
+ * compra real (índice de concorrência 62, lance topo R$ 7,40). O export do
+ * Search Console de 16/09 mostrou o site aparecendo para sete variantes dele
+ * — todas paradas entre as posições 11,0 e 12,0, a primeira linha da segunda
+ * página — sem que nenhuma página do site tratasse o termo diretamente.
+ *
+ * Diferenciação declarada, para que o Ciclo 1 possa medir canibalização:
+ *   /                                  → porta de entrada da marca
+ *   /professor-particular-de-matematica → o termo sem qualificador, a decisão
+ *                                         de contratar, as duas modalidades
+ *   /aulas-de-matematica-online         → o qualificador "online", nacional
+ *   /aulas-particulares-matematica-bh   → o qualificador presencial, 20 km
+ *   /reforco-escolar-matematica         → o problema (acompanhar a escola)
+ *   /enem-matematica                    → a prova
+ */
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
+import Preco from '../components/Preco.astro';
+import Depoimentos from '../components/Depoimentos.astro';
+import { site } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/professor-particular-de-matematica';
+const url = `${site.url}${path}`;
+const title = 'Professor particular de matemática — aula individual com professora da UFMG';
+const description = `Professora particular de matemática para ensino fundamental e médio. Aula individual online em todo o Brasil ou presencial em Belo Horizonte, com contato direto por WhatsApp e aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos.`;
+
+const faqs = [
+  { q: 'Como contratar um professor particular de matemática?', a: `O caminho aqui tem três passos e nenhum cadastro: você manda uma mensagem no WhatsApp, marcamos a aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos, e no fim dela eu digo o que encontrei e o que faria. Só depois disso você decide se quer começar. Não há taxa para falar comigo nem plataforma no meio.` },
+  { q: 'Quanto custa um professor particular de matemática?', a: `Aqui, a aula online de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.online} para todo o Brasil, e a presencial em Belo Horizonte e região começa em R$ ${site.preco.presencialMin}, variando com a distância e o nível. Valores vigentes desde ${site.preco.vigenciaTexto}. No mercado, a faixa vai de cerca de R$ 35 a R$ 150 por hora, e o que mais move o valor é deslocamento e nível de ensino, não a formação do professor.` },
+  { q: 'Qual a diferença entre professor particular e reforço escolar?', a: 'Na prática, nenhuma quando o professor é individual: reforço escolar é um dos objetivos possíveis da aula particular. A diferença que importa é outra, entre treinar para a prova da semana e recuperar uma lacuna de anos anteriores. São trabalhos diferentes, com prazos diferentes, e confundir os dois é a maior fonte de frustração que eu vejo.' },
+  { q: 'Para quais séries você dá aula?', a: 'Do 6º ano do ensino fundamental ao 3º ano do ensino médio, incluindo preparação para o ENEM. Não atendo ensino superior, que é outra linha de trabalho.' },
+  { q: 'A aula é online ou presencial?', a: 'As duas. Online ao vivo para todo o Brasil, e presencial na casa do aluno ou em local público dentro de um raio de 20 km do centro de Belo Horizonte. Quem mora além desse raio é atendido online.' },
+  { q: 'Preciso assinar alguma plataforma para falar com você?', a: 'Não. O contato é direto por WhatsApp, sem taxa, sem assinatura e sem cadastro. É a diferença mais concreta em relação aos marketplaces de aula particular, onde costuma ser preciso pagar um plano antes de conseguir conversar com o professor.' },
+  { q: 'A primeira aula é gratuita mesmo?', a: `É, e ela não é uma conversa de vendas. São ${site.preco.diagnosticoMin} minutos em que o aluno resolve exercício na minha frente para eu ver onde ele trava. Vale notar que primeira aula gratuita é padrão de mercado, oferecida pela quase totalidade dos professores particulares — o que diferencia é o que acontece dentro dela.` },
+  { q: 'Como sei se você é a professora certa para o meu filho?', a: 'Pelo que sair da aula diagnóstica. Se eu achar que o caso não é para mim, eu digo. Escrevi também um guia com sete perguntas para fazer a qualquer professor particular antes de fechar, e ele serve para me avaliar do mesmo jeito.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchema({
+    name: 'Professor particular de matemática',
+    description: 'Aula particular individual de matemática para ensino fundamental e médio, online em todo o Brasil ou presencial em Belo Horizonte e região.',
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Professor particular de matemática', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="Aula particular individual · Fundamental e médio"
+    title=""
+    description="Uma professora, um aluno, e um plano construído a partir do que esse aluno específico não sabe. Online para todo o Brasil ou presencial em Belo Horizonte e região."
+  >
+    <Fragment slot="title">
+      Professora particular de matemática, com aula <em class="italic text-stone-700">individual</em> de verdade.
+    </Fragment>
+    <CTAButtons slot="cta" secondaryHref="#como-contratar" secondaryLabel="Como contratar" />
+  </PageHero>
+
+  <!-- O que é uma aula particular, e o que ela não é -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">O que muda na aula individual</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      A sala de aula anda no ritmo da turma. Aqui, no ritmo do aluno.
+    </h2>
+    <p class="mt-4 max-w-3xl leading-relaxed text-stone-600">
+      É a única diferença que importa, e ela é grande. Um aluno com lacuna de anos anteriores não consegue acompanhar o ritmo médio da turma, por definição: cada conteúdo novo exige uma base que ele não tem. Na aula individual dá para parar, voltar três anos, fechar o buraco e seguir — sem que trinta pessoas esperem.
+    </p>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-3">
+      {[
+        { t: 'O plano começa por um diagnóstico', d: 'Antes de ensinar o conteúdo do bimestre, eu procuro o que ficou para trás. Quase sempre está em fração, sinais ou proporção.' },
+        { t: 'O erro vira informação', d: 'Eu acompanho o raciocínio passo a passo em vez de corrigir só o resultado. É a diferença entre saber que errou e saber onde errou.' },
+        { t: 'A dúvida não espera a próxima aula', d: 'Dúvida de dever de casa pode vir por mensagem durante a semana. A dúvida do momento vale mais que a que ele lembra de trazer depois.' },
+      ].map((c) => (
+        <article class="rounded-xl border border-stone-200 bg-white p-6">
+          <p class="font-serif text-lg font-medium text-stone-900">{c.t}</p>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">{c.d}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Contato direto: a vantagem estrutural medida na Fase 3 -->
+  <section class="border-y border-stone-200 bg-stone-900 text-stone-100">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-400 uppercase">Sem plataforma no meio</p>
+      <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight sm:text-4xl">
+        Você fala comigo direto, de graça.
+      </h2>
+      <p class="mt-5 max-w-3xl leading-relaxed text-stone-300">
+        Nos marketplaces de aula particular, conversar com o professor costuma exigir a assinatura de um plano de aluno, com renovação automática e sem reembolso depois que o professor aceita o pedido. Você paga antes de saber se aquela pessoa serve para o seu filho.
+      </p>
+      <p class="mt-4 max-w-3xl leading-relaxed text-stone-300">
+        Aqui não existe essa camada. O WhatsApp é direto, a aula diagnóstica de {site.preco.diagnosticoMin} minutos é gratuita, e não há cadastro, taxa nem intermediário. Se eu não for a professora certa para o caso, você descobre isso sem ter pago nada.
+      </p>
+      <div class="mt-8">
+        <CTAButtons />
+      </div>
+    </div>
+  </section>
+
+  <!-- Modalidades -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Duas modalidades</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Escolha pelo perfil do aluno, não pelo preço.
+    </h2>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-stone-200 bg-white p-7">
+        <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Online · Todo o Brasil</p>
+        <h3 class="mt-2 font-serif text-xl font-medium text-stone-900">Aula ao vivo por videochamada</h3>
+        <p class="mt-3 text-sm leading-relaxed text-stone-600">
+          Lousa digital compartilhada, gravação opcional e material enviado depois. Costuma ir melhor com aluno de ensino médio, com agenda apertada, ou que pergunta mais por escrito do que na frente de alguém.
+        </p>
+        <p class="mt-5">
+          <a href="/aulas-de-matematica-online" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Ver como funciona a aula online →</a>
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-stone-200 bg-white p-7">
+        <p class="font-serif text-xs font-semibold tracking-widest text-emerald-700 uppercase">Presencial · BH e 20 km</p>
+        <h3 class="mt-2 font-serif text-xl font-medium text-stone-900">Na casa do aluno ou em local público</h3>
+        <p class="mt-3 text-sm leading-relaxed text-stone-600">
+          Costuma ir melhor com criança dos anos iniciais, com aluno que precisa de presença adulta para sustentar a atenção, ou que trava e não avisa. Cobre Belo Horizonte, Contagem, Nova Lima, Sabará, Santa Luzia, Ribeirão das Neves e Vespasiano.
+        </p>
+        <p class="mt-5">
+          <a href="/aulas-particulares-matematica-bh" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">Ver a aula presencial em BH →</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Como contratar -->
+  <section id="como-contratar" class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Como contratar</p>
+      <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Três passos, e você só decide no terceiro.
+      </h2>
+
+      <div class="mt-10 space-y-px overflow-hidden rounded-2xl border border-stone-200 bg-white">
+        {[
+          { n: '01', t: 'Mande uma mensagem', d: 'Diga a série do aluno e o que está acontecendo. Uma frase basta. Responder não custa nada e não compromete nada.' },
+          { n: '02', t: 'Aula diagnóstica gratuita', d: `${site.preco.diagnosticoMin} minutos com o aluno resolvendo exercício, para eu ver onde ele trava. No fim eu digo o que encontrei, inclusive quando o que encontrei não é caso de aula particular.` },
+          { n: '03', t: 'Você decide', d: 'Com o diagnóstico na mão, você sabe o tamanho do problema e quanto tempo ele exige. Aí sim escolhemos frequência e modalidade.' },
+        ].map((s) => (
+          <div class="flex gap-6 border-b border-stone-200 p-6 last:border-b-0">
+            <span class="font-serif text-xl font-medium text-stone-400">{s.n}</span>
+            <div>
+              <p class="font-medium text-stone-900">{s.t}</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-stone-600">{s.d}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- O que perguntar antes de contratar qualquer professor -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Antes de fechar com qualquer um</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Quatro perguntas que separam as propostas.
+    </h2>
+    <p class="mt-4 max-w-3xl leading-relaxed text-stone-600">
+      Valem para mim e para qualquer outro professor que você estiver considerando. Currículo diz pouco: o que separa uma aula que funciona de uma que não funciona não aparece no diploma.
+    </p>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {[
+        { t: 'Como você descobre o que meu filho não sabe?', d: 'Se a resposta for "me manda a matéria que eu preparo a aula", isso é reposição de conteúdo, não recuperação de aprendizagem.' },
+        { t: 'O que acontece entre uma aula e outra?', d: 'Uma hora por semana é pouco. Pergunte se existe canal para a dúvida do dever de casa, e com que limite.' },
+        { t: 'Como vou saber se está funcionando?', d: 'Nota é indicador atrasado. Peça um sinal que apareça antes: o aluno tentar antes de dizer que não sabe, ou escrever a conta em vez de só a resposta.' },
+        { t: 'O que está incluído no valor?', d: 'Duração da aula, material depois, suporte entre aulas, política de remarcação. Duas propostas do mesmo preço podem ser coisas bem diferentes.' },
+      ].map((q) => (
+        <article class="rounded-xl border border-stone-200 bg-white p-6">
+          <p class="font-serif text-lg font-medium text-stone-900">{q.t}</p>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">{q.d}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="mt-8">
+      <a href="/blog/como-escolher-professor-particular-matematica" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+        As sete perguntas completas, com o que cada resposta revela →
+      </a>
+    </p>
+  </section>
+
+  <LeituraRelacionada
+    titulo="Para decidir com informação."
+    itens={[
+      { href: "/blog/como-escolher-professor-particular-matematica", titulo: "Como escolher um professor particular", resumo: "Sete perguntas para fazer antes de fechar, e o que cada resposta revela sobre o método." },
+      { href: "/blog/quanto-custa-aula-particular-matematica", titulo: "Quanto custa uma aula particular", resumo: "Faixas reais do mercado, o que move o valor, e os valores praticados aqui." },
+      { href: "/blog/meu-filho-nao-aprende-matematica", titulo: "Meu filho não aprende matemática", resumo: "Roteiro de cinco passos para a família investigar em casa antes de contratar qualquer aula." },
+      { href: "/blog/sinais-aluno-precisa-reforco-matematica", titulo: "8 sinais de que o aluno precisa de reforço", resumo: "Como distinguir dificuldade passageira de lacuna acumulada, e três coisas que não são sinal." },
+      { href: "/blog/lacunas-de-matematica-do-fundamental", titulo: "As 6 lacunas do fundamental", resumo: "Fração, sinais, proporção, potência, equação e leitura de enunciado, com um teste de um minuto." },
+      { href: "/blog/aula-de-matematica-online-funciona", titulo: "Aula online funciona?", resumo: "O que a videochamada resolve, o que ela atrapalha, e para que perfil de aluno cada formato serve." },
+    ]}
+  />
+
+  <Depoimentos />
+
+  <Preco />
+
+  <FAQ items={faqs} title="Dúvidas sobre aula particular de matemática" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Comece pelo diagnóstico.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl leading-relaxed text-stone-600">
+        {site.preco.diagnosticoMin} minutos, sem custo e sem compromisso. Você sai sabendo onde está a lacuna do aluno, mesmo que decida não continuar comigo.
+      </p>
+      <CTAButtons />
+    </div>
+  </section>
+</Base>

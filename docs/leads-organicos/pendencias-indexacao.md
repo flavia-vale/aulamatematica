@@ -185,3 +185,27 @@ está paga.
 cria. **Pedir indexação assim que estiver no ar**, com prioridade sobre
 qualquer outra pendência: é o termo que o Search Console de 16/09 mostrou o
 site disputando em sete variantes, todas paradas entre as posições 11 e 12.
+
+## Linha de ensino superior aberta em 2026-09-17 — sete páginas novas
+
+Entram na lista na mesma entrega que as cria. **Pedir indexação só depois de
+estarem no ar**, na ordem abaixo: o hub primeiro, porque é dele que as seis
+recebem link, e depois as matérias pela ordem em que a Fase 4 mediu o valor
+do clique.
+
+| Rota | Pedido em | Indexada? |
+|---|---|---|
+| `/aulas-particulares-ensino-superior` | — | não |
+| `/aula-particular-de-calculo-1` | — | não |
+| `/aula-particular-de-calculo-2` | — | não |
+| `/aula-particular-de-calculo-3` | — | não |
+| `/aula-particular-de-pre-calculo` | — | não |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | — | não |
+| `/aula-particular-de-estatistica-e-probabilidade` | — | não |
+
+**Expectativa declarada antes de medir, para o Ciclo 1 não ler errado:** estas
+páginas produzem **pouca impressão por natureza**. A Fase 4 mediu 50 buscas/mês
+por termo neste segmento, contra 5.000 do cluster de fundamental e médio. O que
+se mede aqui é conversa por impressão, não volume — e o lance de anúncio desses
+termos é o mais alto de toda a tabela (teto de R$ 9,41 a R$ 10,02), o que indica
+que quem busca está contratando.

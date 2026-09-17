@@ -207,6 +207,46 @@ export const serviceSchema = (params: {
   audience: { '@type': 'EducationalAudience', educationalRole: site.service.audience },
 });
 
+/**
+ * Service de ensino superior — mesma área de atendimento, SEM oferta de preço.
+ *
+ * Por que separado: o `serviceSchema` acima declara R$ 45 para a aula online,
+ * que é o valor de fundamental e médio. Reaproveitá-lo numa página de Cálculo
+ * declararia ao Google um preço que não é o desta linha, e ancoraria a
+ * operação muito abaixo da faixa de mercado de exatas do ensino superior
+ * (R$ 80–140/h, medido na Fase 3).
+ *
+ * Enquanto `precoSuperior.valor` for nulo, nenhuma oferta com preço é emitida
+ * e nenhuma página de ensino superior exibe R$ — o que também mantém a regra
+ * `preco-sem-vigencia` da varredura satisfeita sem exceção nominal.
+ */
+export const serviceSchemaSuperior = (params: {
+  name: string;
+  description: string;
+  url: string;
+}) => ({
+  '@type': 'Service',
+  serviceType: 'Aulas particulares de Matemática para ensino superior',
+  name: params.name,
+  description: params.description,
+  url: params.url,
+  provider: { '@id': BUSINESS_ID },
+  areaServed: [
+    { '@type': 'Country', name: 'Brasil' },
+    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
+  ],
+  serviceArea: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: site.presencial.lat,
+      longitude: site.presencial.lng,
+    },
+    geoRadius: site.presencial.raioKm * 1000,
+  },
+  audience: { '@type': 'EducationalAudience', educationalRole: 'Estudantes de ensino superior' },
+});
+
 export const faqSchema = (faqs: { q: string; a: string }[]) => ({
   '@type': 'FAQPage',
   mainEntity: faqs.map(({ q, a }) => ({

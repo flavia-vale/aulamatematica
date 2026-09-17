@@ -1,0 +1,166 @@
+---
+/**
+ * Hub das matérias de exatas do ensino superior.
+ *
+ * Existe por dois motivos práticos. O primeiro é de navegação: seis matérias
+ * não cabem no cabeçalho, então uma porta só entra no menu e distribui daí.
+ * O segundo é de descoberta: o Coverage de 16/09 mostrou que artigo com um
+ * único link interno fica em "Detectada, mas não indexada". Página nova
+ * precisa de link vindo de página que o Google já visita.
+ */
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import CTAButtons from '../components/CTAButtons.astro';
+import FAQ from '../components/FAQ.astro';
+import Depoimentos from '../components/Depoimentos.astro';
+import { site, materiasSuperior, precoSuperior } from '../config/site';
+import { graph, personSchema, localBusinessSchema, serviceSchemaSuperior, faqSchema, breadcrumbSchema } from '../lib/schema';
+
+const path = '/aulas-particulares-ensino-superior';
+const url = `${site.url}${path}`;
+const title = 'Aulas particulares de exatas para faculdade — Cálculo, GAAL e Estatística';
+const description = 'Aulas particulares de matemática do ensino superior: pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL. Individuais, online para todo o Brasil ou presenciais em Belo Horizonte e região.';
+
+const faqs = [
+  { q: 'Quais matérias de faculdade você atende?', a: `Pré-cálculo, Cálculo I, Cálculo II, Cálculo III, Estatística e Probabilidade, e Geometria Analítica e Álgebra Linear, a GAAL. É o bloco de matemática do ciclo básico da maior parte dos cursos de exatas, engenharia, computação, economia e áreas correlatas.` },
+  { q: 'Você segue a ementa da minha universidade?', a: 'Sigo. Trabalho com a ementa, as listas e as provas anteriores da sua disciplina, porque o mesmo conteúdo é cobrado de formas bem diferentes entre departamentos, e o formato da prova pesa tanto quanto a matéria.' },
+  { q: 'Quanto custa a aula de ensino superior?', a: `As matérias de faculdade têm faixa própria, diferente da de fundamental e médio que está publicada no site. O valor é fechado depois da aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos, quando já se sabe o tamanho do trabalho e a frequência necessária.` },
+  { q: 'Dá para começar perto da prova?', a: 'Dá, e o trabalho é outro: com prazo curto a estratégia é escolher os dois ou três tópicos de maior peso e treinar neles, em vez de tentar cobrir o semestre. Na aula diagnóstica dá para dizer com alguma precisão o que cabe no tempo que resta.' },
+  { q: 'A aula é online ou presencial?', a: `As duas. Online ao vivo para alunos de todo o Brasil, ou presencial em Belo Horizonte e num raio de ${site.presencial.raioKm} km do centro: ${site.presencial.cidades.join(', ')}.` },
+  { q: 'Preciso assinar alguma plataforma para falar com você?', a: 'Não. O contato é direto por WhatsApp, sem taxa, sem assinatura e sem cadastro. É a diferença mais concreta em relação aos marketplaces de aula particular, onde costuma ser preciso pagar um plano antes de conseguir conversar com o professor.' },
+  { q: 'Você atende matérias além dessas seis?', a: 'Essas seis são as que eu atendo com profundidade. Se a sua disciplina for próxima delas, me mande a ementa e eu digo com honestidade se é caso meu. Quando não for, eu digo.' },
+];
+
+const schema = graph(
+  personSchema,
+  localBusinessSchema,
+  serviceSchemaSuperior({
+    name: 'Aulas particulares de matemática para ensino superior',
+    description,
+    url,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema([
+    { name: 'Início', url: site.url },
+    { name: 'Ensino superior', url },
+  ]),
+);
+---
+
+<Base title={title} description={description} path={path} schema={schema}>
+  <PageHero
+    eyebrow="Ensino superior · Ciclo básico de exatas"
+    title=""
+    description="Pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL. Aula individual, com a ementa e as provas da sua disciplina na mesa."
+  >
+    <Fragment slot="title">
+      Aulas particulares de <em class="italic text-stone-700">exatas</em> para a faculdade.
+    </Fragment>
+    <CTAButtons slot="cta" secondaryHref="#materias" secondaryLabel="Ver as matérias" />
+  </PageHero>
+
+  <!-- Por que a reprovação acontece -->
+  <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">O padrão do ciclo básico</p>
+    <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+      Quase ninguém reprova por não estudar.
+    </h2>
+    <p class="mt-4 max-w-3xl leading-relaxed text-stone-600">
+      O ciclo básico de exatas tem um padrão que se repete: a disciplina assume pronta uma base que o aluno nunca automatizou, avança rápido demais para consertar isso no caminho, e a prova cobra velocidade. O aluno estuda muito, no lugar errado, e conclui que não leva jeito.
+    </p>
+    <p class="mt-4 max-w-3xl leading-relaxed text-stone-600">
+      Por isso toda aula aqui começa por um diagnóstico em vez de começar pela matéria da semana. Descobrir se o problema é base, é método ou é a prova muda completamente o que vale a pena fazer com o tempo que resta.
+    </p>
+
+    <div class="mt-10 grid gap-5 sm:grid-cols-3">
+      {[
+        { t: 'Se for base', d: 'Voltar de propósito e fechar o que falta. Parece perder tempo no meio do semestre e é o que faz o resto render.' },
+        { t: 'Se for método', d: 'Conta longa com erro pequeno pede conferência e organização, não mais teoria.' },
+        { t: 'Se for a prova', d: 'Gestão de tempo, escolha do que fazer primeiro e treino no formato daquele departamento.' },
+      ].map((c) => (
+        <article class="rounded-xl border border-stone-200 bg-white p-6">
+          <p class="font-serif text-lg font-medium text-stone-900">{c.t}</p>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">{c.d}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- As seis matérias -->
+  <section id="materias" class="border-y border-stone-200 bg-stone-100/50">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">As matérias</p>
+      <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Seis disciplinas, e o que cada uma costuma cobrar.
+      </h2>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
+        {materiasSuperior.map((m) => (
+          <article class="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-7">
+            <h3 class="font-serif text-xl font-medium text-stone-900">
+              <a href={`/aula-particular-de-${m.slug}`} class="underline decoration-stone-300 underline-offset-4 hover:decoration-emerald-700">{m.nome}</a>
+            </h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-stone-600">{m.chamada}</p>
+            <p class="mt-5 text-sm">
+              <a href={`/aula-particular-de-${m.slug}`} class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">
+                Ver a página de {m.nomeCurto} →
+              </a>
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato direto -->
+  <section class="border-b border-stone-200 bg-stone-900 text-stone-100">
+    <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
+      <p class="text-sm font-semibold tracking-widest text-stone-400 uppercase">Sem plataforma no meio</p>
+      <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight sm:text-4xl">
+        Você me manda a lista, e a gente conversa.
+      </h2>
+      <p class="mt-5 max-w-3xl leading-relaxed text-stone-300">
+        Nos marketplaces de aula particular, conversar com o professor costuma exigir a assinatura de um plano, com renovação automática e sem reembolso depois que o professor aceita o pedido. Você paga antes de saber se aquela pessoa resolve o seu problema.
+      </p>
+      <p class="mt-4 max-w-3xl leading-relaxed text-stone-300">
+        Aqui é WhatsApp direto. Mande a ementa, a lista ou a prova que está travando, e a aula diagnóstica de {site.preco.diagnosticoMin} minutos é gratuita.
+        {!precoSuperior.valor && ' As matérias de faculdade têm faixa de valor própria, fechada depois desse diagnóstico, quando já se sabe o tamanho do trabalho.'}
+      </p>
+      <div class="mt-8"><CTAButtons /></div>
+    </div>
+  </section>
+
+  <!-- Fundamental e médio -->
+  <section class="mx-auto max-w-5xl border-t border-stone-200 px-4 py-12 sm:px-6">
+    <p class="text-sm font-semibold tracking-widest text-emerald-700 uppercase">Não é o seu caso?</p>
+    <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Também atendo fundamental e médio.</h2>
+    <ul class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        { href: '/professor-particular-de-matematica', t: 'Aula particular de matemática', d: 'A página do serviço: como contratar, o que está incluído e as duas modalidades.' },
+        { href: '/reforco-escolar-matematica', t: 'Reforço escolar', d: 'Acompanhamento paralelo à escola, do 6º ano ao 3º do ensino médio.' },
+        { href: '/enem-matematica', t: 'Matemática para o ENEM', d: 'Preparação para a prova, com cronograma e os conteúdos de maior frequência.' },
+      ].map((i) => (
+        <li class="border-t border-stone-200 pt-5">
+          <a href={i.href} class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">{i.t}</a>
+          <p class="mt-2 text-sm leading-relaxed text-stone-600">{i.d}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <Depoimentos title="O que dizem as famílias e os alunos." />
+
+  <FAQ items={faqs} title="Dúvidas sobre aula particular de exatas na faculdade" />
+
+  <section class="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+    <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">
+      <h2 class="font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
+        Comece pelo diagnóstico.
+      </h2>
+      <p class="mx-auto mt-4 max-w-xl leading-relaxed text-stone-600">
+        {site.preco.diagnosticoMin} minutos, sem custo e sem compromisso. Mande a ementa ou a lista que está travando e você sai sabendo onde está o problema.
+      </p>
+      <CTAButtons />
+    </div>
+  </section>
+</Base>

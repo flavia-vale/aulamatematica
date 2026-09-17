@@ -73,9 +73,31 @@ e várias hipóteses já derrubadas por dado.
 - **A Taciane já tem perfil no Superprof**, e é o único ativo dela que as IAs
   encontram e citam. O site não é citado por nenhuma delas.
 
-## Modelo de atendimento (definido em 2026-09-06)
+## Modelo de atendimento
 
-Duas modalidades, deliberadamente separadas:
+### Duas linhas de ensino (superior aberta em 2026-09-17)
+
+- **Fundamental e médio** — reforço escolar, recuperação e ENEM. Preço
+  publicado: R$ 45 online, a partir de R$ 50 presencial.
+- **Ensino superior** — pré-cálculo, Cálculo I, II e III, Estatística e
+  Probabilidade, e GAAL. **Nenhuma página de ensino superior exibe R$**, e o
+  schema delas usa `serviceSchemaSuperior`, sem oferta com preço. O motivo:
+  a Fase 4 mediu este segmento com os **três maiores tetos de lance de toda a
+  tabela** (R$ 9,41 a R$ 10,02) e a Fase 3 encontrou professores de cálculo
+  cobrando R$ 80–140/h. Aplicar os R$ 45 aqui ancoraria a operação muito
+  abaixo do mercado. **O valor de ensino superior ainda não foi definido pela
+  dona do projeto** — enquanto `precoSuperior.valor` for nulo em
+  `config/site.ts`, as páginas dizem que o valor sai após a diagnóstica.
+- **Volume esperado do superior é baixo por natureza:** 50 buscas/mês por
+  termo, contra 5.000 do cluster de fundamental e médio. Pouca impressão nessas
+  páginas **não é defeito de título**. O que se mede ali é conversa por
+  impressão.
+- As seis matérias vivem em `materiasSuperior`, em `config/site.ts`, e as
+  páginas são geradas por `aula-particular-de-[materia].astro`. O conteúdo que
+  as diferencia (onde o aluno trava, ementa, pré-requisitos) fica no config —
+  páginas quase idênticas disputando o mesmo termo canibalizam.
+
+### Duas modalidades, deliberadamente separadas
 
 - **Online — R$ 45/aula, todo o Brasil.** As páginas de aula online **não
   mencionam BH**: a Fase 4 mediu que termos com "BH" têm volume zero, e o

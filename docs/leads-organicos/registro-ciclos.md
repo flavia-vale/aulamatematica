@@ -1242,3 +1242,71 @@ enfraquece e o Ciclo 1 precisa dizer com quantas avaliações o efeito começa.
 **Respeitar a higiene do protocolo:** chat temporário no ChatGPT, conversa
 nova no Gemini, aba anônima no resto, conferida **antes de cada consulta**.
 No Ciclo 0, 4 de 28 linhas saíram contaminadas por pular isso.
+
+### Linha de ensino superior aberta (2026-09-17)
+
+Decisão da dona do projeto: passar a oferecer pré-cálculo, Cálculo I, II e III,
+Estatística e Probabilidade, e GAAL, online e presencial.
+
+**O que a Fase 4 já dizia sobre este segmento, e que agora vira operação**
+
+Estava registrado em `mercado.md` como observação, não como recomendação:
+
+| Termo | Buscas/mês | Concorrência | Teto de lance |
+|---|---|---|---|
+| `aula particular cálculo` | 50 | Alta | **R$ 10,02** |
+| `professor de calculo particular` | 50 | Alta | **R$ 10,00** |
+| `aula particular de cálculo` | 50 | Alta | **R$ 9,41** |
+
+São os **três maiores tetos de lance de toda a tabela**, e com concorrência
+Alta — o que, pela ressalva metodológica já registrada, significa disputa real
+e não ruído de amostra pequena. A Fase 3 confirmou por outro caminho:
+professores de cálculo cobrando R$ 80–140/h no Superprof, contra R$ 35–70 do
+segmento de fundamental e médio.
+
+**A consequência que precisa estar escrita antes da medição:** 50 buscas/mês
+por termo é **um centésimo** do cluster de fundamental e médio. Estas páginas
+vão produzir pouca impressão, e isso não será defeito de título. A métrica
+certa aqui é conversa por impressão.
+
+**Preço: deliberadamente não publicado**
+
+Nenhuma das sete páginas exibe R$, e o schema delas usa uma variante nova,
+`serviceSchemaSuperior`, sem oferta com preço. Reaproveitar o `serviceSchema`
+existente declararia R$ 45 ao Google numa página de Cálculo III — o valor de
+fundamental e médio, uma ordem de grandeza abaixo do mercado desta linha.
+
+Isso **não contraria** a decisão de 06/09 de publicar preço. Aquela decisão
+tinha um motivo específico: o valor já era público no Superprof e as IAs já o
+citavam, então esconder não criava discrição, criava divergência. Para ensino
+superior não existe valor público em canal nenhum, então não há divergência a
+corrigir. **Pendência para a dona do projeto: definir a faixa.** É uma edição
+de `precoSuperior` em `config/site.ts` e as páginas passam a exibir sozinhas.
+
+O `llms.txt` ganhou uma instrução explícita para as IAs: não aplicar os R$ 45
+às aulas de cálculo, estatística ou álgebra linear, porque são linhas de
+serviço distintas. Sem isso, a leitura mais provável de uma IA seria herdar o
+preço publicado.
+
+**Estrutura, com a lição do Coverage de 16/09 aplicada**
+
+Um hub, `/aulas-particulares-ensino-superior`, e seis páginas de matéria. O hub
+existe por dois motivos: seis matérias não cabem no cabeçalho, e página nova
+com um único link interno fica em "Detectada, mas não indexada" — foi
+exatamente o que aconteceu com três artigos de 11/09. Cada matéria recebe link
+do hub, das outras cinco, do cabeçalho pela porta do hub e do rodapé.
+
+**O risco declarado:** Cálculo I, II e III são a mesma disciplina em três
+semestres, e páginas quase idênticas canibalizam. Por isso o conteúdo que as
+separa — onde o aluno trava, ementa e pré-requisitos — é real e distinto em
+cada uma, e mora no `config/site.ts` em vez de num molde preenchido. Se o
+Ciclo 1 mostrar as três disputando a mesma consulta, a correção é fundir as
+três numa página de Cálculo.
+
+**Textos corrigidos, não experimentados**
+
+A FAQ de `/professor-particular-de-matematica` dizia "não atendo ensino
+superior". A descrição do site e a bio da professora falavam só de fundamental
+e médio. São correções factuais do que o serviço passou a ser, da mesma
+natureza da remoção do "100% online" em 06/09 — não são mudanças de copy para
+testar CTR, e a regra de congelamento até 04/10 continua valendo para essas.

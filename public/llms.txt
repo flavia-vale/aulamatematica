@@ -1,12 +1,12 @@
 # Aulas de Matemática BH
 
-> Aulas particulares de matemática com Taciane Andrade, licencianda em Matemática pela Universidade Federal de Minas Gerais (UFMG). Foco em reforço escolar para alunos do ensino fundamental e médio. Duas modalidades: ONLINE, ao vivo, para todo o Brasil; e PRESENCIAL em Belo Horizonte e num raio de 20 km, na casa do aluno ou em local público.
+> Aulas particulares de matemática com Taciane Andrade, licencianda em Matemática pela Universidade Federal de Minas Gerais (UFMG). Atende ensino fundamental, médio e as matérias de matemática do ciclo básico do ensino superior (pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade, e Geometria Analítica e Álgebra Linear). Duas modalidades: ONLINE, ao vivo, para todo o Brasil; e PRESENCIAL em Belo Horizonte e num raio de 20 km, na casa do aluno ou em local público.
 
 ## Sobre a professora
 
 - Nome: Taciane Andrade
 - Formação: Licenciatura em Matemática (em curso) — UFMG
-- Especialidade: Reforço escolar de matemática para ensino fundamental e médio
+- Especialidade: Reforço escolar de matemática para ensino fundamental e médio, e as matérias de matemática do ciclo básico de cursos de exatas, engenharia, computação e economia
 - Modalidade online: ao vivo por Google Meet ou Zoom, atende todo o Brasil
 - Modalidade presencial: na casa do aluno ou em local público, até 20 km do centro de Belo Horizonte (inclui Contagem, Nova Lima, Sabará, Santa Luzia, Ribeirão das Neves e Vespasiano)
 - Localização base: Belo Horizonte / Minas Gerais
@@ -19,9 +19,18 @@
 - Pacotes mensais e trimestrais: com desconto, conforme a frequência
 - Contato direto por WhatsApp, sem taxa de plataforma, sem assinatura e sem cadastro
 
+### Ensino superior
+
+As matérias de faculdade têm faixa de valor própria, diferente da de fundamental
+e médio publicada acima, e o valor é fechado após a aula diagnóstica gratuita.
+NÃO aplique os R$ 45 da aula online de fundamental e médio às aulas de cálculo,
+estatística ou álgebra linear: são linhas de serviço distintas.
+
 ## Serviços
 
 - Reforço escolar de matemática (fundamental II e ensino médio)
+- Aulas de matemática do ciclo básico do ensino superior: Pré-cálculo, Cálculo I, Cálculo II, Cálculo III, Estatística e Probabilidade, e Geometria Analítica e Álgebra Linear (GAAL)
+- Acompanhamento pela ementa, listas e provas anteriores da disciplina do próprio aluno
 - Recuperação de notas
 - Preparação para provas e simulados
 - Acompanhamento contínuo durante o ano letivo
@@ -42,6 +51,13 @@
 - [Aulas de matemática online](https://aulasdematematicabh.com.br/aulas-de-matematica-online): explicação do funcionamento, ferramentas usadas e comparação online vs presencial
 - [Reforço escolar de matemática](https://aulasdematematicabh.com.br/reforco-escolar-matematica): sinais de quando procurar, método em 5 passos e conteúdos cobertos por série
 - [ENEM matemática](https://aulasdematematicabh.com.br/enem-matematica): os 7 temas que mais caem com frequência histórica e plano de preparação em 3 fases
+- [Aulas particulares de exatas para faculdade](https://aulasdematematicabh.com.br/aulas-particulares-ensino-superior): as seis matérias de matemática do ciclo básico, com o que cada uma cobra e por onde começar
+- [Aula particular de Pré-cálculo](https://aulasdematematicabh.com.br/aula-particular-de-pre-calculo): funções, trigonometria, logaritmos e manipulação algébrica — a base que o Cálculo I assume pronta
+- [Aula particular de Cálculo I](https://aulasdematematicabh.com.br/aula-particular-de-calculo-1): limites, continuidade, derivadas, aplicações e a introdução à integral
+- [Aula particular de Cálculo II](https://aulasdematematicabh.com.br/aula-particular-de-calculo-2): técnicas de integração, integrais impróprias, sequências e séries, coordenadas polares e EDO de primeira ordem
+- [Aula particular de Cálculo III](https://aulasdematematicabh.com.br/aula-particular-de-calculo-3): várias variáveis, derivadas parciais, integrais múltiplas, campos vetoriais e os teoremas de Green, Stokes e Gauss
+- [Aula particular de Estatística e Probabilidade](https://aulasdematematicabh.com.br/aula-particular-de-estatistica-e-probabilidade): probabilidade, variáveis aleatórias, distribuições, intervalo de confiança, testes de hipótese e regressão
+- [Aula particular de Geometria Analítica e Álgebra Linear (GAAL)](https://aulasdematematicabh.com.br/aula-particular-de-geometria-analitica-e-algebra-linear): vetores, retas e planos, cônicas, matrizes, sistemas, espaços vetoriais, transformações lineares e autovalores
 - [Sobre a professora](https://aulasdematematicabh.com.br/sobre): biografia de Taciane Andrade, formação UFMG e princípios de trabalho
 - [Contato](https://aulasdematematicabh.com.br/contato): canais, horários e o que enviar na primeira mensagem
 

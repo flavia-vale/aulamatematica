@@ -37,7 +37,7 @@ const faqs = [
   { q: 'Como contratar um professor particular de matemática?', a: `O caminho aqui tem três passos e nenhum cadastro: você manda uma mensagem no WhatsApp, marcamos a aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos, e no fim dela eu digo o que encontrei e o que faria. Só depois disso você decide se quer começar. Não há taxa para falar comigo nem plataforma no meio.` },
   { q: 'Quanto custa um professor particular de matemática?', a: `Aqui, a aula online de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.online} para todo o Brasil, e a presencial em Belo Horizonte e região começa em R$ ${site.preco.presencialMin}, variando com a distância e o nível. Valores vigentes desde ${site.preco.vigenciaTexto}. No mercado, a faixa vai de cerca de R$ 35 a R$ 150 por hora, e o que mais move o valor é deslocamento e nível de ensino, não a formação do professor.` },
   { q: 'Qual a diferença entre professor particular e reforço escolar?', a: 'Na prática, nenhuma quando o professor é individual: reforço escolar é um dos objetivos possíveis da aula particular. A diferença que importa é outra, entre treinar para a prova da semana e recuperar uma lacuna de anos anteriores. São trabalhos diferentes, com prazos diferentes, e confundir os dois é a maior fonte de frustração que eu vejo.' },
-  { q: 'Para quais séries você dá aula?', a: 'Do 6º ano do ensino fundamental ao 3º ano do ensino médio, incluindo preparação para o ENEM. Não atendo ensino superior, que é outra linha de trabalho.' },
+  { q: 'Para quais séries você dá aula?', a: 'Do 6º ano do ensino fundamental ao 3º ano do ensino médio, incluindo preparação para o ENEM. Atendo também as matérias de matemática do ciclo básico da faculdade: pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL.' },
   { q: 'A aula é online ou presencial?', a: 'As duas. Online ao vivo para todo o Brasil, e presencial na casa do aluno ou em local público dentro de um raio de 20 km do centro de Belo Horizonte. Quem mora além desse raio é atendido online.' },
   { q: 'Preciso assinar alguma plataforma para falar com você?', a: 'Não. O contato é direto por WhatsApp, sem taxa, sem assinatura e sem cadastro. É a diferença mais concreta em relação aos marketplaces de aula particular, onde costuma ser preciso pagar um plano antes de conseguir conversar com o professor.' },
   { q: 'A primeira aula é gratuita mesmo?', a: `É, e ela não é uma conversa de vendas. São ${site.preco.diagnosticoMin} minutos em que o aluno resolve exercício na minha frente para eu ver onde ele trava. Vale notar que primeira aula gratuita é padrão de mercado, oferecida pela quase totalidade dos professores particulares — o que diferencia é o que acontece dentro dela.` },
@@ -145,6 +145,11 @@ const schema = graph(
         </p>
       </article>
     </div>
+
+    <p class="mt-8 max-w-3xl leading-relaxed text-stone-600">
+      Está na faculdade? As matérias de matemática do ciclo básico têm página própria:
+      {' '}<a href="/aulas-particulares-ensino-superior" class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900">pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL</a>.
+    </p>
   </section>
 
   <!-- Como contratar -->

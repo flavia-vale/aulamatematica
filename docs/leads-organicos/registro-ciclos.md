@@ -1191,3 +1191,54 @@ em aberto para o Ciclo 1.
 **Sobre uma pergunta da dona do projeto:** já existe página dedicada ao ENEM,
 `/enem-matematica`, indexada e com 2 impressões na posição 13,5 em 16/09.
 Criar uma segunda canibalizaria a primeira. Não foi criada.
+
+### As cinco famílias avaliaram no Google (2026-09-17)
+
+Confirmado pela dona do projeto. É a conclusão da ação que o Ciclo 0 apontou
+como a de maior retorno de todo o projeto, e ela levou onze dias entre a
+autorização dos depoimentos e a avaliação pública.
+
+**Por que isso importa mais que qualquer mudança no site**
+
+A Fase 3 estabeleceu, em 28 medições, que **volume de avaliação é o critério
+de ranqueamento em todas as listas de "melhores professores" produzidas pelas
+quatro superfícies de IA**. E a consulta 5 trouxe o contraexemplo que fecha o
+argumento: Henrique, com a mesma formação da professora, cobra R$ 100/h com 98
+avaliações nota 5, muito acima da faixa que a credencial sozinha sustenta.
+**Reputação sustenta preço; credencial não.**
+
+Até 06/09 o perfil tinha **uma** avaliação, assinada pela própria dona do
+projeto — na prática, zero de família atendida.
+
+**O que muda no site: um link, e só**
+
+`Depoimentos.astro` passou a exibir, abaixo das mensagens, um link para as
+avaliações no perfil do Google, com a frase que separa as duas coisas: as
+mensagens do site são agradecimentos publicados com autorização e **sem nota
+atribuída**; a avaliação com estrela fica no perfil, onde quem avalia é
+identificado pela própria conta.
+
+**A regra `avaliacao-no-schema` continua valendo, e o motivo não mudou.**
+Registrado aqui porque a tentação vai voltar: agora que existem estrelas
+reais no Google, alguém vai propor trazer a nota para o JSON-LD do site. Não.
+O Google não exibe estrela para avaliação que o próprio negócio coleta e
+publica, as avaliações são do perfil e não do site, e em 06/09 essa marcação
+gerou 10 itens inválidos no relatório de Snippets sem nenhum ganho possível.
+
+**O que isso torna mensurável, e que antes não era**
+
+A Fase 3 foi medida com o perfil em zero avaliação de cliente. **A entrada
+mudou**, então a saída pode mudar. Não é preciso refazer as 28 linhas: as
+consultas que respondem a isso são as **três de diretório** — 1, 3 e 6, do
+tipo "me liste professores" —, que são exatamente as ranqueadas por volume de
+avaliação. São 12 linhas, contra 28 da fase inteira.
+
+A pergunta que elas respondem: **o negócio passa a ser citado em mais de uma
+das 28 medições?** Em 06/09 foi uma, e ela apontava para o Superprof. Se as
+cinco avaliações moverem alguma lista, aparece aqui, e isso valida a tese de
+que o ativo a alimentar é o perfil, não o site. Se não moverem nada, a tese
+enfraquece e o Ciclo 1 precisa dizer com quantas avaliações o efeito começa.
+
+**Respeitar a higiene do protocolo:** chat temporário no ChatGPT, conversa
+nova no Gemini, aba anônima no resto, conferida **antes de cada consulta**.
+No Ciclo 0, 4 de 28 linhas saíram contaminadas por pular isso.

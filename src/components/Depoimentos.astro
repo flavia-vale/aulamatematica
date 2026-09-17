@@ -1,5 +1,5 @@
 ---
-import { depoimentos } from '../config/site';
+import { depoimentos, site } from '../config/site';
 
 interface Props {
   title?: string;
@@ -14,6 +14,21 @@ const {
 // placeholder, exemplo ou texto genérico aqui: um depoimento inventado num
 // site comercial é publicidade enganosa. Ver o comentário em config/site.ts.
 const temDepoimentos = depoimentos.length > 0;
+
+// Link para as avaliações no perfil do Google.
+//
+// Por que ele existe e por que é só um link: a Fase 3 estabeleceu que volume
+// de avaliação é o critério de ranqueamento em todas as listas de "melhores
+// professores" das quatro IAs, e que o lugar da nota com estrela é o perfil
+// do Google — não o schema deste site. Em 2026-09-17 as cinco famílias que
+// autorizaram depoimento avaliaram lá.
+//
+// NÃO transformar isto em nota, média ou contagem no site. A regra
+// `avaliacao-no-schema` do npm run check continua valendo, e o motivo não
+// mudou: o Google não exibe estrela para avaliação que o próprio negócio
+// coleta e publica, e derivar nota de mensagem de agradecimento é fabricar
+// dado de avaliação. Ver docs/leads-organicos/registro-ciclos.md.
+const perfilGoogle = site.social.googleBusiness;
 ---
 
 {temDepoimentos && (
@@ -43,6 +58,21 @@ const temDepoimentos = depoimentos.length > 0;
           </figure>
         ))}
       </div>
+
+      {perfilGoogle && (
+        <p class="mt-8 text-sm text-stone-600">
+          As mensagens acima foram enviadas por famílias atendidas e publicadas com autorização, sem nota atribuída.
+          {' '}
+          <a
+            href={perfilGoogle}
+            target="_blank"
+            rel="noopener"
+            class="font-medium text-emerald-700 underline underline-offset-4 hover:text-emerald-900"
+          >
+            As avaliações com estrela ficam no perfil do Google
+          </a>, onde quem avalia é identificado pela própria conta.
+        </p>
+      )}
     </div>
   </section>
 )}

@@ -1140,3 +1140,54 @@ estatística por causa do clique único, mas deixou de ser desprezível.
 **Nada foi preenchido na tabela histórica.** O export veio com período de
 3 meses e a convenção da série exige 12 meses. Misturar recortes transforma a
 série em ficção, e a linha do Ciclo 1 continua marcada para 04/10.
+
+### Página do termo `professor particular de matemática` (2026-09-17)
+
+Decisão da dona do projeto, tomada a partir do export de 16/09.
+
+**A evidência que a justifica, de dois instrumentos**
+
+1. **Fase 4:** é o único cluster do mercado que combina a faixa de volume mais
+   alta (5.000 buscas/mês) com intenção de compra real — índice de
+   concorrência 62 e lance topo de R$ 7,40, o maior da tabela.
+2. **Search Console, 16/09:** o site aparece para **sete variantes** desse
+   termo, todas paradas entre as posições 11,0 e 12,0 — a primeira linha da
+   segunda página — sem que nenhuma página tratasse o termo diretamente.
+
+Ou seja, o site já é considerado relevante para a consulta e não tem onde
+apoiar essa relevância. A página foi escrita para ser esse apoio.
+
+**Diferenciação declarada, para o Ciclo 1 poder medir canibalização**
+
+| Rota | O que ela disputa |
+|---|---|
+| `/` | porta de entrada da marca |
+| `/professor-particular-de-matematica` | o termo sem qualificador, a decisão de contratar |
+| `/aulas-de-matematica-online` | o qualificador "online", nacional |
+| `/aulas-particulares-matematica-bh` | o qualificador presencial, raio de 20 km |
+| `/reforco-escolar-matematica` | o problema: acompanhar a escola |
+| `/enem-matematica` | a prova |
+
+**A hipótese, registrada antes de medir.** As sete consultas entre 11 e 12
+passam a ser atendidas pela página nova e sobem. **O risco simétrico:** a home
+e a página nova dividem a mesma consulta e as duas ficam piores. O teste está
+na aba Páginas do Ciclo 1, cruzando consulta com página. Se as duas
+afundarem, a página nova volta atrás e a decisão de título da home assume o
+lugar dela.
+
+**O que a página traz que nenhuma outra trazia**
+
+A seção central é a **vantagem estrutural única** que a Fase 3 encontrou em 28
+medições: pelo site o contato é direto por WhatsApp, sem taxa, sem assinatura
+e sem cadastro, enquanto nos marketplaces é preciso assinar um plano de aluno
+para conversar com o professor — confirmado por 3 das 4 superfícies de IA.
+Nenhuma página do site tinha isso como assunto próprio, apenas como frase
+solta no bloco de preço.
+
+**Nenhum título ou descrição de página existente foi alterado.** A regra de
+congelamento segue valendo até 04/10, e a decisão do título da home continua
+em aberto para o Ciclo 1.
+
+**Sobre uma pergunta da dona do projeto:** já existe página dedicada ao ENEM,
+`/enem-matematica`, indexada e com 2 impressões na posição 13,5 em 16/09.
+Criar uma segunda canibalizaria a primeira. Não foi criada.

@@ -32,6 +32,7 @@ qualidade ou por ninguém ter pedido.
 | Rota | Pedido em | Indexada? | Último rastreamento |
 |---|---|---|---|
 | `/` | 2026-09-04 | **sim** | 04/09 |
+| `/professor-particular-de-matematica` | — | não | — |
 | `/aulas-particulares-matematica-bh` | 2026-09-04 | **sim** | 04/09 |
 | `/aulas-de-matematica-online` | 2026-09-04 | **não** | — |
 | `/reforco-escolar-matematica` | 2026-09-04 | **sim** | 04/09 |
@@ -177,3 +178,10 @@ continua não sendo problema. É o `http://` apontando por canonical para o
 06/09 foram todas re-rastreadas entre 12 e 13/09, incluindo
 `/aulas-particulares-matematica-bh`. A dívida de reindexação daquela data
 está paga.
+
+## Página nova de 2026-09-17
+
+`/professor-particular-de-matematica` entra na lista na mesma entrega que a
+cria. **Pedir indexação assim que estiver no ar**, com prioridade sobre
+qualquer outra pendência: é o termo que o Search Console de 16/09 mostrou o
+site disputando em sete variantes, todas paradas entre as posições 11 e 12.

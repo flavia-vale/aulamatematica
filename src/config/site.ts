@@ -199,6 +199,8 @@ export const waLink = (msg = 'Olá! Tenho interesse em aulas particulares de mat
  */
 export const leadMessages: Record<string, string> = {
   '/': 'Olá! Vim da página inicial do site e quero agendar a aula diagnóstica gratuita.',
+  '/professor-particular-de-matematica':
+    'Olá! Vim da página de aula particular de matemática e quero agendar a aula diagnóstica gratuita.',
   '/aulas-particulares-matematica-bh':
     'Olá! Vim da página de aulas particulares em BH e quero agendar a aula diagnóstica gratuita.',
   '/aulas-de-matematica-online':

@@ -46,6 +46,15 @@ const schema = graph(
             <p class="font-serif text-2xl font-medium">WhatsApp</p>
           </div>
           <p class="mt-6 font-serif text-3xl font-medium tracking-tight">{site.contact.whatsappDisplay}</p>
+          <!--
+            O DDD 32 é de Juiz de Fora, e esta é a página onde o número aparece
+            em corpo 3xl. Quem conhece DDD lê "a professora não é de BH" e
+            fecha a aba sem perguntar. Explicar é correção factual; trocar o
+            número é decisão da dona do projeto (ver plano-aceleracao.md).
+          -->
+          <p class="mt-2 text-sm text-stone-400">
+            O DDD é 32, mas o atendimento presencial é em {site.city} e nas cidades num raio de {site.presencial.raioKm} km — e online, em todo o Brasil.
+          </p>
           <p class="mt-4 text-stone-300 leading-relaxed">
             Mande uma mensagem com a série do aluno e o motivo da busca (notas baixas, prova chegando, recuperação). Envio um horário disponível para a diagnóstica gratuita.
           </p>

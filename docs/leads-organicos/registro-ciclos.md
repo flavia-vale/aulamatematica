@@ -1310,3 +1310,109 @@ superior". A descrição do site e a bio da professora falavam só de fundamenta
 e médio. São correções factuais do que o serviço passou a ser, da mesma
 natureza da remoção do "100% online" em 06/09 — não são mudanças de copy para
 testar CTR, e a regra de congelamento até 04/10 continua valendo para essas.
+
+### Diagnóstico externo implementado (2026-09-18)
+
+Chegou uma auditoria feita de fora do repositório — 30 páginas com `curl`,
+índice do Bing, leitura do HTML e do schema entregues aos robôs —, com doze
+itens de estrutura e sete pautas de blog. A leitura item por item, com o que
+entrou e com a evidência de cada recusa, está em
+[diagnostico-externo-2026-09-18.md](diagnostico-externo-2026-09-18.md).
+
+**O que a medição de fora derrubou**
+
+- *"O sitemap está bom, é só não ter `lastmod` por decisão."* Meia verdade. A
+  decisão de 04/09 (não declarar data falsa) estava certa, mas ela tinha
+  virado motivo para não ter data nenhuma. O que faltava era **fonte** de data
+  confiável, não a avaliação de que `new Date()` mente. A fonte existia desde
+  sempre: a data em que alguém mudou a página. Agora ela é declarada à mão em
+  `src/config/atualizacoes.ts` e alimenta três lugares — `lastmod`, a linha
+  "Atualizado em" visível e o `dateModified` do JSON-LD.
+- *"Os links internos foram resolvidos em 16/09."* **Falso, e este é o achado
+  que dói.** O conserto de 16/09 tratou os três artigos que o Coverage apontou
+  — e só eles. A regra nova `links-internos` varreu o site inteiro e encontrou
+  **outras três páginas** na mesma situação, nenhuma delas em relatório algum:
+  `atividades-de-matematica-para-praticar-em-casa` com 1 origem,
+  `matematica-enem-conteudos-que-mais-caem` e `por-que-matematica-parece-dificil`
+  com 2. É exatamente a armadilha que o princípio da varredura existe para
+  evitar: em 16/09 eu consertei a **lista de páginas apontadas pelo relatório**
+  em vez de escrever a varredura. O relatório vê o que já aconteceu; a
+  varredura vê o que vai acontecer.
+- *"Cada página do site tem um endereço."* Falso. `http://` e `www.` respondem
+  **200**, então cada página existe em quatro endereços. O canonical está
+  segurando a barra desde o começo — mas canonical é pedido, 301 é resposta.
+  Não dá para resolver no repositório: `_redirects` do Workers só casa caminho,
+  não host. Documentado como dois cliques no painel, em `../deploy-e-dns.md`.
+- *"O site é invisível para as IAs porque o conteúdo não presta."* Falso, e a
+  causa é bem mais simples: **zero páginas no índice do Bing**, por duas
+  fontes. O ChatGPT busca no Bing. Nenhuma reescrita de texto muda isso —
+  cadastro no Bing Webmaster Tools muda.
+- *"O DDD do WhatsApp é detalhe."* Não é. É DDD 32, de Juiz de Fora, numa marca
+  que promete BH, no rodapé de 33 páginas e em corpo 3xl em `/contato`. É a
+  única informação do site que o visitante consegue interpretar errado sozinho,
+  e ele interpreta errado em silêncio: fecha a aba e não pergunta. Entrou uma
+  linha explicando, nos dois lugares. Trocar o número segue como decisão.
+
+**O que foi feito**
+
+- `lastmod` em 29 de 29 URLs; nó `WebPage` com `dateModified` em toda página
+  indexável; `WebSite` e o nó da mantenedora em todas as páginas, e não só na
+  home (nas outras 28 o `isPartOf` apontava para um `@id` que não existia
+  naquele documento).
+- Duas regras novas na varredura: `sitemap-lastmod` e `links-internos` (piso de
+  três páginas de origem distintas, calibrado pelo Coverage de 16/09).
+- `/sitemap.xml` com 301 para `sitemap-index.xml`; `Claude-SearchBot` e
+  `Claude-User` no `robots.txt`.
+- Bloco "quem mantém este site" no rodapé, com `creator` e `maintainer` no
+  `WebSite`. No rodapé, **não** na bio da professora: quem dá as aulas é a
+  Taciane, e misturar as duas pessoas numa bio derrubaria a confiança que a
+  página constrói.
+- Três correções factuais do que o serviço deixou de ser — o rodapé e a CTA dos
+  artigos ainda diziam "online" e "fundamental e médio". Mesma natureza da
+  remoção do "100% online": informação errada, não experimento de copy.
+- **Quatro artigos novos.** Três de prova de admissão com data marcada e edital
+  conferido em 18/09 — Coltec (prova em 22/11, inscrição até 08/10), CEFET-MG
+  (prevista em 29/11, inscrição até 05/10) e o Exame Intelectual dos Colégios
+  Militares (18/10, **inscrições encerradas em 17/09**, o que muda a pauta para
+  "o que fazer com quatro semanas"). E um de Cálculo 1, porque a linha de
+  ensino superior nasceu em 17/09 com sete páginas e nenhuma porta de entrada
+  editorial.
+
+**A hipótese declarada antes de medir**
+
+Os três artigos de prova de admissão são o **experimento simétrico** ao de
+11/09. Aquele (`atividades-de-matematica-para-praticar-em-casa`, 50.000
+buscas/mês, índice 2) previa muita impressão e nenhuma conversa. Estes preveem
+**pouca impressão e conversa atribuída**: busca local, sazonal, com data
+marcada e intenção de contratar. Os dois medem a mesma tese por lados opostos,
+e é esse par que a torna falseável. Se os três não trouxerem nem impressão nem
+conversa até o fim de novembro, a pauta se congela com evidência própria em vez
+de emprestada.
+
+**O que NÃO foi feito, e por quê**
+
+- **Nenhum título ou descrição reescrito**, apesar de ser o item mais volumoso
+  do plano (16 páginas). A regra de congelamento vale até 04/10; a hipótese que
+  sustenta o item ("título longo mata o clique") já foi derrubada com dado de
+  campo; e o gargalo que a leitura de 16/09 mediu é **posição**, não CTR — as
+  sete consultas de contratação param na 11, e título nenhum move página da
+  segunda para a primeira posição.
+- **Home "BH-primeiro" com UFMG no H1.** Contraria os dois fatos mais medidos
+  do projeto: termos com BH não têm volume (Trends, Planejador e, agora pela
+  terceira vez, Search Console na posição 39) e a credencial UFMG não é
+  diferencial (12+ professores da UFMG nomeados pelas IAs).
+- **Analytics.** Decisão da dona do projeto em 11/09, mantida. O gatilho
+  combinado foi atingido por `/sobre`, então volta como pergunta do Ciclo 1.
+- **`sameAs` de Instagram, Facebook e LinkedIn.** O próprio diagnóstico marca
+  os três como "verificar". `sameAs` é afirmação de identidade; perfil não
+  confirmado não entra.
+- **Três das sete pautas propostas.** Duas canibalizariam os dois artigos com
+  mais impressão do site (`recuperacao-de-matematica-fim-do-ano`, 15 impressões
+  na posição 8,47, e `quanto-custa-aula-particular-matematica`, 5 na 7,60). A
+  terceira depende de nomes de escolas onde já há aluno — informação que só a
+  dona do projeto tem, e página por escola imaginada é o erro dos 50 bairros de
+  06/09 outra vez.
+
+**Nada foi preenchido na tabela histórica.** A linha do Ciclo 1 continua
+marcada para 04/10, e a propriedade mudou de tamanho outra vez: 29 páginas
+indexáveis em 16/09, 33 agora.

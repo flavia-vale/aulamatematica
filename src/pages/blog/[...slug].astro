@@ -44,7 +44,13 @@ const schema = graph(
 );
 ---
 
-<Base title={post.data.title} description={post.data.description} path={path} schema={schema}>
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  path={path}
+  schema={schema}
+  atualizadoEm={(post.data.updatedAt ?? post.data.publishedAt).toISOString().slice(0, 10)}
+>
   <article data-preco-vigencia={post.data.precoVigencia}>
     <header class="relative overflow-hidden border-b border-stone-200">
       <div class="grain absolute inset-0 opacity-50" aria-hidden="true"></div>
@@ -93,7 +99,7 @@ const schema = graph(
         Gostou do texto?
       </h2>
       <p class="mx-auto mt-4 max-w-xl text-stone-600">
-        Dou aulas particulares de matemática para ensino fundamental e médio: online para todo o Brasil, ou presenciais em Belo Horizonte e região. A primeira conversa é uma aula diagnóstica gratuita.
+        Dou aulas particulares de matemática para ensino fundamental, médio e para as matérias de exatas do ciclo básico da faculdade: online para todo o Brasil, ou presenciais em Belo Horizonte e região. A primeira conversa é uma aula diagnóstica gratuita.
       </p>
       <CTAButtons />
     </div>

@@ -53,6 +53,17 @@ qualidade ou por ninguém ter pedido.
 | `/blog/matematica-enem-conteudos-que-mais-caem` | — | não | — |
 | `/blog/como-estudar-matematica-sozinho` | — | não | — |
 | `/blog/atividades-de-matematica-para-praticar-em-casa` | — | não | — |
+| `/aulas-particulares-ensino-superior` | — | não | — |
+| `/aula-particular-de-pre-calculo` | — | não | — |
+| `/aula-particular-de-calculo-1` | — | não | — |
+| `/aula-particular-de-calculo-2` | — | não | — |
+| `/aula-particular-de-calculo-3` | — | não | — |
+| `/aula-particular-de-estatistica-e-probabilidade` | — | não | — |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | — | não | — |
+| `/blog/matematica-coltec-ufmg-como-preparar` | — | não | — |
+| `/blog/matematica-cefet-mg-prova-o-que-estudar` | — | não | — |
+| `/blog/matematica-colegio-militar-bh-exame-intelectual` | — | não | — |
+| `/blog/calculo-1-ufmg-puc-minas-por-que-reprova` | — | não | — |
 
 **9 de 11 indexadas em dois dias.** Rápido para um domínio novo.
 

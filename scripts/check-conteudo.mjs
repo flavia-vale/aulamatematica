@@ -82,6 +82,27 @@ const paginas = htmlFiles(DIST).map((f) => {
 
 const indexaveis = paginas.filter((p) => !p.noindex);
 
+/**
+ * Links internos que cada página EMITE, já normalizados em rota.
+ *
+ * Só conta `href` de mesma origem: caminho começando em `/`, sem `//`, sem
+ * protocolo. Âncora, query e `.html` saem fora — é a mesma normalização do
+ * `leadMessage`, e pelo mesmo motivo de sempre (com `build.format: 'file'` a
+ * rota real e o href escrito não são a mesma string).
+ */
+const linksInternos = (html) =>
+  new Set(
+    [...html.matchAll(/href="(\/[^"#?]*)/g)]
+      .map((m) => m[1])
+      .filter((h) => !h.startsWith('//'))
+      .map((h) => {
+        const r = ('/' + h.replace(/^\/+|\/+$/g, '')).replace(/\.html$/, '').replace(/\/index$/, '/');
+        return r === '/' || r === '' ? '/' : r;
+      }),
+  );
+
+for (const p of paginas) p.links = linksInternos(p.html);
+
 // ---------- R1 · título e descrição existem e são únicos ----------
 const vistos = { titulo: new Map(), descricao: new Map() };
 for (const p of paginas) {
@@ -193,6 +214,65 @@ for (const p of indexaveis) {
     erro('llms-txt', p.rota, 'ausente de public/llms.txt');
   if (pend && !pend.includes(p.rota))
     erro('pendencias-indexacao', p.rota, `ausente de ${PENDENCIAS} — toda página entra na lista na mesma entrega que a cria`);
+}
+
+// ---------- R8 · lastmod no sitemap ----------
+// Decidido em 2026-09-18. Até aqui nenhuma URL declarava `lastmod`, porque a
+// tentativa anterior usava `new Date()` e fazia toda página mentir a cada
+// build. Agora a data vem de declaração editorial — `src/config/atualizacoes.ts`
+// para as páginas e o frontmatter para os artigos — e é isto que impede uma
+// página nova de entrar no sitemap sem data: sem a varredura, o esquecimento
+// seria silencioso e só apareceria como sinal fraco, meses depois.
+const SITEMAP = join(DIST, 'sitemap-0.xml');
+if (existsSync(SITEMAP)) {
+  const xml = readFileSync(SITEMAP, 'utf8');
+  const comLastmod = new Set(
+    [...xml.matchAll(/<loc>([^<]*)<\/loc><lastmod>/g)].map(
+      (m) => new URL(m[1]).pathname.replace(/\/$/, '') || '/',
+    ),
+  );
+  const noSitemap = new Set(
+    [...xml.matchAll(/<loc>([^<]*)<\/loc>/g)].map(
+      (m) => new URL(m[1]).pathname.replace(/\/$/, '') || '/',
+    ),
+  );
+  for (const p of indexaveis) {
+    if (!noSitemap.has(p.rota))
+      erro('sitemap-presente', p.rota, 'página indexável ausente do sitemap');
+    else if (!comLastmod.has(p.rota))
+      erro(
+        'sitemap-lastmod',
+        p.rota,
+        'URL no sitemap sem lastmod — declare a data em src/config/atualizacoes.ts (ou no frontmatter, se for artigo)',
+      );
+  }
+}
+
+// ---------- R9 · links internos suficientes ----------
+// Regra vinda de medição, não de intuição. Coverage de 16/09/2026: os três
+// artigos publicados em 11/09 que ficaram em "Detectada, mas não indexada"
+// recebiam UM OU DOIS links internos, todos vindos de /blog. Os que indexaram
+// rápido recebiam link de página com impressão. Página no sitemap não é página
+// descoberta.
+//
+// Conta páginas de ORIGEM distintas, não links: três links na mesma página
+// valem um. O piso é 3 — foi onde a diferença apareceu no Coverage.
+const MIN_ORIGENS = 3;
+const origens = new Map();
+for (const p of paginas)
+  for (const destino of p.links)
+    if (destino !== p.rota) {
+      if (!origens.has(destino)) origens.set(destino, new Set());
+      origens.get(destino).add(p.rota);
+    }
+for (const p of indexaveis) {
+  const n = (origens.get(p.rota) ?? new Set()).size;
+  if (n < MIN_ORIGENS)
+    erro(
+      'links-internos',
+      p.rota,
+      `recebe link de ${n} página(s) — mínimo ${MIN_ORIGENS}; o Coverage de 16/09 mostrou que 1 ou 2 origens deixam a página em "Detectada, mas não indexada"`,
+    );
 }
 
 // ---------- AVISOS · hipóteses ainda não medidas ----------

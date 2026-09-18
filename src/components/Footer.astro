@@ -7,8 +7,16 @@ const year = new Date().getFullYear();
   <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
     <div class="md:col-span-2">
       <p class="font-serif text-xl font-semibold text-stone-900">{site.brand}</p>
+      <!--
+        Este parágrafo dizia "aulas particulares de matemática online" e
+        "reforço escolar para ensino fundamental e médio". As duas metades
+        estavam desatualizadas: o presencial existe desde 06/09 e o ensino
+        superior desde 17/09. Correção factual do que o serviço é, da mesma
+        natureza da remoção do "100% online" — não é experimento de copy, e a
+        regra de congelamento até 04/10 não se aplica a informação errada.
+      -->
       <p class="mt-3 max-w-sm text-sm leading-relaxed text-stone-600">
-        Aulas particulares de matemática online com {site.teacher.name}, {site.teacher.credentials.toLowerCase()}. Reforço escolar para ensino fundamental e médio.
+        Aulas particulares de matemática com {site.teacher.name}, {site.teacher.credentials.toLowerCase()}. Reforço escolar para ensino fundamental e médio, e as matérias de exatas do ciclo básico da faculdade. Online para todo o Brasil, ou presenciais em Belo Horizonte e região.
       </p>
     </div>
 
@@ -31,11 +39,46 @@ const year = new Date().getFullYear();
           <a href={waLinkFor(Astro.url.pathname)} target="_blank" rel="noopener" class="hover:text-stone-900">
             WhatsApp {site.contact.whatsappDisplay}
           </a>
+          <!--
+            O número é DDD 32 (Juiz de Fora) numa marca que promete BH. Medido
+            em 18/09/2026, e é a única informação do site que o visitante
+            consegue interpretar errado sozinho: quem conhece DDD lê "a
+            professora não é daqui" e vai embora sem perguntar.
+            Trocar o número é decisão da dona do projeto; explicá-lo é
+            correção factual, e é o que está feito aqui.
+          -->
+          <p class="mt-1 text-xs leading-relaxed text-stone-500">
+            O DDD é 32, mas o atendimento presencial é em {site.city} e região; online, em todo o Brasil.
+          </p>
         </li>
         <li><a href="/sobre" class="hover:text-stone-900">Sobre a professora</a></li>
         <li><a href="/blog" class="hover:text-stone-900">Blog</a></li>
         <li><a href="/contato" class="hover:text-stone-900">Agendar aula</a></li>
       </ul>
+    </div>
+  </div>
+
+  <!--
+    "Quem mantém este site" — decidido em 18/09/2026.
+
+    Fica no rodapé, e NÃO na bio da professora, de propósito. Quem dá as aulas
+    é a Taciane; quem cuida do site, do conteúdo e da tecnologia é a Flávia.
+    Misturar as duas pessoas numa bio só derrubaria a confiança que a página
+    constrói — e é um erro fácil de cometer, porque as duas aparecem no mesmo
+    projeto.
+  -->
+  <div class="border-t border-stone-200/70">
+    <div class="mx-auto max-w-6xl px-4 py-5 text-xs leading-relaxed text-stone-500 sm:px-6">
+      <p>
+        Site mantido por Flávia Vale, fundadora do
+        <a
+          href="https://espelhagrupos.com.br"
+          rel="noopener"
+          target="_blank"
+          class="underline underline-offset-2 hover:text-stone-700">Espelha Grupos</a>. As aulas
+        são dadas por {site.teacher.name}; o site, o conteúdo e a tecnologia são cuidados pela
+        Flávia.
+      </p>
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 ---
 import { site } from '../config/site';
+import { websiteSchema, mantenedorSchema } from '../lib/schema';
 
 interface Props {
   title: string;
@@ -7,12 +8,61 @@ interface Props {
   path?: string;
   schema?: object;
   noindex?: boolean;
+  /** Data (AAAA-MM-DD) da última mudança de conteúdo. Vira `dateModified`. */
+  atualizadoEm?: string;
 }
 
-const { title, description, path = '', schema, noindex = false } = Astro.props;
+const { title, description, path = '', schema, noindex = false, atualizadoEm } = Astro.props;
 const canonical = new URL(path, site.url).toString();
 const ogImage = new URL('/og-image.png', site.url).toString();
 const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}`;
+
+/**
+ * Nó `WebPage`, com `dateModified`.
+ *
+ * Injetado aqui, e não em cada página, de propósito: o princípio da varredura
+ * da Fase 5 — nunca uma lista de páginas a conferir — vale para o schema
+ * também. Se este nó dependesse de cada arquivo em `src/pages/` se lembrar de
+ * montá-lo, a próxima página nasceria sem `dateModified` e ninguém veria.
+ *
+ * O `@id` é o canonical, o mesmo que os artigos já usam em
+ * `mainEntityOfPage`. Os dois viram um nó só quando o buscador monta o grafo,
+ * o que resolve uma referência que até agora apontava para o vazio.
+ *
+ * Página `noindex` não recebe o nó: declarar data de modificação de uma página
+ * que pede para não ser indexada é ruído.
+ */
+const webPage =
+  !noindex && atualizadoEm
+    ? {
+        '@type': 'WebPage',
+        '@id': canonical,
+        url: canonical,
+        name: fullTitle,
+        description,
+        inLanguage: site.locale,
+        isPartOf: { '@id': `${site.url}/#website` },
+        // Fuso de Brasília explícito: a data é uma declaração de dia, e sem
+        // fuso o consumidor pode ler o dia anterior.
+        dateModified: `${atualizadoEm}T12:00:00-03:00`,
+        primaryImageOfPage: { '@type': 'ImageObject', url: ogImage },
+      }
+    : null;
+
+/**
+ * `WebSite` e o nó de quem mantém o site entram em TODA página indexável.
+ *
+ * Antes viviam só no grafo da home. O `isPartOf` do `WebPage` acima apontaria,
+ * nas outras 28 páginas, para um `@id` que não existe em lugar nenhum daquele
+ * documento — referência pendurada, que o consumidor pode simplesmente
+ * descartar. Declarar a identidade do site em cada página é o que as
+ * implementações de referência fazem, e custa poucas centenas de bytes.
+ */
+const grafo = schema as { '@graph'?: object[] } | undefined;
+const schemaFinal =
+  grafo && webPage && Array.isArray(grafo['@graph'])
+    ? { ...grafo, '@graph': [...grafo['@graph'], websiteSchema, mantenedorSchema, webPage] }
+    : schema;
 ---
 
 <title>{fullTitle}</title>
@@ -37,6 +87,6 @@ const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}
 <meta name="geo.region" content={site.region} />
 <meta name="geo.placename" content={site.city} />
 
-{schema && (
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+{schemaFinal && (
+  <script type="application/ld+json" set:html={JSON.stringify(schemaFinal)} />
 )}

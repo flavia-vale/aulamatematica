@@ -1,0 +1,14 @@
+# Cloudflare Workers — redirecionamentos de assets estáticos
+# https://developers.cloudflare.com/workers/static-assets/redirects/
+#
+# Este arquivo só resolve redirecionamento por CAMINHO. Redirecionamento por
+# HOST — `http://` para `https://` e `www.` para o domínio sem www — não cabe
+# aqui: é regra de zona no painel da Cloudflare, e está descrita em
+# docs/deploy-e-dns.md. Medido em 18/09/2026: as duas variantes respondiam 200,
+# servindo duas cópias de cada página com o canonical remediando.
+
+# `/sitemap.xml` é o caminho que todo mundo digita, e que o Bing Webmaster
+# Tools e o Search Console oferecem por padrão. O @astrojs/sitemap gera
+# `sitemap-index.xml`, e sem esta linha `/sitemap.xml` responde 404 — medido
+# em 18/09/2026.
+/sitemap.xml /sitemap-index.xml 301

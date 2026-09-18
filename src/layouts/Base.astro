@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { site } from '../config/site';
+import { atualizadoEm as atualizadoEmDaRota } from '../config/atualizacoes';
 import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -13,9 +14,39 @@ interface Props {
   schema?: object;
   noindex?: boolean;
   hideFloat?: boolean;
+  /**
+   * Data (AAAA-MM-DD) da última mudança de conteúdo. Só os artigos passam
+   * este valor, porque a data deles é editorial e mora no frontmatter. Todas
+   * as outras páginas são resolvidas pela rota, em `config/atualizacoes.ts` —
+   * assim nenhuma página nova nasce sem data por esquecimento.
+   */
+  atualizadoEm?: string;
 }
 
-const { title, description, path, schema, noindex, hideFloat = false } = Astro.props;
+const { title, description, path, schema, noindex, hideFloat = false, atualizadoEm } = Astro.props;
+
+const dataAtualizacao = atualizadoEm ?? atualizadoEmDaRota(Astro.url.pathname);
+
+/**
+ * "Atualizado em" visível, decidido em 18/09/2026.
+ *
+ * Até aqui só os artigos mostravam data, e nenhuma página de serviço mostrava
+ * nada — quem chegava não tinha como saber se o preço e o conteúdo eram de
+ * ontem ou do ano passado. A data é a mesma que vai no `lastmod` do sitemap e
+ * no `dateModified` do JSON-LD: uma fonte, três lugares.
+ *
+ * Não anuncia cadência de revisão. Prometer "revisado a cada três meses" numa
+ * página pública cria uma obrigação que ninguém verifica; a cadência é
+ * combinada em docs/leads-organicos/, onde ela pode ser cobrada.
+ */
+const dataVisivel = dataAtualizacao
+  ? new Date(`${dataAtualizacao}T12:00:00Z`).toLocaleDateString('pt-BR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'America/Sao_Paulo',
+    })
+  : null;
 ---
 
 <!doctype html>
@@ -33,7 +64,14 @@ const { title, description, path, schema, noindex, hideFloat = false } = Astro.p
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&display=swap"
     />
 
-    <SEO title={title} description={description} path={path} schema={schema} noindex={noindex} />
+    <SEO
+      title={title}
+      description={description}
+      path={path}
+      schema={schema}
+      noindex={noindex}
+      atualizadoEm={dataAtualizacao}
+    />
   </head>
   <body class="min-h-screen bg-stone-50 text-stone-900">
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-stone-900 focus:px-4 focus:py-2 focus:text-stone-50">Pular para o conteúdo</a>
@@ -41,6 +79,11 @@ const { title, description, path, schema, noindex, hideFloat = false } = Astro.p
     <main id="main">
       <slot />
     </main>
+    {dataVisivel && !noindex && (
+      <p class="mx-auto max-w-6xl px-4 pb-12 text-xs text-stone-500 sm:px-6">
+        Conteúdo atualizado em <time datetime={dataAtualizacao}>{dataVisivel}</time>.
+      </p>
+    )}
     <Footer />
     {!hideFloat && <WhatsAppFloat />}
   </body>

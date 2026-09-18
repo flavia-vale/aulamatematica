@@ -93,3 +93,43 @@ Assim que a verificação passar:
    responde se uma página não indexou por qualidade ou por ninguém ter pedido.
 4. Espere ~30 dias e rode as Fases 1 e 2 do
    [ciclo](leads-organicos/README.md).
+
+## 7. Redirecionamento de host — pendente no painel (medido em 18/09/2026)
+
+Medição de fora, com `curl`, em 18/09/2026:
+
+| URL | Resposta | Devia ser |
+|---|---|---|
+| `http://aulasdematematicabh.com.br/` | **200** | 301 para `https://` |
+| `https://www.aulasdematematicabh.com.br/` | **200** | 301 para o domínio sem `www` |
+
+Ou seja: **cada página do site existe hoje em quatro endereços** que respondem
+200. O `canonical` aponta para a versão sem `www` e com `https`, e é ele que
+está segurando a barra — mas canonical é um pedido, e 301 é uma resposta.
+
+Isso **não se resolve no repositório.** O `public/_redirects` do Workers só
+casa caminho, não host — o comentário no topo do arquivo registra isso. As duas
+regras vivem no painel da Cloudflare, e são dois cliques:
+
+1. **SSL/TLS → Edge Certificates → Always Use HTTPS**: ligar. Resolve a
+   primeira linha da tabela.
+2. **Rules → Redirect Rules → Create rule**:
+   - Nome: `www para apex`
+   - Quando: `Hostname` `equals` `www.aulasdematematicabh.com.br`
+   - Então: **Dynamic redirect**, `concat("https://aulasdematematicabh.com.br", http.request.uri.path)`
+   - Status: **301**, e marque *Preserve query string*.
+
+Como conferir depois, sem entrar no painel:
+
+```sh
+curl -sI http://aulasdematematicabh.com.br/ | grep -i '^HTTP\|^location'
+curl -sI https://www.aulasdematematicabh.com.br/ | grep -i '^HTTP\|^location'
+```
+
+As duas linhas precisam responder `301` e apontar para
+`https://aulasdematematicabh.com.br/...`.
+
+**O que já está resolvido no repositório:** `/sitemap.xml` respondia 404 —
+é o caminho que todo mundo digita, e o que o Bing Webmaster Tools e o Search
+Console oferecem por padrão, enquanto o Astro gera `sitemap-index.xml`.
+O `public/_redirects` passou a redirecionar um para o outro com 301.

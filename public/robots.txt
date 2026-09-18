@@ -33,6 +33,15 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# Nomes atuais dos robôs da Anthropic. ClaudeBot e Claude-Web continuam
+# acima porque nomes antigos ainda aparecem em log; estes dois são os que a
+# Anthropic documenta hoje, e é por eles que a busca do Claude passa.
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 

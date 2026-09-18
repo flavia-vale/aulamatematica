@@ -122,6 +122,44 @@ export const localBusinessSchema = {
   ...(perfisExternos.length > 0 && { sameAs: perfisExternos }),
 };
 
+const MANTENEDOR_ID = `${site.url}/#flavia`;
+
+/**
+ * Quem mantém o site, como entidade própria. Decidido em 18/09/2026.
+ *
+ * Duas pessoas distintas participam deste projeto, e o schema precisa dizer
+ * isso: a Taciane dá as aulas (é o `Person` do serviço, o `founder` e o
+ * `employee` do negócio) e a Flávia cuida do site, do conteúdo e da
+ * tecnologia. Sem um nó separado, a única leitura possível seria a errada —
+ * a de que é tudo a mesma pessoa.
+ *
+ * **Por que `creator` e `maintainer`, e não `publisher`.** A proposta original
+ * era trocar o `publisher` do `WebSite` por este nó. Não foi feito: o
+ * `publisher` aponta para o `LocalBusiness` desde o começo, essa ligação é o
+ * que amarra site e negócio, e ela foi construída com evidência (é o negócio
+ * que publica o conteúdo, e é o perfil dele que as buscas de BH encontram).
+ * `creator` e `maintainer` dizem o que se quer dizer — quem fez e quem cuida —
+ * sem desfazer nada.
+ *
+ * **Sem `sameAs`, e o motivo é medição.** A proposta trazia
+ * `espelhagrupos.com.br/quem-somos` e `cuponito.com.br/quem-somos` como
+ * `sameAs`. As duas URLs respondem 200, conferido em 18/09/2026, mas
+ * **nenhuma das duas nomeia a Flávia Vale** — a de Espelha Grupos atribui
+ * apenas à empresa. `sameAs` é afirmação de identidade: apontar para página
+ * que não nomeia a pessoa é pedir ao buscador para acreditar numa ligação que
+ * ele não consegue confirmar, e é o tipo de dado que este projeto não publica.
+ * Vira `sameAs` no dia em que aquelas páginas trouxerem o nome dela. Até lá,
+ * `url` aponta para o site que ela fundou, que é verificável.
+ */
+export const mantenedorSchema = {
+  '@type': 'Person',
+  '@id': MANTENEDOR_ID,
+  name: 'Flávia Vale',
+  url: 'https://espelhagrupos.com.br',
+  description:
+    'Fundadora do Espelha Grupos. Mantém este site: conteúdo, tecnologia e publicação. Não dá as aulas.',
+};
+
 export const websiteSchema = {
   '@type': 'WebSite',
   '@id': WEBSITE_ID,
@@ -129,6 +167,8 @@ export const websiteSchema = {
   name: site.brand,
   inLanguage: site.locale,
   publisher: { '@id': BUSINESS_ID },
+  creator: { '@id': MANTENEDOR_ID },
+  maintainer: { '@id': MANTENEDOR_ID },
 };
 
 export const serviceSchema = (params: {

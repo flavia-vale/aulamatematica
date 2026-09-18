@@ -16,6 +16,7 @@ import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
 import Depoimentos from '../components/Depoimentos.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
 import { site, materiasSuperior, precoSuperior, type MateriaSuperior } from '../config/site';
 import { graph, personSchema, localBusinessSchema, serviceSchemaSuperior, faqSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -164,6 +165,14 @@ const schema = graph(
       </li>
     </ul>
   </section>
+
+  <LeituraRelacionada
+    eyebrow="Leitura relacionada"
+    titulo="Por que a disciplina reprova tanto."
+    itens={[
+        { href: "/blog/calculo-1-ufmg-puc-minas-por-que-reprova", titulo: "Cálculo 1: 5 razões da reprovação", resumo: "As cinco causas que eu encontro na prática, e por que cada uma pede um trabalho diferente." },
+    ]}
+  />
 
   <Depoimentos title="O que dizem as famílias e os alunos." />
 

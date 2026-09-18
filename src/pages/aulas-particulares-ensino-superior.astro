@@ -13,6 +13,7 @@ import PageHero from '../components/PageHero.astro';
 import CTAButtons from '../components/CTAButtons.astro';
 import FAQ from '../components/FAQ.astro';
 import Depoimentos from '../components/Depoimentos.astro';
+import LeituraRelacionada from '../components/LeituraRelacionada.astro';
 import { site, materiasSuperior, precoSuperior } from '../config/site';
 import { graph, personSchema, localBusinessSchema, serviceSchemaSuperior, faqSchema, breadcrumbSchema } from '../lib/schema';
 
@@ -147,6 +148,20 @@ const schema = graph(
       ))}
     </ul>
   </section>
+
+  <!--
+    A linha de ensino superior nasceu em 17/09 sem nenhuma porta de entrada
+    editorial: seis páginas de matéria e nenhum texto que um universitário de
+    BH encontre buscando o problema dele em vez do nome da disciplina. Este
+    bloco é essa porta.
+  -->
+  <LeituraRelacionada
+    eyebrow="Leitura relacionada"
+    titulo="Antes de contratar, entenda onde a conta quebra."
+    itens={[
+        { href: "/blog/calculo-1-ufmg-puc-minas-por-que-reprova", titulo: "Cálculo 1: 5 razões da reprovação", resumo: "As cinco causas que eu encontro na prática, e por que cada uma pede um trabalho diferente." },
+    ]}
+  />
 
   <Depoimentos title="O que dizem as famílias e os alunos." />
 

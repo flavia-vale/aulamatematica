@@ -19,8 +19,11 @@ atribuição de lead quebrar (página sem WhatsApp, com duas frases diferentes,
 ou repetindo a frase de outra página), houver promessa de resultado, houver
 preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, o JSON-LD contiver
 `review` ou `aggregateRating`, uma página cair
-numa linha congelada, ou uma página indexável faltar no `llms.txt` ou nas
-pendências de indexação.
+numa linha congelada, uma página indexável faltar no `llms.txt` ou nas
+pendências de indexação, uma URL entrar no sitemap **sem `lastmod`**, ou uma
+página indexável receber link interno de **menos de três páginas de origem**
+(piso calibrado pelo Coverage de 16/09: as que ficaram fora do índice recebiam
+uma ou duas).
 
 Além dos erros, ele emite **avisos** que não falham: título acima de 60
 caracteres, descrição acima de 160, e título sem número concreto. São
@@ -47,6 +50,7 @@ e várias hipóteses já derrubadas por dado.
 | `concorrentes.md` | Lista de concorrentes citados pelas IAs + preços de mercado |
 | `funil.md` | Como a atribuição de lead funciona sem backend |
 | **`plano-aceleracao.md`** | **Leitura do Search Console de 11/09 e o plano de 4 trilhas** |
+| **`diagnostico-externo-2026-09-18.md`** | **Auditoria externa de 18/09: o que entrou, o que foi recusado e com qual evidência, e o que depende da dona do projeto** |
 | `search-console-2026-09-11/` | Export bruto dos 7 primeiros dias |
 | `tabela-historica.md` | A série do Search Console, uma linha por ciclo |
 | `pendencias-indexacao.md` | Controle dos pedidos manuais de indexação no Google |
@@ -72,6 +76,31 @@ e várias hipóteses já derrubadas por dado.
   material, não por aula.
 - **A Taciane já tem perfil no Superprof**, e é o único ativo dela que as IAs
   encontram e citam. O site não é citado por nenhuma delas.
+- **O gargalo medido é posição, não impressão nem CTR.** Em 16/09, com 132
+  impressões e 1 clique, sete consultas de intenção de contratação paravam
+  entre as posições 11,0 e 12,0 — a primeira linha da segunda página. Título
+  melhor não move página da segunda para a primeira posição.
+- **Zero páginas no índice do Bing** em 18/09, por duas fontes. Como o ChatGPT
+  busca no Bing, o site não pode ser citado por ele nem por acidente. É
+  cadastro no Bing Webmaster Tools, não qualidade de conteúdo.
+- **O WhatsApp é DDD 32 (Juiz de Fora) numa marca que promete BH.** O site
+  explica isso ao lado do número, no rodapé e em `/contato`, desde 18/09.
+  Trocar o número é decisão em aberto — nunca deixar o visitante descobrir o
+  DDD sozinho.
+
+## Datas de atualização
+
+`src/config/atualizacoes.ts` é a **fonte única** da data de última mudança de
+cada página que não é artigo, e alimenta três lugares: o `lastmod` do sitemap,
+a linha "Atualizado em" visível no fim da página e o `dateModified` do nó
+`WebPage` no JSON-LD. É declarada à mão de propósito — `new Date()` fazia toda
+página mentir a cada build, e num clone raso (`fetch-depth: 1`) a data do git
+não existe. Artigo não entra lá: a data dele é `updatedAt ?? publishedAt`, no
+frontmatter.
+
+Mudança de rodapé, cabeçalho ou estilo aplicada ao site inteiro **não** muda a
+data das páginas. Declarar que 33 páginas mudaram porque o rodapé ganhou uma
+linha é o erro do `new Date()` em câmera lenta.
 
 ## Modelo de atendimento
 
@@ -113,6 +142,14 @@ O site disputava esse termo oferecendo aula remota — e listava 50 bairros para
 um serviço que dizia ser 100% online.
 
 **Não reintroduzir "100% online" em lugar nenhum.** É falso desde 2026-09-06.
+
+## Quem mantém o site
+
+As aulas são da **Taciane Andrade**; o site, o conteúdo e a tecnologia são da
+**Flávia Vale**, fundadora do Espelha Grupos. A atribuição fica no **rodapé** e
+no `creator`/`maintainer` do `WebSite` — **nunca na bio da professora**.
+Misturar as duas pessoas na mesma bio derruba a confiança que a página
+constrói, e é um erro fácil de cometer.
 
 ## Ativos externos
 

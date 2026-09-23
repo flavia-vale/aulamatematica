@@ -275,6 +275,46 @@ for (const p of indexaveis) {
     );
 }
 
+// ---------- R-redirecionamento · o site só aponta para endereço final ----------
+// Coverage de 23/09: "Página com redirecionamento", 1 URL. Medição de fora no
+// mesmo dia: as 38 URLs do domínio que o build emite responderam 200 — o
+// relatado é uma variante de host (`http://` ou `www.`), que desde que as
+// regras de zona entraram no painel responde 301, como devia. Ou seja: o
+// motivo é intencional e o erro não está no repositório.
+//
+// Mas é o mesmo relatório que nasceria de um link interno mal escrito, e o
+// Workers responde 307 para `/contato/`, `/contato.html` e `/index.html`
+// (medido em 23/09). A normalização de `linksInternos` esconde essas formas de
+// propósito, para contar origem; esta regra olha a string crua. Varre todo
+// endereço do próprio domínio que o HTML emite — `href`, canonical, `og:url`,
+// JSON-LD — e mais os caminhos que `public/_redirects` desvia.
+const DOMINIO = 'aulasdematematicabh.com.br';
+const desviados = existsSync('public/_redirects')
+  ? readFileSync('public/_redirects', 'utf8')
+      .split('\n')
+      .map((l) => l.trim().split(/\s+/)[0])
+      .filter((s) => s && s.startsWith('/'))
+  : [];
+const formaRedirecionada = (url) => {
+  if (/^http:\/\//.test(url)) return 'http:// responde 301 para https://';
+  if (/^https?:\/\/www\./.test(url)) return 'www. responde 301 para o domínio sem www';
+  const caminho = url.replace(/^https?:\/\/[^/]+/, '') || '/';
+  if (caminho !== '/' && caminho.endsWith('/')) return 'barra final responde 307 para o caminho sem barra';
+  if (/\.html$|\/index$/.test(caminho)) return '`.html`/`index` responde 307 para a rota limpa';
+  if (desviados.includes(caminho)) return 'caminho desviado em public/_redirects';
+  return null;
+};
+for (const p of paginas) {
+  const achados = new Set([
+    ...[...p.html.matchAll(/href="(\/(?!\/)[^"#?]*)/g)].map((m) => m[1]),
+    ...[...p.html.matchAll(new RegExp(`https?://(?:www\\.)?${DOMINIO.replace(/\./g, '\\.')}[^"'<>\\s#?]*`, 'g'))].map((m) => m[0]),
+  ]);
+  for (const url of achados) {
+    const motivo = formaRedirecionada(url);
+    if (motivo) erro('link-redirecionado', p.rota, `aponta para ${url} — ${motivo}`);
+  }
+}
+
 // ---------- AVISOS · hipóteses ainda não medidas ----------
 // A iniciativa derrubou "título longo mata o clique" com dado de campo.
 // Aqui ainda não há dado, então isto NÃO falha: vira pergunta do Ciclo 1.

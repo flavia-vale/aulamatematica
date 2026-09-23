@@ -94,7 +94,19 @@ Assim que a verificação passar:
 4. Espere ~30 dias e rode as Fases 1 e 2 do
    [ciclo](leads-organicos/README.md).
 
-## 7. Redirecionamento de host — pendente no painel (medido em 18/09/2026)
+## 7. Redirecionamento de host — resolvido no painel (medido em 23/09/2026)
+
+**Estado em 23/09/2026:** as duas regras estão no ar. `http://`, `www.` e
+`http://www.` respondem **301** para `https://aulasdematematicabh.com.br/...`.
+O Coverage do mesmo dia passou a listar 1 URL em **"Página com
+redirecionamento"** — é consequência esperada do conserto, não erro: o Google
+conhecia a variante de host desde antes e agora a vê redirecionar. Não pedir
+validação para esse motivo. O registro e a regra que impede o site de apontar
+para endereço redirecionado estão em
+`leads-organicos/registro-ciclos.md` (23/09).
+
+A medição original, que motivou a seção:
+
 
 Medição de fora, com `curl`, em 18/09/2026:
 

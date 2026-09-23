@@ -1416,3 +1416,44 @@ de emprestada.
 **Nada foi preenchido na tabela histórica.** A linha do Ciclo 1 continua
 marcada para 04/10, e a propriedade mudou de tamanho outra vez: 29 páginas
 indexáveis em 16/09, 33 agora.
+
+### Coverage: "Página com redirecionamento" (2026-09-23)
+
+**O aviso.** Search Console, e-mail de 23/09: *novo motivo que impede a
+indexação — Página com redirecionamento*, **1 página**. Export em
+`search-console-2026-09-23/`. No mesmo relatório: 27 indexadas, 7 não
+indexadas (6 em "Detectada, mas não indexada", 1 no redirecionamento).
+O export não diz qual URL.
+
+**A medição, de fora, no mesmo dia:**
+
+| URL | Resposta |
+|---|---|
+| `http://aulasdematematicabh.com.br/` | 301 → `https://aulasdematematicabh.com.br/` |
+| `https://www.aulasdematematicabh.com.br/` | 301 → `https://aulasdematematicabh.com.br/` |
+| `http://www.aulasdematematicabh.com.br/` | 301 → `https://aulasdematematicabh.com.br/` |
+| as 38 URLs do domínio que o build emite (href, canonical, `og:url`, JSON-LD, `llms.txt`) | **200**, todas |
+| sitemap | 0 URL com `http://`, `www.` ou barra final |
+
+**Leitura.** As regras de host descritas em `../deploy-e-dns.md` §7 entraram no
+painel entre 18/09 e 23/09. O Google conhecia a variante de host (as quatro
+cópias respondiam 200 até 18/09) e agora a vê redirecionar — exatamente o que
+o 301 existe para dizer. **O motivo é intencional; não há o que corrigir e não
+se pede validação.** A linha deve crescer um pouco antes de sumir, conforme o
+Google revisita as outras variantes.
+
+**O que isto derrubou:** nada — confirmou o conserto de 18/09. Mas a medição
+achou uma porta aberta: o Workers responde **307** para `/contato/`,
+`/contato.html` e `/index.html`, e a normalização de `linksInternos` no
+`check-conteudo.mjs` apaga essas formas antes de contar origem. Um link interno
+escrito com barra final passaria no check e produziria este mesmo relatório,
+só que desta vez por erro nosso.
+
+**O que foi feito:** regra nova `link-redirecionado` no `check-conteudo.mjs`.
+Varre a string crua de todo endereço do próprio domínio no HTML e falha se
+houver `http://`, `www.`, barra final fora da raiz, `.html`/`index`, ou um
+caminho que `public/_redirects` desvia (hoje, `/sitemap.xml`). Testada com os
+três casos injetados em `dist/`; passa limpa no site atual.
+
+**As 6 "Detectada, mas não indexada"** são outro motivo, e o conserto delas já
+está no ar desde 18/09 (piso de três origens). Não se mexe antes do Ciclo 1.

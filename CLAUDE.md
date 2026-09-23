@@ -20,7 +20,9 @@ ou repetindo a frase de outra página), houver promessa de resultado, houver
 preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, o JSON-LD contiver
 `review` ou `aggregateRating`, uma página cair
 numa linha congelada, uma página indexável faltar no `llms.txt` ou nas
-pendências de indexação, uma URL entrar no sitemap **sem `lastmod`**, ou uma
+pendências de indexação, uma URL entrar no sitemap **sem `lastmod`**, alguma página apontar para
+um endereço do próprio domínio que redireciona (`http://`, `www.`, barra
+final, `.html`, ou caminho de `public/_redirects`), ou uma
 página indexável receber link interno de **menos de três páginas de origem**
 (piso calibrado pelo Coverage de 16/09: as que ficaram fora do índice recebiam
 uma ou duas).

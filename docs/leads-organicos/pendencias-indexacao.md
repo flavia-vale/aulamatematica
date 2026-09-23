@@ -220,3 +220,38 @@ por termo neste segmento, contra 5.000 do cluster de fundamental e médio. O que
 se mede aqui é conversa por impressão, não volume — e o lance de anúncio desses
 termos é o mais alto de toda a tabela (teto de R$ 9,41 a R$ 10,02), o que indica
 que quem busca está contratando.
+
+## Cobertura de 2026-09-23 — 27 indexadas, 7 fora
+
+Export em `search-console-2026-09-23/`. As URLs vieram do painel, porque o
+export não as lista.
+
+**"Página com redirecionamento" (1): `http://aulasdematematicabh.com.br/`.**
+É a mesma URL que até 16/09 aparecia em "Página alternativa com tag canônica
+adequada" — mudou de rótulo porque agora responde 301 em vez de 200 com
+canonical. É o conserto de host de 18/09 funcionando. **Não pedir indexação e
+não clicar em "Validar correção".** Registro completo em `registro-ciclos.md`
+(23/09).
+
+**"Detectada, mas não indexada no momento" (6), todas sem rastreamento:**
+
+| Rota | Recebe link de | Observação |
+|---|---|---|
+| `/aulas-de-matematica-online` | 33 páginas | fora desde 04/09; terceiro pedido |
+| `/blog/aula-de-matematica-online-funciona` | 5 páginas | fora desde 11/09 |
+| `/aula-particular-de-pre-calculo` | 7 páginas | página de 17/09 |
+| `/aula-particular-de-calculo-1` | 7 páginas | página de 17/09 |
+| `/aula-particular-de-calculo-2` | 7 páginas | página de 17/09 |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | 7 páginas | página de 17/09 |
+
+Todas acima do piso de três origens do `check-conteudo.mjs` — o conserto de
+16/09 já está no ar para elas. Não é página órfã nem defeito técnico; é fila,
+e o que fura fila é o pedido manual. **Pedir as seis**, nesta ordem, e anotar a
+data na tabela do topo. Cálculo 3, Estatística e a página-mãe de ensino
+superior não estão em nenhum motivo de exclusão — conferir na Inspeção de URL
+antes de gastar cota com elas.
+
+`/aulas-de-matematica-online` merece atenção à parte: é a única página de
+prioridade 1 que nunca entrou, e já foi pedida duas vezes. Se continuar
+"Detectada" no Ciclo 1 (04/10), a hipótese de canibalização com a home
+(passo B1 de `plano-aceleracao.md`) volta à mesa com três semanas de dado.

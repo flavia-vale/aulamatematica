@@ -10,8 +10,9 @@ Dados brutos, sem análise. Transcritos da mensagem enviada em 03/10.
 - Telefone: (32) 99999-3956
 - Horário: fecha 20:00 · abre dom. às 07:00
 - Site: preenchido (URL não informada no envio)
-- URL canônica do perfil: **ainda não informada**
-- Área de atendimento / endereço: **não informado no envio**
+- URL do perfil: https://share.google/aIyjG0xrtFcM7QS38 (link curto; a canônica
+  do Maps ainda precisa ser resolvida a partir dele)
+- Cadastrado como **área de atendimento**, sem endereço público
 
 ## Bloqueio
 
@@ -35,8 +36,8 @@ Três das quatro avaliações têm menos de um mês.
 ## Decisões da dona do projeto, 2026-10-03
 
 - O número de WhatsApp **continua DDD 32**.
-- Raio presencial: "**toda BH**" (a confirmar se as seis cidades da
-  região metropolitana listadas no site continuam).
+- Raio presencial: **toda BH e as cidades vizinhas** (confirmado em 03/10:
+  as seis cidades listadas no site continuam).
 - Preço do ensino superior: **mantido como está** (indefinido, sai após a
   diagnóstica).
 
@@ -44,7 +45,13 @@ Três das quatro avaliações têm menos de um mês.
 
 - `autocompletar/`: 5 capturas do autocompletar do Google (03/10).
 - `google-maps-2026-10-03.csv`: listas do Google Maps para três consultas.
-  A **primeira consulta não veio identificada** no envio.
-- `../planejador/`: dois exports do Planejador com as mesmas 5 palavras.
-  O export não grava o filtro geográfico; a ser confirmado qual é Brasil e
-  qual é Belo Horizonte.
+  A primeira consulta é `professor particular de matemática` (confirmado
+  em 03/10).
+- `../planejador/`: dois exports do Planejador com as mesmas 5 palavras,
+  `keyword-stats-brasil.csv` e `keyword-stats-belo-horizonte.csv`
+  (filtro confirmado em 03/10).
+
+## O que a dona do projeto informou que não virá
+
+- **WhatsApp**: os dados de conversas não serão compartilhados.
+- **Superprof**: não há dado de desempenho do perfil.

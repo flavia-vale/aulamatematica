@@ -1457,3 +1457,123 @@ três casos injetados em `dist/`; passa limpa no site atual.
 
 **As 6 "Detectada, mas não indexada"** são outro motivo, e o conserto delas já
 está no ar desde 18/09 (piso de três origens). Não se mexe antes do Ciclo 1.
+
+---
+
+## Ciclo 1 — Primeira leitura com 30 dias (2026-10-03)
+
+Relatório completo, no formato As-Is / To-Be / GAP / Plano pedido pela dona
+do projeto, em [relatorio-ciclo-1-2026-10-03.md](relatorio-ciclo-1-2026-10-03.md).
+Dados brutos em `search-console-2026-10-03/`: Search Console (12 meses, 27
+dias com dado), Cobertura de 20/09, Bing Webmaster Tools, autocompletar,
+Google Maps em três consultas, Planejador com filtro Brasil e Belo Horizonte,
+SERP do Google e do Bing para cinco termos, Fase 3 no ChatGPT e na Visão
+geral por IA do Google, e a ficha do Google Business Profile.
+
+**Lacunas declaradas, por decisão da dona do projeto em 03/10:** Gemini e
+Perplexity não medidos; Trends de vestibulares não feito; sem dado do
+Superprof; conversas de WhatsApp resumidas a "chegou uma, buscando aula de
+reforço", sem a frase de atribuição confirmada.
+
+**O que foi feito**
+
+- Linha do Ciclo 1 preenchida na [tabela-historica.md](tabela-historica.md),
+  na convenção de 12 meses e soma da aba Países.
+- [pendencias-indexacao.md](pendencias-indexacao.md) atualizada com a
+  Cobertura de 20/09 (27 indexadas, 6 em "Detectada", 1 redirecionamento) e
+  com as páginas confirmadas no índice por impressão.
+- Fase 3 do Ciclo 1 registrada em [citacao-ia.md](citacao-ia.md) e na
+  planilha, 14 linhas, com 3 marcadas como contaminadas.
+- Lista A de [concorrentes.md](concorrentes.md) preenchida pela primeira vez,
+  a partir das cinco SERPs.
+- Uma mudança no site, sem linha de base a proteger: nas sete páginas de
+  ensino superior, a frase "o valor é fechado após a diagnóstica" passou a
+  dizer que fundamental e médio têm valor público e aponta para o artigo de
+  preço. Motivo: a Visão geral por IA respondeu "quanto custa aula com a
+  Taciane" dizendo que **o site não divulga o valor**, quando quatro páginas
+  publicam R$ 45. Hipótese declarada: a IA leu a exceção do superior como
+  regra geral. As sete páginas somam 5 impressões em 30 dias.
+- `CLAUDE.md` atualizado nos fatos que este ciclo mudou.
+
+**O que a medição derrubou**
+
+1. *"O gargalo é o muro da posição 11."* As sete consultas de contratação que
+   paravam entre 11 e 12 em 16/09 estão entre 8 e 11, com cerca de 80
+   impressões na primeira página e **zero clique**. O gargalo se moveu: de
+   entrar na página 1 para produzir clique na posição 8 a 10, abaixo de
+   anúncio, pacote local e Visão geral por IA. No celular, onde estão 67% das
+   impressões, a taxa de clique é 0,71%; no computador, 3,03%.
+2. *"Sem índice no Bing o ChatGPT não consegue citar o site."* O ChatGPT
+   citou o site na consulta de marca, em linha limpa, com `utm_source=
+   chatgpt.com`, enquanto o Bing tinha 2 URLs indexadas. O Bing continua
+   valendo para o Copilot e para a busca do Bing; deixou de ser condição para
+   o ChatGPT.
+3. *"Termo de volume alto gera muita impressão e nenhuma conversa."* O artigo
+   de `atividades de matemática` (50.000 buscas/mês) gerou **zero impressão**
+   em 22 dias de índice. Nem a impressão veio. A hipótese simétrica de 18/09
+   se confirmou pelo outro lado: os três artigos de prova de admissão, locais
+   e com data, somam 216 impressões e 6 cliques em 12 dias. É a confirmação
+   mais limpa que o projeto tem de que **intenção e data valem mais que
+   volume**.
+4. *"As páginas canibalizam entre si."* URLs por busca caiu de 1,71 (11/09)
+   para 1,41 (16/09) e **1,08** agora. O que sobrou não é canibalização entre
+   páginas indexadas; é `/aulas-de-matematica-online` fora do índice há 30
+   dias, com 33 links internos e três pedidos.
+5. *"Título longo mata o clique."* Derrubada pela segunda vez, agora com dado
+   próprio: os cinco títulos que produziram clique têm de 74 a 110
+   caracteres, e a home, com 110, tem a melhor taxa de clique das páginas de
+   serviço. O que separa clique de não clique nos dados deste ciclo é
+   **posição e tipo de consulta**, não comprimento.
+6. *"As cinco famílias avaliaram no Google."* A ficha mostra 4 avaliações, e
+   uma é da própria dona do projeto. São **3 famílias**. O registro de 17/09
+   anotou cinco por confirmação verbal; o número que vale é o da ficha.
+7. *"O perfil não aparece no Maps por falta de avaliação."* Hipótese que eu
+   teria escrito antes de ver os dados. No Maps aparecem perfis sem endereço
+   com 2 e 15 avaliações; o da Taciane, com 4, não aparece em nenhuma das
+   três consultas. O que ele tem de diferente é **não estar verificado**,
+   e a verificação está travada na exigência de vídeo. Volume de avaliação
+   segue sendo o critério das listas de IA; para aparecer no Maps, a hipótese
+   mais forte agora é a verificação.
+8. *"Página por bairro."* Quinta e sexta ferramenta contra: Planejador com
+   filtro BH dá 50 buscas/mês para os cinco termos, e o autocompletar visto de
+   BH não sugere nenhum bairro nem escola. Sugere "perto de mim" e "bh". A
+   linha continua aberta por decisão de 06/09; nenhum dado novo a favorece.
+
+**O que a medição confirmou**
+
+- Os artigos de 18/09 são 34% das impressões e 8 dos 12 cliques do ciclo.
+- O site está na **posição 6 orgânica** de `professor particular de
+  matemática`, visto de BH, como único site individual de BH no top 10 além
+  do brunoprofessorbh.com.br.
+- A Visão geral por IA aparece nas cinco consultas nacionais e, na de
+  `valor`, responde o preço na própria SERP: o artigo de preço tem 131
+  impressões na posição 8,6 e zero clique. Consulta de preço virou consulta
+  de citação, não de clique.
+- `/sobre` pela terceira vez: melhor posição do site (3,7), zero clique em 39
+  impressões. Não há consulta com "taciane" entre as 46 nomeadas: as
+  impressões de `/sobre` vêm de consultas anônimas. O teste de busca de marca
+  não fecha com este export.
+- Google Business Profile: nome correto, área de atendimento sem endereço,
+  categoria "Aulas particulares", DDD 32, fecha às 20h enquanto o schema do
+  site diz 21h. Verificação pendente, o que bloqueia Desempenho e resposta às
+  avaliações.
+
+**Um sinal novo, ainda sem volume**
+
+O autocompletar de `reforço escolar matemática` é inteiro por ano escolar
+(2º ao 9º ano, ensino médio), e a única conversa do ciclo disse "buscando
+aula de reforço". No Search Console, `aulas de reforço de matemática` está
+entre as posições 3,5 e 6 enquanto `reforço de matemática` está na 50. A
+página de reforço (`/reforco-escolar-matematica`) usa a forma que está na 50.
+É o primeiro dado a favor da linha "por série" desde 06/09, e ainda é só
+sugestão de autocompletar. Vira pergunta do Ciclo 2, não página.
+
+**Decisões que ficaram com a dona do projeto** (detalhe no relatório):
+verificação por vídeo da ficha; completar as cinco avaliações; horário da
+ficha ou do site; serviços e posts na ficha; título da home para liberar a
+página online (texto proposto no relatório, item 7); reposicionar a página
+de reforço para "aulas de reforço"; analytics, com o gatilho atingido pela
+terceira vez.
+
+**Perguntas do Ciclo 2 (a partir de 03/11):** as sete do fim do relatório.
+A mais barata e mais valiosa: o perfil verificado apareceu no Maps?

@@ -255,3 +255,45 @@ antes de gastar cota com elas.
 prioridade 1 que nunca entrou, e já foi pedida duas vezes. Se continuar
 "Detectada" no Ciclo 1 (04/10), a hipótese de canibalização com a home
 (passo B1 de `plano-aceleracao.md`) volta à mesa com três semanas de dado.
+
+## Ciclo 1 — Cobertura de 20/09 e Search Console de 03/10
+
+Export em `search-console-2026-10-03/`. A Cobertura vai até 20/09: **27
+indexadas, 7 fora** (6 em "Detectada, mas não indexada", 1 em "Página com
+redirecionamento", que é o `http://` e não é problema). O export não lista as
+URLs; a aba Páginas do Search Console confirma por impressão quem está no
+índice.
+
+**Confirmadas no índice por impressão em 30 dias** (além das 17 de 16/09):
+`/professor-particular-de-matematica` (62), `/aulas-particulares-ensino-superior`
+(4), `/aula-particular-de-calculo-3` (1), `/blog/meu-filho-nao-aprende-matematica`
+(1), e os quatro artigos de 18/09: CEFET-MG (145), Cálculo 1 UFMG e PUC (66),
+Coltec (57) e Colégio Militar (14). Indexadas sem impressão, por não
+constarem de nenhum motivo de exclusão: `/blog/sinais-aluno-precisa-reforco-matematica`,
+`/blog/atividades-de-matematica-para-praticar-em-casa` e
+`/aula-particular-de-estatistica-e-probabilidade`.
+
+**As 6 em "Detectada, mas não indexada", sem mudança desde 23/09:**
+
+| Rota | Situação |
+|---|---|
+| `/aulas-de-matematica-online` | fora desde 04/09, três pedidos, 33 links internos, zero impressão em 30 dias |
+| `/blog/aula-de-matematica-online-funciona` | fora desde 11/09 |
+| `/aula-particular-de-pre-calculo` | página de 17/09 |
+| `/aula-particular-de-calculo-1` | página de 17/09 |
+| `/aula-particular-de-calculo-2` | página de 17/09 |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | página de 17/09 |
+
+Duas das seis têm "online" no título. A hipótese de 11/09, de que a home
+(título "Aulas particulares de matemática online") absorve a consulta, está
+na mesa com 30 dias de dado e virou o item 7 do plano em
+[relatorio-ciclo-1-2026-10-03.md](relatorio-ciclo-1-2026-10-03.md): decisão
+de título da home, da dona do projeto.
+
+**As sete páginas de ensino superior mudaram em 03/10** (frase de preço).
+Pedir indexação de novo só depois do deploy, começando pelas quatro que
+estão fora.
+
+**Bing:** cadastro feito, 2 URLs indexadas em 23/09 (home e
+`/enem-matematica`), 1 impressão até 30/09, zero backlink. O IndexNow enviou
+as 33 URLs em 23/09.

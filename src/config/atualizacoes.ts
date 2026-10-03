@@ -63,13 +63,17 @@ export const atualizacoes: Record<string, string> = {
   // Linha de ensino superior aberta em 17/09. Em 18/09 as sete ganharam o
   // bloco de leitura relacionada com o artigo de Cálculo 1 — a primeira porta
   // de entrada editorial da linha.
-  '/aulas-particulares-ensino-superior': '2026-09-18',
-  '/aula-particular-de-pre-calculo': '2026-09-18',
-  '/aula-particular-de-calculo-1': '2026-09-18',
-  '/aula-particular-de-calculo-2': '2026-09-18',
-  '/aula-particular-de-calculo-3': '2026-09-18',
-  '/aula-particular-de-estatistica-e-probabilidade': '2026-09-18',
-  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-09-18',
+  // 03/10: a frase de preço passou a dizer que fundamental e médio têm valor
+  // público e apontar para o artigo de preço. A Visão geral por IA do Google
+  // respondeu em 03/10 que "o site não divulga o valor", lendo a exceção do
+  // superior como regra geral. Ver relatorio-ciclo-1-2026-10-03.md, item 8.
+  '/aulas-particulares-ensino-superior': '2026-10-03',
+  '/aula-particular-de-pre-calculo': '2026-10-03',
+  '/aula-particular-de-calculo-1': '2026-10-03',
+  '/aula-particular-de-calculo-2': '2026-10-03',
+  '/aula-particular-de-calculo-3': '2026-10-03',
+  '/aula-particular-de-estatistica-e-probabilidade': '2026-10-03',
+  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-10-03',
 
   // Bio reescrita em 17/09 (ensino superior); em 18/09 entrou um artigo novo
   // na leitura relacionada. O bloco "quem mantém este site" é de rodapé, e

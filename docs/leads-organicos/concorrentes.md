@@ -5,9 +5,42 @@ mostra (quem disputa as mesmas buscas) e a que as IAs citam (quem elas
 recomendam no seu lugar). No projeto de origem as duas eram **quase disjuntas** —
 19 concorrentes apareceram só na medição manual de IA e nunca no Search Console.
 
-## Lista A — Search Console
+## Lista A — Search Console e SERP
 
-Vazia. Depende da propriedade verificada e de ~30 dias de dado.
+Preenchida pela primeira vez em **2026-10-03**, a partir das cinco SERPs do
+Google e do Bing capturadas de BH (dados em
+`search-console-2026-10-03/pesquisa-campo/serp-2026-10-03.md`). O Search
+Console não nomeia concorrente; a SERP das consultas em que o site aparece
+nomeia.
+
+| Quem | Onde aparece | Natureza |
+|---|---|---|
+| Superprof | top 3 das cinco SERPs, 2 a 3 URLs por SERP, anúncio em todas | marketplace |
+| Preply | top 3 em três SERPs, anúncio nas cinco, Google e Bing | marketplace |
+| Suas Aulas Particulares | top 4 em quatro SERPs | marketplace |
+| GetNinjas | orgânico em uma, anúncio no Bing nas cinco | marketplace |
+| OLX | orgânico em duas | classificados |
+| Aulas Particulares Bruno (Moema, SP) | posição 8 em `online`, 8 em `professor de matemática online` | site individual |
+| brunoprofessorbh.com.br | posição 8 em `professor particular de matemática` | site individual, BH |
+| profjoaomauricio.com.br (Contagem) | posição 8 em `valor` | site individual, região |
+| matonline.com.br, chalababa.com.br (USP) | posições 4 e 5 no Bing, `online` | sites individuais |
+| @profraimundoalmeida, @curso.matematica.online | orgânico em três SERPs | Instagram |
+| Monitorias.com.br, Curso Fernanda Pessoa, IXL, umajornada | só anúncio | pagos |
+
+**Este site:** posição 6 orgânica em `professor particular de matemática`,
+visto de BH. Ausente das outras quatro.
+
+**Pacote local do Google** para `professor particular de matemática`, de BH:
+Eduardo Ribeiro (19 avaliações, DDD 35), Laura Milanez (87), Professor
+Henrique (49). Todos área de atendimento sem endereço, todos abertos no
+momento da busca. O perfil da Taciane não aparece (não verificado).
+
+**Google Maps, 03/10**, três consultas, lista completa em
+`google-maps-2026-10-03.csv`. Os de maior avaliação em "Aulas particulares":
+Educament (219), Aprender em Casa (149), 1000tinho (93), Laura Milanez (87),
+Apoio Escolar da CA (88, Contagem), Professor Leonardo (75), Débora Sodré
+Cálculo (69), Miriam Mello (57), Samantha (57), Wagner Chebile (55), Bruna
+M. (51), Token Método (50), Cida Lage (49), Professor Henrique (49).
 
 ## Lista B — Citados pelas IAs
 

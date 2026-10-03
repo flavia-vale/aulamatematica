@@ -1,5 +1,10 @@
 # Ciclo 1 — roteiro pronto, a partir de 04/10/2026
 
+> **Executado em 2026-10-03.** Passos 1, 2, 4 e 5 feitos; passo 3 feito em
+> duas superfícies de quatro, por decisão da dona do projeto. Resultado em
+> [relatorio-ciclo-1-2026-10-03.md](relatorio-ciclo-1-2026-10-03.md) e no
+> registro do ciclo. O roteiro abaixo fica como modelo para o Ciclo 2.
+
 Este documento existe para que a próxima rodada não dependa de ninguém
 lembrar de nada. Abra, execute de cima para baixo.
 

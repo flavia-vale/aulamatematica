@@ -32,7 +32,7 @@ const outras = materiasSuperior.filter((o) => o.slug !== m.slug);
 
 const faqsComuns = [
   { q: `A aula de ${m.nome} é online ou presencial?`, a: `As duas. Online ao vivo por videochamada com lousa digital, para alunos de todo o Brasil, ou presencial em Belo Horizonte e num raio de ${site.presencial.raioKm} km do centro, na casa do aluno ou em local público combinado.` },
-  { q: 'Quanto custa a aula de ensino superior?', a: `As matérias de ensino superior têm faixa própria, diferente da de fundamental e médio, e o valor é fechado depois da aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos — quando já se sabe o tamanho do trabalho e a frequência necessária. Falar comigo não custa nada e não passa por plataforma.` },
+  { q: 'Quanto custa a aula de ensino superior?', a: `As matérias de ensino superior têm faixa própria, diferente da de fundamental e médio, cujo valor é público e está no artigo sobre preço deste site. A faixa de faculdade é fechada depois da aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos — quando já se sabe o tamanho do trabalho e a frequência necessária. Falar comigo não custa nada e não passa por plataforma.` },
   { q: 'Como funciona a primeira conversa?', a: `São ${site.preco.diagnosticoMin} minutos, sem custo. Você manda a ementa, a lista ou a prova que está travando, eu vejo você resolver, e no fim digo o que encontrei e o que faria. Só depois disso você decide.` },
 ];
 const faqs = [...m.faqs, ...faqsComuns];
@@ -137,7 +137,7 @@ const schema = graph(
 
     {!precoSuperior.valor && (
       <p class="mt-8 max-w-3xl text-sm leading-relaxed text-stone-600">
-        As matérias de ensino superior têm faixa de valor própria, diferente da de fundamental e médio que está publicada no site. O valor é fechado depois da aula diagnóstica gratuita de {site.preco.diagnosticoMin} minutos, quando já se sabe o tamanho do trabalho. <strong class="text-stone-900">Falar comigo não custa nada, é direto por WhatsApp e não passa por plataforma nenhuma.</strong>
+        As matérias de ensino superior têm faixa de valor própria, diferente da de fundamental e médio, cujo valor é público e está em <a href="/blog/quanto-custa-aula-particular-matematica" class="underline">quanto custa uma aula particular</a>. A faixa de faculdade é fechada depois da aula diagnóstica gratuita de {site.preco.diagnosticoMin} minutos, quando já se sabe o tamanho do trabalho. <strong class="text-stone-900">Falar comigo não custa nada, é direto por WhatsApp e não passa por plataforma nenhuma.</strong>
       </p>
     )}
   </section>

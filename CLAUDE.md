@@ -53,6 +53,7 @@ e várias hipóteses já derrubadas por dado.
 | `funil.md` | Como a atribuição de lead funciona sem backend |
 | **`plano-aceleracao.md`** | **Leitura do Search Console de 11/09 e o plano de 4 trilhas** |
 | **`diagnostico-externo-2026-09-18.md`** | **Auditoria externa de 18/09: o que entrou, o que foi recusado e com qual evidência, e o que depende da dona do projeto** |
+| **`relatorio-ciclo-1-2026-10-03.md`** | **Ciclo 1 com 30 dias: As-Is, To-Be (BH e Brasil), GAP e plano de ação** |
 | `search-console-2026-09-11/` | Export bruto dos 7 primeiros dias |
 | `tabela-historica.md` | A série do Search Console, uma linha por ciclo |
 | `pendencias-indexacao.md` | Controle dos pedidos manuais de indexação no Google |
@@ -78,13 +79,30 @@ e várias hipóteses já derrubadas por dado.
   material, não por aula.
 - **A Taciane já tem perfil no Superprof**, e é o único ativo dela que as IAs
   encontram e citam. O site não é citado por nenhuma delas.
-- **O gargalo medido é posição, não impressão nem CTR.** Em 16/09, com 132
-  impressões e 1 clique, sete consultas de intenção de contratação paravam
-  entre as posições 11,0 e 12,0 — a primeira linha da segunda página. Título
-  melhor não move página da segunda para a primeira posição.
-- **Zero páginas no índice do Bing** em 18/09, por duas fontes. Como o ChatGPT
-  busca no Bing, o site não pode ser citado por ele nem por acidente. É
-  cadastro no Bing Webmaster Tools, não qualidade de conteúdo.
+- **O gargalo se moveu da posição para o clique.** Em 16/09, sete consultas
+  de contratação paravam entre as posições 11 e 12. Em 03/10, com 835
+  impressões em 30 dias, o mesmo cluster está entre 8 e 11, com ~80
+  impressões na primeira página e **zero clique**. No celular (67% das
+  impressões) a taxa de clique é 0,71%; no computador, 3,03%. Acima da
+  posição 8 ficam anúncio, pacote local e Visão geral por IA.
+- **Intenção e data valem mais que volume.** O artigo para `atividades de
+  matemática` (50.000 buscas/mês) fez zero impressão em 22 dias de índice.
+  Os três artigos de prova de admissão de BH (Coltec, CEFET-MG, Colégio
+  Militar), locais e com data, fizeram 216 impressões e 6 cliques em 12 dias.
+- **Título longo não mata o clique**, derrubado duas vezes (projeto de origem
+  e 03/10): os cinco títulos com clique têm 74 a 110 caracteres.
+- **O Bing tem 2 URLs do site** (cadastro feito, descobertas em 23/09). Em
+  03/10 o ChatGPT citou o site na consulta de marca mesmo assim, por busca
+  própria. O índice do Bing continua importando para Copilot e Bing; não é
+  condição para o ChatGPT.
+- **O site passou a ser citado pelas IAs em 03/10:** 3 linhas limpas em 9
+  (ChatGPT na marca; Visão geral por IA do Google em preço e em UFMG). O que
+  as citações reproduzem é o que as páginas declaram em texto e `FAQPage`:
+  R$ 45 por 50 minutos, diagnóstica gratuita, "todo o Brasil", UFMG.
+- **O perfil do Google não aparece no Maps nem no pacote local** (03/10, três
+  consultas). Hipótese mais forte: a verificação está pendente (exige vídeo),
+  e perfil não verificado não é exibido. Aparecem perfis sem endereço com 2
+  avaliações; o da Taciane tem 4, sendo 3 de famílias.
 - **O WhatsApp é DDD 32 (Juiz de Fora) numa marca que promete BH.** O site
   explica isso ao lado do número, no rodapé e em `/contato`, desde 18/09.
   Trocar o número é decisão em aberto — nunca deixar o visitante descobrir o
@@ -171,11 +189,12 @@ constrói, e é um erro fácil de cometer.
 
 ## Regras de trabalho
 
-- **Não alterar título, descrição ou copy sem dado do Search Console.** A
-  propriedade foi verificada em 04/09/2026; o primeiro ciclo de leitura ocorre
-  ~04/10/2026. Mexer antes destrói a linha de base.
-- **A partir de 04/10/2026, abrir `docs/leads-organicos/ciclo-1.md`** — é o
-  roteiro da rodada, com as decisões que ficaram esperando dado.
+- **Não alterar título, descrição ou copy sem dado do Search Console.** O
+  Ciclo 1 foi lido em 03/10/2026 (`relatorio-ciclo-1-2026-10-03.md`). As duas
+  mudanças de título propostas lá (home e página de reforço) são decisão da
+  dona do projeto, com o risco declarado. O Ciclo 2 lê a partir de 03/11.
+- **`docs/leads-organicos/ciclo-1.md` é o roteiro de cada rodada**; o
+  relatório de cada ciclo fica em `relatorio-ciclo-N-AAAA-MM-DD.md`.
 - **Toda decisão de conteúdo vira regra no `check-conteudo.mjs`**, escrita como
   varredura com exceção nominal — nunca como lista do que conferir.
 - **Registrar o que a medição derrubou**, sempre, em `registro-ciclos.md`.

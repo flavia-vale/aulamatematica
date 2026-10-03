@@ -1577,3 +1577,19 @@ terceira vez.
 
 **Perguntas do Ciclo 2 (a partir de 03/11):** as sete do fim do relatório.
 A mais barata e mais valiosa: o perfil verificado apareceu no Maps?
+
+### Aplicado em 03/10 (itens 7 e 9 do relatório do Ciclo 1)
+
+- **Home:** título passou a `Aulas particulares de matemática — online para
+  todo o Brasil e presencial em BH | Taciane Andrade`, para deixar o termo
+  "online" com `/aulas-de-matematica-online`. **Risco declarado:** a home tem a
+  melhor taxa de clique (4 em 110). **Regra de reversão:** se no Ciclo 2 a home
+  perder cliques e a página online não entrar no índice, volta o título antigo
+  (`Aulas particulares de matemática online — Reforço escolar com professora
+  da UFMG`).
+- **Reforço:** título, descrição e H1 passaram de "reforço escolar de
+  matemática" (posição 47) para "aulas de reforço de matemática" (3,5 a 6).
+  Linha de base: 36 impressões, zero clique.
+- Item 8 (preço do superior) já estava aplicado no commit anterior. Itens 1 a 6
+  (ficha do Google) dependem da dona do projeto; 10 a 12 não têm mudança de
+  código.

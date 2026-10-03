@@ -86,7 +86,8 @@ export const atualizacoes: Record<string, string> = {
   '/sobre': '2026-09-18',
 
   // Em 18/09: a nota sobre o DDD do número, ao lado do telefone.
-  '/contato': '2026-09-18',
+  // 03/10: horário de seg a sex passou a fechar às 20h, igual à ficha do Google.
+  '/contato': '2026-10-03',
 
   // A lista muda quando entra artigo. Três entraram em 18/09.
   '/blog': '2026-09-18',

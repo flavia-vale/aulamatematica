@@ -1593,3 +1593,8 @@ A mais barata e mais valiosa: o perfil verificado apareceu no Maps?
 - Item 8 (preço do superior) já estava aplicado no commit anterior. Itens 1 a 6
   (ficha do Google) dependem da dona do projeto; 10 a 12 não têm mudança de
   código.
+
+### Horário alinhado em 03/10 (item 3 do relatório do Ciclo 1)
+
+Decisão da dona do projeto: seg-sex até **20h**, igual à ficha do Google. Ajustados
+o schema (`closes`), `/contato` e `llms.txt`. Sábado segue 9h–14h.

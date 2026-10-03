@@ -38,7 +38,9 @@
 export const atualizacoes: Record<string, string> = {
   // Reposicionamento de 06/09 (BH virou presencial) e bloco de leitura
   // relacionada de 16/09; em 18/09 ganhou os artigos das provas de admissão.
-  '/': '2026-09-18',
+  // 03/10: título deixou de disputar "online" (fica com /aulas-de-matematica-online)
+  // e passou a apresentar as duas modalidades. Item 7 do relatório do Ciclo 1.
+  '/': '2026-10-03',
 
   // Criada em 17/09 para o termo sem qualificador. Em 18/09: a nota sobre o
   // DDD do WhatsApp e os artigos novos na leitura relacionada.
@@ -54,7 +56,10 @@ export const atualizacoes: Record<string, string> = {
 
   // Bloco de leitura relacionada em 16/09; em 18/09 ganhou os artigos das
   // provas de admissão e o de atividades para casa.
-  '/reforco-escolar-matematica': '2026-09-18',
+  // 03/10: título, descrição e H1 passaram de "reforço escolar de matemática"
+  // (posição 47) para "aulas de reforço de matemática" (posição 3,5 a 6).
+  // Item 9 do relatório do Ciclo 1.
+  '/reforco-escolar-matematica': '2026-10-03',
 
   // Bloco de leitura relacionada em 16/09. Em 18/09 NÃO mudou: os artigos de
   // prova de admissão são de fundamental e não têm o que fazer aqui.

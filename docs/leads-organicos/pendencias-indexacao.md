@@ -206,13 +206,13 @@ do clique.
 
 | Rota | Pedido em | Indexada? |
 |---|---|---|
-| `/aulas-particulares-ensino-superior` | — | não |
-| `/aula-particular-de-calculo-1` | — | não |
-| `/aula-particular-de-calculo-2` | — | não |
-| `/aula-particular-de-calculo-3` | — | não |
-| `/aula-particular-de-pre-calculo` | — | não |
-| `/aula-particular-de-geometria-analitica-e-algebra-linear` | — | não |
-| `/aula-particular-de-estatistica-e-probabilidade` | — | não |
+| `/aulas-particulares-ensino-superior` | 2026-10-03 | não |
+| `/aula-particular-de-calculo-1` | 2026-10-03 | não |
+| `/aula-particular-de-calculo-2` | 2026-10-03 | não |
+| `/aula-particular-de-calculo-3` | 2026-10-03 | não |
+| `/aula-particular-de-pre-calculo` | 2026-10-03 | não |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | 2026-10-03 | não |
+| `/aula-particular-de-estatistica-e-probabilidade` | 2026-10-03 | não |
 
 **Expectativa declarada antes de medir, para o Ciclo 1 não ler errado:** estas
 páginas produzem **pouca impressão por natureza**. A Fase 4 mediu 50 buscas/mês
@@ -297,3 +297,34 @@ estão fora.
 **Bing:** cadastro feito, 2 URLs indexadas em 23/09 (home e
 `/enem-matematica`), 1 impressão até 30/09, zero backlink. O IndexNow enviou
 as 33 URLs em 23/09.
+
+## Pedidos de 2026-10-03
+
+Feitos na Inspeção de URL pela dona do projeto, **depois** de o deploy estar no
+ar (conferido: os dois títulos novos aparecem no HTML publicado).
+
+| Rota | Motivo do pedido |
+|---|---|
+| `/` | título novo (item 7 do relatório do Ciclo 1) |
+| `/reforco-escolar-matematica` | título, descrição e H1 novos (item 9) |
+| `/contato` | horário de seg a sex até 20h |
+| `/aulas-particulares-ensino-superior` | frase de preço mudou em 03/10 (item 8) |
+| `/aula-particular-de-calculo-1` | nunca indexou ("Detectada") |
+| `/aula-particular-de-calculo-2` | nunca indexou ("Detectada") |
+| `/aula-particular-de-pre-calculo` | nunca indexou ("Detectada") |
+| `/aula-particular-de-geometria-analitica-e-algebra-linear` | nunca indexou ("Detectada") |
+| `/blog/aula-de-matematica-online-funciona` | nunca indexou ("Detectada") |
+| `/aula-particular-de-calculo-3` | frase de preço mudou em 03/10 |
+| `/aula-particular-de-estatistica-e-probabilidade` | frase de preço mudou em 03/10 |
+
+**Atenção ao título da home:** o pedido foi feito com o título publicado em
+03/10, que termina em `| Taciane Andrade | Aulas de Matemática BH` (o layout
+acrescenta o sufixo e o título proposto já trazia o nome). Se o título for
+ajustado, a home precisa de novo pedido.
+
+**Deliberadamente não pedida:** `/aulas-de-matematica-online` (três pedidos sem
+efeito; esperar a home ser relida). Bing e demais: `npm run indexnow` após o
+deploy final, ainda não rodado.
+
+**Conferir a partir de 06/10** a coluna `Indexada?` das quatro que nunca
+indexaram, e no Ciclo 2 (03/11) se a home e a página de reforço foram relidas.

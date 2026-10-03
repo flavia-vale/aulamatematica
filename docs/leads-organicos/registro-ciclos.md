@@ -1598,3 +1598,29 @@ A mais barata e mais valiosa: o perfil verificado apareceu no Maps?
 
 Decisão da dona do projeto: seg-sex até **20h**, igual à ficha do Google. Ajustados
 o schema (`closes`), `/contato` e `llms.txt`. Sábado segue 9h–14h.
+
+### Cruzamento página × consulta, 03/10 (3 meses, aba Consultas por página)
+
+Export do site inteiro contra o export filtrado em
+`/professor-particular-de-matematica` (`search-console-2026-10-03/cruzamento/`).
+O filtro da home sozinha não saiu; a diferença entre os dois é "todo o resto".
+
+**A hipótese "home e página nova disputam o mesmo termo" não se sustenta com
+este dado.** A página nova recebe sozinha as consultas `professor particular de
+matemática` (6 de 6), `professora particular de matemática` (4 de 4),
+`professor particular matematica` (3 de 3) e `professor particular de
+matemática presencial` (2 de 2). Em `aula particular de matematica` ela tem 13
+das 32 impressões, na posição 7,5 contra 9,1 do site todo: nas impressões que
+sobram a posição implícita é ~10,3, pior que a da página. Em `professora de
+matemática particular` o resto do site está na ~3, e a página, na 10,8: ali
+outra URL ganha, e não dá para dizer qual sem o filtro.
+
+**Limites:** amostra de 1 a 13 impressões por consulta, e a página soma só 41
+das suas 62 impressões em consultas nomeadas. Nada aqui justifica mexer em
+título; vira pergunta do Ciclo 2 se alguma dessas consultas passar a dar clique.
+
+**Outros achados:** `ddd 32 quais cidades` (1 impressão) confirma que o
+visitante estranha o DDD; a nota ao lado do número continua certa. As consultas
+`reforço de matemática` (posição 51 a 59) e `aulas de reforço de matematica`
+(3,5 a 6) reconfirmam o desalinhamento tratado no item 9. No celular, a página
+nova tem 30 impressões na posição 9,7 e zero clique.

@@ -88,6 +88,36 @@ base mais valiosa que existe — o retrato do "antes". Daqui a três meses ela �
 | Ciclo | Data | Citações | Superfícies que citam | Observação |
 |---|---|---|---|---|
 | 0 | 2026-09-03 a 09-06 | **1 de 28** | 1 de 4 | ciclo completo; a única citação aponta para o Superprof, **não para o site** |
+| 1 | 2026-10-03 | **6 de 14** (3 limpas) | 2 de 2 medidas | só ChatGPT e Google Visão geral por IA; 3 linhas do ChatGPT contaminadas pelo nome na mesma conversa; **o site passou a ser citado** |
+
+### Ciclo 1 — 2026-10-03, duas superfícies
+
+Dados em `search-console-2026-10-03/pesquisa-campo/citacao-ia-ciclo-1-2026-10-03.md`.
+Gemini e Perplexity não foram medidos, por decisão da dona do projeto. No
+Google foi usada a "Visão geral criada por IA", não o Modo IA do Ciclo 0.
+
+**Linhas limpas: 3 citações em 9.** ChatGPT na consulta 1 (marca), com link,
+preço e diagnóstica; Google na consulta 2 (preço), com link, mas afirmando
+que o site não divulga valor; Google na consulta 6 (UFMG), com o site em
+primeiro e três páginas listadas. No Ciclo 0 foram 0 em 28.
+
+**Linhas contaminadas: 3.** No ChatGPT, as consultas 2 a 7 saíram na mesma
+conversa, depois de uma pergunta que nomeava a professora. As citações nas
+consultas 2, 4 e 6 não contam para a série.
+
+**O que as citações limpas reproduzem:** R$ 45 por 50 minutos, presencial a
+partir de R$ 50, diagnóstica gratuita de 30 minutos, "todo o Brasil",
+licencianda pela UFMG. São os dados que as páginas de serviço e o artigo de
+preço declaram em texto corrido e no `FAQPage`.
+
+**O erro de fato:** a Visão geral por IA diz que o preço "não é divulgado
+abertamente" e manda ao WhatsApp. A fonte citada é o artigo de preço, que
+publica R$ 45. Hipótese: a IA generalizou a frase das páginas de ensino
+superior. Correção aplicada em 03/10 nas sete páginas; medir na consulta 2
+do Ciclo 2.
+
+**Consultas 3, 5 e 7 continuam sem citar ninguém individual**, como no Ciclo 0.
+A de categoria online segue com marketplaces; a de dor, com conselho e Kumon.
 
 ### Fase 3 encerrada — a síntese
 

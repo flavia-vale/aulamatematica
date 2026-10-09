@@ -21,9 +21,12 @@ interface Props {
    * assim nenhuma página nova nasce sem data por esquecimento.
    */
   atualizadoEm?: string;
+  /** Repassados ao SEO: imagem própria da página e tipo do Open Graph. */
+  image?: string;
+  ogType?: 'website' | 'article';
 }
 
-const { title, description, path, schema, noindex, hideFloat = false, atualizadoEm } = Astro.props;
+const { title, description, path, schema, noindex, hideFloat = false, atualizadoEm, image, ogType } = Astro.props;
 
 const dataAtualizacao = atualizadoEm ?? atualizadoEmDaRota(Astro.url.pathname);
 
@@ -71,6 +74,8 @@ const dataVisivel = dataAtualizacao
       schema={schema}
       noindex={noindex}
       atualizadoEm={dataAtualizacao}
+      image={image}
+      ogType={ogType}
     />
   </head>
   <body class="min-h-screen bg-stone-50 text-stone-900">

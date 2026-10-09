@@ -10,11 +10,15 @@ interface Props {
   noindex?: boolean;
   /** Data (AAAA-MM-DD) da última mudança de conteúdo. Vira `dateModified`. */
   atualizadoEm?: string;
+  /** Imagem própria da página, caminho em `public/`. Sem ela, a og-image do site. */
+  image?: string;
+  /** `article` nos artigos do blog; `website` no resto. */
+  ogType?: 'website' | 'article';
 }
 
-const { title, description, path = '', schema, noindex = false, atualizadoEm } = Astro.props;
+const { title, description, path = '', schema, noindex = false, atualizadoEm, image, ogType = 'website' } = Astro.props;
 const canonical = new URL(path, site.url).toString();
-const ogImage = new URL('/og-image.png', site.url).toString();
+const ogImage = new URL(image ?? '/og-image.png', site.url).toString();
 const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}`;
 
 /**
@@ -70,7 +74,7 @@ const schemaFinal =
 <link rel="canonical" href={canonical} />
 {noindex && <meta name="robots" content="noindex,nofollow" />}
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />

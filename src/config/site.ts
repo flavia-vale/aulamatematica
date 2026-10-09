@@ -22,6 +22,14 @@ export const site = {
     foto: '/taciane-andrade.jpg',
     fotoAlt: 'Taciane Andrade, professora particular de matemática',
   },
+  /**
+   * Quem mantém o site e edita os artigos. Assina como edição no fim de cada
+   * artigo, separada da bio da professora — nunca dentro dela (CLAUDE.md).
+   */
+  mantenedor: {
+    name: 'Flávia Vale',
+    linkedin: 'https://www.linkedin.com/in/flaviavale/',
+  },
   contact: {
     whatsappRaw: '5532999993956',
     whatsappDisplay: '(32) 99999-3956',

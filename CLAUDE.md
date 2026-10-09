@@ -56,6 +56,8 @@ e várias hipóteses já derrubadas por dado.
 | **`plano-aceleracao.md`** | **Leitura do Search Console de 11/09 e o plano de 4 trilhas** |
 | **`diagnostico-externo-2026-09-18.md`** | **Auditoria externa de 18/09: o que entrou, o que foi recusado e com qual evidência, e o que depende da dona do projeto** |
 | **`relatorio-ciclo-1-2026-10-03.md`** | **Ciclo 1 com 30 dias: As-Is, To-Be (BH e Brasil), GAP e plano de ação** |
+| **`plano-maquina-de-alunos-2026-10-09.md`** | **Plano de 09/10: a conta da máquina, as 5 frentes (ficha do Google, conteúdo, indicação, anúncio, universidade), conversão, medição e calendário** |
+| `dados-2026-10-09/` | Search Console 3 meses (site, blog, recursos de IA), Planejador e Trends de 09/10 |
 | `search-console-2026-09-11/` | Export bruto dos 7 primeiros dias |
 | `tabela-historica.md` | A série do Search Console, uma linha por ciclo |
 | `pendencias-indexacao.md` | Controle dos pedidos manuais de indexação no Google |

@@ -1688,3 +1688,27 @@ e isso não aparece no site. Vigência `2026-10`.
 
 Também em 09/10: LinkedIn da professora no `sameAs` do `Person` e no quadro de
 autoria dos artigos.
+
+### Plano "máquina de receber alunos", 09/10
+
+Pedido da dona do projeto. Está em
+[plano-maquina-de-alunos-2026-10-09.md](plano-maquina-de-alunos-2026-10-09.md),
+e os dados brutos que o sustentam em [dados-2026-10-09/](dados-2026-10-09/).
+
+**O que os dados de 09/10 confirmaram**
+- Os 4 artigos com escola, prova ou data têm **todos os 13 cliques do blog** em
+  3 meses. Os 11 genéricos: 452 impressões, zero clique. Terceira confirmação
+  de "intenção e data valem mais que volume".
+- Recursos de IA do Google mostraram o blog 164 vezes; CEFET-MG em 55.
+- Celular: 69% das impressões, taxa de clique 1,04%; computador 2,64%.
+
+**O que a conta mostrou**
+- O orgânico entrega ~1 conversa por mês. Para 4 alunos novos por mês são
+  precisos ~20 (hipótese de taxas: 50% viram diagnóstica, 40% das diagnósticas
+  viram aluno). Daí o plano ter cinco frentes, e não só conteúdo.
+
+**O que ficou de fora**
+- ENCCEJA: prova de 2026 foi em 23/08; as buscas de matemática do ENCCEJA têm
+  50/mês. Reavaliar em março de 2027.
+- O Trends de 09/10 incluiu ENCCEJA na comparação e achatou os outros termos em
+  zero. A sazonalidade de `recuperação de matemática` segue sem medição.

@@ -5,6 +5,7 @@ import { site } from '../config/site';
  *  hoje o perfil citado pelas IAs é o do Superprof, não o site. */
 const perfisExternos = [
   site.social.instagram,
+  site.social.linkedin,
   site.social.superprof,
   site.social.googleBusiness,
 ].filter(
@@ -266,7 +267,7 @@ export const serviceSchema = (params: {
 /**
  * Service de ensino superior — mesma área de atendimento, SEM oferta de preço.
  *
- * Por que separado: o `serviceSchema` acima declara R$ 45 para a aula online,
+ * Por que separado: o `serviceSchema` acima declara o preço da aula online,
  * que é o valor de fundamental e médio. Reaproveitá-lo numa página de Cálculo
  * declararia ao Google um preço que não é o desta linha, e ancoraria a
  * operação muito abaixo da faixa de mercado de exatas do ensino superior

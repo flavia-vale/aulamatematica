@@ -2,10 +2,11 @@
 title: "Colégio Militar de BH: 4 semanas até o exame de matemática"
 description: "O Exame Intelectual dos Colégios Militares é em 18 de outubro e exige 50% dos pontos em matemática. O que dá para fazer com as semanas que restam."
 publishedAt: 2026-09-18
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["colégio militar", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "8 min"
-precoVigencia: "2026-09"
+precoVigencia: "2026-10"
 ---
 
 **Resposta direta:** o Exame Intelectual do concurso de admissão aos Colégios Militares para 2027 está marcado para **18 de outubro de 2026**, e cobra matemática, língua portuguesa e produção textual. As inscrições encerraram em **17 de setembro**, então se o seu filho está inscrito, o que existe agora são cerca de **quatro semanas** — e quatro semanas mudam o trabalho: não dá para cobrir o currículo, dá para escolher bem onde mexer.
@@ -64,6 +65,6 @@ Serve, porque as três cobram a matemática do fundamental, e as datas não coli
 As duas funcionam, desde que a aula seja individual. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, online ao vivo.
 
 **Quanto custa?**
-Aula online de 50 minutos: R$ 45. Presencial em BH: a partir de R$ 50, com deslocamento incluso. Pacote mensal com desconto. A aula diagnóstica de 30 minutos é gratuita — e, com prazo curto, ela é também a forma mais rápida de saber se vale investir agora ou preparar para a próxima edição.
+Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, com deslocamento incluso. Pacote mensal com desconto. A aula diagnóstica de 30 minutos é gratuita — e, com prazo curto, ela é também a forma mais rápida de saber se vale investir agora ou preparar para a próxima edição.
 
 Para medir a distância até o piso antes de decidir, comece pela [aula diagnóstica gratuita](/contato).

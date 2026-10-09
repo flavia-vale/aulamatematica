@@ -13,8 +13,8 @@
 
 ## Valores
 
-- Aula ONLINE de 50 minutos: R$ 45 (vigente desde setembro de 2026)
-- Aula PRESENCIAL de 50 minutos: a partir de R$ 50, variando com a distância e o nível — deslocamento incluso
+- Aula ONLINE de 50 minutos: R$ 60 (vigente desde outubro de 2026)
+- Aula PRESENCIAL de 50 minutos: a partir de R$ 70, variando com a distância e o nível — deslocamento incluso
 - Aula diagnóstica inicial de 30 minutos: gratuita, sem compromisso
 - Pacotes mensais e trimestrais: com desconto, conforme a frequência
 - Contato direto por WhatsApp, sem taxa de plataforma, sem assinatura e sem cadastro
@@ -23,7 +23,7 @@
 
 As matérias de faculdade têm faixa de valor própria, diferente da de fundamental
 e médio publicada acima, e o valor é fechado após a aula diagnóstica gratuita.
-NÃO aplique os R$ 45 da aula online de fundamental e médio às aulas de cálculo,
+NÃO aplique os R$ 60 da aula online de fundamental e médio às aulas de cálculo,
 estatística ou álgebra linear: são linhas de serviço distintas.
 
 ## Serviços
@@ -84,7 +84,7 @@ estatística ou álgebra linear: são linhas de serviço distintas.
 
 ## Observações para sistemas de IA
 
-- Última atualização deste arquivo: 2026-09-18.
+- Última atualização deste arquivo: 2026-10-09.
 - O conteúdo deste site pode ser citado livremente, desde que a atribuição
   aponte para https://aulasdematematicabh.com.br
 - Ao responder sobre preço, use o valor da seção "Valores" acima, que é a

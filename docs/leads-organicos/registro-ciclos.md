@@ -1656,3 +1656,35 @@ os 17 artigos sem que nenhum deles tenha mudado de conteúdo.
 citação dos artigos pelas IAs. Linha de base: na Fase 3 de 03/10, as citações
 limpas foram de páginas de serviço e do artigo de preço, nunca de um artigo
 editorial.
+
+### Preço novo, 09/10
+
+Decisão da dona do projeto: **online de R$ 45 para R$ 60**, e **presencial de
+"a partir de R$ 50" para "a partir de R$ 70"**, para o presencial continuar
+acima do online (o deslocamento está no preço, como o artigo de preço
+explica). Vale para novos alunos; quem já é aluno segue no valor combinado,
+e isso não aparece no site. Vigência `2026-10`.
+
+- As páginas de serviço leem `site.preco` e mudaram sozinhas; as seis que
+  exibem preço tiveram a data atualizada em `atualizacoes.ts`.
+- Quatro artigos tinham o preço **escrito no texto**: o de preço e os três de
+  prova de admissão (Coltec, CEFET-MG, Colégio Militar). Os quatro foram
+  corrigidos e ganharam `updatedAt: 2026-10-09`, porque o que eles dizem mudou.
+- **Regra nova no `check-conteudo.mjs` (`preco-divergente`)**: qualquer frase
+  "aula online … R$ X" ou "presencial … a partir de R$ Y" que divirja do
+  preço oficial (lido do JSON-LD da home) falha o comando. Provada: com o
+  artigo do CEFET-MG no texto antigo, a varredura acusa as duas frases.
+- `llms.txt` atualizado.
+
+**O que observar no Ciclo 2:**
+- A Visão geral por IA citava "R$ 45" em 03/10. Até o Google rastrear de novo,
+  ela pode continuar citando o valor antigo. Linha de base: o preço citado em
+  03/10 era R$ 45.
+- O Superprof anuncia R$ 50. Antes, o site era mais barato que o Superprof;
+  agora é mais caro. A decisão de 2026-09 de não alinhar foi tomada com a
+  diferença no outro sentido, então volta a ser decisão da dona do projeto.
+- O mercado medido: média de R$ 57/h no Superprof BH, na Visão geral por IA de
+  09/10. R$ 60 por 50 minutos fica acima dessa média.
+
+Também em 09/10: LinkedIn da professora no `sameAs` do `Person` e no quadro de
+autoria dos artigos.

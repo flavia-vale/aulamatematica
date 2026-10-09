@@ -17,7 +17,9 @@ npm run indexnow   # avisa Bing/Yandex/DuckDuckGo (exige build antes)
 ou descrição faltarem ou se repetirem entre páginas, faltar canonical, a
 atribuição de lead quebrar (página sem WhatsApp, com duas frases diferentes,
 ou repetindo a frase de outra página), houver promessa de resultado, houver
-preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, o JSON-LD contiver
+preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, um texto citar
+preço da aula online ou do presencial diferente do oficial (lido do JSON-LD da
+home), o JSON-LD contiver
 `review` ou `aggregateRating`, uma página cair
 numa linha congelada, uma página indexável faltar no `llms.txt` ou nas
 pendências de indexação, uma URL entrar no sitemap **sem `lastmod`**, alguma página apontar para
@@ -98,7 +100,8 @@ e várias hipóteses já derrubadas por dado.
 - **O site passou a ser citado pelas IAs em 03/10:** 3 linhas limpas em 9
   (ChatGPT na marca; Visão geral por IA do Google em preço e em UFMG). O que
   as citações reproduzem é o que as páginas declaram em texto e `FAQPage`:
-  R$ 45 por 50 minutos, diagnóstica gratuita, "todo o Brasil", UFMG.
+  R$ 45 por 50 minutos (o preço da época; desde 09/10 é R$ 60), diagnóstica
+  gratuita, "todo o Brasil", UFMG.
 - **O perfil do Google não aparece no Maps nem no pacote local** (03/10, três
   consultas). Hipótese mais forte: a verificação está pendente (exige vídeo),
   e perfil não verificado não é exibido. Aparecem perfis sem endereço com 2
@@ -127,13 +130,15 @@ linha é o erro do `new Date()` em câmera lenta.
 ### Duas linhas de ensino (superior aberta em 2026-09-17)
 
 - **Fundamental e médio** — reforço escolar, recuperação e ENEM. Preço
-  publicado: R$ 45 online, a partir de R$ 50 presencial.
+  publicado: R$ 60 online, a partir de R$ 70 presencial (desde 09/10/2026;
+  antes, R$ 45 e R$ 50). Vale para novos alunos; quem já é aluno segue no
+  valor combinado, e isso não aparece no site.
 - **Ensino superior** — pré-cálculo, Cálculo I, II e III, Estatística e
   Probabilidade, e GAAL. **Nenhuma página de ensino superior exibe R$**, e o
   schema delas usa `serviceSchemaSuperior`, sem oferta com preço. O motivo:
   a Fase 4 mediu este segmento com os **três maiores tetos de lance de toda a
   tabela** (R$ 9,41 a R$ 10,02) e a Fase 3 encontrou professores de cálculo
-  cobrando R$ 80–140/h. Aplicar os R$ 45 aqui ancoraria a operação muito
+  cobrando R$ 80–140/h. Aplicar os R$ 60 aqui ancoraria a operação muito
   abaixo do mercado. **O valor de ensino superior ainda não foi definido pela
   dona do projeto** — enquanto `precoSuperior.valor` for nulo em
   `config/site.ts`, as páginas dizem que o valor sai após a diagnóstica.
@@ -148,10 +153,10 @@ linha é o erro do `new Date()` em câmera lenta.
 
 ### Duas modalidades, deliberadamente separadas
 
-- **Online — R$ 45/aula, todo o Brasil.** As páginas de aula online **não
+- **Online — R$ 60/aula, todo o Brasil.** As páginas de aula online **não
   mencionam BH**: a Fase 4 mediu que termos com "BH" têm volume zero, e o
   público online é nacional.
-- **Presencial — a partir de R$ 50, até 20 km do centro de BH**, na casa do
+- **Presencial — a partir de R$ 70, até 20 km do centro de BH**, na casa do
   aluno ou em local público. Cobre Contagem, Nova Lima, Sabará, Santa Luzia,
   Ribeirão das Neves e Vespasiano. Cidades além do raio (Lagoa Santa, Sete
   Lagoas, Divinópolis, Juiz de Fora) são atendidas **só online**.
@@ -173,9 +178,10 @@ constrói, e é um erro fácil de cometer.
 
 ## Ativos externos
 
-- **Superprof** — ligado via `sameAs`. Anuncia R$ 50; o site anuncia R$ 45.
-  A dona do projeto decidiu **não corrigir** a divergência. Não reabrir sem
-  motivo novo.
+- **Superprof** — ligado via `sameAs`. Anuncia R$ 50; o site anuncia R$ 60
+  desde 09/10 (antes, R$ 45). A dona do projeto decidiu **não corrigir** a
+  divergência em 2026-09; com a mudança de preço, a diferença inverteu de
+  lado e é decisão dela de novo.
 - **Google Business Profile** — existe como "Taciane S. — Professora
   Particular de Matemática". Falta a URL canônica em
   `site.social.googleBusiness`, e o nome diverge do resto ("Taciane

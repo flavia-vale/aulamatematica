@@ -2,10 +2,11 @@
 title: "Matemática do CEFET-MG: o que estudar para 2027"
 description: "A seleção do CEFET-MG para 2027 é fase única, com 2.174 vagas e um caderno só, de cinco matérias. O que isso muda no jeito de estudar matemática."
 publishedAt: 2026-09-18
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["cefet-mg", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "8 min"
-precoVigencia: "2026-09"
+precoVigencia: "2026-10"
 ---
 
 **Resposta direta:** a seleção do CEFET-MG para 2027 acontece em **fase única**, com um caderno único de questões objetivas de cinco matérias — português e literatura, matemática, ciências, geografia e história. As inscrições vão até **5 de outubro de 2026**, e a data prevista da prova é **29 de novembro**. São 2.174 vagas, distribuídas entre nove campi. A consequência prática para o estudo: aqui não existe uma prova de matemática isolada para treinar, existe **uma prova de resistência de três horas em que a matemática é uma parte** — e é isso que o plano de estudo precisa levar em conta.
@@ -70,6 +71,6 @@ Dá, se a base estiver razoável e o aluno fizer as listas entre as aulas. Se o 
 Funcionam as duas, desde que a aula seja individual e tenha lista entre uma e outra. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, a aula é online ao vivo.
 
 **Quanto custa?**
-Aula online de 50 minutos: R$ 45. Presencial em BH: a partir de R$ 50, deslocamento incluso. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita.
+Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, deslocamento incluso. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita.
 
 Para saber de quantas aulas o seu caso precisa antes de decidir qualquer coisa, a [aula diagnóstica gratuita](/contato) responde isso em 30 minutos.

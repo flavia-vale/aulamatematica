@@ -2,10 +2,11 @@
 title: "Quanto custa uma aula particular de matemática em 2026"
 description: "As faixas de preço praticadas hoje para aula particular de matemática, o que faz o valor subir ou descer, e como comparar propostas que parecem iguais."
 publishedAt: 2026-09-11
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["preço", "aula particular", "pais"]
 readingTime: "7 min"
-precoVigencia: "2026-09"
+precoVigencia: "2026-10"
 ---
 
 Preço de aula particular de matemática é uma das buscas mais frequentes das famílias, e uma das piores respondidas. A maior parte do que se encontra são faixas muito largas, sem dizer o que está dentro delas.
@@ -34,11 +35,11 @@ Duas coisas que esses números mostram e que surpreendem quem está pesquisando.
 
 Minhas aulas são de 50 minutos.
 
-- **Online, para todo o Brasil: R$ 45 por aula.**
-- **Presencial, em Belo Horizonte e num raio de 20 km: a partir de R$ 50**, variando com a distância e com o nível do aluno.
+- **Online, para todo o Brasil: R$ 60 por aula.**
+- **Presencial, em Belo Horizonte e num raio de 20 km: a partir de R$ 70**, variando com a distância e com o nível do aluno.
 - **Aula diagnóstica de 30 minutos: gratuita.**
 
-Esses valores valem desde setembro de 2026. Coloco a data de propósito: preço publicado sem data envelhece em silêncio e vira informação errada seis meses depois.
+Esses valores valem desde outubro de 2026. Coloco a data de propósito: preço publicado sem data envelhece em silêncio e vira informação errada seis meses depois.
 
 Se você me encontrar em alguma plataforma de aula particular com valor diferente, o valor que vale é o daqui.
 

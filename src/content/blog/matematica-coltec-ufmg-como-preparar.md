@@ -2,10 +2,11 @@
 title: "Matemática do Coltec 2027: o que cai e como preparar"
 description: "A prova do Coltec tem 10 questões de matemática com peso 2 e elimina quem zera. O que o edital cobra, e um plano para as semanas que faltam até 22 de novembro."
 publishedAt: 2026-09-18
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["coltec", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "9 min"
-precoVigencia: "2026-09"
+precoVigencia: "2026-10"
 ---
 
 **Resposta direta:** a prova do Coltec cobra a matemática do ensino fundamental inteiro em 10 questões, e elas têm **peso 2** — o mesmo de português e o dobro de ciências, história e geografia. Quem tira zero em matemática está eliminado, independentemente do resto. A prova de 2027 é em **22 de novembro de 2026**, e as inscrições vão até **8 de outubro**. Quem começa a se preparar agora tem cerca de nove semanas, o que dá para um plano sério — desde que ele comece pelo diagnóstico e não pelo conteúdo do 9º ano.
@@ -94,7 +95,7 @@ Dão, se a base estiver razoável e o aluno fizer as listas. Se o diagnóstico m
 As duas, desde que a aula seja individual e tenha lista entre uma e outra. Em Belo Horizonte e nas cidades num raio de 20 km eu vou até a casa do aluno; fora disso, a aula é online ao vivo.
 
 **Quanto custa a preparação?**
-A aula online de 50 minutos custa R$ 45. A presencial em BH sai a partir de R$ 50, com deslocamento incluso. Há pacote mensal com desconto para quem fecha a frequência semanal. A aula diagnóstica de 30 minutos é gratuita, e serve justamente para dizer de quantas aulas o seu caso precisa antes de você decidir.
+A aula online de 50 minutos custa R$ 60. A presencial em BH sai a partir de R$ 70, com deslocamento incluso. Há pacote mensal com desconto para quem fecha a frequência semanal. A aula diagnóstica de 30 minutos é gratuita, e serve justamente para dizer de quantas aulas o seu caso precisa antes de você decidir.
 
 **Vale a pena tentar Coltec e CEFET-MG no mesmo ano?**
 Vale, e é comum: as provas são em datas diferentes e o conteúdo se sobrepõe bastante, então a preparação é quase a mesma. As diferenças estão no formato e no peso de cada prova — e é isso que o plano de estudo precisa acomodar.

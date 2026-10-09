@@ -40,30 +40,36 @@ export const atualizacoes: Record<string, string> = {
   // relacionada de 16/09; em 18/09 ganhou os artigos das provas de admissão.
   // 03/10: título deixou de disputar "online" (fica com /aulas-de-matematica-online)
   // e passou a apresentar as duas modalidades. Item 7 do relatório do Ciclo 1.
-  '/': '2026-10-03',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/': '2026-10-09',
 
   // Criada em 17/09 para o termo sem qualificador. Em 18/09: a nota sobre o
   // DDD do WhatsApp e os artigos novos na leitura relacionada.
-  '/professor-particular-de-matematica': '2026-09-18',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/professor-particular-de-matematica': '2026-10-09',
 
   // Título e descrição mudaram em 06/09, no reposicionamento. Em 18/09 passou
   // a ser a porta de entrada dos três artigos de prova de admissão de BH.
-  '/aulas-particulares-matematica-bh': '2026-09-18',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/aulas-particulares-matematica-bh': '2026-10-09',
 
   // Título e H1 reescritos em 11/09 (a página que o Google não conhecia).
   // Bloco de leitura relacionada em 16/09.
-  '/aulas-de-matematica-online': '2026-09-16',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/aulas-de-matematica-online': '2026-10-09',
 
   // Bloco de leitura relacionada em 16/09; em 18/09 ganhou os artigos das
   // provas de admissão e o de atividades para casa.
   // 03/10: título, descrição e H1 passaram de "reforço escolar de matemática"
   // (posição 47) para "aulas de reforço de matemática" (posição 3,5 a 6).
   // Item 9 do relatório do Ciclo 1.
-  '/reforco-escolar-matematica': '2026-10-03',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/reforco-escolar-matematica': '2026-10-09',
 
   // Bloco de leitura relacionada em 16/09. Em 18/09 NÃO mudou: os artigos de
   // prova de admissão são de fundamental e não têm o que fazer aqui.
-  '/enem-matematica': '2026-09-16',
+  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  '/enem-matematica': '2026-10-09',
 
   // Linha de ensino superior aberta em 17/09. Em 18/09 as sete ganharam o
   // bloco de leitura relacionada com o artigo de Cálculo 1 — a primeira porta

@@ -42,6 +42,9 @@ export const site = {
   },
   social: {
     instagram: '',
+    /** LinkedIn da professora, fornecido pela dona do projeto em 09/10/2026.
+     *  Entra no `sameAs` do `Person` e no quadro de autoria dos artigos. */
+    linkedin: 'https://www.linkedin.com/in/taciane-andrade-619692339/',
     /**
      * Perfil no Superprof. É o único ativo da professora que as IAs
      * encontram e citam hoje (ver docs/leads-organicos/citacao-ia.md).
@@ -78,15 +81,19 @@ export const site = {
    */
   preco: {
     /** Aula online, ao vivo. Atendimento nacional. */
-    online: 45,
+    online: 60,
     /** Presencial na casa do aluno ou em local público, dentro do raio.
      *  Varia com deslocamento e nível — a página anuncia "a partir de". */
-    presencialMin: 50,
+    presencialMin: 70,
     presencialMax: 150,
     duracaoMin: 50,
     diagnosticoMin: 30,
-    vigencia: '2026-09',
-    vigenciaTexto: 'setembro de 2026',
+    // 09/10/2026: online de R$ 45 para R$ 60 e presencial de "a partir de
+    // R$ 50" para "a partir de R$ 70", decisão da dona do projeto. O
+    // presencial continua acima do online: o deslocamento está no preço.
+    // Vale para novos alunos; quem já é aluno segue no valor combinado.
+    vigencia: '2026-10',
+    vigenciaTexto: 'outubro de 2026',
   },
 
   /**
@@ -150,7 +157,7 @@ export const site = {
  * O que se mede aqui é conversa por impressão, não volume.
  *
  * `preco` fica NULO de propósito: o valor de ensino superior ainda não foi
- * definido pela dona do projeto, e a faixa de fundamental e médio (R$ 45)
+ * definido pela dona do projeto, e a faixa de fundamental e médio (R$ 60)
  * ancoraria a operação muito abaixo do mercado desta linha. Enquanto for
  * nulo, as páginas não exibem R$ e o schema não declara oferta com preço.
  */

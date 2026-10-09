@@ -1712,3 +1712,27 @@ e os dados brutos que o sustentam em [dados-2026-10-09/](dados-2026-10-09/).
   50/mês. Reavaliar em março de 2027.
 - O Trends de 09/10 incluiu ENCCEJA na comparação e achatou os outros termos em
   zero. A sazonalidade de `recuperação de matemática` segue sem medição.
+
+### Frente B entregue, 09/10 — e 5 alunos novos
+
+A dona do projeto informou em 09/10 que **chegaram 5 alunos novos**. A origem de
+cada um não foi registrada; é exatamente o que a planilha de leads do plano
+(seção 6) passa a responder. Sem ela, não dá para dizer se vieram do site, da
+ficha do Google, do Superprof ou de indicação.
+
+**Entregue (frente B):** três artigos novos (revisão do ENEM 2026, GAAL na
+UFMG, álgebra do 9º ano) e quatro atualizações (recuperação, Cálculo 1, quanto
+custa, CEFET-MG). Colégio Militar fica para 19/10, depois da prova de 18/10.
+Regra nova `pauta-sem-ancora` no `check-conteudo.mjs`.
+
+**Fatos conferidos em fonte primária para estes textos:** LDB art. 24, V, e
+(Planalto); ENEM 2026, 2º dia de 5 horas, 13h30–18h30 (Inep, 08/10); ementa
+oficial da MAT038 na UFMG, que é Rⁿ e não espaço vetorial geral, e não inclui
+cônicas nem transformações lineares (IGC/UFMG); habilidades EF09MA06 a 09 da
+BNCC; estudo da UFG sobre reprovação em Cálculo 1A.
+
+**Divergência a anotar:** o resumo de busca da página do Superprof em BH diz
+que **99%** dos professores oferecem a primeira aula grátis; o `CLAUDE.md`
+registra **97%** (medição anterior). Não confirmado direto na página, que
+bloqueia leitura automática. A conclusão não muda: aula grátis não é
+diferencial.

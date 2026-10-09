@@ -7,6 +7,15 @@ author: "Taciane Andrade"
 tags: ["preço", "aula particular", "pais"]
 readingTime: "7 min"
 precoVigencia: "2026-10"
+faq:
+  - q: "Qual o valor de uma aula particular de matemática?"
+    a: "Para ensino fundamental e médio, a faixa mais comum vai de R$ 40 a R$ 110 por hora, conforme a formação, a reputação e se a aula é presencial. Ensino superior custa mais, de R$ 80 a R$ 140. Aqui, a aula online de 50 minutos custa R$ 60 e a presencial em Belo Horizonte começa em R$ 70, valores vigentes desde outubro de 2026."
+  - q: "Quanto custa 1 hora de aula particular de matemática?"
+    a: "Depende de quanto dura a aula de cada professor: muitos dão aulas de 50 minutos e cobram por aula, não por hora. Para comparar, converta para o mesmo tempo e confira o que está incluído, como material, correção de exercício entre as aulas e remarcação."
+  - q: "Aula online é mais barata que presencial?"
+    a: "Em geral, sim. Sem deslocamento, o mesmo professor costuma cobrar menos pela mesma aula. Aqui, a online custa R$ 60 e a presencial começa em R$ 70, com o deslocamento incluído."
+  - q: "Quantas aulas são necessárias?"
+    a: "Depende do tamanho da lacuna. Para apoio antes de uma prova, de 2 a 4 aulas. Para recuperar um bimestre, de 6 a 10. Para lacuna acumulada de anos anteriores, acompanhamento semanal por um semestre. A aula diagnóstica gratuita serve para dizer em qual dos três casos o aluno está."
 ---
 
 Preço de aula particular de matemática é uma das buscas mais frequentes das famílias, e uma das piores respondidas. A maior parte do que se encontra são faixas muito largas, sem dizer o que está dentro delas.
@@ -25,6 +34,8 @@ Olhando anúncios de professores particulares de matemática para ensino fundame
 | Aula presencial em domicílio | R$ 50 a R$ 150 | o deslocamento entra no preço |
 | Matemática de ensino superior | R$ 80 a R$ 140 | cálculo, álgebra linear, outra linha |
 
+Para Belo Horizonte, a [página de aulas de matemática do Superprof](https://www.superprof.com.br/aulas/matematica/belo-horizonte-minas-gerais/) informava, em 9 de outubro de 2026, uma média de R$ 57 por hora, com anúncios a partir de R$ 40.
+
 Duas coisas que esses números mostram e que surpreendem quem está pesquisando.
 
 **A formação move menos o preço do que a reputação.** Professores com a mesma formação aparecem em faixas muito distantes, e o que os separa é volume de avaliação pública, não diploma.
@@ -42,6 +53,12 @@ Minhas aulas são de 50 minutos.
 Esses valores valem desde outubro de 2026. Coloco a data de propósito: preço publicado sem data envelhece em silêncio e vira informação errada seis meses depois.
 
 Se você me encontrar em alguma plataforma de aula particular com valor diferente, o valor que vale é o daqui.
+
+Aqui a família fala comigo direto pelo WhatsApp, sem taxa, assinatura ou cadastro em plataforma, e isso não é detalhe:
+
+> "Eu prefiro falar direto com a família porque a educação é um pacto de confiança a três pontas: aluno, escola e casa. Quando a família está alinhada e entende o processo, a cobrança cede espaço ao apoio real, e o peso da escola diminui muito."
+>
+> — Taciane Andrade, professora particular de matemática
 
 ## O que faz o preço subir
 

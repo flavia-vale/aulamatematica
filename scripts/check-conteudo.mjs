@@ -197,6 +197,29 @@ else
         erro('preco-divergente', p.rota, `"${m[0]}" — o presencial oficial começa em R$ ${precoOficial.presencial}`);
   }
 
+// ---------- R4c · pauta nova sem âncora ----------
+// Decidido em 09/10/2026, a partir do Search Console de 3 meses: os 4 artigos
+// com escola, prova ou data (CEFET-MG, Coltec, Colégio Militar, Cálculo 1 UFMG)
+// têm TODOS os 13 cliques do blog; os 11 genéricos somam 452 impressões e zero
+// clique, e o de `atividades de matemática` (50 mil buscas/mês) não teve nem
+// impressão. Daí a regra: artigo publicado a partir de 09/10 precisa ter no
+// título uma prova, uma instituição, um ano escolar ou um ano-calendário.
+// Artigos anteriores ficam de fora — a regra vale para pauta nova, não
+// reescreve o que já existe. Ver plano-maquina-de-alunos-2026-10-09.md.
+const REGRA_PAUTA_DESDE = '2026-10-09';
+const ANCORA =
+  /\b20\d\d\b|\d+º\s*ano|\bENEM\b|ENCCEJA|UFMG|PUC|CEFET|Coltec|Colégio Militar|\bGAAL\b|Cálculo|recupera|vestibular|edital|prova final/i;
+for (const p of indexaveis) {
+  if (!p.rota.startsWith('/blog/')) continue;
+  const publicado = pega(p.html, /"@type":"BlogPosting"[^]*?"datePublished":"(\d{4}-\d{2}-\d{2})/);
+  if (publicado && publicado >= REGRA_PAUTA_DESDE && !ANCORA.test(p.titulo))
+    erro(
+      'pauta-sem-ancora',
+      p.rota,
+      `artigo de ${publicado} sem prova, instituição, ano escolar ou data no título — pauta genérica não gerou clique (Search Console, 09/10)`,
+    );
+}
+
 // ---------- R5 · avaliação inventada no JSON-LD ----------
 // Três vezes em 2026-09-06 essa marcação tentou entrar: no pedido de
 // depoimentos fabricados, num `nota ?? 5` que eu mesmo escrevi, e como

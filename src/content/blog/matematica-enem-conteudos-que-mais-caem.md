@@ -2,6 +2,7 @@
 title: "Matemática no ENEM: os 10 conteúdos que mais caem"
 description: "Os conteúdos de matemática com maior frequência histórica na prova do ENEM, em ordem, e quanto tempo dedicar a cada um quando falta pouco para a prova."
 publishedAt: 2026-09-11
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["enem", "ensino médio", "estudo"]
 readingTime: "9 min"
@@ -85,6 +86,8 @@ Se faltam oito semanas, uma distribuição que funciona:
 | 10% | tópico 10 e o que mais aparecer nos simulados |
 
 E uma advertência sobre a base. Todos os dez itens acima assumem operação com fração, regra de sinais e proporcionalidade funcionando. Se esses três estiverem frágeis, estudar os dez tópicos rende pouco, porque o gargalo não está neles. Os testes de um minuto para checar isso estão em [as seis lacunas do fundamental](/blog/lacunas-de-matematica-do-fundamental).
+
+Para a reta final do ENEM 2026, com a prova de matemática em 15 de novembro, o plano semana a semana está em [revisão de matemática para o ENEM 2026: as 5 semanas até 15/11](/blog/revisao-matematica-enem-2026-ultimas-semanas).
 
 ## Três coisas que valem mais que conteúdo novo
 

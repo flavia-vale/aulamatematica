@@ -2,12 +2,42 @@
 title: "Cálculo 1 na UFMG e na PUC Minas: 5 razões da reprovação"
 description: "Por que Cálculo 1 reprova tanto nos cursos de exatas, o que quase sempre é a causa real, e o que fazer quando a prova está perto e o semestre já andou."
 publishedAt: 2026-09-18
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["cálculo", "ensino superior", "ufmg", "belo horizonte"]
-readingTime: "9 min"
+readingTime: "10 min"
+faq:
+  - q: "Qual a taxa de reprovação de Cálculo 1?"
+    a: "Não existe um número nacional oficial. Os estudos publicados são de uma universidade de cada vez: na UFG, um estudo de 2010 a 2016 encontrou pico de 79% de reprovados e nunca menos de 56%; na USP, a média entre 1990 e 1995 foi de 43,8%. Os índices variam muito entre turmas e anos, mas todos colocam Cálculo 1 entre as disciplinas que mais reprovam no primeiro ano de exatas e engenharia."
+  - q: "Cálculo 1 é muito difícil?"
+    a: "O conteúdo novo, limite e derivada, não costuma ser o problema. O que derruba é a álgebra do ensino médio que não ficou automática, encontrada num ritmo que não espera. Quem chega com a base firme acha a disciplina trabalhosa, mas não impossível."
+  - q: "Qual é mais difícil, Cálculo 1 ou Cálculo 2?"
+    a: "Depende de onde está a sua lacuna. Cálculo 1 cobra mais a base do ensino médio; Cálculo 2 cobra técnicas de integração e séries, que pedem muito treino. Em geral, quem passou em Cálculo 1 entendendo, e não decorando, sente Cálculo 2 como mais trabalhoso, mas menos assustador."
+  - q: "Reprovei e vou repetir. Como estudar diferente?"
+    a: "Começando pelo diagnóstico, não pelo início da ementa. Repetir a disciplina estudando do mesmo jeito é o caminho mais curto para repetir o resultado. O que muda o desfecho é descobrir qual das cinco causas deste artigo é a sua, porque são consertos diferentes."
+  - q: "Preciso de pré-cálculo antes ou dá para fazer em paralelo?"
+    a: "Em paralelo funciona, e é o mais comum. Nas primeiras semanas a aula cobre a base que a prova da semana vai exigir, e depois passa a acompanhar a disciplina. Esperar um semestre para fechar a base primeiro raramente é necessário."
+  - q: "Você atende presencialmente em BH?"
+    a: "Sim, na casa do aluno ou em local público, em Belo Horizonte e nas cidades num raio de 20 km. Fora do raio, a aula é online ao vivo, e para ensino superior o online funciona especialmente bem: a conta cabe na tela compartilhada e a gravação da resolução fica com o aluno."
+  - q: "Você acompanha a lista e o material do meu professor?"
+    a: "Sim, e é assim que eu prefiro trabalhar. Cada departamento cobra de um jeito, e o formato pesa tanto quanto o conteúdo."
 ---
 
 **Resposta direta:** Cálculo 1 é a disciplina que mais reprova nos cursos de exatas, engenharia, computação e economia, e em quase todos os casos que eu vejo a causa não é o cálculo. É álgebra do ensino médio que nunca ficou automática, encontrada num ritmo que não espera. O aluno estuda, entende a aula, e trava na lista — e conclui que não leva jeito para a matéria, quando o que está acontecendo é outra coisa.
+
+> "No Cálculo e em GAAL, o aluno costuma travar na hora de passar do visual geométrico para a linguagem algébrica e formal. Ele até entende a intuição do limite ou do vetor no espaço, mas se perde na hora de montar a demonstração."
+>
+> — Taciane Andrade, professora particular de matemática
+
+## Quanto Cálculo 1 reprova
+
+Não existe um número nacional oficial: os estudos publicados olham uma universidade de cada vez. Mas os que existem apontam na mesma direção.
+
+- Na **Universidade Federal de Goiás**, um estudo que acompanhou Cálculo 1A de 2010 a 2016 encontrou um pico de **79% de reprovados**, e a reprovação "se manteve em nível elevado, sempre acima dos 56%" ([Rosa, Alvarenga e Santos, 2019](https://periodicos.sbu.unicamp.br/ojs/index.php/riesup/article/download/8653091/19035/46882)).
+- O mesmo estudo cita levantamentos anteriores: média de **43,8%** de reprovação em Cálculo na USP entre 1990 e 1995, e de **45% a 95%** em universidades do Rio de Janeiro.
+- Na **UFRJ**, a diretora da Escola Politécnica disse em 2023 que "não pode ser normal reprovar 70% da turma; e pior, sistematicamente" ([Gazeta do Povo](https://www.gazetadopovo.com.br/vida-e-cidadania/ufrj-mudar-curriculo-calculo-evasao-cotistas/)).
+
+Os números variam muito entre turmas e anos, e não dizem nada sobre um aluno específico. O que dizem é que reprovar em Cálculo 1 é comum, e que o motivo quase nunca é falta de capacidade.
 
 Este texto separa as cinco causas que eu encontro na prática, porque cada uma pede um trabalho diferente. Tratar a errada é o jeito mais comum de estudar muito e não sair do lugar.
 
@@ -63,20 +93,8 @@ Se o semestre já está perdido pela frequência ou pelas notas, o trabalho hone
 
 A primeira conversa é uma aula diagnóstica de 30 minutos, gratuita, e nela a pergunta é só uma: **onde a conta quebra?** A partir dessa resposta a gente decide se o trabalho é de base, de conceito, de modelagem ou de formato de prova — e quantos encontros isso pede. As aulas de ensino superior têm faixa de valor própria, diferente da de fundamental e médio, e ela é fechada depois da diagnóstica, quando já se sabe do que o caso precisa.
 
+Cálculo 1 quase sempre é cursado junto com GAAL, que reprova por outros motivos. Escrevi sobre ela em [GAAL na UFMG: os 4 pontos em que a disciplina reprova](/blog/gaal-ufmg-por-que-reprova-como-estudar).
+
 As páginas com a ementa completa e os pontos de travamento de cada matéria estão aqui: [Cálculo I](/aula-particular-de-calculo-1), [Cálculo II](/aula-particular-de-calculo-2), [Cálculo III](/aula-particular-de-calculo-3), [Pré-cálculo](/aula-particular-de-pre-calculo), [GAAL](/aula-particular-de-geometria-analitica-e-algebra-linear) e [Estatística e Probabilidade](/aula-particular-de-estatistica-e-probabilidade).
-
-## Perguntas frequentes
-
-**Reprovei e vou repetir. Como estudar diferente?**
-Começando pelo diagnóstico, não pelo início da ementa. Repetir a disciplina estudando do mesmo jeito é o caminho mais curto para repetir o resultado. O que muda o desfecho é descobrir qual das cinco causas acima é a sua — porque são consertos diferentes.
-
-**Preciso de pré-cálculo antes ou dá para fazer em paralelo?**
-Em paralelo funciona, e é o mais comum. Nas primeiras semanas a aula cobre a base que a prova da semana vai exigir, e depois passa a acompanhar a disciplina. Esperar um semestre para "fechar a base primeiro" raramente é necessário.
-
-**Você atende presencialmente em BH?**
-Sim, na casa do aluno ou em local público, em Belo Horizonte e nas cidades num raio de 20 km. Fora do raio, a aula é online ao vivo, e para ensino superior o online funciona especialmente bem: a conta cabe na tela compartilhada e a gravação da resolução fica com o aluno.
-
-**Você acompanha a lista e o material do meu professor?**
-Sim, e é assim que eu prefiro trabalhar. Cada departamento cobra de um jeito, e o formato pesa tanto quanto o conteúdo.
 
 Para localizar onde a conta quebra antes de decidir qualquer coisa, comece pela [aula diagnóstica gratuita](/contato).

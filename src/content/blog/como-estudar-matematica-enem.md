@@ -2,6 +2,7 @@
 title: "Como estudar matemática para o ENEM em 6 meses (plano realista)"
 description: "Cronograma de 6 meses para quem precisa subir a nota de matemática no ENEM. Análise dos temas que mais caem, ordem de prioridade e quantas horas por semana dedicar."
 publishedAt: 2026-05-18
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["ENEM", "vestibular", "ensino médio"]
 readingTime: "11 min"
@@ -123,6 +124,8 @@ Aluno que faz 4 simulados completos no último mês ganha em média 30 a 50 pont
 Se você tem 3 meses, faça os 7 temas frequentes (mês 2 a 5 do plano acima), pulando o mês 1 e 6. É menos ideal — mas funciona pra subir de 500 pra 600.
 
 Se você tem 2 meses, foco em razão/proporção/porcentagem + funções básicas + simulados. Você não vai cobrir tudo. Mas vai acertar mais do que se tentasse cobrir tudo.
+
+Se faltam poucas semanas, o plano é outro: o que fazer na reta final do ENEM 2026, semana a semana, está em [revisão de matemática para o ENEM 2026: as 5 semanas até 15/11](/blog/revisao-matematica-enem-2026-ultimas-semanas).
 
 ## Última coisa
 

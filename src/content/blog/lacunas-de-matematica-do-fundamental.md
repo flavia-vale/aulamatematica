@@ -2,6 +2,7 @@
 title: "As 6 lacunas do fundamental que travam o aluno no ensino médio"
 description: "Fração, sinais, proporção, potência, equação e leitura de enunciado. As seis portas do fundamental que, quando ficam abertas, reaparecem como dificuldade no médio."
 publishedAt: 2026-09-11
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["ensino fundamental", "ensino médio", "diagnóstico"]
 readingTime: "10 min"
@@ -62,6 +63,8 @@ Estas são as seis lacunas que eu mais encontro, na ordem em que costumam aparec
 **Por que trava tudo depois:** a passagem da aritmética para a álgebra é a maior mudança conceitual do ensino básico. Antes dela, letra não existia; depois dela, quase tudo tem letra. Quem atravessa decorando procedimentos ("passa para o outro lado trocando o sinal") consegue resolver equações simples e para na primeira que não se parece com as do exemplo.
 
 **O sintoma clássico:** ele resolve a equação do livro e trava quando a mesma equação aparece dentro de um problema de função.
+
+Essa lacuna explode no 9º ano, quando chegam produtos notáveis, fatoração e equação do 2º grau. O que se estuda nesse ano e um teste de cinco perguntas estão em [matemática do 9º ano: a álgebra que trava o aluno no ensino médio](/blog/matematica-9-ano-algebra-onde-o-aluno-trava).
 
 ## 6. Leitura de enunciado
 

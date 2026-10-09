@@ -2,14 +2,28 @@
 title: "Recuperação de matemática: o que dá para fazer nas últimas 8 semanas"
 description: "Um plano realista para o aluno que entrou em recuperação de matemática no fim do ano, com o que priorizar quando o tempo é curto e o conteúdo é longo."
 publishedAt: 2026-09-11
+updatedAt: 2026-10-09
 author: "Taciane Andrade"
 tags: ["recuperação", "pais", "ensino médio"]
-readingTime: "8 min"
+readingTime: "10 min"
+faq:
+  - q: "Quando o aluno tem direito à recuperação?"
+    a: "A Lei de Diretrizes e Bases da Educação (LDB, Lei 9.394/1996, art. 24, V, e) determina a obrigatoriedade de estudos de recuperação para os casos de baixo rendimento escolar, de preferência paralelos ao período letivo. Quando, como e com que nota mínima isso acontece é definido pelo regimento de cada escola ou rede, e é nele que a família deve conferir."
+  - q: "Qual a nota da recuperação?"
+    a: "Depende da escola. Há regimentos em que a nota da recuperação substitui a nota anterior se for maior, outros em que entra na média com a nota antiga, e outros com um teto para a nota recuperada. Pergunte à escola as três coisas: a média exigida, o peso da prova de recuperação e se ela substitui ou se soma à nota anterior."
+  - q: "É obrigatório fazer a recuperação?"
+    a: "A escola é obrigada a oferecer. O aluno que não faz fica com a nota que tinha, o que, no caso da recuperação final, normalmente significa reprovar na disciplina. Por isso vale fazer mesmo quando a conta parece difícil."
+  - q: "Qual a diferença entre recuperação paralela e recuperação final?"
+    a: "A paralela acontece durante o ano, bimestre a bimestre, para recuperar uma nota específica. A final acontece depois do último bimestre, para quem não atingiu a média do ano, e costuma cobrar o conteúdo do ano inteiro ou de vários bimestres. O plano de estudo é diferente: a paralela pede foco num assunto, a final pede escolher os assuntos de maior peso."
 ---
 
 Setembro e outubro são os meses em que as contas do ano letivo aparecem. A média do terceiro bimestre sai, a família soma o que falta, e fica claro que matemática vai exigir alguma coisa diferente nas últimas semanas.
 
 Este texto é sobre o que cabe nesse prazo. Porque cabe menos do que se gostaria, e escolher bem o que fazer vale mais do que estudar muito.
+
+> "Para quem vai para a recuperação, eu sempre digo: 'A nota vermelha não define quem você é, ela é apenas um aviso de que precisamos ajustar o radar. O trimestre foi difícil, mas a folha agora está em branco e o jogo continua'."
+>
+> — Taciane Andrade, professora particular de matemática
 
 ## Primeiro: descubra de quanto é a conta
 
@@ -19,6 +33,8 @@ Antes de qualquer plano, pegue os números reais com a escola.
 - Quantas avaliações são, e valendo quanto cada uma?
 - A recuperação é por bimestre ou do ano inteiro?
 - A prova de recuperação substitui a média ou entra na média?
+
+Vale saber que a recuperação é um direito, não um favor da escola. A [Lei de Diretrizes e Bases da Educação](https://www.planalto.gov.br/ccivil_03/leis/L9394compilado.htm), no art. 24, determina a "obrigatoriedade de estudos de recuperação, de preferência paralelos ao período letivo, para os casos de baixo rendimento escolar, a serem disciplinados pelas instituições de ensino em seus regimentos". O como, o quando e a nota ficam no regimento da escola, e é ele que responde as perguntas acima.
 
 Isso muda tudo. Precisar de 6 em duas provas é um problema. Precisar de 9 na última é outro, e às vezes a resposta honesta é preparar a recuperação final em vez de gastar energia numa prova cujo peso não resolve.
 
@@ -41,6 +57,23 @@ Tentar revisar o ano inteiro em oito semanas produz um verniz sobre tudo e domí
 Peça ao professor da escola, ou olhe nas provas anteriores, quais são os três ou quatro tópicos com maior peso. Em quase toda série existe um conteúdo que sozinho vale mais que a soma dos outros.
 
 Concentre 70 por cento do tempo nesses. Aceite conscientemente que alguns tópicos não serão estudados. Essa escolha é a diferença entre acertar as questões que valem mais e distribuir erro por todas.
+
+## O que costuma pesar na recuperação de cada ano
+
+Cada escola monta a própria prova, então a lista abaixo não substitui o que o professor indicar. Ela mostra **o assunto que mais costuma derrubar a nota em cada ano**, e por onde eu começo quando o aluno chega sem saber o que vai cair.
+
+| Ano | O que mais pesa | Por onde começar |
+|---|---|---|
+| 4º e 5º ano | as quatro operações, problemas em texto e as primeiras frações | conferir tabuada e divisão antes de qualquer outra coisa |
+| 6º ano | frações, números decimais e porcentagem simples | fração equivalente e comparação de frações |
+| 7º ano | números negativos, equação do 1º grau e razão e proporção | regra de sinais, que reaparece em todo o resto |
+| 8º ano | potências, expressões algébricas e sistemas de equações | a distributiva, com letras e com números |
+| 9º ano | produtos notáveis, fatoração, equação do 2º grau e função | o "teste com número", explicado em [a álgebra do 9º ano](/blog/matematica-9-ano-algebra-onde-o-aluno-trava) |
+| 1º ano do médio | função afim e quadrática, exponencial e logaritmo | leitura de gráfico e a ligação entre fórmula e gráfico |
+| 2º ano do médio | trigonometria, progressões e geometria espacial | o ciclo trigonométrico, antes das fórmulas |
+| 3º ano do médio | geometria analítica, estatística e probabilidade, e a revisão do ENEM | os conteúdos que mais caem, em [revisão para o ENEM 2026](/blog/revisao-matematica-enem-2026-ultimas-semanas) |
+
+Uma regra vale para todos os anos: quando o erro está sempre no sinal ou na fração, o problema é de um ano anterior, e estudar o conteúdo do ano atual não vai resolver.
 
 ## Quarto: mude a proporção entre ler e resolver
 

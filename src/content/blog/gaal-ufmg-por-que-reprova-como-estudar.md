@@ -3,6 +3,8 @@ title: "GAAL na UFMG: os 4 pontos em que Geometria Analítica e Álgebra Linear 
 description: "Onde o aluno de GAAL costuma travar, por que a disciplina fica difícil de repente no meio do semestre, e como estudar Geometria Analítica e Álgebra Linear com a prova perto."
 publishedAt: 2026-10-09
 author: "Taciane Andrade"
+image: "/blog/gaal-ufmg-por-que-reprova-como-estudar.webp"
+imageAlt: "Folha quadriculada com vetores e um plano desenhados a lápis, um deles em verde, ao lado de um livro de álgebra linear numa mesa de biblioteca."
 tags: ["gaal", "álgebra linear", "ensino superior", "ufmg"]
 readingTime: "9 min"
 faq:

@@ -3,6 +3,8 @@ title: "Revisão de matemática para o ENEM 2026: o que fazer nas 5 semanas até
 description: "A prova de matemática do ENEM 2026 é no domingo, 15 de novembro. Um plano semana a semana para as últimas 5 semanas, com o que revisar e o que deixar de lado."
 publishedAt: 2026-10-09
 author: "Taciane Andrade"
+image: "/blog/revisao-matematica-enem-2026-ultimas-semanas.webp"
+imageAlt: "Mesa de estudo com caderno de erros, prova impressa, caneta preta e um calendário com a data da prova circulada em verde."
 tags: ["enem", "enem 2026", "revisão", "ensino médio"]
 readingTime: "9 min"
 precoVigencia: "2026-10"

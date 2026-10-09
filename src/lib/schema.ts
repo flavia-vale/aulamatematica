@@ -154,10 +154,26 @@ const MANTENEDOR_ID = `${site.url}/#flavia`;
 export const mantenedorSchema = {
   '@type': 'Person',
   '@id': MANTENEDOR_ID,
-  name: 'Flávia Vale',
+  name: site.mantenedor.name,
   url: 'https://espelhagrupos.com.br',
+  // O LinkedIn foi fornecido pela própria Flávia em 09/10/2026: é o perfil
+  // dela, com o nome dela, o que satisfaz a condição de `sameAs` acima.
+  sameAs: [site.mantenedor.linkedin],
   description:
     'Fundadora do Espelha Grupos. Mantém este site: conteúdo, tecnologia e publicação. Não dá as aulas.',
+};
+
+/**
+ * `@id` da pessoa que assina um artigo, pelo nome do frontmatter.
+ *
+ * O `BlogPosting` apontava sempre para a professora. Se um artigo fosse
+ * assinado por outra pessoa, o schema afirmaria uma autoria que a página não
+ * mostra. Nome desconhecido vira um `Person` só com nome, sem inventar ligação.
+ */
+export const pessoaPorNome = (nome: string) => {
+  if (nome === site.teacher.name) return { '@id': PERSON_ID };
+  if (nome === site.mantenedor.name) return { '@id': MANTENEDOR_ID };
+  return { '@type': 'Person', name: nome };
 };
 
 export const websiteSchema = {

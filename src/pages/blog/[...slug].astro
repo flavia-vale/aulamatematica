@@ -2,8 +2,16 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CTAButtons from '../../components/CTAButtons.astro';
+import FAQ from '../../components/FAQ.astro';
 import { site } from '../../config/site';
-import { graph, personSchema, localBusinessSchema, breadcrumbSchema } from '../../lib/schema';
+import {
+  graph,
+  personSchema,
+  localBusinessSchema,
+  breadcrumbSchema,
+  faqSchema,
+  pessoaPorNome,
+} from '../../lib/schema';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -11,21 +19,34 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 const path = `/blog/${post.id}`;
 const url = `${site.url}${path}`;
 
 const fmtDate = (d: Date) =>
-  d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+  d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+const publicadoEm = post.data.publishedAt;
+const atualizadoEm = post.data.updatedAt ?? post.data.publishedAt;
+const foiAtualizado = atualizadoEm.getTime() !== publicadoEm.getTime();
+
+/** Sumário só em texto longo: com menos de quatro seções ele é ruído. */
+const secoes = headings.filter((h) => h.depth === 2);
+const mostraSumario = secoes.length >= 4;
+
+const autoraEProfessora = post.data.author === site.teacher.name;
+const imagemUrl = post.data.image ? `${site.url}${post.data.image}` : undefined;
 
 const articleSchema = {
   '@type': 'BlogPosting',
   headline: post.data.title,
   description: post.data.description,
-  datePublished: post.data.publishedAt.toISOString(),
-  dateModified: (post.data.updatedAt ?? post.data.publishedAt).toISOString(),
-  author: { '@id': `${site.url}/#taciane` },
+  datePublished: publicadoEm.toISOString(),
+  dateModified: atualizadoEm.toISOString(),
+  author: pessoaPorNome(post.data.author),
+  editor: pessoaPorNome(post.data.editor),
+  ...(imagemUrl && { image: imagemUrl }),
   publisher: { '@id': `${site.url}/#business` },
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
   keywords: post.data.tags.join(', '),
@@ -36,6 +57,7 @@ const schema = graph(
   personSchema,
   localBusinessSchema,
   articleSchema,
+  ...(post.data.faq.length > 0 ? [faqSchema(post.data.faq)] : []),
   breadcrumbSchema([
     { name: 'Início', url: site.url },
     { name: 'Blog', url: `${site.url}/blog` },
@@ -49,7 +71,9 @@ const schema = graph(
   description={post.data.description}
   path={path}
   schema={schema}
-  atualizadoEm={(post.data.updatedAt ?? post.data.publishedAt).toISOString().slice(0, 10)}
+  atualizadoEm={atualizadoEm.toISOString().slice(0, 10)}
+  image={post.data.image}
+  ogType="article"
 >
   <article data-preco-vigencia={post.data.precoVigencia}>
     <header class="relative overflow-hidden border-b border-stone-200">
@@ -58,7 +82,17 @@ const schema = graph(
         <div class="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-widest text-stone-500">
           <a href="/blog" class="hover:text-stone-900">Blog</a>
           <span class="text-stone-300" aria-hidden="true">·</span>
-          <time datetime={post.data.publishedAt.toISOString()}>{fmtDate(post.data.publishedAt)}</time>
+          <span>
+            Atualizado em <time datetime={atualizadoEm.toISOString().slice(0, 10)}>{fmtDate(atualizadoEm)}</time>
+          </span>
+          {foiAtualizado && (
+            <>
+              <span class="text-stone-300" aria-hidden="true">·</span>
+              <span>
+                Publicado em <time datetime={publicadoEm.toISOString().slice(0, 10)}>{fmtDate(publicadoEm)}</time>
+              </span>
+            </>
+          )}
           {post.data.readingTime && (
             <>
               <span class="text-stone-300" aria-hidden="true">·</span>
@@ -73,12 +107,36 @@ const schema = graph(
           {post.data.description}
         </p>
         <p class="mt-8 text-sm text-stone-500">
-          Por <span class="font-medium text-stone-700">{post.data.author}</span>
+          Por <a href="#autoria" class="font-medium text-stone-700 hover:text-stone-900">{post.data.author}</a>
+          {autoraEProfessora && <span>, {site.teacher.credentials.charAt(0).toLowerCase() + site.teacher.credentials.slice(1)}</span>}
         </p>
       </div>
     </header>
 
+    {post.data.image && (
+      <figure class="mx-auto max-w-4xl px-4 pt-10 sm:px-6">
+        <img
+          src={post.data.image}
+          alt={post.data.imageAlt}
+          class="aspect-[16/9] w-full rounded-2xl border border-stone-200 object-cover"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+    )}
+
     <div class="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+      {mostraSumario && (
+        <nav aria-labelledby="sumario-titulo" class="mb-12 rounded-2xl border border-stone-200 bg-stone-100/60 p-6">
+          <p id="sumario-titulo" class="text-xs font-semibold uppercase tracking-widest text-stone-500">Neste artigo</p>
+          <ol class="mt-4 space-y-2 text-sm">
+            {secoes.map((h) => (
+              <li><a href={`#${h.slug}`} class="text-stone-700 underline-offset-4 hover:text-stone-900 hover:underline">{h.text}</a></li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
       <div class="prose-article text-stone-800">
         <Content />
       </div>
@@ -90,8 +148,56 @@ const schema = graph(
           ))}
         </div>
       )}
+
+      {/*
+        Quadro de autoria. A bio é só da professora; a edição fica numa linha
+        separada, fora do quadro — misturar as duas pessoas na mesma bio
+        derruba a confiança que a página constrói (CLAUDE.md).
+      */}
+      <aside id="autoria" class="mt-14 border-t border-stone-200 pt-10" aria-label="Sobre a autoria">
+        {autoraEProfessora ? (
+          <div class="flex flex-col gap-6 sm:flex-row sm:items-start">
+            {site.teacher.foto && (
+              <img
+                src={site.teacher.foto}
+                alt={site.teacher.fotoAlt}
+                width="96"
+                height="96"
+                loading="lazy"
+                class="h-24 w-24 shrink-0 rounded-full border border-stone-200 object-cover"
+              />
+            )}
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Quem escreveu</p>
+              <p class="mt-2 font-serif text-xl font-medium text-stone-900">{site.teacher.name}</p>
+              <p class="text-sm text-stone-600">{site.teacher.role} · {site.teacher.credentials}</p>
+              <p class="mt-3 text-sm leading-relaxed text-stone-600">{site.teacher.bio}</p>
+              <p class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <a href="/sobre" class="text-emerald-700 underline underline-offset-4 hover:text-emerald-800">Conheça a professora</a>
+                {site.social.superprof && (
+                  <a href={site.social.superprof} rel="noopener" target="_blank" class="text-emerald-700 underline underline-offset-4 hover:text-emerald-800">Perfil no Superprof</a>
+                )}
+              </p>
+            </div>
+          </div>
+        ) : (
+          <p class="text-sm text-stone-600">Texto de <span class="font-medium text-stone-800">{post.data.author}</span>.</p>
+        )}
+        {post.data.editor && post.data.editor !== post.data.author && (
+          <p class="mt-6 text-sm text-stone-500">
+            Edição:{' '}
+            {post.data.editor === site.mantenedor.name ? (
+              <a href={site.mantenedor.linkedin} rel="noopener" target="_blank" class="font-medium text-stone-700 underline underline-offset-4 hover:text-stone-900">{post.data.editor}</a>
+            ) : (
+              <span class="font-medium text-stone-700">{post.data.editor}</span>
+            )}
+          </p>
+        )}
+      </aside>
     </div>
   </article>
+
+  {post.data.faq.length > 0 && <FAQ items={post.data.faq} />}
 
   <section class="mx-auto max-w-3xl px-4 pb-24 sm:px-6">
     <div class="rounded-3xl border border-stone-900 bg-stone-50 p-10 text-center md:p-14">

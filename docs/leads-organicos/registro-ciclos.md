@@ -1624,3 +1624,35 @@ visitante estranha o DDD; a nota ao lado do número continua certa. As consultas
 `reforço de matemática` (posição 51 a 59) e `aulas de reforço de matematica`
 (3,5 a 6) reconfirmam o desalinhamento tratado no item 9. No celular, a página
 nova tem 30 impressões na posição 9,7 e zero clique.
+
+### Modelo de artigo do blog, 09/10 (estrutura, sem mudar texto)
+
+Pedido da dona do projeto em 09/10, a partir do material de SEO, GEO e EEAT que
+ela trouxe (checklist "Anatomia do AEO"). Nenhum título, descrição ou texto de
+artigo mudou, e nenhuma data foi alterada: é mudança de modelo, que vale para
+os 17 artigos sem que nenhum deles tenha mudado de conteúdo.
+
+- **"Atualizado em" no topo do artigo**, ao lado de "Publicado em" quando as
+  duas datas diferem. Antes, o cabeçalho mostrava só a publicação, e a data
+  de atualização ficava apenas no rodapé.
+- **Quadro de autoria** no fim do texto: foto, credencial, bio, link para
+  `/sobre` e para o Superprof. Só para artigos da professora.
+- **Edição: Flávia Vale**, com o LinkedIn, numa linha **separada** do quadro.
+  Decisão de 09/10: a Flávia não assina artigo de matemática; a autoridade de
+  conteúdo é da professora. No schema, vira `editor` do `BlogPosting`, e o
+  LinkedIn entra como `sameAs` do nó `#flavia`, porque é perfil dela, com o
+  nome dela.
+- **`author` do `BlogPosting` resolvido pelo nome** do frontmatter. Antes,
+  apontava sempre para `#taciane`, mesmo num artigo assinado por outra pessoa.
+- **Sumário** automático quando o artigo tem quatro ou mais seções.
+- **Capa opcional** (`image` + `imageAlt` obrigatório): vira `og:image`,
+  `og:type=article` e `image` do `BlogPosting`. As capas serão geradas no
+  Canva.
+- **FAQ opcional** no frontmatter (`faq`): aparece visível e vira `FAQPage`
+  com o mesmo texto. Os artigos existentes que já têm "Perguntas frequentes"
+  no corpo **não** foram migrados: seria mudança de texto sem dado.
+
+**Hipótese, a medir no Ciclo 2:** quadro de autoria e FAQ marcado aumentam a
+citação dos artigos pelas IAs. Linha de base: na Fase 3 de 03/10, as citações
+limpas foram de páginas de serviço e do artigo de preço, nunca de um artigo
+editorial.

@@ -3,6 +3,8 @@ title: "Matemática do 9º ano: a álgebra que trava o aluno no ensino médio"
 description: "O que se estuda de álgebra no 9º ano, o erro de raciocínio que está por trás de quase toda dificuldade, e um teste de 5 perguntas para saber onde o aluno está."
 publishedAt: 2026-10-09
 author: "Taciane Andrade"
+image: "/blog/matematica-9-ano-algebra-onde-o-aluno-trava.webp"
+imageAlt: "Mão de um estudante escrevendo equações num caderno quadriculado, ao lado de peças de números e uma peça de letra, numa mesa de cozinha."
 tags: ["9º ano", "álgebra", "ensino fundamental", "pais"]
 readingTime: "8 min"
 faq:

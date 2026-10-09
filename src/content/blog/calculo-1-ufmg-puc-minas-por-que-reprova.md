@@ -4,6 +4,8 @@ description: "Por que Cálculo 1 reprova tanto nos cursos de exatas, o que quase
 publishedAt: 2026-09-18
 updatedAt: 2026-10-09
 author: "Taciane Andrade"
+image: "/blog/calculo-1-ufmg-puc-minas-por-que-reprova.webp"
+imageAlt: "Livro de cálculo aberto em gráficos de curvas e uma folha de contas com uma linha circulada em verde, sob a luz de uma luminária."
 tags: ["cálculo", "ensino superior", "ufmg", "belo horizonte"]
 readingTime: "10 min"
 faq:

@@ -64,11 +64,13 @@ export const atualizacoes: Record<string, string> = {
   // (posição 47) para "aulas de reforço de matemática" (posição 3,5 a 6).
   // Item 9 do relatório do Ciclo 1.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  // 09/10: artigo da álgebra do 9º ano na leitura relacionada.
   '/reforco-escolar-matematica': '2026-10-09',
 
   // Bloco de leitura relacionada em 16/09. Em 18/09 NÃO mudou: os artigos de
   // prova de admissão são de fundamental e não têm o que fazer aqui.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
+  // 09/10: artigo de revisão do ENEM 2026 na leitura relacionada.
   '/enem-matematica': '2026-10-09',
 
   // Linha de ensino superior aberta em 17/09. Em 18/09 as sete ganharam o
@@ -78,13 +80,15 @@ export const atualizacoes: Record<string, string> = {
   // público e apontar para o artigo de preço. A Visão geral por IA do Google
   // respondeu em 03/10 que "o site não divulga o valor", lendo a exceção do
   // superior como regra geral. Ver relatorio-ciclo-1-2026-10-03.md, item 8.
-  '/aulas-particulares-ensino-superior': '2026-10-03',
-  '/aula-particular-de-pre-calculo': '2026-10-03',
-  '/aula-particular-de-calculo-1': '2026-10-03',
-  '/aula-particular-de-calculo-2': '2026-10-03',
-  '/aula-particular-de-calculo-3': '2026-10-03',
-  '/aula-particular-de-estatistica-e-probabilidade': '2026-10-03',
-  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-10-03',
+  // 09/10: artigo de GAAL na leitura relacionada.
+  '/aulas-particulares-ensino-superior': '2026-10-09',
+  // 09/10: as seis páginas de matéria ganharam o artigo de GAAL na leitura relacionada.
+  '/aula-particular-de-pre-calculo': '2026-10-09',
+  '/aula-particular-de-calculo-1': '2026-10-09',
+  '/aula-particular-de-calculo-2': '2026-10-09',
+  '/aula-particular-de-calculo-3': '2026-10-09',
+  '/aula-particular-de-estatistica-e-probabilidade': '2026-10-09',
+  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-10-09',
 
   // Bio reescrita em 17/09 (ensino superior); em 18/09 entrou um artigo novo
   // na leitura relacionada. O bloco "quem mantém este site" é de rodapé, e

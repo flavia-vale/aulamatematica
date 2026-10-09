@@ -7,9 +7,20 @@ author: "Taciane Andrade"
 tags: ["cefet-mg", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "8 min"
 precoVigencia: "2026-10"
+faq:
+  - q: "Estudar para o CEFET-MG serve para o Coltec também?"
+    a: "Em grande parte sim, porque as duas cobram a matemática do fundamental e as datas não colidem. O que não se transfere é o treino de formato: as duas provas têm estruturas e pesos diferentes, e a estratégia de prova precisa ser treinada em cada uma. Escrevi sobre a do Coltec em Matemática do Coltec 2027."
+  - q: "Meu filho estuda em escola pública. Tem reserva de vagas?"
+    a: "Os editais das instituições federais preveem reserva. As regras, os percentuais e a documentação mudam de edital para edital, e é no edital do ano que isso precisa ser lido — não em resumo de site nenhum, inclusive este."
+  - q: "Dá para preparar nas semanas que faltam até a prova?"
+    a: "Dá, se a base estiver razoável e o aluno fizer as listas entre as aulas. Se o diagnóstico encontrar lacunas em vários anos, dá para uma preparação honesta, não completa — e saber disso em outubro é muito melhor que descobrir em novembro."
+  - q: "Aula presencial ou online?"
+    a: "Funcionam as duas, desde que a aula seja individual e tenha lista entre uma e outra. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, a aula é online ao vivo."
+  - q: "Quanto custa?"
+    a: "Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, deslocamento incluso. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita."
 ---
 
-**Resposta direta:** a seleção do CEFET-MG para 2027 acontece em **fase única**, com um caderno único de questões objetivas de cinco matérias — português e literatura, matemática, ciências, geografia e história. As inscrições vão até **5 de outubro de 2026**, e a data prevista da prova é **29 de novembro**. São 2.174 vagas, distribuídas entre nove campi. A consequência prática para o estudo: aqui não existe uma prova de matemática isolada para treinar, existe **uma prova de resistência de três horas em que a matemática é uma parte** — e é isso que o plano de estudo precisa levar em conta.
+**Resposta direta:** a seleção do CEFET-MG para 2027 acontece em **fase única**, com um caderno único de questões objetivas de cinco matérias — português e literatura, matemática, ciências, geografia e história. As inscrições foram até **5 de outubro de 2026**, e a data prevista da prova é **29 de novembro**. São 2.174 vagas, distribuídas entre nove campi. A consequência prática para o estudo: aqui não existe uma prova de matemática isolada para treinar, existe **uma prova de resistência de três horas em que a matemática é uma parte** — e é isso que o plano de estudo precisa levar em conta.
 
 ## Os números da seleção de 2027
 
@@ -50,27 +61,29 @@ O conteúdo é a matemática do ensino fundamental — o mesmo território das o
 
 E a parte que não é conteúdo: **resolver provas anteriores do próprio CEFET-MG**, cronometradas, com o caderno completo. Não a prova de matemática recortada — o caderno inteiro. É o único jeito de descobrir onde a sua atenção cai, e a partir disso decidir em que ordem você vai resolver no dia.
 
+## A reta final: as semanas até 29 de novembro
+
+Com a prova prevista para 29 de novembro, quem está lendo isto em outubro tem cerca de sete semanas. É tempo para um plano sério, desde que o plano escolha. A divisão que eu uso:
+
+| Semanas | Foco |
+|---|---|
+| 1 e 2 | uma prova anterior completa do CEFET-MG, cronometrada, e a lista dos erros por assunto |
+| 3 e 4 | os dois ou três assuntos que mais apareceram nos erros, com muita questão em texto |
+| 5 e 6 | um caderno completo por semana, no tempo da prova, treinando a ordem de resolução |
+| 7 | só revisar os próprios erros, exercício leve e descanso na véspera |
+
+O ponto em que a maior parte dos alunos de 9º ano perde questão nesta prova é a álgebra dentro do problema em texto: montar a equação, não resolver.
+
+> "O erro mais clássico do nono ano é achar que álgebra é só um monte de letra solta sem sentido. Eles travam porque esquecem que a manipulação algébrica nada mais é do que a velha aritmética que eles já sabem, só que generalizada."
+>
+> — Taciane Andrade, professora particular de matemática
+
+Um teste de cinco perguntas para saber onde o aluno está nessa parte, e o hábito que destrava a maior parte dos erros, estão em [matemática do 9º ano: a álgebra que trava o aluno no ensino médio](/blog/matematica-9-ano-algebra-onde-o-aluno-trava).
+
 ## Por onde começar
 
 Eu começo por 30 minutos de diagnóstico, gratuitos: questões no estilo da prova, uma por tema, para descobrir **quais lacunas dos anos anteriores estão ativas**. É comum encontrar um aluno de 9º ano que erra a questão de área por causa da fração no meio da conta, não por causa da geometria. Quem estuda geometria nesse caso está resolvendo o problema errado.
 
-Do diagnóstico sai a única decisão que importa no começo: fechar base antes, ou ir direto para o treino no formato da prova. Com a prova prevista para o fim de novembro, quem começa agora tem cerca de dez semanas — tempo suficiente para um plano sério, e curto o bastante para não caber erro de rota.
-
-## Perguntas frequentes
-
-**Estudar para o CEFET-MG serve para o Coltec também?**
-Em grande parte sim, porque as duas cobram a matemática do fundamental e as datas não colidem. O que não se transfere é o treino de formato: as duas provas têm estruturas e pesos diferentes, e a estratégia de prova precisa ser treinada em cada uma. Escrevi sobre a do Coltec em [Matemática do Coltec 2027](/blog/matematica-coltec-ufmg-como-preparar).
-
-**Meu filho estuda em escola pública. Tem reserva de vagas?**
-Os editais das instituições federais preveem reserva. As regras, os percentuais e a documentação mudam de edital para edital, e é no edital do ano que isso precisa ser lido — não em resumo de site nenhum, inclusive este.
-
-**Dá para preparar em dez semanas?**
-Dá, se a base estiver razoável e o aluno fizer as listas entre as aulas. Se o diagnóstico encontrar lacunas em vários anos, dá para uma preparação honesta, não completa — e saber disso em setembro é muito melhor que descobrir em novembro.
-
-**Aula presencial ou online?**
-Funcionam as duas, desde que a aula seja individual e tenha lista entre uma e outra. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, a aula é online ao vivo.
-
-**Quanto custa?**
-Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, deslocamento incluso. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita.
+Do diagnóstico sai a única decisão que importa no começo: fechar base antes, ou ir direto para o treino no formato da prova. Com a prova prevista para o fim de novembro, o tempo é suficiente para um plano sério, e curto o bastante para não caber erro de rota.
 
 Para saber de quantas aulas o seu caso precisa antes de decidir qualquer coisa, a [aula diagnóstica gratuita](/contato) responde isso em 30 minutos.

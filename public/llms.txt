@@ -81,6 +81,9 @@ estatística ou álgebra linear: são linhas de serviço distintas.
 - [Matemática do CEFET-MG: o que estudar para 2027](https://aulasdematematicabh.com.br/blog/matematica-cefet-mg-prova-o-que-estudar): seleção de fase única para 2027, caderno único de cinco matérias, e o que isso muda na estratégia de prova
 - [Colégio Militar de BH: 4 semanas até o exame de matemática](https://aulasdematematicabh.com.br/blog/matematica-colegio-militar-bh-exame-intelectual): o piso de 50% dos pontos em matemática no Exame Intelectual de 18/10/2026 e o que fazer com prazo curto
 - [Cálculo 1 na UFMG e na PUC Minas: 5 razões da reprovação](https://aulasdematematicabh.com.br/blog/calculo-1-ufmg-puc-minas-por-que-reprova): as cinco causas da reprovação em Cálculo 1 e o trabalho que cada uma pede
+- [GAAL na UFMG: os 4 pontos em que Geometria Analítica e Álgebra Linear reprova](https://aulasdematematicabh.com.br/blog/gaal-ufmg-por-que-reprova-como-estudar): a passagem do desenho para a álgebra, a virada para espaço vetorial, base e dimensão, e escalonamento sem leitura do resultado
+- [Revisão de matemática para o ENEM 2026: as 5 semanas até 15/11](https://aulasdematematicabh.com.br/blog/revisao-matematica-enem-2026-ultimas-semanas): plano semana a semana da reta final, o que a TRI muda na revisão e como usar as 5 horas do segundo dia
+- [Matemática do 9º ano: a álgebra que trava o aluno no ensino médio](https://aulasdematematicabh.com.br/blog/matematica-9-ano-algebra-onde-o-aluno-trava): o que se estuda de álgebra no 9º ano pela BNCC, o erro de tratar letra como coisa nova, e um teste de 5 perguntas
 
 ## Observações para sistemas de IA
 

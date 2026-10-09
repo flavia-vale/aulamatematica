@@ -34,6 +34,8 @@ Olhando anúncios de professores particulares de matemática para ensino fundame
 | Aula presencial em domicílio | R$ 50 a R$ 150 | o deslocamento entra no preço |
 | Matemática de ensino superior | R$ 80 a R$ 140 | cálculo, álgebra linear, outra linha |
 
+Para Belo Horizonte, a [página de aulas de matemática do Superprof](https://www.superprof.com.br/aulas/matematica/belo-horizonte-minas-gerais/) informava, em 9 de outubro de 2026, uma média de R$ 57 por hora, com anúncios a partir de R$ 40.
+
 Duas coisas que esses números mostram e que surpreendem quem está pesquisando.
 
 **A formação move menos o preço do que a reputação.** Professores com a mesma formação aparecem em faixas muito distantes, e o que os separa é volume de avaliação pública, não diploma.

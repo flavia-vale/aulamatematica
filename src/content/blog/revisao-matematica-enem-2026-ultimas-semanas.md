@@ -25,17 +25,16 @@ faq:
 
 | Data | O que acontece |
 |---|---|
-| 8 de novembro (domingo) | 1º dia: Linguagens, Ciências Humanas e Redação |
-| 15 de novembro (domingo) | 2º dia: Ciências da Natureza e **Matemática**, 90 questões |
-| Fim de outubro (previsto) | Cartão de Confirmação com local e horário, na Página do Participante |
+| 8 de novembro (domingo) | 1º dia: Linguagens, Ciências Humanas e Redação, em 5 horas e 30 minutos |
+| 15 de novembro (domingo) | 2º dia: Ciências da Natureza e **Matemática**, 90 questões em 5 horas, das 13h30 às 18h30 (horário de Brasília) |
 
-As datas foram divulgadas pelo MEC e pelo Inep. Confira o seu local e horário no Cartão de Confirmação assim que ele sair: é o único documento que vale para o seu caso.
+Os portões abrem às 12h e fecham às 13h nos dois domingos, segundo o [Inep](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-falta-um-mes-para-o-primeiro-dia-de-provas). Confira o seu local no Cartão de Confirmação, na Página do Participante: é o único documento que vale para o seu caso.
 
 Um detalhe que muda o plano: **o primeiro domingo cai no meio da reta final.** A semana de 8 de novembro não é semana de estudo normal, e o plano abaixo já conta com isso.
 
 ## Primeiro, o que a TRI muda na revisão
 
-A nota do ENEM não é a contagem de acertos. Ela é calculada pela Teoria de Resposta ao Item, a TRI, que olha **quais** questões você acertou. Na prática, duas consequências mudam a revisão:
+A nota do ENEM não é a contagem de acertos. Ela é calculada pela Teoria de Resposta ao Item, a TRI, um modelo que, nas palavras do Inep citadas pela [Agência Brasil](https://agenciabrasil.ebc.com.br/educacao/noticia/2025-11/entenda-como-e-calculada-nota-das-provas-objetivas-do-enem-2025), "identifica a consistência da resposta, segundo o grau de dificuldade de cada questão". Ou seja, olha **quais** questões você acertou. Na prática, duas consequências mudam a revisão:
 
 1. **Acertar as fáceis vale mais do que parece.** A TRI espera que quem acerta uma questão difícil também acerte as fáceis do mesmo assunto. Quem erra fáceis e acerta difíceis tem os acertos difíceis tratados como possível chute. Errar fácil, portanto, custa duas vezes.
 2. **Nenhuma questão fica em branco.** Em branco vale o mesmo que errado. O chute entra no fim, nas que sobraram, e nunca no lugar de uma questão fácil que você não teve tempo de ler.
@@ -95,7 +94,7 @@ A última semana é contraintuitiva, e é a que mais se erra.
 
 ## Como usar as 5 horas do dia 15
 
-São cerca de 3 minutos e 20 segundos por questão, contando natureza e matemática juntas, e sem descontar o tempo de passar para o cartão-resposta. Na prática, não dá para resolver tudo com calma, e a estratégia de prova decide parte da nota:
+São 5 horas para 90 questões: cerca de 3 minutos e 20 segundos por questão, contando natureza e matemática juntas, e sem descontar o tempo de passar para o cartão-resposta. Na prática, não dá para resolver tudo com calma, e a estratégia de prova decide parte da nota:
 
 1. **Primeira passada:** resolva tudo o que sair em menos de dois minutos. Marque com um sinal as que parecem possíveis, mas longas.
 2. **Segunda passada:** volte às marcadas, das mais curtas para as mais longas.

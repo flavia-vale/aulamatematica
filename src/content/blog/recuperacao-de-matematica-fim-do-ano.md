@@ -8,7 +8,7 @@ tags: ["recuperação", "pais", "ensino médio"]
 readingTime: "10 min"
 faq:
   - q: "Quando o aluno tem direito à recuperação?"
-    a: "A Lei de Diretrizes e Bases da Educação (LDB, Lei 9.394/1996) obriga a escola a oferecer estudos de recuperação aos alunos de baixo rendimento, de preferência ao longo do ano letivo. Quando, como e com que nota mínima isso acontece é definido pelo regimento de cada escola ou rede, e é nele que a família deve conferir."
+    a: "A Lei de Diretrizes e Bases da Educação (LDB, Lei 9.394/1996, art. 24, V, e) determina a obrigatoriedade de estudos de recuperação para os casos de baixo rendimento escolar, de preferência paralelos ao período letivo. Quando, como e com que nota mínima isso acontece é definido pelo regimento de cada escola ou rede, e é nele que a família deve conferir."
   - q: "Qual a nota da recuperação?"
     a: "Depende da escola. Há regimentos em que a nota da recuperação substitui a nota anterior se for maior, outros em que entra na média com a nota antiga, e outros com um teto para a nota recuperada. Pergunte à escola as três coisas: a média exigida, o peso da prova de recuperação e se ela substitui ou se soma à nota anterior."
   - q: "É obrigatório fazer a recuperação?"
@@ -33,6 +33,8 @@ Antes de qualquer plano, pegue os números reais com a escola.
 - Quantas avaliações são, e valendo quanto cada uma?
 - A recuperação é por bimestre ou do ano inteiro?
 - A prova de recuperação substitui a média ou entra na média?
+
+Vale saber que a recuperação é um direito, não um favor da escola. A [Lei de Diretrizes e Bases da Educação](https://www.planalto.gov.br/ccivil_03/leis/L9394compilado.htm), no art. 24, determina a "obrigatoriedade de estudos de recuperação, de preferência paralelos ao período letivo, para os casos de baixo rendimento escolar, a serem disciplinados pelas instituições de ensino em seus regimentos". O como, o quando e a nota ficam no regimento da escola, e é ele que responde as perguntas acima.
 
 Isso muda tudo. Precisar de 6 em duas provas é um problema. Precisar de 9 na última é outro, e às vezes a resposta honesta é preparar a recuperação final em vez de gastar energia numa prova cujo peso não resolve.
 

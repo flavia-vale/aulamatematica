@@ -8,7 +8,7 @@ tags: ["cálculo", "ensino superior", "ufmg", "belo horizonte"]
 readingTime: "10 min"
 faq:
   - q: "Qual a taxa de reprovação de Cálculo 1?"
-    a: "Não existe um número nacional oficial. Os estudos publicados são de uma universidade ou de um curso de cada vez, e os índices variam muito: há levantamentos com reprovação acima de 50% por vários semestres seguidos, e turmas com índices bem menores. O que todos mostram é que Cálculo 1 está entre as disciplinas que mais reprovam no primeiro ano de exatas e engenharia."
+    a: "Não existe um número nacional oficial. Os estudos publicados são de uma universidade de cada vez: na UFG, um estudo de 2010 a 2016 encontrou pico de 79% de reprovados e nunca menos de 56%; na USP, a média entre 1990 e 1995 foi de 43,8%. Os índices variam muito entre turmas e anos, mas todos colocam Cálculo 1 entre as disciplinas que mais reprovam no primeiro ano de exatas e engenharia."
   - q: "Cálculo 1 é muito difícil?"
     a: "O conteúdo novo, limite e derivada, não costuma ser o problema. O que derruba é a álgebra do ensino médio que não ficou automática, encontrada num ritmo que não espera. Quem chega com a base firme acha a disciplina trabalhosa, mas não impossível."
   - q: "Qual é mais difícil, Cálculo 1 ou Cálculo 2?"
@@ -28,6 +28,16 @@ faq:
 > "No Cálculo e em GAAL, o aluno costuma travar na hora de passar do visual geométrico para a linguagem algébrica e formal. Ele até entende a intuição do limite ou do vetor no espaço, mas se perde na hora de montar a demonstração."
 >
 > — Taciane Andrade, professora particular de matemática
+
+## Quanto Cálculo 1 reprova
+
+Não existe um número nacional oficial: os estudos publicados olham uma universidade de cada vez. Mas os que existem apontam na mesma direção.
+
+- Na **Universidade Federal de Goiás**, um estudo que acompanhou Cálculo 1A de 2010 a 2016 encontrou um pico de **79% de reprovados**, e a reprovação "se manteve em nível elevado, sempre acima dos 56%" ([Rosa, Alvarenga e Santos, 2019](https://periodicos.sbu.unicamp.br/ojs/index.php/riesup/article/download/8653091/19035/46882)).
+- O mesmo estudo cita levantamentos anteriores: média de **43,8%** de reprovação em Cálculo na USP entre 1990 e 1995, e de **45% a 95%** em universidades do Rio de Janeiro.
+- Na **UFRJ**, a diretora da Escola Politécnica disse em 2023 que "não pode ser normal reprovar 70% da turma; e pior, sistematicamente" ([Gazeta do Povo](https://www.gazetadopovo.com.br/vida-e-cidadania/ufrj-mudar-curriculo-calculo-evasao-cotistas/)).
+
+Os números variam muito entre turmas e anos, e não dizem nada sobre um aluno específico. O que dizem é que reprovar em Cálculo 1 é comum, e que o motivo quase nunca é falta de capacidade.
 
 Este texto separa as cinco causas que eu encontro na prática, porque cada uma pede um trabalho diferente. Tratar a errada é o jeito mais comum de estudar muito e não sair do lugar.
 

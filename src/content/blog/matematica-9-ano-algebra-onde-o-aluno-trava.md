@@ -20,14 +20,14 @@ faq:
 
 ## O que se estuda de álgebra no 9º ano
 
-Pela Base Nacional Comum Curricular (BNCC), a parte de álgebra do 9º ano gira em torno de quatro blocos:
+Pela [Base Nacional Comum Curricular](http://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf) (BNCC), a unidade de álgebra do 9º ano tem quatro habilidades:
 
-| Bloco | O que o aluno precisa fazer |
+| Habilidade | O que o aluno precisa fazer |
 |---|---|
-| Produtos notáveis e fatoração | Expandir e fatorar expressões como (a + b)², (a − b)² e (a + b)(a − b) |
-| Equação do 2º grau | Resolver equações do 2º grau, começando pela fatoração |
-| Funções | Entender função como relação entre duas grandezas, em tabela, fórmula e gráfico |
-| Grandezas proporcionais | Resolver problemas com grandezas direta e inversamente proporcionais |
+| EF09MA06 · Funções | Entender função como relação de dependência entre duas variáveis, em tabela, fórmula e gráfico |
+| EF09MA07 · Razão entre grandezas | Resolver problemas com razão entre grandezas de espécies diferentes, como velocidade e densidade |
+| EF09MA08 · Proporcionalidade | Resolver problemas com grandezas direta e inversamente proporcionais, escalas e divisão em partes proporcionais |
+| EF09MA09 · Fatoração e 2º grau | Fatorar expressões a partir dos produtos notáveis, como (a + b)² e (a + b)(a − b), e usar isso para resolver problemas com equação do 2º grau |
 
 Cada escola organiza a ordem do seu jeito, e muitas deixam função para o fim do ano. É justamente o assunto que o 1º ano do médio assume como pronto.
 

@@ -334,14 +334,18 @@ indexaram, e no Ciclo 2 (03/11) se a home e a página de reforço foram relidas.
 **Pedir só depois do deploy**, nesta ordem (a revisão do ENEM tem prazo: a
 prova de matemática é em 15/11).
 
-| Rota | Motivo do pedido |
-|---|---|
-| `/blog/revisao-matematica-enem-2026-ultimas-semanas` | artigo novo, com data |
-| `/blog/gaal-ufmg-por-que-reprova-como-estudar` | artigo novo |
-| `/blog/matematica-9-ano-algebra-onde-o-aluno-trava` | artigo novo |
-| `/blog/recuperacao-de-matematica-fim-do-ano` | seção por ano escolar, FAQ e citação |
-| `/blog/calculo-1-ufmg-puc-minas-por-que-reprova` | FAQ marcado, dados de reprovação, citação |
-| `/blog/quanto-custa-aula-particular-matematica` | FAQ marcado, referência de mercado, preço novo |
-| `/blog/matematica-cefet-mg-prova-o-que-estudar` | reta final até a prova, FAQ marcado |
-| `/` | preço novo (09/10) |
-| `/enem-matematica` | preço novo e artigo de revisão na leitura relacionada |
+| Rota | Motivo do pedido | Pedido em | Indexada? |
+|---|---|---|---|
+| `/blog/revisao-matematica-enem-2026-ultimas-semanas` | artigo novo, com data | 09/10 | |
+| `/blog/gaal-ufmg-por-que-reprova-como-estudar` | artigo novo | 09/10 | |
+| `/blog/matematica-9-ano-algebra-onde-o-aluno-trava` | artigo novo | 09/10 | |
+| `/blog/recuperacao-de-matematica-fim-do-ano` | seção por ano escolar, FAQ e citação | pendente (10/10) | |
+| `/blog/calculo-1-ufmg-puc-minas-por-que-reprova` | FAQ marcado, dados de reprovação, citação | pendente (10/10) | |
+| `/blog/quanto-custa-aula-particular-matematica` | FAQ marcado, referência de mercado, preço novo | pendente (10/10) | |
+| `/blog/matematica-cefet-mg-prova-o-que-estudar` | reta final até a prova, FAQ marcado | pendente (10/10) | |
+| `/` | preço novo (09/10) | 09/10 | |
+| `/enem-matematica` | preço novo e artigo de revisão na leitura relacionada | 09/10 | |
+
+Pedidos feitos pela dona do projeto em 09/10, depois do deploy das capas: os
+três artigos novos, a home e `/enem-matematica`. Os outros quatro ficam para
+10/10, quando a cota diária renovar.

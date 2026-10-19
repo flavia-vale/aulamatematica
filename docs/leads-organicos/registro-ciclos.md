@@ -1736,3 +1736,26 @@ que **99%** dos professores oferecem a primeira aula grátis; o `CLAUDE.md`
 registra **97%** (medição anterior). Não confirmado direto na página, que
 bloqueia leitura automática. A conclusão não muda: aula grátis não é
 diferencial.
+
+### Colégio Militar depois da prova, 19/10 (item A5 do plano)
+
+O Exame Intelectual 2026/2027 foi aplicado em 18/10. O artigo
+`/blog/matematica-colegio-militar-bh-exame-intelectual` foi reescrito no
+corpo: calendário de resultados desta edição (gabarito 19/10, recursos
+20–21/10, resultados 13/11, 27/11 e 11/12, conforme o calendário divulgado), o
+piso de 50% por prova, quem presta a edição de ingresso em 2028 e um plano de
+um ano em três fases. As quatro semanas finais ficaram como uma seção. FAQ
+passou a ser marcado (`FAQPage`).
+
+**Título e descrição NÃO mudaram**, pela regra do projeto, mas hoje dizem uma
+coisa vencida ("4 semanas até o exame", "é em 18 de outubro"). A troca fica com
+a dona do projeto; proposta no PR. Linha de base de 09/10: 22 impressões e 1
+clique em 3 meses, posição 4,8.
+
+Os cartões de leitura relacionada que diziam "4 semanas até a prova", em quatro
+páginas de serviço, passaram a "a próxima edição": era informação vencida
+visível ao visitante. As datas dessas páginas avançaram para 19/10.
+
+**A conferir:** uma fonte secundária fala em 15 questões por prova objetiva; a
+cópia do edital no DOU lida em 09/10 diz 20 de matemática e 20 de português. O
+artigo não cita o número.

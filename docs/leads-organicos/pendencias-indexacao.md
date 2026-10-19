@@ -349,3 +349,9 @@ prova de matemática é em 15/11).
 Pedidos feitos pela dona do projeto em 09/10, depois do deploy das capas: os
 três artigos novos, a home e `/enem-matematica`. Os outros quatro ficam para
 10/10, quando a cota diária renovar.
+
+## Entrega de 2026-10-19 — Colégio Militar depois da prova
+
+| Rota | Motivo do pedido | Pedido em | Indexada? |
+|---|---|---|---|
+| `/blog/matematica-colegio-militar-bh-exame-intelectual` | corpo reescrito para a próxima edição; FAQ marcado | pendente | |

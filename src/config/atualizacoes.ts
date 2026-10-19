@@ -41,17 +41,20 @@ export const atualizacoes: Record<string, string> = {
   // 03/10: título deixou de disputar "online" (fica com /aulas-de-matematica-online)
   // e passou a apresentar as duas modalidades. Item 7 do relatório do Ciclo 1.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
-  '/': '2026-10-09',
+  // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
+  '/': '2026-10-19',
 
   // Criada em 17/09 para o termo sem qualificador. Em 18/09: a nota sobre o
   // DDD do WhatsApp e os artigos novos na leitura relacionada.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
-  '/professor-particular-de-matematica': '2026-10-09',
+  // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
+  '/professor-particular-de-matematica': '2026-10-19',
 
   // Título e descrição mudaram em 06/09, no reposicionamento. Em 18/09 passou
   // a ser a porta de entrada dos três artigos de prova de admissão de BH.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
-  '/aulas-particulares-matematica-bh': '2026-10-09',
+  // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
+  '/aulas-particulares-matematica-bh': '2026-10-19',
 
   // Título e H1 reescritos em 11/09 (a página que o Google não conhecia).
   // Bloco de leitura relacionada em 16/09.
@@ -65,7 +68,8 @@ export const atualizacoes: Record<string, string> = {
   // Item 9 do relatório do Ciclo 1.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
   // 09/10: artigo da álgebra do 9º ano na leitura relacionada.
-  '/reforco-escolar-matematica': '2026-10-09',
+  // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
+  '/reforco-escolar-matematica': '2026-10-19',
 
   // Bloco de leitura relacionada em 16/09. Em 18/09 NÃO mudou: os artigos de
   // prova de admissão são de fundamental e não têm o que fazer aqui.

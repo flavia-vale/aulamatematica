@@ -2,6 +2,7 @@
 title: "Como estudar matemática sozinho: um método de 5 passos para usar em casa"
 description: "Um método de estudo de matemática para fazer sozinho, com a ordem certa entre teoria, exercício e revisão, e os erros de método que fazem horas de estudo renderem pouco."
 publishedAt: 2026-09-11
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["estudo", "método", "ensino médio"]
 readingTime: "8 min"
@@ -95,4 +96,4 @@ Se você aplicar os cinco passos por três semanas e continuar travando no mesmo
 
 Os testes rápidos para descobrir isso estão em [as seis lacunas do fundamental que travam o aluno no médio](/blog/lacunas-de-matematica-do-fundamental).
 
-E se o padrão de erro se repetir sem que você consiga nomear a causa, é exatamente aí que outra pessoa olhando ajuda. Minha [aula diagnóstica](/contato) é gratuita, dura 30 minutos, e serve para isso: encontrar o padrão. Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+E se o padrão de erro se repetir sem que você consiga nomear a causa, é exatamente aí que outra pessoa olhando ajuda. Minha [aula diagnóstica](/contato) é gratuita, dura 30 minutos, e serve para isso: encontrar o padrão. Atendo [online para todo o Brasil](/aulas-de-matematica-online).

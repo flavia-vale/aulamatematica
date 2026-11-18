@@ -2,6 +2,7 @@
 title: "Atividades de matemática para praticar em casa: como escolher e como usar"
 description: "Onde encontrar atividades de matemática gratuitas por ano escolar e, sobretudo, como usá-las para que o aluno aprenda em vez de apenas preencher folha."
 publishedAt: 2026-09-11
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["atividades", "pais", "ensino fundamental"]
 readingTime: "7 min"
@@ -71,4 +72,4 @@ Pouco mais de uma hora por semana, distribuída. Rende mais que três horas no d
 
 Se depois de algumas semanas o padrão de erro for sempre o mesmo, ou se o aluno hesitar em conta básica, a folha de exercício não é a ferramenta certa. Os testes para descobrir isso estão em [as seis lacunas do fundamental](/blog/lacunas-de-matematica-do-fundamental), e levam dez minutos.
 
-Se for esse o caso, a [aula diagnóstica](/contato) é gratuita e serve exatamente para localizar a lacuna antes de gastar dinheiro com aula. Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+Se for esse o caso, a [aula diagnóstica](/contato) é gratuita e serve exatamente para localizar a lacuna antes de gastar dinheiro com aula. Atendo [online para todo o Brasil](/aulas-de-matematica-online).

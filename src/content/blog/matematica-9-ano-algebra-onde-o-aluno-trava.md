@@ -2,6 +2,7 @@
 title: "Matemática do 9º ano: a álgebra que trava o aluno no ensino médio"
 description: "O que se estuda de álgebra no 9º ano, o erro de raciocínio que está por trás de quase toda dificuldade, e um teste de 5 perguntas para saber onde o aluno está."
 publishedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 image: "/blog/matematica-9-ano-algebra-onde-o-aluno-trava.webp"
 imageAlt: "Mão de um estudante escrevendo equações num caderno quadriculado, ao lado de peças de números e uma peça de letra, numa mesa de cozinha."
@@ -76,4 +77,4 @@ Para quem vai prestar seleção para o ensino médio técnico ou federal, o peso
 
 Quando o teste acima mostrar erro em três ou mais perguntas, ou quando a nota de matemática cair justamente no bimestre de álgebra, vale olhar com calma antes do fim do ano. Se o aluno já está na recuperação, o plano das últimas semanas está em [recuperação de matemática: o que dá para fazer nas últimas 8 semanas](/blog/recuperacao-de-matematica-fim-do-ano).
 
-A primeira conversa é uma [aula diagnóstica gratuita](/contato) de 30 minutos. Nela eu passo um teste como o deste artigo e digo se a dificuldade é da álgebra do 9º ano ou de uma lacuna mais antiga, e o que cada caso pede. Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh). Para o reforço contínuo ao longo do ano, veja [aulas de reforço de matemática](/reforco-escolar-matematica).
+A primeira conversa é uma [aula diagnóstica gratuita](/contato) de 30 minutos. Nela eu passo um teste como o deste artigo e digo se a dificuldade é da álgebra do 9º ano ou de uma lacuna mais antiga, e o que cada caso pede. Atendo [online para todo o Brasil](/aulas-de-matematica-online). Para o reforço contínuo ao longo do ano, veja [aulas de reforço de matemática](/reforco-escolar-matematica).

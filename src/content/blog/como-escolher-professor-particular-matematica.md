@@ -2,6 +2,7 @@
 title: "Como escolher um professor particular de matemática: 7 perguntas antes de fechar"
 description: "Sete perguntas para fazer antes de contratar um professor particular de matemática, e o que cada resposta revela sobre a forma como ele trabalha."
 publishedAt: 2026-09-11
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["pais", "como escolher", "aula particular"]
 readingTime: "8 min"
@@ -86,4 +87,4 @@ A resposta que me preocupa é a que trata isso como falta de caráter. Um aluno 
 
 A [aula diagnóstica](/contato) é gratuita, dura 30 minutos, e serve exatamente para isso: você faz as perguntas, eu vejo o aluno resolver, e no final eu digo o que encontrei, inclusive quando o que encontrei é que o caso não é para mim.
 
-Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+Atendo [online para todo o Brasil](/aulas-de-matematica-online).

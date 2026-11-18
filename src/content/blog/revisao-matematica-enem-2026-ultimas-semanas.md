@@ -2,12 +2,13 @@
 title: "Revisão de matemática para o ENEM 2026: o que fazer nas 5 semanas até 15/11"
 description: "A prova de matemática do ENEM 2026 é no domingo, 15 de novembro. Um plano semana a semana para as últimas 5 semanas, com o que revisar e o que deixar de lado."
 publishedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 image: "/blog/revisao-matematica-enem-2026-ultimas-semanas.webp"
 imageAlt: "Mesa de estudo com caderno de erros, prova impressa, caneta preta e um calendário com a data da prova circulada em verde."
 tags: ["enem", "enem 2026", "revisão", "ensino médio"]
 readingTime: "9 min"
-precoVigencia: "2026-10"
+precoVigencia: "2026-11"
 faq:
   - q: "Que dia é a prova de matemática do ENEM 2026?"
     a: "No segundo domingo de aplicação, 15 de novembro de 2026, junto com Ciências da Natureza. O primeiro domingo, 8 de novembro, tem Linguagens, Ciências Humanas e Redação. Confira o horário e o local no Cartão de Confirmação, na Página do Participante do Inep."
@@ -115,4 +116,4 @@ A ordem entre natureza e matemática é escolha sua, mas decida **antes**, no si
 
 Nesta altura, o formato que mais rende é curto e focado. Na primeira conversa, uma [aula diagnóstica gratuita](/contato) de 30 minutos, eu olho a sua tabela de erros (ou uma prova anterior feita na hora) e digo onde estão os pontos que dá para recuperar até o dia 15. Depois, as aulas vão só nesses pontos, com simulado corrigido entre uma e outra.
 
-A aula online de 50 minutos custa R$ 60 e atende todo o Brasil. Mais sobre como eu trabalho a preparação para o ENEM em [aulas de matemática para o ENEM](/enem-matematica), e, para quem ainda tem meses pela frente no ano que vem, o [plano de 6 meses](/blog/como-estudar-matematica-enem).
+A aula online de 50 minutos custa R$ 80 e atende todo o Brasil. Mais sobre como eu trabalho a preparação para o ENEM em [aulas de matemática para o ENEM](/enem-matematica), e, para quem ainda tem meses pela frente no ano que vem, o [plano de 6 meses](/blog/como-estudar-matematica-enem).

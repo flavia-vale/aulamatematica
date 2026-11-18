@@ -2,6 +2,7 @@
 title: "Aula de matemática online funciona? O que muda e o que não muda"
 description: "Comparação honesta entre aula de matemática online e presencial: o que a videochamada resolve, o que ela atrapalha e para que tipo de aluno cada formato serve melhor."
 publishedAt: 2026-09-11
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["aula online", "pais", "como funciona"]
 readingTime: "7 min"
@@ -40,14 +41,14 @@ A pergunta aparece em quase toda primeira conversa, e ela merece uma resposta me
 
 Esse último caso me surpreendeu quando comecei. Alguns alunos que quase não falavam presencialmente passaram a perguntar bastante no chat durante a aula.
 
-## Para quem o presencial costuma ir melhor
+## Para quem o online costuma render menos
 
 - Criança dos anos iniciais, que precisa de presença adulta para sustentar a atenção.
 - Aluno com dificuldade de atenção já identificada.
 - Aluno que trava e não avisa, e que precisa de alguém que perceba isso sem ele dizer.
 - Casa sem internet estável ou sem um lugar tranquilo para a aula.
 
-Quando a família está em Belo Horizonte ou na região e o aluno está num desses casos, eu costumo recomendar [o presencial](/aulas-particulares-matematica-bh), mesmo que o online fosse mais cômodo para mim.
+Se o aluno está num desses casos, eu digo na aula diagnóstica gratuita se o online vai funcionar. Hoje as minhas aulas são só online, então, quando não funciona, eu prefiro dizer isso a vender a aula.
 
 ## O que não muda entre os dois formatos
 

@@ -24,7 +24,6 @@ uma frase diferente**:
 | Página | Frase que chega |
 |---|---|
 | `/` | "Vim da página inicial do site…" |
-| `/aulas-particulares-matematica-bh` | "Vim da página de aulas particulares em BH…" |
 | `/aulas-de-matematica-online` | "Vim da página de aulas online…" |
 | `/reforco-escolar-matematica` | "Vim da página de reforço escolar…" |
 | `/enem-matematica` | "Vim da página de ENEM…" |

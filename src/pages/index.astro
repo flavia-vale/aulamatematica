@@ -13,7 +13,7 @@ import {
   faqSchema,
 } from '../lib/schema';
 
-const title = 'Aulas particulares de matemática — online para todo o Brasil e presencial em BH | Taciane Andrade';
+const title = 'Aulas particulares de matemática — online para todo o Brasil | Taciane Andrade';
 const description = `Aulas particulares de matemática online para alunos do ensino fundamental e médio. Reforço escolar, recuperação e acompanhamento com ${site.teacher.name}, licencianda em Matemática pela UFMG. Aula diagnóstica gratuita.`;
 
 const faqs = [
@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: 'Quanto custa a aula particular de matemática?',
-    a: `A aula online de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.online}. A presencial, na casa do aluno ou em local público dentro de ${site.presencial.raioKm} km de ${site.presencial.origem}, começa em R$ ${site.preco.presencialMin} e varia conforme a distância e o nível. Valores vigentes desde ${site.preco.vigenciaTexto}, com desconto em pacotes mensais e trimestrais. A aula diagnóstica inicial de ${site.preco.diagnosticoMin} minutos é gratuita e sem compromisso — e você fala comigo direto pelo WhatsApp, sem taxa, assinatura ou cadastro em plataforma.`,
+    a: `A aula online de ${site.preco.duracaoMin} minutos custa R$ ${site.preco.online}. Valores vigentes desde ${site.preco.vigenciaTexto}, com desconto em pacotes mensais e trimestrais. A aula diagnóstica inicial de ${site.preco.diagnosticoMin} minutos é gratuita e sem compromisso — e você fala comigo direto pelo WhatsApp, sem taxa, assinatura ou cadastro em plataforma.`,
   },
   {
-    q: 'Atende alunos fora de Belo Horizonte?',
-    a: 'Sim. As aulas online são individuais e ao vivo, e atendo alunos de qualquer cidade do Brasil. Em Belo Horizonte e num raio de 20 km também atendo presencialmente, na casa do aluno ou em local público.',
+    q: 'Atende alunos de outras cidades?',
+    a: 'Sim. As aulas online são individuais e ao vivo, e atendo alunos de qualquer cidade do Brasil.',
   },
   {
     q: 'Como agendar a primeira aula?',
@@ -48,7 +48,7 @@ const schema = graph(
   localBusinessSchema,
   serviceSchema({
     name: 'Aulas particulares de matemática online',
-    description: 'Reforço escolar de matemática para alunos do ensino fundamental e médio. Aulas individuais, online para todo o Brasil ou presenciais em Belo Horizonte e região.',
+    description: 'Reforço escolar de matemática para alunos do ensino fundamental e médio. Aulas individuais, online para todo o Brasil.',
     url: site.url,
   }),
   faqSchema(faqs),
@@ -93,7 +93,7 @@ const schema = graph(
         <dl class="mt-12 grid grid-cols-3 gap-6 border-t border-stone-200 pt-8 text-sm">
           <div>
             <dt class="text-stone-500">Modalidade</dt>
-            <dd class="mt-1 font-semibold text-stone-900">Online ou presencial</dd>
+            <dd class="mt-1 font-semibold text-stone-900">Online, ao vivo</dd>
           </div>
           <div>
             <dt class="text-stone-500">Foco</dt>

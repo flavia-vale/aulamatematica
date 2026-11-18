@@ -2,18 +2,18 @@
 title: "Quanto custa uma aula particular de matemática em 2026"
 description: "As faixas de preço praticadas hoje para aula particular de matemática, o que faz o valor subir ou descer, e como comparar propostas que parecem iguais."
 publishedAt: 2026-09-11
-updatedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["preço", "aula particular", "pais"]
 readingTime: "7 min"
-precoVigencia: "2026-10"
+precoVigencia: "2026-11"
 faq:
   - q: "Qual o valor de uma aula particular de matemática?"
-    a: "Para ensino fundamental e médio, a faixa mais comum vai de R$ 40 a R$ 110 por hora, conforme a formação, a reputação e se a aula é presencial. Ensino superior custa mais, de R$ 80 a R$ 140. Aqui, a aula online de 50 minutos custa R$ 60 e a presencial em Belo Horizonte começa em R$ 70, valores vigentes desde outubro de 2026."
+    a: "Para ensino fundamental e médio, a faixa mais comum vai de R$ 40 a R$ 110 por hora, conforme a formação, a reputação e se a aula é presencial. Ensino superior custa mais, de R$ 80 a R$ 140. Aqui, a aula online de 50 minutos custa R$ 80, valor vigente desde novembro de 2026, e não há aula presencial."
   - q: "Quanto custa 1 hora de aula particular de matemática?"
     a: "Depende de quanto dura a aula de cada professor: muitos dão aulas de 50 minutos e cobram por aula, não por hora. Para comparar, converta para o mesmo tempo e confira o que está incluído, como material, correção de exercício entre as aulas e remarcação."
   - q: "Aula online é mais barata que presencial?"
-    a: "Em geral, sim. Sem deslocamento, o mesmo professor costuma cobrar menos pela mesma aula. Aqui, a online custa R$ 60 e a presencial começa em R$ 70, com o deslocamento incluído."
+    a: "Em geral, sim. Sem deslocamento, o mesmo professor costuma cobrar menos pela mesma aula. Aqui só há aula online, e ela custa R$ 80."
   - q: "Quantas aulas são necessárias?"
     a: "Depende do tamanho da lacuna. Para apoio antes de uma prova, de 2 a 4 aulas. Para recuperar um bimestre, de 6 a 10. Para lacuna acumulada de anos anteriores, acompanhamento semanal por um semestre. A aula diagnóstica gratuita serve para dizer em qual dos três casos o aluno está."
 ---
@@ -28,7 +28,7 @@ Olhando anúncios de professores particulares de matemática para ensino fundame
 
 | Perfil | Faixa por hora | Observação |
 |---|---|---|
-| Estudante de licenciatura | R$ 35 a R$ 60 | faixa de entrada, é onde eu estou |
+| Estudante de licenciatura | R$ 35 a R$ 60 | faixa de entrada |
 | Professor formado, sem histórico público | R$ 40 a R$ 70 | |
 | Professor formado com muitas avaliações | R$ 70 a R$ 110 | reputação acumulada sustenta o valor |
 | Aula presencial em domicílio | R$ 50 a R$ 150 | o deslocamento entra no preço |
@@ -46,11 +46,10 @@ Duas coisas que esses números mostram e que surpreendem quem está pesquisando.
 
 Minhas aulas são de 50 minutos.
 
-- **Online, para todo o Brasil: R$ 60 por aula.**
-- **Presencial, em Belo Horizonte e num raio de 20 km: a partir de R$ 70**, variando com a distância e com o nível do aluno.
+- **Online, para todo o Brasil: R$ 80 por aula.** Não há aula presencial.
 - **Aula diagnóstica de 30 minutos: gratuita.**
 
-Esses valores valem desde outubro de 2026. Coloco a data de propósito: preço publicado sem data envelhece em silêncio e vira informação errada seis meses depois.
+Esses valores valem desde novembro de 2026. Coloco a data de propósito: preço publicado sem data envelhece em silêncio e vira informação errada seis meses depois.
 
 Se você me encontrar em alguma plataforma de aula particular com valor diferente, o valor que vale é o daqui.
 
@@ -110,4 +109,4 @@ Não vou responder isso por você, mas dá para tornar a conta mais honesta. Aul
 
 A [aula diagnóstica gratuita](/contato) existe para separar esses casos antes de você gastar. Em 30 minutos dá para saber em qual deles o aluno está, e eu digo quando acho que o caminho não é aula particular.
 
-Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+Atendo [online para todo o Brasil](/aulas-de-matematica-online).

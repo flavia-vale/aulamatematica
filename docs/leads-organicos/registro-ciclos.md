@@ -1759,3 +1759,54 @@ visível ao visitante. As datas dessas páginas avançaram para 19/10.
 **A conferir:** uma fonte secundária fala em 15 questões por prova objetiva; a
 cópia do edital no DOU lida em 09/10 diz 20 de matemática e 20 de português. O
 artigo não cita o número.
+
+---
+
+## Mudança de modelo — 18/11/2026: só online, R$ 80
+
+**Decisão da dona do projeto** (sem dado novo do Search Console; é decisão de
+operação, não de SEO): encerrar o atendimento presencial e subir a aula online
+de R$ 60 para **R$ 80**. Vale para novos alunos; quem já é aluno segue no valor
+combinado.
+
+**O que saiu**
+
+- `/aulas-particulares-matematica-bh` (a página inteira era presencial) saiu do
+  ar e responde 301 para `/aulas-de-matematica-online` em `public/_redirects`.
+  Saiu também do cabeçalho, do rodapé, do `llms.txt`, de `leadMessages` e de
+  `atualizacoes.ts`. Tinha histórico no Google (indexada desde 04/09), por isso
+  redirecionamento e não 404.
+- Oferta "Aula presencial", `serviceArea`/`geoRadius` e as cidades do raio
+  saíram do JSON-LD (`LocalBusiness`, `Service` e `Service` superior); o
+  `priceRange` virou `R$80`. O `address` de Belo Horizonte do `LocalBusiness`
+  ficou: é onde a professora está, não uma promessa de deslocamento.
+- `site.preco.presencialMin/Max` e o bloco `site.presencial` saíram do config.
+- O card de preço (`Preco.astro`) ficou com um valor só; as seções "duas
+  modalidades" das páginas de serviço e de matéria viraram uma só; a tabela
+  online x presencial de `/aulas-de-matematica-online` perdeu a coluna do
+  presencial; o título da home perdeu "e presencial em BH".
+- FAQs e textos de 14 artigos (preço R$ 80, sem presencial; `updatedAt` e
+  `precoVigencia` avançados para 18/11).
+
+**Regra nova** em `scripts/check-conteudo.mjs`: `presencial-encerrado` falha
+se qualquer página volta a oferecer presencial (raio em km, "na casa do aluno",
+"local público", "atendo presencialmente", oferta ou raio no JSON-LD). Citar o
+presencial como categoria de mercado e escrever "não há aula presencial"
+continuam permitidos. `preco-divergente` passou a olhar só o online.
+
+**Efeitos a medir no Ciclo 2 (a partir de 03/12)**
+
+- A página de BH era a única com "presencial em BH" no título. O que ela
+  rendia em impressões some; a leitura de BH nos Ciclos anteriores já mostrava
+  que termos com "BH" não têm volume, mas os três artigos de admissão de BH
+  continuam e agora recebem link de menos páginas.
+- O artigo `como-ajudar-filho-matematica` perdeu o link da página de BH e
+  ganhou um em `/professor-particular-de-matematica` para manter as 3 origens
+  mínimas.
+- O Google Business Profile e o Superprof ainda dizem "presencial" e R$ 50;
+  isso é externo ao repositório e fica com a dona do projeto. Divergência de
+  preço de novo (Superprof R$ 50, site R$ 80).
+- A tabela de mercado do artigo de preço dizia "faixa de entrada, é onde eu
+  estou" na linha de estudante de licenciatura (R$ 35 a R$ 60). Com R$ 80 isso
+  deixou de ser verdade; o trecho foi retirado.
+- Ensino superior segue sem valor publicado.

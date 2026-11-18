@@ -12,3 +12,10 @@
 # `sitemap-index.xml`, e sem esta linha `/sitemap.xml` responde 404 — medido
 # em 18/09/2026.
 /sitemap.xml /sitemap-index.xml 301
+
+# 18/11/2026: o atendimento presencial foi encerrado e a página que o vendia
+# (aulas particulares em BH, presencial) saiu do ar. A URL tinha histórico no
+# Google, então responde 301 para a página de aula online, que é o que o
+# serviço passou a ser. Nenhuma página do site pode apontar para este caminho
+# (a regra `link-redirecionado` do `npm run check` garante).
+/aulas-particulares-matematica-bh /aulas-de-matematica-online 301

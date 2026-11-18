@@ -2,7 +2,7 @@
 title: "Cálculo 1 na UFMG e na PUC Minas: 5 razões da reprovação"
 description: "Por que Cálculo 1 reprova tanto nos cursos de exatas, o que quase sempre é a causa real, e o que fazer quando a prova está perto e o semestre já andou."
 publishedAt: 2026-09-18
-updatedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 image: "/blog/calculo-1-ufmg-puc-minas-por-que-reprova.webp"
 imageAlt: "Livro de cálculo aberto em gráficos de curvas e uma folha de contas com uma linha circulada em verde, sob a luz de uma luminária."
@@ -19,8 +19,8 @@ faq:
     a: "Começando pelo diagnóstico, não pelo início da ementa. Repetir a disciplina estudando do mesmo jeito é o caminho mais curto para repetir o resultado. O que muda o desfecho é descobrir qual das cinco causas deste artigo é a sua, porque são consertos diferentes."
   - q: "Preciso de pré-cálculo antes ou dá para fazer em paralelo?"
     a: "Em paralelo funciona, e é o mais comum. Nas primeiras semanas a aula cobre a base que a prova da semana vai exigir, e depois passa a acompanhar a disciplina. Esperar um semestre para fechar a base primeiro raramente é necessário."
-  - q: "Você atende presencialmente em BH?"
-    a: "Sim, na casa do aluno ou em local público, em Belo Horizonte e nas cidades num raio de 20 km. Fora do raio, a aula é online ao vivo, e para ensino superior o online funciona especialmente bem: a conta cabe na tela compartilhada e a gravação da resolução fica com o aluno."
+  - q: "A aula é online ou presencial?"
+    a: "Online, ao vivo, para alunos de qualquer cidade do Brasil. Para ensino superior o online funciona especialmente bem: a conta cabe na tela compartilhada e a gravação da resolução fica com o aluno."
   - q: "Você acompanha a lista e o material do meu professor?"
     a: "Sim, e é assim que eu prefiro trabalhar. Cada departamento cobra de um jeito, e o formato pesa tanto quanto o conteúdo."
 ---

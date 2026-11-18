@@ -4,7 +4,7 @@ export const site = {
   brand: 'Aulas de Matemática BH',
   tagline: 'Aulas particulares de matemática com professora da UFMG',
   description:
-    'Aulas particulares de matemática para ensino fundamental, médio e superior. Online para todo o Brasil, ou presenciais em Belo Horizonte e num raio de 20 km — na casa do aluno ou em local público. Reforço escolar, ENEM e as matérias de exatas do ciclo básico da faculdade, com Taciane Andrade, licencianda em Matemática pela UFMG.',
+    'Aulas particulares de matemática para ensino fundamental, médio e superior. Aulas online, ao vivo e individuais, para todo o Brasil. Reforço escolar, ENEM e as matérias de exatas do ciclo básico da faculdade, com Taciane Andrade, licencianda em Matemática pela UFMG.',
   locale: 'pt-BR',
   region: 'BR-MG',
   city: 'Belo Horizonte',
@@ -12,7 +12,7 @@ export const site = {
     name: 'Taciane Andrade',
     role: 'Professora particular de Matemática',
     credentials: 'Licencianda em Matemática pela UFMG',
-    bio: 'Estudante de Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG), com experiência em reforço escolar para alunos do ensino fundamental e médio e nas matérias de matemática do ciclo básico do ensino superior — cálculo, estatística e álgebra linear. Atende online em todo o Brasil e presencialmente em Belo Horizonte e região.',
+    bio: 'Estudante de Licenciatura em Matemática pela Universidade Federal de Minas Gerais (UFMG), com experiência em reforço escolar para alunos do ensino fundamental e médio e nas matérias de matemática do ciclo básico do ensino superior — cálculo, estatística e álgebra linear. Atende online, em todo o Brasil.',
     /**
      * Foto da professora, em `public/`. Deixe string vazia enquanto não
      * houver arquivo: as seções que a exibem simplesmente não renderizam, e
@@ -81,56 +81,19 @@ export const site = {
    */
   preco: {
     /** Aula online, ao vivo. Atendimento nacional. */
-    online: 60,
-    /** Presencial na casa do aluno ou em local público, dentro do raio.
-     *  Varia com deslocamento e nível — a página anuncia "a partir de". */
-    presencialMin: 70,
-    presencialMax: 150,
+    online: 80,
     duracaoMin: 50,
     diagnosticoMin: 30,
-    // 09/10/2026: online de R$ 45 para R$ 60 e presencial de "a partir de
-    // R$ 50" para "a partir de R$ 70", decisão da dona do projeto. O
-    // presencial continua acima do online: o deslocamento está no preço.
-    // Vale para novos alunos; quem já é aluno segue no valor combinado.
-    vigencia: '2026-10',
-    vigenciaTexto: 'outubro de 2026',
+    // 18/11/2026: online de R$ 60 para R$ 80, decisão da dona do projeto, e
+    // fim do atendimento presencial (antes: a partir de R$ 70). Em 09/10 o
+    // online tinha subido de R$ 45 para R$ 60. Vale para novos alunos; quem já
+    // é aluno segue no valor combinado.
+    vigencia: '2026-11',
+    vigenciaTexto: 'novembro de 2026',
   },
 
-  /**
-   * Presencial. Definido em 2026-09-06.
-   *
-   * A Fase 3 mostrou que as quatro IAs leem "BH" como consulta de aula
-   * PRESENCIAL, por bairro, e respondem com fichas do Google Business
-   * Profile. O site disputava esse termo oferecendo aula remota — e listava
-   * 50 bairros para um serviço que dizia ser 100% online.
-   *
-   * Agora: BH é presencial, o resto é online e não menciona BH.
-   */
-  presencial: {
-    raioKm: 20,
-    origem: 'Belo Horizonte',
-    /** Centro de BH. Um GeoCircle sem coordenada real é ininterpretável:
-     *  o Google normalizava a string de endereço para um PostalAddress solto
-     *  e o raio ficava sem âncora. */
-    lat: -19.9167,
-    lng: -43.9345,
-    /** Locais: casa do aluno ou local público (biblioteca, café, coworking). */
-    ondeTexto: 'na casa do aluno ou em local público combinado',
-    /** Dentro de ~20 km do centro de BH. Sete Lagoas, Divinópolis, Itaúna,
-     *  Juiz de Fora, Lagoa Santa e Pedro Leopoldo ficam FORA — foram
-     *  movidas para o atendimento online. */
-    cidades: [
-      'Belo Horizonte',
-      'Contagem',
-      'Nova Lima',
-      'Sabará',
-      'Santa Luzia',
-      'Ribeirão das Neves',
-      'Vespasiano',
-    ],
-  },
   service: {
-    /** Online é nacional; o presencial tem raio próprio em `presencial`. */
+    /** Só online, nacional. O presencial foi encerrado em 18/11/2026. */
     areaServed: ['Brasil'],
     serviceType: 'Aulas particulares de Matemática',
     audience: 'Alunos do ensino fundamental, médio e superior',
@@ -157,7 +120,7 @@ export const site = {
  * O que se mede aqui é conversa por impressão, não volume.
  *
  * `preco` fica NULO de propósito: o valor de ensino superior ainda não foi
- * definido pela dona do projeto, e a faixa de fundamental e médio (R$ 60)
+ * definido pela dona do projeto, e a faixa de fundamental e médio (R$ 80)
  * ancoraria a operação muito abaixo do mercado desta linha. Enquanto for
  * nulo, as páginas não exibem R$ e o schema não declara oferta com preço.
  */
@@ -191,7 +154,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Pré-cálculo',
     nomeCurto: 'Pré-cálculo',
     titulo: 'Aula particular de Pré-cálculo — a base que o Cálculo I vai cobrar',
-    descricao: 'Aula particular de pré-cálculo individual, online para todo o Brasil ou presencial em Belo Horizonte. Funções, trigonometria, logaritmos e manipulação algébrica, que é onde a reprovação em Cálculo I costuma começar.',
+    descricao: 'Aula particular de pré-cálculo individual, online para todo o Brasil. Funções, trigonometria, logaritmos e manipulação algébrica, que é onde a reprovação em Cálculo I costuma começar.',
     eyebrow: 'Ensino superior · Pré-cálculo',
     h1: 'Aula particular de Pré-cálculo, para chegar inteiro no',
     h1Enfase: 'Cálculo I',
@@ -215,7 +178,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Cálculo I',
     nomeCurto: 'Cálculo I',
     titulo: 'Aula particular de Cálculo I — limites, derivadas e integrais',
-    descricao: 'Aula particular de Cálculo I individual, online para todo o Brasil ou presencial em Belo Horizonte. Limites, continuidade, derivadas, aplicações e a introdução à integral, com foco em entender antes de aplicar a regra.',
+    descricao: 'Aula particular de Cálculo I individual, online para todo o Brasil. Limites, continuidade, derivadas, aplicações e a introdução à integral, com foco em entender antes de aplicar a regra.',
     eyebrow: 'Ensino superior · Cálculo I',
     h1: 'Aula particular de',
     h1Enfase: 'Cálculo I',
@@ -239,7 +202,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Cálculo II',
     nomeCurto: 'Cálculo II',
     titulo: 'Aula particular de Cálculo II — técnicas de integração e séries',
-    descricao: 'Aula particular de Cálculo II individual, online para todo o Brasil ou presencial em Belo Horizonte. Técnicas de integração, integrais impróprias, sequências e séries, equações diferenciais de primeira ordem e coordenadas polares.',
+    descricao: 'Aula particular de Cálculo II individual, online para todo o Brasil. Técnicas de integração, integrais impróprias, sequências e séries, equações diferenciais de primeira ordem e coordenadas polares.',
     eyebrow: 'Ensino superior · Cálculo II',
     h1: 'Aula particular de',
     h1Enfase: 'Cálculo II',
@@ -263,7 +226,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Cálculo III',
     nomeCurto: 'Cálculo III',
     titulo: 'Aula particular de Cálculo III — várias variáveis e campos vetoriais',
-    descricao: 'Aula particular de Cálculo III individual, online para todo o Brasil ou presencial em Belo Horizonte. Funções de várias variáveis, derivadas parciais, integrais múltiplas, campos vetoriais e os teoremas de Green, Stokes e Gauss.',
+    descricao: 'Aula particular de Cálculo III individual, online para todo o Brasil. Funções de várias variáveis, derivadas parciais, integrais múltiplas, campos vetoriais e os teoremas de Green, Stokes e Gauss.',
     eyebrow: 'Ensino superior · Cálculo III',
     h1: 'Aula particular de',
     h1Enfase: 'Cálculo III',
@@ -287,7 +250,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Estatística e Probabilidade',
     nomeCurto: 'Estatística',
     titulo: 'Aula particular de Estatística e Probabilidade — da distribuição ao teste de hipótese',
-    descricao: 'Aula particular de Estatística e Probabilidade individual, online para todo o Brasil ou presencial em Belo Horizonte. Probabilidade, variáveis aleatórias, distribuições, intervalo de confiança, testes de hipótese e regressão.',
+    descricao: 'Aula particular de Estatística e Probabilidade individual, online para todo o Brasil. Probabilidade, variáveis aleatórias, distribuições, intervalo de confiança, testes de hipótese e regressão.',
     eyebrow: 'Ensino superior · Estatística e Probabilidade',
     h1: 'Aula particular de',
     h1Enfase: 'Estatística e Probabilidade',
@@ -311,7 +274,7 @@ export const materiasSuperior: MateriaSuperior[] = [
     nome: 'Geometria Analítica e Álgebra Linear',
     nomeCurto: 'GAAL',
     titulo: 'Aula particular de GAAL — Geometria Analítica e Álgebra Linear',
-    descricao: 'Aula particular de Geometria Analítica e Álgebra Linear, a GAAL, individual, online para todo o Brasil ou presencial em Belo Horizonte. Vetores, retas e planos, matrizes, sistemas, espaços vetoriais e autovalores.',
+    descricao: 'Aula particular de Geometria Analítica e Álgebra Linear, a GAAL, individual, online para todo o Brasil. Vetores, retas e planos, matrizes, sistemas, espaços vetoriais e autovalores.',
     eyebrow: 'Ensino superior · GAAL',
     h1: 'Aula particular de',
     h1Enfase: 'GAAL',
@@ -413,8 +376,6 @@ export const leadMessages: Record<string, string> = {
   '/': 'Olá! Vim da página inicial do site e quero agendar a aula diagnóstica gratuita.',
   '/professor-particular-de-matematica':
     'Olá! Vim da página de aula particular de matemática e quero agendar a aula diagnóstica gratuita.',
-  '/aulas-particulares-matematica-bh':
-    'Olá! Vim da página de aulas particulares em BH e quero agendar a aula diagnóstica gratuita.',
   '/aulas-de-matematica-online':
     'Olá! Vim da página de aulas online e quero agendar a aula diagnóstica gratuita.',
   '/reforco-escolar-matematica':

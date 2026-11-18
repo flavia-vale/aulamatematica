@@ -2,7 +2,7 @@
 title: "As 6 lacunas do fundamental que travam o aluno no ensino médio"
 description: "Fração, sinais, proporção, potência, equação e leitura de enunciado. As seis portas do fundamental que, quando ficam abertas, reaparecem como dificuldade no médio."
 publishedAt: 2026-09-11
-updatedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["ensino fundamental", "ensino médio", "diagnóstico"]
 readingTime: "10 min"
@@ -94,6 +94,6 @@ Isso é impopular porque parece perder tempo no meio do ano letivo. Na prática 
 
 Toda aula diagnóstica que eu faço passa por essas seis portas antes de olhar o conteúdo do bimestre. É por isso que às vezes eu digo, na primeira conversa, que o problema não é o que a família achava que era.
 
-A [aula diagnóstica](/contato) é gratuita e dura 30 minutos. Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+A [aula diagnóstica](/contato) é gratuita e dura 30 minutos. Atendo [online para todo o Brasil](/aulas-de-matematica-online).
 
 Se quiser ler antes sobre como identificar o problema em casa, [meu filho não aprende matemática](/blog/meu-filho-nao-aprende-matematica) traz o roteiro completo.

@@ -355,3 +355,16 @@ três artigos novos, a home e `/enem-matematica`. Os outros quatro ficam para
 | Rota | Motivo do pedido | Pedido em | Indexada? |
 |---|---|---|---|
 | `/blog/matematica-colegio-militar-bh-exame-intelectual` | corpo reescrito para a próxima edição; FAQ marcado | pendente | |
+
+## Entrega de 2026-11-18 — só online, R$ 80
+
+`/aulas-particulares-matematica-bh` saiu do ar e responde 301 para
+`/aulas-de-matematica-online`. Não há o que pedir para ela; as linhas antigas
+acima ficam como histórico.
+
+| Rota | Motivo do pedido | Pedido em | Indexada? |
+|---|---|---|---|
+| `/` | preço R$ 80, título e FAQ sem presencial | pendente | |
+| `/aulas-de-matematica-online` | recebe a página de BH por redirecionamento; preço R$ 80 | pendente | |
+| `/professor-particular-de-matematica` | preço R$ 80, sem presencial | pendente | |
+| `/blog/quanto-custa-aula-particular-matematica` | preço R$ 80, sem presencial | pendente | |

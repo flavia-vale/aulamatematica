@@ -20,14 +20,14 @@ import { graph, personSchema, localBusinessSchema, serviceSchemaSuperior, faqSch
 const path = '/aulas-particulares-ensino-superior';
 const url = `${site.url}${path}`;
 const title = 'Aulas particulares de exatas para faculdade — Cálculo, GAAL e Estatística';
-const description = 'Aulas particulares de matemática do ensino superior: pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL. Individuais, online para todo o Brasil ou presenciais em Belo Horizonte e região.';
+const description = 'Aulas particulares de matemática do ensino superior: pré-cálculo, Cálculo I, II e III, Estatística e Probabilidade e GAAL. Individuais, online e ao vivo, para todo o Brasil.';
 
 const faqs = [
   { q: 'Quais matérias de faculdade você atende?', a: `Pré-cálculo, Cálculo I, Cálculo II, Cálculo III, Estatística e Probabilidade, e Geometria Analítica e Álgebra Linear, a GAAL. É o bloco de matemática do ciclo básico da maior parte dos cursos de exatas, engenharia, computação, economia e áreas correlatas.` },
   { q: 'Você segue a ementa da minha universidade?', a: 'Sigo. Trabalho com a ementa, as listas e as provas anteriores da sua disciplina, porque o mesmo conteúdo é cobrado de formas bem diferentes entre departamentos, e o formato da prova pesa tanto quanto a matéria.' },
   { q: 'Quanto custa a aula de ensino superior?', a: `As matérias de faculdade têm faixa própria, diferente da de fundamental e médio, cujo valor é público e está no artigo sobre preço deste site. A faixa de faculdade é fechada depois da aula diagnóstica gratuita de ${site.preco.diagnosticoMin} minutos, quando já se sabe o tamanho do trabalho e a frequência necessária.` },
   { q: 'Dá para começar perto da prova?', a: 'Dá, e o trabalho é outro: com prazo curto a estratégia é escolher os dois ou três tópicos de maior peso e treinar neles, em vez de tentar cobrir o semestre. Na aula diagnóstica dá para dizer com alguma precisão o que cabe no tempo que resta.' },
-  { q: 'A aula é online ou presencial?', a: `As duas. Online ao vivo para alunos de todo o Brasil, ou presencial em Belo Horizonte e num raio de ${site.presencial.raioKm} km do centro: ${site.presencial.cidades.join(', ')}.` },
+  { q: 'A aula é online ou presencial?', a: 'Online, ao vivo, por videochamada com lousa digital, para alunos de qualquer cidade do Brasil. Não há aula presencial.' },
   { q: 'Preciso assinar alguma plataforma para falar com você?', a: 'Não. O contato é direto por WhatsApp, sem taxa, sem assinatura e sem cadastro. É a diferença mais concreta em relação aos marketplaces de aula particular, onde costuma ser preciso pagar um plano antes de conseguir conversar com o professor.' },
   { q: 'Você atende matérias além dessas seis?', a: 'Essas seis são as que eu atendo com profundidade. Se a sua disciplina for próxima delas, me mande a ementa e eu digo com honestidade se é caso meu. Quando não for, eu digo.' },
 ];
@@ -137,7 +137,7 @@ const schema = graph(
     <h2 class="mt-3 font-serif text-2xl font-medium tracking-tight text-stone-900">Também atendo fundamental e médio.</h2>
     <ul class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { href: '/professor-particular-de-matematica', t: 'Aula particular de matemática', d: 'A página do serviço: como contratar, o que está incluído e as duas modalidades.' },
+        { href: '/professor-particular-de-matematica', t: 'Aula particular de matemática', d: 'A página do serviço: como contratar, o que está incluído e como funciona a aula online.' },
         { href: '/reforco-escolar-matematica', t: 'Reforço escolar', d: 'Acompanhamento paralelo à escola, do 6º ano ao 3º do ensino médio.' },
         { href: '/enem-matematica', t: 'Matemática para o ENEM', d: 'Preparação para a prova, com cronograma e os conteúdos de maior frequência.' },
       ].map((i) => (

@@ -79,9 +79,8 @@ export const localBusinessSchema = {
   url: site.url,
   image: `${site.url}/og-image.png`,
   telephone: `+${site.contact.whatsappRaw}`,
-  // Cobre as duas modalidades. Só o valor do online descrevia mal a
-  // operação desde que o presencial passou a existir.
-  priceRange: `R$${site.preco.online}–R$${site.preco.presencialMax}`,
+  // Só há aula online (presencial encerrado em 18/11/2026).
+  priceRange: `R$${site.preco.online}`,
   currenciesAccepted: 'BRL',
   openingHoursSpecification: [
     {
@@ -97,21 +96,8 @@ export const localBusinessSchema = {
       closes: '14:00',
     },
   ],
-  // Online é nacional; presencial tem raio real. Declarar os dois separados
-  // é o que permite ao Google entender a operação híbrida.
-  areaServed: [
-    { '@type': 'Country', name: 'Brasil' },
-    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
-  ],
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: site.presencial.lat,
-      longitude: site.presencial.lng,
-    },
-    geoRadius: site.presencial.raioKm * 1000,
-  },
+  // Atendimento só online, para todo o Brasil. Sem raio presencial.
+  areaServed: [{ '@type': 'Country', name: 'Brasil' }],
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.city,
@@ -222,50 +208,15 @@ export const serviceSchema = (params: {
         },
       },
     },
-    {
-      '@type': 'Offer',
-      name: 'Aula presencial',
-      priceCurrency: 'BRL',
-      availability: 'https://schema.org/InStock',
-      url: params.url,
-      areaServed: {
-        '@type': 'GeoCircle',
-        geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: site.presencial.lat,
-      longitude: site.presencial.lng,
-    },
-        geoRadius: site.presencial.raioKm * 1000,
-      },
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        minPrice: site.preco.presencialMin,
-        maxPrice: site.preco.presencialMax,
-        priceCurrency: 'BRL',
-      },
-    },
   ],
   provider: { '@id': BUSINESS_ID },
-  // Online é nacional; presencial tem raio real. Declarar os dois separados
-  // é o que permite ao Google entender a operação híbrida.
-  areaServed: [
-    { '@type': 'Country', name: 'Brasil' },
-    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
-  ],
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: site.presencial.lat,
-      longitude: site.presencial.lng,
-    },
-    geoRadius: site.presencial.raioKm * 1000,
-  },
+  // Só online, para todo o Brasil (presencial encerrado em 18/11/2026).
+  areaServed: [{ '@type': 'Country', name: 'Brasil' }],
   audience: { '@type': 'EducationalAudience', educationalRole: site.service.audience },
 });
 
 /**
- * Service de ensino superior — mesma área de atendimento, SEM oferta de preço.
+ * Service de ensino superior — mesma área de atendimento (online, Brasil), SEM oferta de preço.
  *
  * Por que separado: o `serviceSchema` acima declara o preço da aula online,
  * que é o valor de fundamental e médio. Reaproveitá-lo numa página de Cálculo
@@ -288,19 +239,7 @@ export const serviceSchemaSuperior = (params: {
   description: params.description,
   url: params.url,
   provider: { '@id': BUSINESS_ID },
-  areaServed: [
-    { '@type': 'Country', name: 'Brasil' },
-    ...site.presencial.cidades.map((n) => ({ '@type': 'City', name: n })),
-  ],
-  serviceArea: {
-    '@type': 'GeoCircle',
-    geoMidpoint: {
-      '@type': 'GeoCoordinates',
-      latitude: site.presencial.lat,
-      longitude: site.presencial.lng,
-    },
-    geoRadius: site.presencial.raioKm * 1000,
-  },
+  areaServed: [{ '@type': 'Country', name: 'Brasil' }],
   audience: { '@type': 'EducationalAudience', educationalRole: 'Estudantes de ensino superior' },
 });
 

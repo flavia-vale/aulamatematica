@@ -42,24 +42,24 @@ export const atualizacoes: Record<string, string> = {
   // e passou a apresentar as duas modalidades. Item 7 do relatório do Ciclo 1.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
   // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
-  '/': '2026-10-19',
+  // 18/11: preço R$ 80 e fim do presencial (título, FAQ e schema sem BH).
+  '/': '2026-11-18',
 
   // Criada em 17/09 para o termo sem qualificador. Em 18/09: a nota sobre o
   // DDD do WhatsApp e os artigos novos na leitura relacionada.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
   // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
-  '/professor-particular-de-matematica': '2026-10-19',
+  // 18/11: preço R$ 80 e fim do presencial.
+  '/professor-particular-de-matematica': '2026-11-18',
 
-  // Título e descrição mudaram em 06/09, no reposicionamento. Em 18/09 passou
-  // a ser a porta de entrada dos três artigos de prova de admissão de BH.
-  // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
-  // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
-  '/aulas-particulares-matematica-bh': '2026-10-19',
+  // /aulas-particulares-matematica-bh saiu do ar em 18/11/2026 (fim do
+  // presencial) e responde 301 para /aulas-de-matematica-online.
 
   // Título e H1 reescritos em 11/09 (a página que o Google não conhecia).
   // Bloco de leitura relacionada em 16/09.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
-  '/aulas-de-matematica-online': '2026-10-09',
+  // 18/11: preço R$ 80; tabela deixou de comparar com o presencial.
+  '/aulas-de-matematica-online': '2026-11-18',
 
   // Bloco de leitura relacionada em 16/09; em 18/09 ganhou os artigos das
   // provas de admissão e o de atividades para casa.
@@ -69,13 +69,15 @@ export const atualizacoes: Record<string, string> = {
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
   // 09/10: artigo da álgebra do 9º ano na leitura relacionada.
   // 19/10: cartão do Colégio Militar atualizado depois da prova de 18/10.
-  '/reforco-escolar-matematica': '2026-10-19',
+  // 18/11: preço R$ 80 e fim do presencial.
+  '/reforco-escolar-matematica': '2026-11-18',
 
   // Bloco de leitura relacionada em 16/09. Em 18/09 NÃO mudou: os artigos de
   // prova de admissão são de fundamental e não têm o que fazer aqui.
   // 09/10: preço novo (online R$ 60, presencial a partir de R$ 70).
   // 09/10: artigo de revisão do ENEM 2026 na leitura relacionada.
-  '/enem-matematica': '2026-10-09',
+  // 18/11: preço R$ 80 e fim do presencial.
+  '/enem-matematica': '2026-11-18',
 
   // Linha de ensino superior aberta em 17/09. Em 18/09 as sete ganharam o
   // bloco de leitura relacionada com o artigo de Cálculo 1 — a primeira porta
@@ -85,23 +87,27 @@ export const atualizacoes: Record<string, string> = {
   // respondeu em 03/10 que "o site não divulga o valor", lendo a exceção do
   // superior como regra geral. Ver relatorio-ciclo-1-2026-10-03.md, item 8.
   // 09/10: artigo de GAAL na leitura relacionada.
-  '/aulas-particulares-ensino-superior': '2026-10-09',
+  // 18/11: fim do presencial (descrição e FAQ).
+  '/aulas-particulares-ensino-superior': '2026-11-18',
   // 09/10: as seis páginas de matéria ganharam o artigo de GAAL na leitura relacionada.
-  '/aula-particular-de-pre-calculo': '2026-10-09',
-  '/aula-particular-de-calculo-1': '2026-10-09',
-  '/aula-particular-de-calculo-2': '2026-10-09',
-  '/aula-particular-de-calculo-3': '2026-10-09',
-  '/aula-particular-de-estatistica-e-probabilidade': '2026-10-09',
-  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-10-09',
+  // 18/11: fim do presencial (descrição, FAQ e bloco de modalidade).
+  '/aula-particular-de-pre-calculo': '2026-11-18',
+  '/aula-particular-de-calculo-1': '2026-11-18',
+  '/aula-particular-de-calculo-2': '2026-11-18',
+  '/aula-particular-de-calculo-3': '2026-11-18',
+  '/aula-particular-de-estatistica-e-probabilidade': '2026-11-18',
+  '/aula-particular-de-geometria-analitica-e-algebra-linear': '2026-11-18',
 
   // Bio reescrita em 17/09 (ensino superior); em 18/09 entrou um artigo novo
   // na leitura relacionada. O bloco "quem mantém este site" é de rodapé, e
   // rodapé não conta como mudança de página — ver a regra acima.
-  '/sobre': '2026-09-18',
+  // 18/11: fim do presencial (bio).
+  '/sobre': '2026-11-18',
 
   // Em 18/09: a nota sobre o DDD do número, ao lado do telefone.
   // 03/10: horário de seg a sex passou a fechar às 20h, igual à ficha do Google.
-  '/contato': '2026-10-03',
+  // 18/11: fim do presencial (localização e nota do DDD).
+  '/contato': '2026-11-18',
 
   // A lista muda quando entra artigo. Três entraram em 18/09.
   '/blog': '2026-09-18',

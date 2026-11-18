@@ -2,6 +2,7 @@
 title: "8 sinais de que o aluno precisa de reforço de matemática"
 description: "Como distinguir dificuldade passageira de lacuna acumulada em matemática, com os sinais que aparecem no caderno e na conversa antes de aparecerem no boletim."
 publishedAt: 2026-09-11
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["pais", "reforço escolar", "diagnóstico"]
 readingTime: "7 min"
@@ -79,4 +80,4 @@ Se o que aparece são os sinais 1, 2 e 6, o caso costuma ser de método de estud
 
 A [aula diagnóstica gratuita](/contato) de 30 minutos serve para checar esses oito sinais com o aluno resolvendo na minha frente, que é quando eles aparecem sem margem de dúvida. No final eu digo qual conjunto encontrei e o que eu faria.
 
-Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh). Como funciona o acompanhamento contínuo está em [reforço escolar de matemática](/reforco-escolar-matematica).
+Atendo [online para todo o Brasil](/aulas-de-matematica-online). Como funciona o acompanhamento contínuo está em [reforço escolar de matemática](/reforco-escolar-matematica).

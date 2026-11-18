@@ -51,9 +51,9 @@ const schema = graph(
     <CTAButtons slot="cta" secondaryHref="#ferramentas" secondaryLabel="Como funciona" />
   </PageHero>
 
-  <!-- Comparação online vs presencial -->
+  <!-- O que a aula online oferece -->
   <section class="mx-auto max-w-5xl px-4 py-20 sm:px-6">
-    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Online vs Presencial</p>
+    <p class="text-sm font-semibold tracking-widest text-stone-500 uppercase">Como é a aula online</p>
     <h2 class="mt-3 font-serif text-3xl font-medium tracking-tight text-stone-900 sm:text-4xl">
       Sim, online funciona. E aqui é por quê.
     </h2>
@@ -64,23 +64,20 @@ const schema = graph(
           <tr>
             <th class="px-5 py-4 font-semibold text-stone-700">Critério</th>
             <th class="px-5 py-4 font-semibold text-stone-700">Aula online ao vivo</th>
-            <th class="px-5 py-4 font-semibold text-stone-500">Aula presencial</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-stone-200 bg-white">
           {[
-            ['Deslocamento', 'Zero', '30 a 60 min entre ida e volta'],
-            ['Gravação para revisar', 'Sim, opcional', 'Não'],
-            ['Lousa digital infinita', 'Sim', 'Limitada ao quadro'],
-            ['Material enviado depois', 'PDF organizado', 'Foto do caderno'],
-            ['Dúvida fora do horário', 'Foto no WhatsApp', 'Espera a próxima aula'],
-            ['Custo médio', 'Menor', 'Maior (deslocamento embutido)'],
-            ['Flexibilidade de horário', 'Alta', 'Limitada'],
+            ['Deslocamento', 'Zero'],
+            ['Gravação para revisar', 'Sim, opcional'],
+            ['Lousa digital infinita', 'Sim'],
+            ['Material enviado depois', 'PDF organizado'],
+            ['Dúvida fora do horário', 'Foto no WhatsApp'],
+            ['Flexibilidade de horário', 'Alta'],
           ].map((row) => (
             <tr>
               <td class="px-5 py-4 font-medium text-stone-900">{row[0]}</td>
               <td class="px-5 py-4 text-emerald-700">{row[1]}</td>
-              <td class="px-5 py-4 text-stone-500">{row[2]}</td>
             </tr>
           ))}
         </tbody>

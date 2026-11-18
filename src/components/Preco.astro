@@ -3,12 +3,10 @@ import { site } from '../config/site';
 import CTAButtons from './CTAButtons.astro';
 
 interface Props {
-  /** Qual modalidade destacar. A outra continua visível, só sem realce. */
-  destaque?: 'online' | 'presencial';
   compacto?: boolean;
 }
-const { destaque = 'online', compacto = false } = Astro.props;
-const { preco, presencial } = site;
+const { compacto = false } = Astro.props;
+const { preco } = site;
 ---
 
 <!--
@@ -26,74 +24,16 @@ const { preco, presencial } = site;
       Sem taxa, sem cadastro, sem intermediário.
     </h2>
 
-    <div class="mt-10 grid gap-5 sm:grid-cols-2">
-      <div
-        class:list={[
-          'rounded-xl border p-7',
-          destaque === 'online'
-            ? 'border-stone-900 bg-stone-900 text-stone-50'
-            : 'border-stone-200 bg-stone-50 text-stone-900',
-        ]}
-      >
-        <p
-          class:list={[
-            'text-xs font-semibold tracking-widest uppercase',
-            destaque === 'online' ? 'text-stone-400' : 'text-stone-500',
-          ]}
-        >
-          Aula online
-        </p>
-        <p class="mt-4 font-serif text-5xl leading-none tracking-tight">R$ {preco.online}</p>
-        <p class:list={['mt-3 text-sm', destaque === 'online' ? 'text-stone-300' : 'text-stone-600']}>
-          por aula de {preco.duracaoMin} minutos, ao vivo e individual
-        </p>
-        <p
-          class:list={[
-            'mt-6 border-t pt-5 text-sm leading-relaxed',
-            destaque === 'online' ? 'border-stone-700 text-stone-300' : 'border-stone-200 text-stone-600',
-          ]}
-        >
-          Atendo alunos de qualquer cidade do Brasil. Pacotes mensais e
-          trimestrais têm desconto.
-        </p>
-      </div>
-
-      <div
-        class:list={[
-          'rounded-xl border p-7',
-          destaque === 'presencial'
-            ? 'border-stone-900 bg-stone-900 text-stone-50'
-            : 'border-stone-200 bg-stone-50 text-stone-900',
-        ]}
-      >
-        <p
-          class:list={[
-            'text-xs font-semibold tracking-widest uppercase',
-            destaque === 'presencial' ? 'text-stone-400' : 'text-stone-500',
-          ]}
-        >
-          Aula presencial
-        </p>
-        <p class="mt-4 font-serif text-5xl leading-none tracking-tight">
-          <span class="align-middle text-xl">a partir de</span> R$ {preco.presencialMin}
-        </p>
-        <p
-          class:list={['mt-3 text-sm', destaque === 'presencial' ? 'text-stone-300' : 'text-stone-600']}
-        >
-          por aula de {preco.duracaoMin} minutos, {presencial.ondeTexto}
-        </p>
-        <p
-          class:list={[
-            'mt-6 border-t pt-5 text-sm leading-relaxed',
-            destaque === 'presencial'
-              ? 'border-stone-700 text-stone-300'
-              : 'border-stone-200 text-stone-600',
-          ]}
-        >
-          Me desloco até {presencial.raioKm} km de {presencial.origem}. O valor
-          varia com a distância e o nível do aluno — combinamos na conversa.
-        </p>
-      </div>
+    <div class="mt-10 rounded-xl border border-stone-900 bg-stone-900 p-7 text-stone-50">
+      <p class="text-xs font-semibold tracking-widest text-stone-400 uppercase">Aula online</p>
+      <p class="mt-4 font-serif text-5xl leading-none tracking-tight">R$ {preco.online}</p>
+      <p class="mt-3 text-sm text-stone-300">
+        por aula de {preco.duracaoMin} minutos, ao vivo e individual
+      </p>
+      <p class="mt-6 border-t border-stone-700 pt-5 text-sm leading-relaxed text-stone-300">
+        Atendo alunos de qualquer cidade do Brasil. Pacotes mensais e
+        trimestrais têm desconto.
+      </p>
     </div>
 
     <div class="mt-5 rounded-xl border border-emerald-700/30 bg-emerald-50 p-7">

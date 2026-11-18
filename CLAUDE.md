@@ -18,8 +18,8 @@ ou descrição faltarem ou se repetirem entre páginas, faltar canonical, a
 atribuição de lead quebrar (página sem WhatsApp, com duas frases diferentes,
 ou repetindo a frase de outra página), houver promessa de resultado, houver
 preço em R$ sem `data-preco-vigencia="AAAA-MM"` na página, um texto citar
-preço da aula online ou do presencial diferente do oficial (lido do JSON-LD da
-home), o JSON-LD contiver
+preço da aula online diferente do oficial (lido do JSON-LD da home), alguma
+página voltar a oferecer aula presencial, o JSON-LD contiver
 `review` ou `aggregateRating`, uma página cair
 numa linha congelada, uma página indexável faltar no `llms.txt` ou nas
 pendências de indexação, uma URL entrar no sitemap **sem `lastmod`**, alguma página apontar para
@@ -132,16 +132,16 @@ linha é o erro do `new Date()` em câmera lenta.
 ### Duas linhas de ensino (superior aberta em 2026-09-17)
 
 - **Fundamental e médio** — reforço escolar, recuperação e ENEM. Preço
-  publicado: R$ 60 online, a partir de R$ 70 presencial (desde 09/10/2026;
-  antes, R$ 45 e R$ 50). Vale para novos alunos; quem já é aluno segue no
-  valor combinado, e isso não aparece no site.
+  publicado: **R$ 80 online** (desde 18/11/2026; antes R$ 60 desde 09/10, e
+  R$ 45 antes disso). Vale para novos alunos; quem já é aluno segue no valor
+  combinado, e isso não aparece no site.
 - **Ensino superior** — pré-cálculo, Cálculo I, II e III, Estatística e
   Probabilidade, e GAAL. **Nenhuma página de ensino superior exibe R$**, e o
   schema delas usa `serviceSchemaSuperior`, sem oferta com preço. O motivo:
   a Fase 4 mediu este segmento com os **três maiores tetos de lance de toda a
   tabela** (R$ 9,41 a R$ 10,02) e a Fase 3 encontrou professores de cálculo
-  cobrando R$ 80–140/h. Aplicar os R$ 60 aqui ancoraria a operação muito
-  abaixo do mercado. **O valor de ensino superior ainda não foi definido pela
+  cobrando R$ 80–140/h. Aplicar os R$ 80 aqui ancoraria a operação no piso dessa faixa
+  do mercado. **O valor de ensino superior ainda não foi definido pela
   dona do projeto** — enquanto `precoSuperior.valor` for nulo em
   `config/site.ts`, as páginas dizem que o valor sai após a diagnóstica.
 - **Volume esperado do superior é baixo por natureza:** 50 buscas/mês por
@@ -153,22 +153,28 @@ linha é o erro do `new Date()` em câmera lenta.
   as diferencia (onde o aluno trava, ementa, pré-requisitos) fica no config —
   páginas quase idênticas disputando o mesmo termo canibalizam.
 
-### Duas modalidades, deliberadamente separadas
+### Só aula online (presencial encerrado em 18/11/2026)
 
-- **Online — R$ 60/aula, todo o Brasil.** As páginas de aula online **não
-  mencionam BH**: a Fase 4 mediu que termos com "BH" têm volume zero, e o
-  público online é nacional.
-- **Presencial — a partir de R$ 70, até 20 km do centro de BH**, na casa do
-  aluno ou em local público. Cobre Contagem, Nova Lima, Sabará, Santa Luzia,
-  Ribeirão das Neves e Vespasiano. Cidades além do raio (Lagoa Santa, Sete
-  Lagoas, Divinópolis, Juiz de Fora) são atendidas **só online**.
+- **Online — R$ 80/aula, todo o Brasil.** É a única modalidade. O atendimento
+  presencial (antes "a partir de R$ 70, até 20 km do centro de BH") foi
+  encerrado por decisão da dona do projeto.
+- `/aulas-particulares-matematica-bh` saiu do ar e responde 301 para
+  `/aulas-de-matematica-online`. **Nenhuma página pode apontar para ela** (a
+  regra `link-redirecionado` falha) e **nenhuma página pode oferecer
+  presencial** (a regra `presencial-encerrado` falha: raio em km, "na casa do
+  aluno", "local público", "atendo presencialmente", oferta ou raio no
+  JSON-LD).
+- As páginas de aula online **não mencionam BH** como área de atendimento. O
+  `address` de Belo Horizonte no `LocalBusiness` fica: é onde a professora
+  está.
+- Reabrir o presencial exige decisão escrita e desfazer a regra
+  `presencial-encerrado`; o histórico do modelo antigo está em
+  `registro-ciclos.md` (Fase 3: as IAs leem "BH" como aula presencial por
+  bairro) e no git.
 
-A separação veio da Fase 3: as quatro IAs leem "BH" como consulta de aula
-**presencial, por bairro**, e respondem com fichas do Google Business Profile.
-O site disputava esse termo oferecendo aula remota — e listava 50 bairros para
-um serviço que dizia ser 100% online.
-
-**Não reintroduzir "100% online" em lugar nenhum.** É falso desde 2026-09-06.
+**Não reintroduzir "100% online" em lugar nenhum.** Foi falso entre 06/09 e
+18/11/2026 e agora é verdadeiro, mas a frase ficou queimada; diga "aulas
+online, ao vivo, para todo o Brasil".
 
 ## Quem mantém o site
 
@@ -180,10 +186,10 @@ constrói, e é um erro fácil de cometer.
 
 ## Ativos externos
 
-- **Superprof** — ligado via `sameAs`. Anuncia R$ 50; o site anuncia R$ 60
-  desde 09/10 (antes, R$ 45). A dona do projeto decidiu **não corrigir** a
-  divergência em 2026-09; com a mudança de preço, a diferença inverteu de
-  lado e é decisão dela de novo.
+- **Superprof** — ligado via `sameAs`. Anuncia R$ 50 e aula presencial; o site
+  anuncia R$ 80 e só online (desde 18/11). A dona do projeto decidiu **não
+  corrigir** a divergência em 2026-09; ela só cresceu e é decisão dela de
+  novo.
 - **Google Business Profile** — existe como "Taciane S. — Professora
   Particular de Matemática". Falta a URL canônica em
   `site.social.googleBusiness`, e o nome diverge do resto ("Taciane

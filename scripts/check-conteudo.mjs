@@ -170,20 +170,18 @@ for (const p of paginas) {
 }
 
 // ---------- R4b · preço escrito à mão que diverge do oficial ----------
-// Em 09/10/2026 o preço mudou (online R$ 45 → 60, presencial a partir de
-// R$ 50 → 70). As páginas de serviço leem o valor de `site.preco`, mas três
-// artigos de prova de admissão traziam "R$ 45" escrito no texto e continuariam
-// anunciando o preço velho em silêncio. A fonte do valor oficial é o JSON-LD
-// da home (`Offer.price` do online e `minPrice` do presencial), que sai do
-// mesmo `site.preco`; qualquer frase "online … R$ X" ou "presencial … a partir
-// de R$ Y" que divirja dele falha. Faixas de mercado ("R$ 50 a R$ 150") não
-// casam com os padrões, porque não falam da aula daqui.
+// Em 09/10/2026 o preço mudou (online R$ 45 → 60) e três artigos de prova de
+// admissão traziam "R$ 45" escrito no texto, anunciando o preço velho em
+// silêncio. Em 18/11/2026 mudou de novo (online R$ 80) e o presencial saiu do
+// ar. A fonte do valor oficial é o JSON-LD da home (`Offer.price` do online),
+// que sai de `site.preco`; qualquer frase "aula online … R$ X" que divirja
+// dele falha. Faixas de mercado ("R$ 50 a R$ 150") não casam com o padrão,
+// porque não falam da aula daqui.
 const home = paginas.find((p) => p.rota === '/');
 const precoOficial = {
   online: Number(pega(home?.html ?? '', /"name":"Aula online","price":(\d+)/)),
-  presencial: Number(pega(home?.html ?? '', /"minPrice":(\d+)/)),
 };
-if (!precoOficial.online || !precoOficial.presencial)
+if (!precoOficial.online)
   erro('preco-oficial', '/', 'não achei o preço oficial no JSON-LD da home — a regra de preço divergente ficou cega');
 else
   for (const p of paginas) {
@@ -192,10 +190,34 @@ else
     for (const m of texto.matchAll(/aula online[^.]{0,40}?R\$\s?(\d+)/gi))
       if (+m[1] !== precoOficial.online)
         erro('preco-divergente', p.rota, `"${m[0]}" — o online oficial é R$ ${precoOficial.online}`);
-    for (const m of texto.matchAll(/presencial[^.]{0,60}?a partir de R\$\s?(\d+)/gi))
-      if (+m[1] !== precoOficial.presencial)
-        erro('preco-divergente', p.rota, `"${m[0]}" — o presencial oficial começa em R$ ${precoOficial.presencial}`);
   }
+
+// ---------- R4b' · o atendimento presencial acabou ----------
+// Decidido em 18/11/2026 pela dona do projeto: só aula online, e o valor passou
+// a R$ 80. A página de BH (presencial) saiu do ar e responde 301. Esta regra
+// impede que o presencial volte por esquecimento — em texto visível, FAQ,
+// schema ou link. Dizer "não há aula presencial" e citar o presencial como
+// categoria de mercado (tabela de preços, comparação genérica) continua
+// permitido: os padrões abaixo pegam só a OFERTA (raio, casa do aluno, local
+// público, "atendo presencialmente", oferta com preço no JSON-LD).
+const OFERTA_PRESENCIAL = [
+  /atend\w*\s+(também\s+)?presencialmente/i,
+  /(?:raio|até)\s+(?:de\s+)?\d+\s*km/i,
+  /na casa do aluno/i,
+  /local público/i,
+  /presenciais?\s+em\s+(?:BH|Belo Horizonte)/i,
+  /presencial[^.]{0,60}a partir de R\$/i,
+];
+for (const p of paginas) {
+  const texto = decodeEnt(p.html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' '))
+    .replace(/\s+/g, ' ');
+  for (const re of OFERTA_PRESENCIAL) {
+    const m = texto.match(re);
+    if (m) erro('presencial-encerrado', p.rota, `"${m[0]}" — o atendimento presencial foi encerrado em 18/11/2026`);
+  }
+  if (/"name":"Aula presencial"|"serviceArea"|"geoRadius"/.test(p.html))
+    erro('presencial-encerrado', p.rota, 'JSON-LD ainda declara oferta ou raio presencial (serviceArea/geoRadius/Aula presencial)');
+}
 
 // ---------- R4c · pauta nova sem âncora ----------
 // Decidido em 09/10/2026, a partir do Search Console de 3 meses: os 4 artigos

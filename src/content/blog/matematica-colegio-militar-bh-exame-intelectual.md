@@ -2,11 +2,11 @@
 title: "Colégio Militar de BH: 4 semanas até o exame de matemática"
 description: "O Exame Intelectual dos Colégios Militares é em 18 de outubro e exige 50% dos pontos em matemática. O que dá para fazer com as semanas que restam."
 publishedAt: 2026-09-18
-updatedAt: 2026-10-19
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["colégio militar", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "9 min"
-precoVigencia: "2026-10"
+precoVigencia: "2026-11"
 faq:
   - q: "Quando sai o resultado do Exame Intelectual de 18 de outubro?"
     a: "Pelo calendário divulgado para o processo seletivo 2026/2027, o gabarito preliminar sai a partir de 19 de outubro, os recursos vão de 20 a 21 de outubro, o resultado parcial da prova objetiva sai em 13 de novembro, o da produção textual em 27 de novembro e o resultado final do exame intelectual em 11 de dezembro de 2026. Confira sempre no site do concurso, porque o calendário pode ser retificado."
@@ -18,10 +18,10 @@ faq:
     a: "Quem vai entrar no 6º ano em 2028, que hoje está no 4º ano, e quem vai entrar no 1º ano do ensino médio em 2028, que hoje está no 8º ano. As regras de idade e de série estão no edital de cada ano."
   - q: "A preparação serve para Coltec e CEFET-MG também?"
     a: "Serve, porque as três seleções cobram a matemática do ensino fundamental e acontecem em datas diferentes no segundo semestre. O que muda é o formato de cada prova, que precisa ser treinado separadamente."
-  - q: "Presencial ou online?"
-    a: "As duas funcionam, desde que a aula seja individual. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, online ao vivo."
+  - q: "A aula é online?"
+    a: "É. A aula é individual e ao vivo por videochamada, e atendo alunos de qualquer cidade do Brasil."
   - q: "Quanto custa?"
-    a: "Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, com deslocamento incluso. Pacote mensal com desconto. A aula diagnóstica de 30 minutos é gratuita."
+    a: "Aula online de 50 minutos: R$ 80. Pacote mensal com desconto. A aula diagnóstica de 30 minutos é gratuita."
 ---
 
 **Resposta direta:** o Exame Intelectual do processo seletivo dos Colégios Militares para 2027 foi aplicado em **18 de outubro de 2026**. Para quem fez a prova, o que vem agora é o gabarito, o prazo de recurso e os resultados, entre outubro e dezembro. Para quem vai prestar a **próxima edição**, de ingresso em 2028, há cerca de um ano pela frente, e um ano é tempo para fazer o que quatro semanas não permitem: fechar a base de matemática antes de treinar a prova.

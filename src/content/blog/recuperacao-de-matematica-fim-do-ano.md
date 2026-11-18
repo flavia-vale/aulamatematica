@@ -2,7 +2,7 @@
 title: "Recuperação de matemática: o que dá para fazer nas últimas 8 semanas"
 description: "Um plano realista para o aluno que entrou em recuperação de matemática no fim do ano, com o que priorizar quando o tempo é curto e o conteúdo é longo."
 publishedAt: 2026-09-11
-updatedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["recuperação", "pais", "ensino médio"]
 readingTime: "10 min"
@@ -125,4 +125,4 @@ A oitava semana é contraintuitiva e importante. Aumentar a carga na véspera pi
 
 Para prazo curto, o formato que eu costumo sugerir é uma aula semanal focada nos tópicos de maior peso, com correção do que foi feito entre as aulas. O que muda o resultado nesse prazo é a correção frequente, mais do que a quantidade de aulas.
 
-A primeira conversa é uma [aula diagnóstica gratuita](/contato) de 30 minutos, e nela dá para dizer com alguma precisão o que cabe no tempo que resta. Atendo [online para todo o Brasil](/aulas-de-matematica-online) e [presencialmente em Belo Horizonte e região](/aulas-particulares-matematica-bh).
+A primeira conversa é uma [aula diagnóstica gratuita](/contato) de 30 minutos, e nela dá para dizer com alguma precisão o que cabe no tempo que resta. Atendo [online para todo o Brasil](/aulas-de-matematica-online).

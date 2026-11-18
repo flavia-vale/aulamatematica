@@ -2,11 +2,11 @@
 title: "Matemática do CEFET-MG: o que estudar para 2027"
 description: "A seleção do CEFET-MG para 2027 é fase única, com 2.174 vagas e um caderno só, de cinco matérias. O que isso muda no jeito de estudar matemática."
 publishedAt: 2026-09-18
-updatedAt: 2026-10-09
+updatedAt: 2026-11-18
 author: "Taciane Andrade"
 tags: ["cefet-mg", "prova de admissão", "ensino fundamental", "belo horizonte"]
 readingTime: "8 min"
-precoVigencia: "2026-10"
+precoVigencia: "2026-11"
 faq:
   - q: "Estudar para o CEFET-MG serve para o Coltec também?"
     a: "Em grande parte sim, porque as duas cobram a matemática do fundamental e as datas não colidem. O que não se transfere é o treino de formato: as duas provas têm estruturas e pesos diferentes, e a estratégia de prova precisa ser treinada em cada uma. Escrevi sobre a do Coltec em Matemática do Coltec 2027."
@@ -14,10 +14,10 @@ faq:
     a: "Os editais das instituições federais preveem reserva. As regras, os percentuais e a documentação mudam de edital para edital, e é no edital do ano que isso precisa ser lido — não em resumo de site nenhum, inclusive este."
   - q: "Dá para preparar nas semanas que faltam até a prova?"
     a: "Dá, se a base estiver razoável e o aluno fizer as listas entre as aulas. Se o diagnóstico encontrar lacunas em vários anos, dá para uma preparação honesta, não completa — e saber disso em outubro é muito melhor que descobrir em novembro."
-  - q: "Aula presencial ou online?"
-    a: "Funcionam as duas, desde que a aula seja individual e tenha lista entre uma e outra. Atendo presencialmente em Belo Horizonte e nas cidades num raio de 20 km, na casa do aluno; fora do raio, a aula é online ao vivo."
+  - q: "A aula é online?"
+    a: "É. A aula é individual, ao vivo por videochamada, e funciona desde que tenha lista entre uma e outra. Atendo alunos de qualquer cidade do Brasil."
   - q: "Quanto custa?"
-    a: "Aula online de 50 minutos: R$ 60. Presencial em BH: a partir de R$ 70, deslocamento incluso. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita."
+    a: "Aula online de 50 minutos: R$ 80. Pacote mensal com desconto para frequência semanal. A aula diagnóstica de 30 minutos é gratuita."
 ---
 
 **Resposta direta:** a seleção do CEFET-MG para 2027 acontece em **fase única**, com um caderno único de questões objetivas de cinco matérias — português e literatura, matemática, ciências, geografia e história. As inscrições foram até **5 de outubro de 2026**, e a data prevista da prova é **29 de novembro**. São 2.174 vagas, distribuídas entre nove campi. A consequência prática para o estudo: aqui não existe uma prova de matemática isolada para treinar, existe **uma prova de resistência de três horas em que a matemática é uma parte** — e é isso que o plano de estudo precisa levar em conta.

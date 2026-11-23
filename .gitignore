@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Astro
 .astro/
+
+# cache do Python dos scripts de SEO (.claude/scripts)
+.claude/scripts/__pycache__/
